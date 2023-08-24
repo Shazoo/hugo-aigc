@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git
+ on 技术分享站</title>
+    <link>https://techdocdb.com/tags/git/</link>
+    <description>Recent content in git
+ on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 15:40:13 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在.gitignore 文件中可以使用注释</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>
+      <pubDate>Thu, 24 Aug 2023 15:40:13 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在.gitignore 文件中如何使用注释。我们将使用示例代码来说明这个过程。
+内容 在.gitignore 文件中，可以使用注释来做一些备注或解释。注释必须位于行的开头，并以“#”字符开始。
+以下是一个示例：
+1# 这是一个注释示例 2# 忽略所有以.a结尾的文件 3*.a 根据 Git 文档的说明，可以在.gitignore 文件中使用注释。注释需要以“#”字符开头，并且可以用来提供更多的信息或解释特定的规则。
+注意，注释只能出现在行的开头，并且不能以空格或其他字符开头。
+总结 在.gitignore 文件中，可以使用注释来进行备注和解释。注释必须以“#”字符开头，并且只能出现在行的开头。使用注释可以帮助其他开发人员理解特定规则的用途和作用。在配置.gitignore 文件时，注释可以提供更多的上下文和信息。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

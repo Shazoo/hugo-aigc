@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>selection-object on 技术分享站</title>
+    <link>https://techdocdb.com/tags/selection-object/</link>
+    <description>Recent content in selection-object on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 14:40:16 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/selection-object/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阻止双击后文本选择的方法</title>
+      <link>https://techdocdb.com/posts/%E9%98%BB%E6%AD%A2%E5%8F%8C%E5%87%BB%E5%90%8E%E6%96%87%E6%9C%AC%E9%80%89%E6%8B%A9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 24 Aug 2023 14:40:16 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E9%98%BB%E6%AD%A2%E5%8F%8C%E5%87%BB%E5%90%8E%E6%96%87%E6%9C%AC%E9%80%89%E6%8B%A9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在 JavaScript 中阻止双击后发生文本选择的方法。我们将使用示例代码来说明这个过程。
+内容 双击一个元素会导致文本被选中，如果不希望发生这种选中，可以使用以下几种方法：
+使用 CSS 属性 user-select: none 可以通过为元素添加 CSS 属性 user-select: none 来阻止双击后发生文本选择。以下是一个示例：
+1.element { 2 user-select: none; 3} 在上述示例中，我们将 user-select: none 应用于 .element 元素，使其在双击后不会发生文本选择。
+使用 JavaScript 事件处理 可以在双击事件的处理函数中阻止默认的文本选择行为。以下是一个示例：
+1element.addEventListener(&amp;#39;dblclick&amp;#39;, function (event) { 2 event.preventDefault(); 3}); 在上述示例中，我们使用 addEventListener() 添加了一个双击事件的监听器，并在处理函数中使用 preventDefault() 方法阻止默认的文本选择行为。
+综上所述，以上两种方法都可以用来阻止双击后发生文本选择。根据具体的需求和场景，选择适合的方法来实现阻止文本选择的效果。
+总结 在 JavaScript 中，我们可以通过添加 CSS 属性 user-select: none 或在事件处理函数中使用 preventDefault() 方法来阻止双击后发生文本选择。根据具体情况选择适合的方法来实现阻止文本选择的效果。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

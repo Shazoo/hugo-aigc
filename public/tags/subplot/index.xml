@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>subplot on 技术分享站</title>
+    <link>https://techdocdb.com/tags/subplot/</link>
+    <description>Recent content in subplot on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 15:37:20 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/subplot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用.otf 字体在网页中</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</link>
+      <pubDate>Thu, 24 Aug 2023 15:37:20 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在网页中使用.otf 字体。我们将使用示例代码来说明这个过程。
+内容 如果你需要在网页中使用.otf 字体，可以使用@font-face 规则来嵌入字体并在网页中使用。下面是一个示例代码：
+1@font-face { 2 font-family: &amp;#39;YourFontName&amp;#39;; 3 src: url(&amp;#39;path/your-font.otf&amp;#39;) format(&amp;#39;opentype&amp;#39;); 4} 在以上代码中，我们使用@font-face 规则指定了字体文件的路径和格式。然后，你可以在网页中使用这种字体：
+1body { 2 font-family: &amp;#39;YourFontName&amp;#39;, sans-serif; 3} 在这个示例中，我们将字体文件的路径和格式指定为.otf，并使用@font-face 规则嵌入字体。然后，我们将这种字体应用于整个网页的 body 元素。
+请注意，为了使字体在所有浏览器中正常工作，你可能需要提供其他字体格式的备用选项，例如.woff 或.ttf 格式。这样可以确保在不同的浏览器上都可以正常显示字体。
+总结 通过使用@font-face 规则，你可以在网页中使用.otf 字体。可以指定字体文件的路径和格式，并将其嵌入到网页中。如果需要在不同的浏览器上都正常显示字体，可以提供其他字体格式的备用选项。使用这种方法，你可以实现在网页中使用自定义.otf 字体。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>attributes on 技术分享站</title>
+    <link>https://techdocdb.com/tags/attributes/</link>
+    <description>Recent content in attributes on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 13:10:39 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/attributes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python中定义类变量的正确方法</title>
+      <link>https://techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 24 Aug 2023 13:10:39 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在Python中定义类变量的两种不同方法。我们将通过代码示例说明这两种方法的区别和使用场景。
+内容 在Python中，我们可以使用两种不同的方法来初始化类变量。
+在类内部直接初始化 第一种方法是在类内部直接初始化类变量。这样的类变量是属于类本身的，而不是属于对象的。以下是一个示例：
+1class MyClass: 2 __element1 = 123 3 __element2 = &amp;#34;this is Africa&amp;#34; 4 5 def __init__(self): 6 #pass or something else 在上述示例中，我们直接在类内部定义了__element1和__element2这两个类变量。这些变量属于类本身，而不是属于对象。因此，它们是静态的，并且对于所有的对象来说都是相同的，可以在类外部通过MyClass.__element1的方式访问。
+在__init__方法中初始化 第二种方法是在__init__方法中初始化类变量。这样的类变量是对象的一部分，每个对象都有自己的副本。以下是一个示例：
+1class MyClass: 2 def __init__(self): 3 self.__element1 = 123 4 self.__element2 = &amp;#34;this is Africa&amp;#34; 在上述示例中，我们将__element1和__element2作为对象的实例变量来初始化。每个对象都会有自己的__element1和__element2，它们在各个对象之间是独立的。
+总结 在Python中，我们可以采用不同的方法来定义类变量。直接在类内部定义的类变量是属于类本身的，它们对于所有的对象来说是相同的。而在__init__方法中定义的类变量是对象的一部分，它们会随着对象的创建而初始化，并且在各个对象之间是独立的。根据具体的需求，选择适合的方法来初始化类变量。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

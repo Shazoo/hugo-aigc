@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linq on 技术分享站</title>
+    <link>https://techdocdb.com/tags/linq/</link>
+    <description>Recent content in linq on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 14:16:28 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/linq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将Linq查询结果转换为字典</title>
+      <link>https://techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</link>
+      <pubDate>Thu, 24 Aug 2023 14:16:28 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何将Linq查询结果转换为字典。我们将使用示例代码来说明这个过程。
+内容 在C#中，将Linq查询结果转换为字典可以使用ToDictionary()方法。以下是一个示例：
+1var dict = TableObj.Select(t =&amp;gt; new { t.Key, t.TimeStamp }) 2 .ToDictionary(t =&amp;gt; t.Key, t =&amp;gt; t.TimeStamp); 在上述示例中，我们使用ToDictionary()方法将Linq查询结果转换为字典。首先，我们从TableObj中选择Key和TimeStamp属性，然后使用ToDictionary()方法将它们转换为字典。
+这样，你就可以将获取到的字典存储到dict变量中。
+总结 通过使用ToDictionary()方法，可以方便地将Linq查询结果转换为字典。在使用ToDictionary()方法时，需要指定键和值的属性，并确保属性名称和类型与查询结果匹配。这样，你就可以快速将Linq查询结果转换为字典，以便后续处理。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

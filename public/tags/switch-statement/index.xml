@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>switch-statement on 技术分享站</title>
+    <link>https://techdocdb.com/tags/switch-statement/</link>
+    <description>Recent content in switch-statement on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 12:11:19 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/switch-statement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Java 中使用 switch 语句和枚举</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-switch-%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9E%9A%E4%B8%BE/</link>
+      <pubDate>Thu, 24 Aug 2023 12:11:19 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-switch-%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9E%9A%E4%B8%BE/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在 Java 中使用 switch 语句和枚举。我们将使用示例代码来说明这个过程。
+内容 在 Java 中，可以使用 switch 语句来进行多条件的比较。当与枚举一起使用时，可以更方便地处理不同的情况。
+以下是一个示例代码：
+1public class SomeClass { 2 3 public enum MyEnum { 4 VALUE_A, VALUE_B 5 } 6 7 public void someMethod() { 8 MyEnum enumExample = MyEnum.VALUE_A; 9 10 switch (enumExample) { 11 case VALUE_A: { 12 // 这里是 VALUE_A 的逻辑 13 break; 14 } 15 case VALUE_B: { 16 // 这里是 VALUE_B 的逻辑 17 break; 18 } 19 } 20 } 21} 在上述示例中，我们定义了一个枚举 MyEnum，它包含了两个枚举常量 VALUE_A 和 VALUE_B。在 someMethod 方法中，我们使用了 switch 语句来根据 enumExample 的值进行不同的逻辑处理。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
