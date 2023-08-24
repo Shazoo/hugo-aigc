@@ -18,7 +18,7 @@ ga_analytics = ""
 google_tag_manager_id = ""
 
 # Baidu analytics Id
-# baidu_analytics = "XXXXXXXX"
+baidu_analytics = "c0975d9b05e4bf71a901523a660febf5"
 
 # limit the number of taxonomies links shown on the sidebar of each page by default.
 numberOfTagsShown = 200 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
@@ -67,7 +67,9 @@ codeLineNumbers = false
 enableMathNotation = true
 
 # directory(s) where your articles are located
-mainSections = ["posts"] # see config details here https://gohugo.io/functions/where/#mainsections
+mainSections = [
+    "posts",
+] # see config details here https://gohugo.io/functions/where/#mainsections
 
 # Label Non inline images on an article body
 figurePositionShow = false # toggle on or off globally
@@ -139,13 +141,13 @@ name = "技术分享"
 # photo = "images/jane-doe.png" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
-enable = false # to enable plausible analytics set to true.
+enable = false                        # to enable plausible analytics set to true.
 websiteDomain = "CoderGasStation.com" # domain name of your website, most cases same as your base url
 # plausibleDomain = "plausible.io" # default is set to plausible.io, only required if plausible is selfhosted
 # scritpName = "plausible" # default is set to plausible, only required if using a custome name for script
 
 [matomo_analytics]
-enable = false # To enable matomo analytics change to `true`.
+enable = false                        # To enable matomo analytics change to `true`.
 websiteDomain = "CoderGasStation.com" # Set the domain name of your website, in most cases same as your base URL this is required.
-matomoDomain = "CoderGasStation.com" # Set to Matomo domain
-matomoSiteID = "1" # Default is set to 1, change this to the siteid being tracked
+matomoDomain = "CoderGasStation.com"  # Set to Matomo domain
+matomoSiteID = "1"                    # Default is set to 1, change this to the siteid being tracked
