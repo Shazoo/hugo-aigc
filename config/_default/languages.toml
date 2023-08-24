@@ -1,5 +1,4 @@
 [zh]
-  title = "码农加油站"
-  LanguageName = "中文"
-  weight = 1
-
+title = "技术分享站"
+LanguageName = "中文"
+weight = 1

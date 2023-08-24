@@ -1,14 +1,17 @@
 {{- $s := .Site.Params }}
-{{- $c := default .Site.Title .Site.Copyright  }}
+{{- $c := default .Site.Title .Site.Copyright }}
 {{- if or .Params.enableMathNotation $s.enableMathNotation }}
-  {{ partialCached "math" . }}
+{{ partialCached "math" . }}
 {{- end }}
 {{- $iconsDir := default "icons/" .Site.Params.iconsDir }}
 {{- $defaultFooterLogo := printf "%s%s" $iconsDir "apple-touch-icon.png"}}
 <footer class="footer">
   <div class="footer_inner wrap pale">
     <img src='{{ absURL (default $defaultFooterLogo $s.footerLogo) }}' class="icon icon_2 transparent" alt="{{ $c }}">
-    <p>{{ T "copyright" | markdownify }}{{ with $s.since }}&nbsp;{{ . }}-{{ end }}&nbsp;<span class="year"></span>&nbsp;{{ upper $c }}. {{ T "all_rights" | markdownify }}</p>
+    <p>{{ T "copyright" | markdownify }}{{ with $s.since }}&nbsp;{{ . }}-{{ end }}&nbsp;<span class="year"></span>&nbsp;
+      <a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:underline;">鲁ICP备2023025966号-1</a>
+    </p>
     {{- partialCached "top" .}}
+
   </div>
 </footer>
