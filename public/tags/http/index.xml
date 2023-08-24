@@ -1,40 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>http
- on 技术分享站</title>
+    <title>http on 技术分享站</title>
     <link>https://techdocdb.com/tags/http/</link>
-    <description>Recent content in http
- on 技术分享站</description>
+    <description>Recent content in http on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 15:09:35 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/http/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>301（永久重定向）和 302（临时重定向）的区别</title>
-      <link>https://techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
-      <pubDate>Thu, 24 Aug 2023 15:09:35 +0800</pubDate>
-      
-      <guid>https://techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
-      <description>
-        
-          
-            摘要 本教程将介绍 301 和 302 重定向的区别。我们将使用示例代码来说明这个概念。
-内容 在 HTTP 协议中，301 代表永久重定向，而 302 代表临时重定向。这两种重定向有以下区别：
-301 重定向表明所请求的资源已经分配了新的永久 URI，以后的所有引用都应该使用返回的 URI 之一。 302 重定向表明所请求的资源暂时位于其他 URI。 由于重定向可能会发生变化，客户端应继续使用原始的 URI 进行以后的请求。 以下是一些示例代码：
-301 重定向示例： 1HTTP/1.1 301 Moved Permanently 2Location: http://example.com/new-page 在上述示例中，服务器返回了一个 301 状态码，并指示客户端将请求重定向到新的 URL（http://example.com/new-page）。客户端应该记住这个重定向，并在以后的请求中使用新的URL。
-302 重定向示例： 1HTTP/1.1 302 Found 2Location: http://example.com/temp-page 在上述示例中，服务器返回了一个 302 状态码，并指示客户端将请求暂时重定向到另一个 URL（http://example.com/temp-page）。客户端应该继续使用原始URL进行以后的请求。
-总结 在 HTTP 协议中，301 和 302 重定向有不同的含义。301 重定向表示所请求的资源已永久移动到新的位置，客户端应该使用新的位置；而 302 重定向表示所请求的资源暂时位于其他位置，客户端应继续使用原始位置。在根据不同的需求选择适当的重定向方式时，请记住这些区别。
-          
-          
-        
-      </description>
-    </item>
-    
+    <lastBuildDate>Thu, 24 Aug 2023 14:57:59 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/http/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Fetch API 进行 GET 请求设置查询字符串</title>
       <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
-      <pubDate>Thu, 24 Aug 2023 12:13:54 +0800</pubDate>
+      <pubDate>Thu, 24 Aug 2023 14:57:59 +0800</pubDate>
       
       <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>
@@ -46,6 +23,27 @@
 1const url = new URL(&amp;#39;http://myapi.com/orders&amp;#39;); 2url.searchParams.set(&amp;#39;order_id&amp;#39;, &amp;#39;1&amp;#39;); 3fetch(url); 在上述示例中，我们首先创建一个 URL 对象，并设置其基础地址为&#39;http://myapi.com/orders&#39;。然后，通过设置URL对象的searchParams属性，将查询参数&#39;order_id&#39;设置为&#39;1&#39;。最后，使用fetch方法发送GET请求。
 这种方式可以灵活地设置查询字符串，并且适用于任何有效的 URL 格式。
 总结 使用 Fetch API 进行 GET 请求，并设置查询字符串可以用 URL 对象的 searchParams 属性来实现。首先，创建 URL 对象，并设置基础地址。然后，通过设置 URL 对象的 searchParams 属性，设置查询参数。最后，使用 fetch 方法发送 GET 请求。这种方式可以方便地设置和发送请求，并且可以适用于不同的 URL 和查询参数组合。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>301（永久重定向）和 302（临时重定向）的区别</title>
+      <link>https://techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Thu, 24 Aug 2023 13:23:10 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍 301 和 302 重定向的区别。我们将使用示例代码来说明这个概念。
+内容 在 HTTP 协议中，301 代表永久重定向，而 302 代表临时重定向。这两种重定向有以下区别：
+301 重定向表明所请求的资源已经分配了新的永久 URI，以后的所有引用都应该使用返回的 URI 之一。 302 重定向表明所请求的资源暂时位于其他 URI。 由于重定向可能会发生变化，客户端应继续使用原始的 URI 进行以后的请求。 以下是一些示例代码：
+301 重定向示例： 1HTTP/1.1 301 Moved Permanently 2Location: http://example.com/new-page 在上述示例中，服务器返回了一个 301 状态码，并指示客户端将请求重定向到新的 URL（http://example.com/new-page）。客户端应该记住这个重定向，并在以后的请求中使用新的URL。
+302 重定向示例： 1HTTP/1.1 302 Found 2Location: http://example.com/temp-page 在上述示例中，服务器返回了一个 302 状态码，并指示客户端将请求暂时重定向到另一个 URL（http://example.com/temp-page）。客户端应该继续使用原始URL进行以后的请求。
+总结 在 HTTP 协议中，301 和 302 重定向有不同的含义。301 重定向表示所请求的资源已永久移动到新的位置，客户端应该使用新的位置；而 302 重定向表示所请求的资源暂时位于其他位置，客户端应继续使用原始位置。在根据不同的需求选择适当的重定向方式时，请记住这些区别。
           
           
         

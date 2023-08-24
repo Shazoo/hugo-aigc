@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 12:13:54 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/fetch-api/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 14:57:59 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/fetch-api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Fetch API 进行 GET 请求设置查询字符串</title>
       <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
-      <pubDate>Thu, 24 Aug 2023 12:13:54 +0800</pubDate>
+      <pubDate>Thu, 24 Aug 2023 14:57:59 +0800</pubDate>
       
       <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>

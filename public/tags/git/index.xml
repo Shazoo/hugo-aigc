@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git
- on 技术分享站</title>
+    <title>git on 技术分享站</title>
     <link>https://techdocdb.com/tags/git/</link>
-    <description>Recent content in git
- on 技术分享站</description>
+    <description>Recent content in git on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 15:40:13 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 14:02:13 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在.gitignore 文件中可以使用注释</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>
-      <pubDate>Thu, 24 Aug 2023 15:40:13 +0800</pubDate>
+      <pubDate>Thu, 24 Aug 2023 14:02:13 +0800</pubDate>
       
       <guid>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</guid>
       <description>
