@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>performance on 技术分享站</title>
+    <link>https://techdocdb.com/tags/performance/</link>
+    <description>Recent content in performance on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 25 Aug 2023 08:17:25 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python代码为什么在函数中运行更快？</title>
+      <link>https://techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</link>
+      <pubDate>Fri, 25 Aug 2023 08:17:25 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释为什么将Python代码放在一个函数中可以提高代码的执行速度。我们将使用具体的例子来说明这个问题。
+内容 在将代码放在函数中之前，先看一下不同情况的代码执行时间。
+下面是将代码放在函数中的情况：
+1def main(): 2 for i in xrange(10**8): 3 pass 4main() 运行结果如下（注：此处是在Linux的BASH中使用time函数进行计时）：
+1real 0m1.841s 2user 0m1.828s 3sys 0m0.012s 而将相同的循环代码放在函数之外，则运行时间更长：
+1for i in xrange(10**8): 2 pass 运行结果如下：
+1real 0m4.543s 2user 0m4.524s 3sys 0m0.012s 为什么会出现这种情况呢？
+总结 代码在函数中运行更快的原因是因为CPython的优化实现。在编译函数时，局部变量被存储在一个固定大小的数组中，而局部变量名则被分配给相应的索引。这种方式加快了对局部变量的访问速度。相比之下，全局变量的访问需要进行哈希查找等操作，速度相对较慢。
+通过函数内外代码的比较，我们可以看到存储局部变量的方式比存储全局变量的方式更高效。此外，CPython还针对局部变量的访问进行了一定的优化，包括对下一个操作码的预测。这些优化减少了操作码执行的开销，进一步提高了代码的运行速度。
+结合对字节码的分析和源代码的解释，我们可以更好地理解为什么将代码放在函数中可以提高其执行效率。
+更多关于CPython虚拟机实现的信息可以参考Python的官方文档中关于CPython虚拟机的介绍。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
