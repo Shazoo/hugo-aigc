@@ -7,7 +7,71 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 14:02:13 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 09:00:58 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何判断存储项是否存在于GitHub远程仓库？</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Fri, 25 Aug 2023 09:00:58 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何判断存储项是否存在于GitHub远程仓库。我们将提供示例代码来说明这个问题。
+内容 当我们在GitHub上操作时，有时会遇到&amp;quot;fatal: remote origin already exists&amp;quot;的错误提示。这个错误通常表示已经存在同名的远程仓库。在这种情况下，你可以选择更新现有的远程仓库，或者根据需要添加一个新的远程仓库别名。
+要更新现有的远程仓库，可以使用以下命令：
+1git remote set-url origin git@github.com:ppreyer/first_app.git 这个命令将更新现有的origin远程仓库的URL。如果你不再需要这个远程仓库，可以选择删除它。要删除origin远程仓库，可以使用以下命令：
+1git remote rm origin 如果你希望添加一个新的远程仓库别名，而不是使用origin，可以使用以下命令：
+1git remote add github git@github.com:ppreyer/first_app.git 在这里，github是新的远程仓库别名，你可以根据自己的需要选择一个合适的别名。在教程中，如果你遇到类似&amp;quot;origin&amp;quot;的远程仓库别名，你需要用你自己的别名替换它。
+通过执行上述命令，你可以更新现有的远程仓库、添加新的远程仓库别名或删除不需要的远程仓库。这样就能更好地管理你的远程仓库操作。
+总结 本教程介绍了如何在GitHub上判断存储项是否存在于远程仓库。通过更新现有远程仓库、添加新的远程仓库别名或删除不需要的远程仓库，你可以更好地管理你的GitHub操作。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何从Git仓库中删除.DS_Store文件</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Fri, 25 Aug 2023 08:56:28 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何从Git仓库中删除Mac OS X的.DS_Store文件。我们将提供示例代码来说明这个问题。
+内容 如果你想要从Git仓库中删除这些烦人的.DS_Store文件，你可以按照以下步骤进行操作：
+从仓库中删除现有的.DS_Store文件：
+1find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch 将.DS_Store添加到.gitignore文件中。在项目的顶层目录（如果不存在，可以创建该文件）中，可以执行以下命令：
+1echo .DS_Store &amp;gt;&amp;gt; .gitignore 将.gitignore文件提交到仓库：
+1git add .gitignore 2git commit -m &amp;#39;.DS_Store banished!&amp;#39; 总结 通过执行以上步骤，你可以从Git仓库中删除.DS_Store文件，并在.gitignore文件中忽略这些文件的后续添加。这将帮助保持仓库的干净和整洁，避免将这些不必要的文件提交到版本控制中。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Git递归更新子模块</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Fri, 25 Aug 2023 07:28:30 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用Git递归地更新子模块。我们将提供示例代码来说明这个问题。
+内容 如果你的项目中包含子模块，并且想要递归地更新所有子模块，你可以使用以下命令：
+1git submodule update --init --recursive 这将初始化未初始化的子模块，并递归地更新所有子模块。如果你只需要更新已经初始化的子模块，你可以省略--init选项：
+1git submodule update --recursive 需要注意的是，在某些旧版本的Git中，如果使用了--init选项，已经初始化的子模块可能不会被更新。在这种情况下，你可以在不使用--init选项的情况下再运行一次命令。
+总结 使用`git submodule update
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在.gitignore 文件中可以使用注释</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>

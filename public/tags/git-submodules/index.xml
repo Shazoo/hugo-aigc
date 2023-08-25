@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-submodules on 技术分享站</title>
+    <link>https://techdocdb.com/tags/git-submodules/</link>
+    <description>Recent content in git-submodules on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 25 Aug 2023 07:28:30 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git-submodules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Git递归更新子模块</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Fri, 25 Aug 2023 07:28:30 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用Git递归地更新子模块。我们将提供示例代码来说明这个问题。
+内容 如果你的项目中包含子模块，并且想要递归地更新所有子模块，你可以使用以下命令：
+1git submodule update --init --recursive 这将初始化未初始化的子模块，并递归地更新所有子模块。如果你只需要更新已经初始化的子模块，你可以省略--init选项：
+1git submodule update --recursive 需要注意的是，在某些旧版本的Git中，如果使用了--init选项，已经初始化的子模块可能不会被更新。在这种情况下，你可以在不使用--init选项的情况下再运行一次命令。
+总结 使用`git submodule update
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

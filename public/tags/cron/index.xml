@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cron on 技术分享站</title>
+    <link>https://techdocdb.com/tags/cron/</link>
+    <description>Recent content in cron on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 25 Aug 2023 10:49:37 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在更改 crontab 文件后需要重启 cron 服务吗？</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>
+      <pubDate>Fri, 25 Aug 2023 10:49:37 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在更改 crontab 文件后是否需要重启 cron 服务。我们将提供示例代码来说明这个问题。
+内容 在更改 crontab 文件后，无需重启 cron 服务。根据 cron 的官方文档：
+&amp;quot;...cron 会检查所有 crontab 文件的修改时间，并重新加载已更改的文件。因此，在修改 crontab 文件时无需重启 cron 服务。&amp;quot;
+如果你确实希望执行重启操作，可以使用以下命令：
+1sudo service cron reload 或者
+1/etc/init.d/cron reload 总结 根据 cron 官方文档的说明，无需在更改 crontab 文件后重启 cron 服务。然而，如果你希望确保更改生效，可以执行一次重启 cron 服务的操作。请注意，重启 cron 服务可能会导致某些系统上的其他影响，所以在执行之前请确保了解这些影响。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

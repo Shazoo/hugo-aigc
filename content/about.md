@@ -12,3 +12,5 @@ dontShowRelative = true
 所有文档均受： CC BY-SA [2.5](https://creativecommons.org/licenses/by-sa/2.5/) / [3.0](https://creativecommons.org/licenses/by-sa/3.0/) / [4.0](https://creativecommons.org/licenses/by-sa/4.0/) 保护。
 
 作为实验性质的网站，本站内容全方位开源，无需使用爬虫爬取，可以[联系站长](https://github.com/Shazoo)获取内容并合理利用。
+
+[Github Home](https://github.com/Shazoo/hugo-aigc)

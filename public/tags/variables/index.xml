@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>variables on 技术分享站</title>
+    <link>https://techdocdb.com/tags/variables/</link>
+    <description>Recent content in variables on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 25 Aug 2023 08:49:31 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/variables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL中 @variable 和 variable 有什么区别？</title>
+      <link>https://techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Fri, 25 Aug 2023 08:49:31 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍MySQL中 @variable 和 variable 之间的区别。我们将提供示例代码来说明这个问题。
+内容 在MySQL中，@variable 表示一个用户定义的变量，你可以自定义变量名称。它们是松散类型的变量，在会话中可以初始化并保留其值，直到会话结束为止。
+@variable 变量的前面带有 @ 符号，如 @var。你可以使用 SET 语句或在查询中初始化这个变量：
+1SET @var = 1; 2 3SELECT @var2 := 2; 当你在MySQL中开发存储过程时，可以传递输入参数并声明局部变量：
+1DELIMITER // 2 3CREATE PROCEDURE prc_test (var INT) 4BEGIN 5 DECLARE var2 INT; 6 SET var2 = 1; 7 SELECT var2; 8END; 9// 10 11DELIMITER ; 这些变量不需要任何前缀，并且仅在存储过程被调用时重新初始化，而会话特定的用户定义变量不会重新初始化。
+总结 通过执行上述代码，你可以在MySQL中使用 @variable 和 variable 两种变量。@variable 是会话特定的用户定义变量，variable 是存储过程变量。它们在作用域和用途上有所不同。选择适合你需求的变量类型来进行 MySQL 编程，以提高代码的可读性和灵活性。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

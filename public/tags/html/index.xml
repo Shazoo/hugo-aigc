@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 13:18:05 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 08:31:48 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用`px`还是`rem`作为CSS中的尺寸单位？</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</link>
+      <pubDate>Fri, 25 Aug 2023 08:31:48 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答在CSS中应该使用px还是rem作为尺寸单位的疑问。我们将通过例子来说明这个问题。
+内容 在选择尺寸单位时，您需要考虑以下几点：
+使用px单位时，如果用户在浏览器中调整了基本字体大小，可能会导致显示不兼容。 使用em单位时，由于其继承性，会导致复杂的维护问题。 一些人认为rem单位是与分辨率无关的，更受欢迎。然而，其他人认为现代浏览器会等比缩放所有元素，因此使用px也没有问题。 综合考虑以上因素，结论是：使用px。
+为什么选择px呢？
+根据CSS规范，px并 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在 Web 浏览器中使用.otf 字体</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8-web-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93/</link>

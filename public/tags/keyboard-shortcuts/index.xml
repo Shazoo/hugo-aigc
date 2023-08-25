@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>keyboard-shortcuts on 技术分享站</title>
+    <link>https://techdocdb.com/tags/keyboard-shortcuts/</link>
+    <description>Recent content in keyboard-shortcuts on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 25 Aug 2023 08:23:28 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/keyboard-shortcuts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Vim中如何移动到行末？</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8vim%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A7%BB%E5%8A%A8%E5%88%B0%E8%A1%8C%E6%9C%AB/</link>
+      <pubDate>Fri, 25 Aug 2023 08:23:28 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8vim%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A7%BB%E5%8A%A8%E5%88%B0%E8%A1%8C%E6%9C%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Vim中移动到当前行的末尾。我们将提供示例代码来说明这个问题。
+内容 要在Vim中移动到行末，你可以使用以下命令：
+使用$键。这会将光标移动到当前行的末尾。你还可以使用A键，它会将光标移动到行末并切换到编辑模式（Append）。要跳转到最后一个非空字符，你可以按下g然后_。
+A键将光标移动到行末并切换到编辑模式。
+g_键将光标移动到最后一个非空字符。
+0（数字0）将光标移动到行首，包括空格。
+这些命令可以在命令模式下使用。但请注意，$键只在命令模式下有效，不适用于插入模式。如果要在插入模式下移动光标到行末，请使用A键。
+总结 要在Vim中移动到行末，你可以使用$键。你还可以使用A键将光标移动到行末并切换到编辑模式。这些命令非常实用且易于记忆，帮助你更高效地进行编辑操作。熟练运用这些命令，将提升你的Vim编辑技巧。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

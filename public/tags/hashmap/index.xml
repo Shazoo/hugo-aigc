@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hashmap on 技术分享站</title>
+    <link>https://techdocdb.com/tags/hashmap/</link>
+    <description>Recent content in hashmap on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 25 Aug 2023 09:22:32 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在 HashMap 中保留插入顺序?</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</link>
+      <pubDate>Fri, 25 Aug 2023 09:22:32 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在 HashMap 中保留插入顺序。我们将提供示例代码来说明这个问题。
+内容 在使用 HashMap 时，遍历该映射时，数据的返回顺序通常是随机的。但是，有时我们需要保留插入的顺序。那么，我们该如何做到呢？
+Java 提供了一个类
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

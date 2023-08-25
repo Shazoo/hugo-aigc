@@ -27,5 +27,26 @@
       </description>
     </item>
     
+    <item>
+      <title>如何将 --no-ri --no-rdoc 设置为 gem install 的默认选项</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</link>
+      <pubDate>Fri, 25 Aug 2023 09:00:46 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何将 --no-ri --no-rdoc 设置为 gem install 的默认选项。我们将提供示例代码来说明这个问题。
+内容 为了将 --no-ri --no-rdoc 设置为 gem install 的默认选项，你可以将以下配置行添加到本地的 ~/.gemrc 文件中（在用户的主目录中）：
+1gem: --no-document 你也可以将此行添加到全局的 gemrc 配置文件中。
+以下是具体的操作步骤：
+通过以下命令编辑 .gemrc 文件： 1vi ~/.gemrc 在编辑器中插入以下内容： 1gem: --no-document 保存并退出编辑器。 经过以上操作，你就成功地将 --no-ri --no-rdoc 设置为 gem install 的默认选项。这样，在执行 gem install 命令时，将不会安装 RI 和 RDoc 文档。
+总结 通过编辑 ~/.gemrc 文件并添加 gem: --no-document，你可以将 --no-ri --no-rdoc 设置为 gem install 命令的默认选项。这样，你就可以在安装 gem 时跳过安装文档，节省时间和空间。
+          
+          
+        
+      </description>
+    </item>
+    
   </channel>
 </rss>
