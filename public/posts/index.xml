@@ -7,7 +7,250 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 10:49:37 +0800</lastBuildDate><atom:link href="https://techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 09:05:18 +0800</lastBuildDate><atom:link href="https://techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何去除.NET DateTime中的毫秒</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</link>
+      <pubDate>Mon, 28 Aug 2023 09:05:18 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何去除.NET DateTime中的毫秒。
+内容 在.NET中，DateTime对象包含毫秒级的精度。有时，我们需要删除这些毫秒部分，以便与其他时间进行比较或进行相应的处理。
+以下是一些常见的方法：
+1DateTime dateTime = DateTime.Now; 2dateTime = new DateTime(dateTime.Ticks - (dateTime.Ticks % TimeSpan.TicksPerSecond), dateTime.Kind); 第二种方式更为简短：
+1dateTime = dateTime.AddTicks(-(dateTime.Ticks % TimeSpan.TicksPerSecond)); 你也可以创建一个扩展方法来实现通用的去除毫秒部分的功能：
+1public static class DateTimeExtensions 2{ 3 public static DateTime TruncateMilliseconds(this DateTime dateTime) 4 { 5 return dateTime.AddTicks(-(dateTime.Ticks % TimeSpan.TicksPerSecond)); 6 } 7} 使用方法如下：
+1dateTime = dateTime.TruncateMilliseconds(); 总结 在.NET中，通过去除DateTime对象的毫秒部分，我们可以与其他时间进行比较或进行相应的处理。通过使用适当的方法，我们可以轻松地去除DateTime对象的毫秒部分。希望本教程对你了解如何去除.NET DateTime中的毫秒有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在PHP中如何获取文件扩展名？</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8php%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D/</link>
+      <pubDate>Mon, 28 Aug 2023 08:43:44 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8php%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D/</guid>
+      <description>
+        
+          
+            摘要 本教程将详细说明如何在PHP中获取文件的扩展名。我们将介绍使用不同的方法来获取扩展名，并提供示例代码。
+内容 在PHP中，我们可以使用多种方法来获取文件的扩展名。
+使用pathinfo函数 使用pathinfo函数可以直接获取文件的扩展名。以下是一个示例代码： 1$path = $_FILES[&amp;#39;image&amp;#39;][&amp;#39;name&amp;#39;]; 2$extension = pathinfo($path, PATHINFO_EXTENSION); 使用explode和end函数 使用explode函数将文件名拆分成一个数组，然后使用end函数获取数组的最后一个元素作为扩展名。以下是一个示例代码： 1$array = explode(&amp;#39;.&amp;#39;, $_FILES[&amp;#39;image&amp;#39;][&amp;#39;name&amp;#39;]); 2$extension = end($array); 使用substr和strrpos函数 使用substr函数和strrpos函数可以从文件名中截取出扩展名。以下是一个示例代码： 1$userfile_name = $_FILES[&amp;#39;image&amp;#39;][&amp;#39;name&amp;#39;]; 2$extension = substr($userfile_name, strrpos($userfile_name, &amp;#39;.&amp;#39;) + 1); 总结 在PHP中获取文件的扩展名有多种方法，包括使用pathinfo函数、explode和end函数以及substr和strrpos函数。根据具体情况，选择适合的方法即可。
+参考链接 pathinfo函数文档 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在JavaScript中如何编写行内的IF语句</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Mon, 28 Aug 2023 08:32:40 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中编写行内的IF语句。
+内容 在JavaScript中，你可以使用条件（三元）运算符来编写行内的IF语句。以下是几种常见的方法：
+1var result = (a &amp;lt; b) ? expressionTrue : expressionFalse; 这里的result变量将根据条件结果来赋值，如果条件为真，则使用expressionTrue的值，否则使用expressionFalse的值。
+你还可以在同一行中使用ELSE语句：
+1var result = (a &amp;lt; b) ? expressionTrue : expressionFalse; 你需要注意的是，条件运算符的操作数只能是一个表达式，如果需要执行多个语句，你可以
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>逐行添加Pandas Dataframe</title>
+      <link>https://techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</link>
+      <pubDate>Mon, 28 Aug 2023 08:05:56 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何按顺序逐行添加Pandas Dataframe。通过示例代码，我们将阐明问题的具体场景和解决方案。
+内容 有时候我们需要创建一个空的Dataframe，然后逐行添加数据。
+首先，我们可以创建一个空的Dataframe：
+1df = pd.DataFrame(columns=(&amp;#39;lib&amp;#39;, &amp;#39;qty1&amp;#39;, &amp;#39;qty2&amp;#39;)) 然后，我们可以使用df.loc[i]来添加新的行，其中i是要添加的行的索引，可以根据需要进行指定。
+例如，可以使用以下代码循环添加多行数据：
+1import pandas as pd 2from numpy.random import randint 3 4df = pd.DataFrame(columns=[&amp;#39;lib&amp;#39;, &amp;#39;qty1&amp;#39;, &amp;#39;qty2&amp;#39;]) 5 6for i in range(5): 7 df.loc[i] = [&amp;#39;name&amp;#39; + str(i)] + list(randint(10, size=2)) 通过循环逐行添加数据，我们可以构建一个完整的Dataframe。
+总结 通过循环逐行添加数据可以构建完整的Pandas Dataframe。只需使用df.loc[i]，其中i是要添加的行的索引，可以循环使用该方法来逐行添加数据。希望通过本教程，您对逐行添加Pandas Dataframe有了更好的理解。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&#34;正确&#34;的JSON日期格式是什么？</title>
+      <link>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Mon, 28 Aug 2023 07:40:44 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答有关JSON日期格式的问题。我们将讨论不同的JSON日期表示方法，并确定最佳的日期格式。
+内容 关于JSON日期格式，实际上并没有一个&amp;quot;正确&amp;quot;的格式，因为JSON本身并不规定日期的表示方式。然而，在JavaScript中，我们可以选择使用特定的日期格式。
+最常用的日期表示方法是使用JavaScript内置的Date对象的toJSON方法生成的格式：2012-04-23T18:25:43.511Z。以下是使用该格式的几个原因：
+易读且简洁：这个格式既容易阅读，又很简洁。 正确排序：这个日期格式可以正确排序，方便进行时间顺序的比较。 包含分数秒：这个格式包含了分数秒，有助于确保时间的准确性。 符合ISO 8601标准：这个日期格式符合国际标准ISO 8601的规定。 国际认可：ISO 8601已经在国际上被广泛接受并使用。 符合规范：ISO 8601得到W3C、RFC3339以及XKCD等机构的认可。 需要注意的是，虽然这个日期格式在大多数情况下被认为是最佳的选择，但每个日期库都可以理解&amp;quot;自1970年以来的毫秒数&amp;quot;。因此，如果需要易于移植性，使用毫秒数的格式是一个简单可行的选择。
+以下是示例代码：
+1const date = new Date(); 2const json = JSON.stringify(date); 3const parsed = JSON.parse(json); 4const dateObj = new Date(parsed); 总而言之，虽然JSON本身没有规定日期的表示方式，但在JavaScript中，使用Date对象的toJSON方法生成的格式（2012-04-23T18:25:43.511Z）被认为是最佳选择。选择日期格式时，需考虑易读性、排序性、数据准确性以及国际标准的因素。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Python对包含元组的列表进行排序</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8python%E5%AF%B9%E5%8C%85%E5%90%AB%E5%85%83%E7%BB%84%E7%9A%84%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Mon, 28 Aug 2023 07:25:43 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8python%E5%AF%B9%E5%8C%85%E5%90%AB%E5%85%83%E7%BB%84%E7%9A%84%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用Python对包含元组的列表进行排序。我们将展示多种方法，并附带相应的代码示例。
+内容 要对包含元组的列表按照元组中的第二个元素（整数值）进行升序排序，有几种方法可供选择。
+一种简单的方法是使用sorted()函数，并通过key关键字参数指定按照元组的第二个元素排序。下面是一个示例：
+1sorted( 2 [(&amp;#39;abc&amp;#39;, 121), (&amp;#39;abc&amp;#39;, 231), (&amp;#39;abc&amp;#39;, 148), (&amp;#39;abc&amp;#39;, 221)], 3 key=lambda x: x[1] 4) key参数应该是一个从数据结构中提取可比较元素的函数。在这种情况下，可比较元素是元组的第二个元素，因此我们使用[1]来访问它。
+另一种方法是使用operator.itemgetter(1)代替lambda函数。这是一个更快的方法，下面是一个示例：
+1from operator import itemgetter 2 3data = [(&amp;#39;abc&amp;#39;, 121), (&amp;#39;abc&amp;#39;, 231), (&amp;#39;abc&amp;#39;, 148), (&amp;#39;abc&amp;#39;, 221)] 4sorted(data, key=itemgetter(1)) 这种方法更可读，并且在执行上更高效。
+综上所述，我们可以使用上述方法对包含元组的列表进行排序。具体选择哪种方法取决于个人喜好和项目的要求。希望本教程对您理解如何使用Python对包含元组的列表进行排序有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何从 iptables 中删除特定规则</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</link>
+      <pubDate>Mon, 28 Aug 2023 07:19:38 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何从 iptables 中删除特定的规则。
+内容 如果你想要从 iptables 中删除特定的规则，你可以使用以下几种方法：
+使用 -D 命令来删除规则，将规则中的 -A 替换为 -D。例如:
+1iptables -D ... 使用规则的编号来删除规则。例如，首先使用以下命令列出 iptables 的规则及其行号：
+1iptables -S 然后根据需要删除特定的规则。例如，如果想删除第二条规则：
+1iptables -D INPUT 2 可以使用包含特定注释的规则进行删除。例如，首先添加一条带有注释的临时规则：
+1comment=$(cat /proc/sys/kernel/random/uuid | sed &amp;#39;s/\-//g&amp;#39;) 2iptables -A ... -m comment --comment &amp;#34;${comment}&amp;#34; -j REQUIRED_ACTION 当规则添加完成后，如果希望删除该规则或包含相同注释的所有规则，可以执行以下命令：
+1iptables-save | grep -v &amp;#34;${comment}&amp;#34; | iptables-restore 无论你选择哪种方法，都可以从 iptables 中删除匹配的规则而保留其他规则。希望本教程对你有所帮助！
+参考文献：
+man iptables - 查看 iptables 的手册以了解更多选项和命令使用。 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在JavaScript中给Date对象添加小时的方法</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 28 Aug 2023 07:03:02 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中给Date对象添加小时的方法。我们将提供示例代码来说明这个问题。
+内容 在JavaScript中，Date对象本身没有实现任何添加小时的方法，但是我们可以通过一些方法间接地给Date对象添加小时。
+一种方法是使用原型链，在Date对象的原型上定义一个addHours函数。下面是一个示例：
+1Date.prototype.addHours = function(h) { 2 this.setTime(this.getTime() + (h*60*60*1000)); 3 return this; 4} 通过这个方法，我们可以给Date对象添加指定的小时数，并返回一个新的Date对象。
+以下是示例用法：
+1var now = new Date(); 2var fourHoursLater = now.addHours(4); 另一种方法是直接对时间戳进行操作。我们可以通过将毫秒数与指定的小时数相加来实现。下面是一个示例：
+1var now = new Date(); 2var fourHoursLater = new Date(now.getTime() + (4*60*60*1000)); 这种方法也可以给Date对象添加指定的小时数，并返回一个新的Date对象。
+需要注意的是，这两种方法都是基于现有的Date对象创建新的Date对象，而不是直接修改原始的Date对象。
+总结 本教程介绍了在JavaScript中给Date对象添加小时的方法。通过在Date对象的原型上定义addHours函数，或直接对时间戳进行操作，我们可以给Date对象添加指定的小时数，并返回一个新的Date对象。这些方法可以灵活地处理Date对象的时间操作需求。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Ruby中为什么使用`rescue Exception =&gt; e`是不好的风格？</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>
+      <pubDate>Mon, 28 Aug 2023 06:54:45 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</guid>
+      <description>
+        
+          
+            摘要 rescue Exception =&amp;gt; e会捕获所有异常，这往往不是我们希望的行为。在处理异常时，应该只处理我们知道如何处理的异常。通常情况下，应该使用更具体的异常类进行捕获。如果需要访问异常对象，可以使用rescue =&amp;gt; e。
+内容 Exception是Ruby异常继承层次结构的根，当使用rescue Exception时，实际上是捕获了所有的异常，包括SyntaxError、LoadError和Interrupt等子类。这样的捕获行为可能产生意想不到的结果。
+例如，如果捕获了Interrupt异常，用户将无法使用CTRL+C来中止程序。捕获SignalException异常将导致程序无法正确响应信号，除非使用kill -9来终止程序。捕获SyntaxError意味着eval失败时不会触发错误。
+以下示例程序展示了捕获Exception可能带来的问题：
+1loop do 2 begin 3 sleep 1 4 eval &amp;#34;djsakru3924r9eiuorwju3498 += 5u84fior8u8t4ruyf8ihiure&amp;#34; 5 rescue Exception 6 puts &amp;#34;I refuse to fail or be stopped!&amp;#34; 7 end 8end 另外值得注意的是，捕获Exception并不是默认行为。在没有指定异常类的情况下，rescue语句默认会捕获StandardError。通常情况下，应该明确指定更具体的异常类，而不是捕获Exception。捕获Exception会扩大异常范围，可能导致严重的后果，并且使问题排查变得非常困难。
+对于需要捕获StandardError并且需要访问异常对象的情况，可以使用下面的语法：
+1begin 2 # ... 3rescue =&amp;gt; e 4 # ... 5end 这等效于：
+1begin 2 # ... 3rescue StandardError =&amp;gt; e 4 # ... 5end 为了记录和报告目的而捕获Exception是少数几个可以接受的情况之一，在这种情况下，应该立即重新抛出异常，避免潜在的问题。
+1begin 2 # .
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>通过jQuery选择具有多个类的元素</title>
+      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Mon, 28 Aug 2023 06:38:41 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答如何使用jQuery选择具有多个类的元素的问题。我们将介绍jQuery选择器的不同用法，并提供相应的示例。
+内容 在使用jQuery选择器时，有几种方法可以选择具有多个类的元素。下面将介绍几种常见的方法。
+使用组合选择器 如果要选择具有两个类（交集）的元素，只需要将选择器直接连在一起，而不使用空格隔开。示例如下：
+1$(&amp;#39;.a.b&amp;#39;) 你可以交换类的顺序，结果仍然是相同的：
+1$(&amp;#39;.b.a&amp;#39;) 所以如果要选择具有id为&amp;quot;a&amp;quot;，类为&amp;quot;b&amp;quot;和&amp;quot;c&amp;quot;的div元素，可以使用以下选择器：
+1$(&amp;#39;div#a.b.c&amp;#39;) 在实际使用中，通常不需要如此详细的选择器，只使用id或类选择器就足够了，例如：
+1$(&amp;#39;#a&amp;#39;) 总结 通过使用jQuery选择器，可以轻松选择具有多个类的元素。可以使用组合选择器表示交集，或者根据实际需要选择更简洁的选择器。
+参考链接 jQuery选择器文档 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用CSS设置背景透明度</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</link>
+      <pubDate>Mon, 28 Aug 2023 05:56:44 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用CSS设置背景透明度。我们将提供使用示例代码来演示如何设置HTML元素的背景透明度。
+内容 要设置背景透明度，您可以使用以下几种方法：
+使用rgba()函数设置背景颜色，并在最后一个参数中指定透明度值。例如： 1div { 2 background-color: rgba(0, 0, 0, 0.4); /* 40%透明度的黑色背景 */ 3} 使用半透明PNG图片作为背景。您可以使用图片编辑软件创建一个半透明的PNG图片，并将其设置为HTML元素的背景图像。
+使用伪元素::before和::after创建一个和HTML元素大小相同的半透明背景，并使用z-index属性将其放置在HTML元素的前面。例如：
+1.container { 2 position: relative; 3 z-index: 1; 4} 5 6.container::before { 7 content: &amp;#34;&amp;#34;; 8 position: absolute; 9 top: 0; 10 left: 0; 11 width: 100%; 12 height: 100%; 13 opacity: 0.4; 14 background: url(path/to/your/image.jpg); 15} 通过以上方法，您可以设置HTML元素的背景透明度。请根据您的需求选择适合的方法。
+总结 本教程介绍了如何使用CSS设置背景透明度。无论是通过设置背景颜色的透明度，使用半透明PNG图片作为背景，还是通过创建伪元素来实现背景透明度，您都可以根据需求选择适合的方法。希望本教程对您有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在更改 crontab 文件后需要重启 cron 服务吗？</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>

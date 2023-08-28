@@ -7,7 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 08:31:48 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 06:38:41 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通过jQuery选择具有多个类的元素</title>
+      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Mon, 28 Aug 2023 06:38:41 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答如何使用jQuery选择具有多个类的元素的问题。我们将介绍jQuery选择器的不同用法，并提供相应的示例。
+内容 在使用jQuery选择器时，有几种方法可以选择具有多个类的元素。下面将介绍几种常见的方法。
+使用组合选择器 如果要选择具有两个类（交集）的元素，只需要将选择器直接连在一起，而不使用空格隔开。示例如下：
+1$(&amp;#39;.a.b&amp;#39;) 你可以交换类的顺序，结果仍然是相同的：
+1$(&amp;#39;.b.a&amp;#39;) 所以如果要选择具有id为&amp;quot;a&amp;quot;，类为&amp;quot;b&amp;quot;和&amp;quot;c&amp;quot;的div元素，可以使用以下选择器：
+1$(&amp;#39;div#a.b.c&amp;#39;) 在实际使用中，通常不需要如此详细的选择器，只使用id或类选择器就足够了，例如：
+1$(&amp;#39;#a&amp;#39;) 总结 通过使用jQuery选择器，可以轻松选择具有多个类的元素。可以使用组合选择器表示交集，或者根据实际需要选择更简洁的选择器。
+参考链接 jQuery选择器文档 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用CSS设置背景透明度</title>
+      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</link>
+      <pubDate>Mon, 28 Aug 2023 05:56:44 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用CSS设置背景透明度。我们将提供使用示例代码来演示如何设置HTML元素的背景透明度。
+内容 要设置背景透明度，您可以使用以下几种方法：
+使用rgba()函数设置背景颜色，并在最后一个参数中指定透明度值。例如： 1div { 2 background-color: rgba(0, 0, 0, 0.4); /* 40%透明度的黑色背景 */ 3} 使用半透明PNG图片作为背景。您可以使用图片编辑软件创建一个半透明的PNG图片，并将其设置为HTML元素的背景图像。
+使用伪元素::before和::after创建一个和HTML元素大小相同的半透明背景，并使用z-index属性将其放置在HTML元素的前面。例如：
+1.container { 2 position: relative; 3 z-index: 1; 4} 5 6.container::before { 7 content: &amp;#34;&amp;#34;; 8 position: absolute; 9 top: 0; 10 left: 0; 11 width: 100%; 12 height: 100%; 13 opacity: 0.4; 14 background: url(path/to/your/image.jpg); 15} 通过以上方法，您可以设置HTML元素的背景透明度。请根据您的需求选择适合的方法。
+总结 本教程介绍了如何使用CSS设置背景透明度。无论是通过设置背景颜色的透明度，使用半透明PNG图片作为背景，还是通过创建伪元素来实现背景透明度，您都可以根据需求选择适合的方法。希望本教程对您有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用`px`还是`rem`作为CSS中的尺寸单位？</title>
       <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</link>

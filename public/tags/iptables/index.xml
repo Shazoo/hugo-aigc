@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iptables on 技术分享站</title>
+    <link>https://techdocdb.com/tags/iptables/</link>
+    <description>Recent content in iptables on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 28 Aug 2023 07:19:38 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何从 iptables 中删除特定规则</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</link>
+      <pubDate>Mon, 28 Aug 2023 07:19:38 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何从 iptables 中删除特定的规则。
+内容 如果你想要从 iptables 中删除特定的规则，你可以使用以下几种方法：
+使用 -D 命令来删除规则，将规则中的 -A 替换为 -D。例如:
+1iptables -D ... 使用规则的编号来删除规则。例如，首先使用以下命令列出 iptables 的规则及其行号：
+1iptables -S 然后根据需要删除特定的规则。例如，如果想删除第二条规则：
+1iptables -D INPUT 2 可以使用包含特定注释的规则进行删除。例如，首先添加一条带有注释的临时规则：
+1comment=$(cat /proc/sys/kernel/random/uuid | sed &amp;#39;s/\-//g&amp;#39;) 2iptables -A ... -m comment --comment &amp;#34;${comment}&amp;#34; -j REQUIRED_ACTION 当规则添加完成后，如果希望删除该规则或包含相同注释的所有规则，可以执行以下命令：
+1iptables-save | grep -v &amp;#34;${comment}&amp;#34; | iptables-restore 无论你选择哪种方法，都可以从 iptables 中删除匹配的规则而保留其他规则。希望本教程对你有所帮助！
+参考文献：
+man iptables - 查看 iptables 的手册以了解更多选项和命令使用。 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

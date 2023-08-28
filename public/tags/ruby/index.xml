@@ -7,7 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 09:14:58 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 06:54:45 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Ruby中为什么使用`rescue Exception =&gt; e`是不好的风格？</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>
+      <pubDate>Mon, 28 Aug 2023 06:54:45 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</guid>
+      <description>
+        
+          
+            摘要 rescue Exception =&amp;gt; e会捕获所有异常，这往往不是我们希望的行为。在处理异常时，应该只处理我们知道如何处理的异常。通常情况下，应该使用更具体的异常类进行捕获。如果需要访问异常对象，可以使用rescue =&amp;gt; e。
+内容 Exception是Ruby异常继承层次结构的根，当使用rescue Exception时，实际上是捕获了所有的异常，包括SyntaxError、LoadError和Interrupt等子类。这样的捕获行为可能产生意想不到的结果。
+例如，如果捕获了Interrupt异常，用户将无法使用CTRL+C来中止程序。捕获SignalException异常将导致程序无法正确响应信号，除非使用kill -9来终止程序。捕获SyntaxError意味着eval失败时不会触发错误。
+以下示例程序展示了捕获Exception可能带来的问题：
+1loop do 2 begin 3 sleep 1 4 eval &amp;#34;djsakru3924r9eiuorwju3498 += 5u84fior8u8t4ruyf8ihiure&amp;#34; 5 rescue Exception 6 puts &amp;#34;I refuse to fail or be stopped!&amp;#34; 7 end 8end 另外值得注意的是，捕获Exception并不是默认行为。在没有指定异常类的情况下，rescue语句默认会捕获StandardError。通常情况下，应该明确指定更具体的异常类，而不是捕获Exception。捕获Exception会扩大异常范围，可能导致严重的后果，并且使问题排查变得非常困难。
+对于需要捕获StandardError并且需要访问异常对象的情况，可以使用下面的语法：
+1begin 2 # ... 3rescue =&amp;gt; e 4 # ... 5end 这等效于：
+1begin 2 # ... 3rescue StandardError =&amp;gt; e 4 # ... 5end 为了记录和报告目的而捕获Exception是少数几个可以接受的情况之一，在这种情况下，应该立即重新抛出异常，避免潜在的问题。
+1begin 2 # .
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>通过 UNIX 时间戳将时间转换为 Ruby DateTime 格式</title>
       <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</link>

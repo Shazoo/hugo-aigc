@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 13:12:20 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 09:05:18 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何去除.NET DateTime中的毫秒</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</link>
+      <pubDate>Mon, 28 Aug 2023 09:05:18 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何去除.NET DateTime中的毫秒。
+内容 在.NET中，DateTime对象包含毫秒级的精度。有时，我们需要删除这些毫秒部分，以便与其他时间进行比较或进行相应的处理。
+以下是一些常见的方法：
+1DateTime dateTime = DateTime.Now; 2dateTime = new DateTime(dateTime.Ticks - (dateTime.Ticks % TimeSpan.TicksPerSecond), dateTime.Kind); 第二种方式更为简短：
+1dateTime = dateTime.AddTicks(-(dateTime.Ticks % TimeSpan.TicksPerSecond)); 你也可以创建一个扩展方法来实现通用的去除毫秒部分的功能：
+1public static class DateTimeExtensions 2{ 3 public static DateTime TruncateMilliseconds(this DateTime dateTime) 4 { 5 return dateTime.AddTicks(-(dateTime.Ticks % TimeSpan.TicksPerSecond)); 6 } 7} 使用方法如下：
+1dateTime = dateTime.TruncateMilliseconds(); 总结 在.NET中，通过去除DateTime对象的毫秒部分，我们可以与其他时间进行比较或进行相应的处理。通过使用适当的方法，我们可以轻松地去除DateTime对象的毫秒部分。希望本教程对你了解如何去除.NET DateTime中的毫秒有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>将Linq查询结果转换为字典</title>
       <link>https://techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</link>

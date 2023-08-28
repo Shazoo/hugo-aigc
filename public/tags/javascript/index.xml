@@ -7,7 +7,72 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 07:44:17 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 08:32:40 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在JavaScript中如何编写行内的IF语句</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Mon, 28 Aug 2023 08:32:40 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中编写行内的IF语句。
+内容 在JavaScript中，你可以使用条件（三元）运算符来编写行内的IF语句。以下是几种常见的方法：
+1var result = (a &amp;lt; b) ? expressionTrue : expressionFalse; 这里的result变量将根据条件结果来赋值，如果条件为真，则使用expressionTrue的值，否则使用expressionFalse的值。
+你还可以在同一行中使用ELSE语句：
+1var result = (a &amp;lt; b) ? expressionTrue : expressionFalse; 你需要注意的是，条件运算符的操作数只能是一个表达式，如果需要执行多个语句，你可以
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&#34;正确&#34;的JSON日期格式是什么？</title>
+      <link>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Mon, 28 Aug 2023 07:40:44 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答有关JSON日期格式的问题。我们将讨论不同的JSON日期表示方法，并确定最佳的日期格式。
+内容 关于JSON日期格式，实际上并没有一个&amp;quot;正确&amp;quot;的格式，因为JSON本身并不规定日期的表示方式。然而，在JavaScript中，我们可以选择使用特定的日期格式。
+最常用的日期表示方法是使用JavaScript内置的Date对象的toJSON方法生成的格式：2012-04-23T18:25:43.511Z。以下是使用该格式的几个原因：
+易读且简洁：这个格式既容易阅读，又很简洁。 正确排序：这个日期格式可以正确排序，方便进行时间顺序的比较。 包含分数秒：这个格式包含了分数秒，有助于确保时间的准确性。 符合ISO 8601标准：这个日期格式符合国际标准ISO 8601的规定。 国际认可：ISO 8601已经在国际上被广泛接受并使用。 符合规范：ISO 8601得到W3C、RFC3339以及XKCD等机构的认可。 需要注意的是，虽然这个日期格式在大多数情况下被认为是最佳的选择，但每个日期库都可以理解&amp;quot;自1970年以来的毫秒数&amp;quot;。因此，如果需要易于移植性，使用毫秒数的格式是一个简单可行的选择。
+以下是示例代码：
+1const date = new Date(); 2const json = JSON.stringify(date); 3const parsed = JSON.parse(json); 4const dateObj = new Date(parsed); 总而言之，虽然JSON本身没有规定日期的表示方式，但在JavaScript中，使用Date对象的toJSON方法生成的格式（2012-04-23T18:25:43.511Z）被认为是最佳选择。选择日期格式时，需考虑易读性、排序性、数据准确性以及国际标准的因素。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在JavaScript中给Date对象添加小时的方法</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 28 Aug 2023 07:03:02 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中给Date对象添加小时的方法。我们将提供示例代码来说明这个问题。
+内容 在JavaScript中，Date对象本身没有实现任何添加小时的方法，但是我们可以通过一些方法间接地给Date对象添加小时。
+一种方法是使用原型链，在Date对象的原型上定义一个addHours函数。下面是一个示例：
+1Date.prototype.addHours = function(h) { 2 this.setTime(this.getTime() + (h*60*60*1000)); 3 return this; 4} 通过这个方法，我们可以给Date对象添加指定的小时数，并返回一个新的Date对象。
+以下是示例用法：
+1var now = new Date(); 2var fourHoursLater = now.addHours(4); 另一种方法是直接对时间戳进行操作。我们可以通过将毫秒数与指定的小时数相加来实现。下面是一个示例：
+1var now = new Date(); 2var fourHoursLater = new Date(now.getTime() + (4*60*60*1000)); 这种方法也可以给Date对象添加指定的小时数，并返回一个新的Date对象。
+需要注意的是，这两种方法都是基于现有的Date对象创建新的Date对象，而不是直接修改原始的Date对象。
+总结 本教程介绍了在JavaScript中给Date对象添加小时的方法。通过在Date对象的原型上定义addHours函数，或直接对时间戳进行操作，我们可以给Date对象添加指定的小时数，并返回一个新的Date对象。这些方法可以灵活地处理Date对象的时间操作需求。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何克隆一个 Date 对象？</title>
       <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA-date-%E5%AF%B9%E8%B1%A1/</link>

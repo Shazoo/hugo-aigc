@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jquery-selectors on 技术分享站</title>
+    <link>https://techdocdb.com/tags/jquery-selectors/</link>
+    <description>Recent content in jquery-selectors on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 28 Aug 2023 06:38:41 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/jquery-selectors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通过jQuery选择具有多个类的元素</title>
+      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Mon, 28 Aug 2023 06:38:41 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答如何使用jQuery选择具有多个类的元素的问题。我们将介绍jQuery选择器的不同用法，并提供相应的示例。
+内容 在使用jQuery选择器时，有几种方法可以选择具有多个类的元素。下面将介绍几种常见的方法。
+使用组合选择器 如果要选择具有两个类（交集）的元素，只需要将选择器直接连在一起，而不使用空格隔开。示例如下：
+1$(&amp;#39;.a.b&amp;#39;) 你可以交换类的顺序，结果仍然是相同的：
+1$(&amp;#39;.b.a&amp;#39;) 所以如果要选择具有id为&amp;quot;a&amp;quot;，类为&amp;quot;b&amp;quot;和&amp;quot;c&amp;quot;的div元素，可以使用以下选择器：
+1$(&amp;#39;div#a.b.c&amp;#39;) 在实际使用中，通常不需要如此详细的选择器，只使用id或类选择器就足够了，例如：
+1$(&amp;#39;#a&amp;#39;) 总结 通过使用jQuery选择器，可以轻松选择具有多个类的元素。可以使用组合选择器表示交集，或者根据实际需要选择更简洁的选择器。
+参考链接 jQuery选择器文档 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

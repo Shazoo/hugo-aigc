@@ -7,7 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 09:14:58 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/datetime/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 09:05:18 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/datetime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何去除.NET DateTime中的毫秒</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</link>
+      <pubDate>Mon, 28 Aug 2023 09:05:18 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何去除.NET DateTime中的毫秒。
+内容 在.NET中，DateTime对象包含毫秒级的精度。有时，我们需要删除这些毫秒部分，以便与其他时间进行比较或进行相应的处理。
+以下是一些常见的方法：
+1DateTime dateTime = DateTime.Now; 2dateTime = new DateTime(dateTime.Ticks - (dateTime.Ticks % TimeSpan.TicksPerSecond), dateTime.Kind); 第二种方式更为简短：
+1dateTime = dateTime.AddTicks(-(dateTime.Ticks % TimeSpan.TicksPerSecond)); 你也可以创建一个扩展方法来实现通用的去除毫秒部分的功能：
+1public static class DateTimeExtensions 2{ 3 public static DateTime TruncateMilliseconds(this DateTime dateTime) 4 { 5 return dateTime.AddTicks(-(dateTime.Ticks % TimeSpan.TicksPerSecond)); 6 } 7} 使用方法如下：
+1dateTime = dateTime.TruncateMilliseconds(); 总结 在.NET中，通过去除DateTime对象的毫秒部分，我们可以与其他时间进行比较或进行相应的处理。通过使用适当的方法，我们可以轻松地去除DateTime对象的毫秒部分。希望本教程对你了解如何去除.NET DateTime中的毫秒有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在JavaScript中给Date对象添加小时的方法</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 28 Aug 2023 07:03:02 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中给Date对象添加小时的方法。我们将提供示例代码来说明这个问题。
+内容 在JavaScript中，Date对象本身没有实现任何添加小时的方法，但是我们可以通过一些方法间接地给Date对象添加小时。
+一种方法是使用原型链，在Date对象的原型上定义一个addHours函数。下面是一个示例：
+1Date.prototype.addHours = function(h) { 2 this.setTime(this.getTime() + (h*60*60*1000)); 3 return this; 4} 通过这个方法，我们可以给Date对象添加指定的小时数，并返回一个新的Date对象。
+以下是示例用法：
+1var now = new Date(); 2var fourHoursLater = now.addHours(4); 另一种方法是直接对时间戳进行操作。我们可以通过将毫秒数与指定的小时数相加来实现。下面是一个示例：
+1var now = new Date(); 2var fourHoursLater = new Date(now.getTime() + (4*60*60*1000)); 这种方法也可以给Date对象添加指定的小时数，并返回一个新的Date对象。
+需要注意的是，这两种方法都是基于现有的Date对象创建新的Date对象，而不是直接修改原始的Date对象。
+总结 本教程介绍了在JavaScript中给Date对象添加小时的方法。通过在Date对象的原型上定义addHours函数，或直接对时间戳进行操作，我们可以给Date对象添加指定的小时数，并返回一个新的Date对象。这些方法可以灵活地处理Date对象的时间操作需求。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>通过 UNIX 时间戳将时间转换为 Ruby DateTime 格式</title>
       <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</link>
