@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sublimetext2 on 技术分享站</title>
+    <link>https://techdocdb.com/tags/sublimetext2/</link>
+    <description>Recent content in sublimetext2 on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 06:27:32 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/sublimetext2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Sublime Text 2中进行正则表达式搜索替换</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</link>
+      <pubDate>Tue, 29 Aug 2023 06:27:32 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释在Sublime Text 2中如何使用正则表达式进行搜索替换。我们将使用具体示例说明如何在匹配组上执行替换。
+内容 在Sublime Text 2中，您可以使用正则表达式进行搜索替换。下面是一些使用示例：
+使用括号指定匹配组：在您的搜索表达式中使用括号来指定匹配组。例如，要将文本： 1Hello my name is bob 使用以下搜索表达式进行替换：
+1Find what: my name is (\w)+ 2Replace with: my name used to be $1 确保正确匹配整个名称而不仅仅是字母。搜索表达式应为：
+1my name is (\w+) 替换匹配组：要在替换字符串中使用匹配组的内容，使用以下语法： 1$1 或
+1\1 这将替换为匹配组的内容。
+请注意，正确设置搜索条件和正确使用匹配组非常重要。
+总结 在Sublime Text 2中，您可以使用正则表达式进行搜索替换。通过使用括号来指定匹配组，并在替换字符串中使用$1或\1来引用匹配组的内容，您可以使用正则表达式轻松进行高级搜索替换操作。
+相关链接 Sublime Text官方文档 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

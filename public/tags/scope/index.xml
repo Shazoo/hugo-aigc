@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scope on 技术分享站</title>
+    <link>https://techdocdb.com/tags/scope/</link>
+    <description>Recent content in scope on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 09:53:25 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/scope/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在AngularJS中控制器之间的正确通讯方式</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8angularjs%E4%B8%AD%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Tue, 29 Aug 2023 09:53:25 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8angularjs%E4%B8%AD%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在AngularJS中控制器之间进行通讯的正确方式。我们将提供多种解决方案，并通过示例代码演示每种解决方案的用法和效果。
+内容 在AngularJS中，有多种方法可以实现控制器之间的通讯。以下是几种解决方案：
+解决方案1：使用$rootScope.$broadcast和$scope.$on 在AngularJS中，可以使用$rootScope.$broadcast方法从根作用域向下广播事件，然后使用$scope.$on方法在本地作用域中将事件订阅下来。以下是使用$rootScope.$broadcast和$scope.$on进行通讯的示例代码：
+1// 发布事件 2$rootScope.$broadcast(&amp;#39;eventName&amp;#39;, eventData); 3 4// 订阅事件 5$scope.$on(&amp;#39;eventName&amp;#39;, function(event, data){ 6 // 处理事件 7}); 通过以上解决方案，您可以在AngularJS中实现控制器之间的通讯。请根据您的需求选择适合的解决方案。
+总结 本教程介绍了在AngularJS中控制器之间进行通讯的几种方式。使用$rootScope.$broadcast和$scope.$on方法可以实现控制器之间的事件传递。希望本教程对您有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>numpy on 技术分享站</title>
+    <link>https://techdocdb.com/tags/numpy/</link>
+    <description>Recent content in numpy on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 07:18:38 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何从NumPy数组中删除NaN值？</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Enumpy%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4nan%E5%80%BC/</link>
+      <pubDate>Tue, 29 Aug 2023 07:18:38 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Enumpy%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4nan%E5%80%BC/</guid>
+      <description>
+        
+          
+            摘要 本教程介绍了如何从NumPy数组中删除NaN值。通过使用示例和详细说明，展示了使用NumPy的功能来删除数组中的NaN值的不同方法。
+内容 在NumPy中，可以使用以下方法来删除数组中的NaN值：
+使用逻辑运算来过滤出非NaN值的索引，并将其应用于原始数组。 1x = x[~numpy.isnan(x)] 下面是使用这个方法的示例：
+1import numpy as np 2 3# 创建包含NaN值的NumPy数组 4x = np.array([1, 2, np.nan, 4, np.nan, 8]) 5 6# 使用~numpy.isnan(x)过滤出非NaN值的索引，并将其应用于x数组 7x = x[~np.isnan(x)] 8 9# 输出过滤后的数组 10print(x) 11# 输出: [1, 2, 4, 8] 总结 通过本教程，我们学习了如何从NumPy数组中删除NaN值。可以利用逻辑运算过滤出非NaN值的索引，并将其应用于原始数组，从而得到不包含NaN值的新数组。这种方法在处理数据时非常实用。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

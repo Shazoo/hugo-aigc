@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>using on 技术分享站</title>
+    <link>https://techdocdb.com/tags/using/</link>
+    <description>Recent content in using on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 09:32:58 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/using/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在MySQL中使用JOIN ON和USING的区别是什么？</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Tue, 29 Aug 2023 09:32:58 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释在MySQL中使用JOIN ON和USING的区别。我们将使用示例表和代码来说明问题和解决方案。
+内容 在MySQL中，使用JOIN进行表连接时，可以使用ON和USING来指定连接条件。以下是对两者区别的简要描述：
+ON用于更一般的表连接。可以使用单个列、多个列甚至条件来连接两个表。例如：
+1SELECT * FROM table1 JOIN table2 ON table1.column = table2.column WHERE ... USING在两个表中共享相同名称的列用于连接时非常有用。在这种情况下，可以使用以下语法：
+1SELECT ... FROM table1 JOIN table2 USING (column) 此外，使用USING时不需要完全限定连接列的名称。
+通常情况下，ON和USING可以实现相同的结果。使用USING的一个好处是，查询结果中列名只出现一次，并且没有必要使用完全限定列名。但在某些情况下，由于连接列的名称不同或希望使用更复杂的连接条件，使用ON可能更合适。
+总结 在MySQL中，使用JOIN进行表连接时，可以使用ON或USING指定连接条件。使用ON时可以更灵活地定义连接条件，而使用USING时可以更方便地处理相同名称的连接列。
+相关链接 MySQL官方文档 - JOIN操作 MySQL官方文档 - SELECT语句 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

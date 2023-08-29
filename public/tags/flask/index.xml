@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flask on 技术分享站</title>
+    <link>https://techdocdb.com/tags/flask/</link>
+    <description>Recent content in flask on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 07:21:44 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Flask路由中如何访问查询字符串</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Tue, 29 Aug 2023 07:21:44 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在Flask路由中访问查询参数或查询字符串。我们将使用具体示例来说明如何通过Flask的request对象访问查询字符串。
+内容 在Flask路由中，要访问查询字符串中的查询参数或查询字符串，可以使用以下方法：
+使用Flask的request对象：通过导入Flask的request对象，您可以轻松访问查询字符串。示例代码如下： 1from flask import Flask, request 2 3app = Flask(__name__) 4 5@app.route(&amp;#39;/data&amp;#39;) 6def data(): 7 # 通过request.args.get()获取参数的值 8 user = request.args.get(&amp;#39;user&amp;#39;) 9 return render_template(&amp;#39;data.html&amp;#39;) 在上述示例中，我们使用request.args.get()方法获取查询参数的值。通过使用request对象的args属性，我们可以获取到查询字符串的值。 总结 通过Flask的request对象，我们可以轻松访问Flask路由中的查询字符串。使用request.args.get()方法可以获取指定查询参数的值。
+相关链接 Flask官方文档 Flask request对象文档 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

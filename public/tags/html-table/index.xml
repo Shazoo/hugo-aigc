@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html-table on 技术分享站</title>
+    <link>https://techdocdb.com/tags/html-table/</link>
+    <description>Recent content in html-table on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 06:23:00 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/html-table/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何将表格单元格宽度适应内容</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Tue, 29 Aug 2023 06:23:00 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何使用CSS来强制一个单元格（或一列中的所有单元格）根据其中的内容宽度来自适应，而不是拉伸（这是默认行为）。通过示例代码，我们将阐明问题的具体场景并提供解决方案。
+内容 假设我们有以下标记，我们想使用CSS来实现一个单元格（或一列中的所有单元格）根据其中内容的宽度来自适应，而不是拉伸（这是默认行为）。
+1&amp;lt;table style=&amp;#34;width: 100%;&amp;#34;&amp;gt; 2 &amp;lt;tr&amp;gt; 3 &amp;lt;td class=&amp;#34;block&amp;#34;&amp;gt;this should stretch&amp;lt;/td&amp;gt; 4 &amp;lt;td class=&amp;#34;block&amp;#34;&amp;gt;this should stretch&amp;lt;/td&amp;gt; 5 &amp;lt;td class=&amp;#34;block&amp;#34;&amp;gt;this should be the content width&amp;lt;/td&amp;gt; 6 &amp;lt;/tr&amp;gt; 7&amp;lt;/table&amp;gt; 我们可以使用以下CSS来实现这个效果：
+1td { 2 border: 1px solid black; 3} 4 5tr td:last-child { 6 width: 1%; 7 white-space: nowrap; 8} 这样，最后一个单元格（或一列中的所有单元格）将根据其中的内容宽度来自适应，而不会拉伸。
+总结 您可以使用CSS中的white-space属性和width属性来控制表格中单元格的宽度。通过将white-space设置为nowrap，可以确保内容不换行，并根据内容宽度来自适应单元格宽度。通过将width设置为较小的百分比值（如1%），可以避免拉伸，并让单元格根据内容宽度自动调整。
+设置单元格宽度适应内容可以提高表格的可读性和美观性，并确保整个表格始终保持一致的外观。如果您喜欢根据内容宽度自动调整单元格宽度，而不是硬编码宽度值，那么使用CSS来实现这一目标是一个很好的选择。
+希望通过本教程，您对如何将表格单元格宽度适应内容有了更好的理解，并知道如何使用CSS来实现此效果。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
