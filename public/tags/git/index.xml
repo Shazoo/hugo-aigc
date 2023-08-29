@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 09:00:58 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 09:07:55 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>撤销Git中的stash操作</title>
+      <link>https://techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Tue, 29 Aug 2023 09:07:55 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</guid>
+      <description>
+        
+          
+            摘要 本教程介绍如何撤销Git中的stash操作。通过示例代码和解释，演示了如何使用正确的Git命令来恢复之前的状态。
+内容 如果你在一个尚未提交的项目中执行了stash操作，想要回到stash之前的状态，有一个简单的方法。使用以下命令来恢复stash的修改：
+1git stash apply 这个命令将恢复最近的stash修改。如果你想要恢复特定的stash，可以使用stash@{n}，n表示stash的索引。例如：
+1git stash apply stash@{2} 这样可以恢复第2个stash的修改。你可以使用git stash list命令来查看所有的stash，并找到需要恢复的索引。
+如果你想要同时恢复被暂存（staging）的修改和未暂存（working）的修改，可以使用--index选项：
+1git stash apply --index 这个命令会同时恢复被暂存的修改和未暂存的修改。
+通过这些命令，你可以轻松地撤销Git中的stash操作，恢复到之前的状态。
+总结 通过本教程，我们学习了如何撤销Git中的stash操作。使用git stash apply命令可以恢复最近的stash修改，使用git stash apply stash@{n}命令可以恢复特定的stash修改。如果你还想撤销被暂存的修改，可以使用git stash apply --index命令。根据你的需求，选择适当的命令来恢复stash修改，并回到之前的状态。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Git中从存储区（stash）中提取单个文件（或文件的更改）</title>
+      <link>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
+      <pubDate>Tue, 29 Aug 2023 05:50:51 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何从Git的存储区（stash）中提取单个文件或文件的更改，而无需弹出存储区的更改集。我们将讨论使用Git命令和Git客户端工具提取单个文件的方法。
+内容 在Git中，存储区（stash）允许我们保存当前工作目录的临时更改，以便在后续的开发过程中重新应用。然而，有时我们只需要从存储区中提取单个文件或文件的更改，而无需应用整个更改集。以下是几种方法：
+使用Git命令行工具，可以使用以下命令提取存储区中的文件更改：
+1git checkout stash@{0} -- &amp;lt;filename&amp;gt; 这将把存储区中的文件更改应用到当前工作目录中的指定文件。
+使用Git客户端工具，可以按照以下步骤操作：
+打开Git客户端并进入源代码控制（Source Control）选项卡。 点击存储区（Stashes）选项，查看可用的存储区。 选择目标存储区。 右键点击要提取的文件，弹出菜单中选择“Apply Changes”（应用更改）或“Restore (Checkout)”（恢复/检出）选项。 如果选择“Apply Changes”，则所选文件的更改将出现在“Changes”（更改）部分；如果选择“Restore (Checkout)”，则所选文件的更改将出现在“Staged Changes”（暂存更改）部分。 下面是使用Git命令行工具和Git客户端工具分别提取文件的示例代码：
+1# 使用Git命令行工具 2git checkout stash@{0} -- filename 3 4# 使用Git客户端工具 5# 请参考客户端工具的界面操作 总结 从Git的存储区中提取单个文件或文件的更改是一个常见的操作。使用Git命令行工具时，可以使用git checkout stash@{0} -- &amp;lt;filename&amp;gt;命令将存储区中的文件更改应用到工作目录中的指定文件。使用Git客户端工具时，可以通过界面操作选择要提取的文件并将其应用到工作目录中。根据个人习惯和偏好，选择适合自己的方法来提取文件更改。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何判断存储项是否存在于GitHub远程仓库？</title>
       <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>

@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 09:22:32 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 06:00:42 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安全使用（匿名）内部类的时机</title>
+      <link>https://techdocdb.com/posts/%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Tue, 29 Aug 2023 06:00:42 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E6%97%B6%E6%9C%BA/</guid>
+      <description>
+        
+          
+            摘要 本教程将讨论在何种情况下可以安全使用（匿名）内部类。我们将解释内部类和内存泄漏的概念，以及在Android开发中如何使用内部类。
+内容 在讨论内部类的安全使用之前，我们先来了解一下内部类和内存泄漏的概念。
+内部类：介绍
+在Java中，内部类是指一个类的定义包含在另一个类的定义中。主要有两种类型的内部类：静态内部类和非静态内部类。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何在 HashMap 中保留插入顺序?</title>
       <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</link>

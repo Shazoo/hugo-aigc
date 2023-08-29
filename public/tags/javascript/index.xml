@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 Aug 2023 08:32:40 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 05:56:04 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP中的shell_exec()和exec()命令的区别</title>
+      <link>https://techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 29 Aug 2023 05:56:04 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释在PHP中使用的shell_exec()和exec()命令的区别。我们将提供示例代码，并讨论这两个命令的不同之处。
+内容 在PHP中，shell_exec()和exec()都是用于执行外部命令的函数。它们之间的区别如下：
+shell_exec()函数 shell_exec()函数执行外部命令，并将完整的输出作为字符串返回。这意味着它会获取命令的所有输出，而不仅仅是最后一行。
+exec()函数 exec()函数执行外部命令，并返回输出的最后一行。它还可以通过可选参数接收命令的其他输出行。
+示例代码 下面是使用shell_exec()和exec()的示例代码：
+1$output1 = shell_exec(&amp;#39;ls&amp;#39;); 2var_dump($output1); // 返回完整的输出流作为字符串 3 4$output2 = exec(&amp;#39;ls&amp;#39;); 5var_dump($output2); // 返回输出的最后一行 总结 shell_exec()和exec()函数都是在PHP中执行外部命令的方法。区别在于shell_exec()会返回完整的输出流，而exec()只返回输出的最后一行。
+参考链接 shell_exec() - PHP Manual exec() - PHP Manual 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在JavaScript中如何编写行内的IF语句</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</link>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on 技术分享站</title>
+    <link>https://techdocdb.com/tags/android/</link>
+    <description>Recent content in android on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 07:21:41 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android资源目录中是否可以包含子目录？</title>
+      <link>https://techdocdb.com/posts/android%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%AD%90%E7%9B%AE%E5%BD%95/</link>
+      <pubDate>Tue, 29 Aug 2023 07:21:41 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/android%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%AD%90%E7%9B%AE%E5%BD%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在Android项目的资源目录（res）中是否可以包含子目录。通过解释和示例代码，说明了资源目录的组
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>安全使用（匿名）内部类的时机</title>
+      <link>https://techdocdb.com/posts/%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Tue, 29 Aug 2023 06:00:42 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E6%97%B6%E6%9C%BA/</guid>
+      <description>
+        
+          
+            摘要 本教程将讨论在何种情况下可以安全使用（匿名）内部类。我们将解释内部类和内存泄漏的概念，以及在Android开发中如何使用内部类。
+内容 在讨论内部类的安全使用之前，我们先来了解一下内部类和内存泄漏的概念。
+内部类：介绍
+在Java中，内部类是指一个类的定义包含在另一个类的定义中。主要有两种类型的内部类：静态内部类和非静态内部类。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

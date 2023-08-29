@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging on 技术分享站</title>
+    <link>https://techdocdb.com/tags/logging/</link>
+    <description>Recent content in logging on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Aug 2023 08:39:04 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何禁用Requests库的日志消息？</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A6%81%E7%94%A8requests%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E6%B6%88%E6%81%AF/</link>
+      <pubDate>Tue, 29 Aug 2023 08:39:04 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A6%81%E7%94%A8requests%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E6%B6%88%E6%81%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何禁用Requests库生成的日志消息。
+内容 默认情况下，Requests库会将日志消息写入控制台，内容类似于以下例子：
+1Starting new HTTP connection (1): example.com 2http://example.com:80 &amp;#34;GET / HTTP/1.1&amp;#34; 200 606 很多时候，这些日志消息并不是我们所关注的，我们希望禁止它们的输出或减少Requests库的冗余度。下面是几种禁用这些日志消息或减少Requests库冗余度的方法。
+可以使用Python的标准logging模块来配置Requests库的日志级别，从而控制日志的显示。下面的代码将日志级别设置为WARNING，表示只显示警告级别及更高级别的日志消息：
+1import logging 2 3logging.getLogger(&amp;#34;requests&amp;#34;).setLevel(logging.WARNING) 如果同时希望对urllib3库（通常由Requests库使用）也应用相同的设置，可以添加以下代码：
+1logging.getLogger(&amp;#34;urllib3&amp;#34;).setLevel(logging.WARNING) 总结 通过使用Python的logging模块，我们可以控制和配置Requests库的日志输出。可以将日志级别设置为WARNING或其他更高级别，以选择性地显示日志消息，或者完全禁用它们。希望本教程对你有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

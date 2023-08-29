@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 16:15:55 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 08:34:15 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Matplotlib中旋转坐标轴文本</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8matplotlib%E4%B8%AD%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E6%9C%AC/</link>
+      <pubDate>Tue, 29 Aug 2023 08:34:15 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8matplotlib%E4%B8%AD%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E6%9C%AC/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Matplotlib中旋转X轴的文本。
+内容 为了解决X轴文本重叠的问题，可以使用以下代码来旋转X轴文本：
+1plt.xticks(rotation=90) 这将使X轴的文本以90度的角度进行旋转，使得随着样本数量的增加，它们之间的间隔变得更大，避免了重叠。
+总结 通过使用plt.xticks(rotation=90)来旋转X轴的文本，可以方便地解决X轴文本重叠的问题，提高图表的可读性。希望本教程对你理解如何在Matplotlib中旋转坐标轴文本有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用.otf 字体在网页中</title>
       <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</link>

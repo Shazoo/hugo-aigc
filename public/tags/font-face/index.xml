@@ -7,7 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 13:18:05 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/font-face/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 06:01:15 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/font-face/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web字体中的font-face和不同格式之间的关系</title>
+      <link>https://techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Tue, 29 Aug 2023 06:01:15 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释在CSS3的font-face中为什么需要包括多种字体格式，例如ttf、eot、woff、svg和cff。我们将讨论不同字体格式的作用和用途，以及为什么需要多种字体格式。
+内容 在CSS3的font-face中，可以包含多个字体格式，如ttf、eot、woff、svg和cff。每种字体格式都有其特定的用途和兼容性。
+字体格式的兼容性 不同的字体格式适用于不同的浏览器和设备。例如，旧版的Internet Explorer只支持EOT格式，而较新的浏览器则支持更多的字体格式，如WOFF和WOFF2。
+字体格式的用途 每种字体格式都有其特定的用途和优势。下面是一些常用字体格式的介绍：
+TTF和OTF：这些是常规的字体格式，可以在各种应用程序和操作系统中使用。然而，由于版权保护的原因，可能需要获取授权或购买相应的字体许可。 EOT：这是一种用于Internet Explorer的专有字体格式。如果你的目标是支持旧版的IE浏览器，可能需要包含这种格式。 WOFF：这是目前最常用的字体格式之一。它是一种压缩格式，可以在Web上快速加载，并在大多数现代浏览器中被支持。这是推荐的字体格式。 SVG：这是一种使用SVG标记定义字体的格式。然而，它并不像其他字体格式那样常用，SVG 2标准已经将其从规范中删除。 最佳实践 在选择和使用字体格式时，应该根据目标浏览器和设备的兼容性做出选择。通常建议只使用WOFF和WOFF2这两种格式，因为它们具有较好的压缩性能和广泛的浏览器支持。
+例如，可以使用以下方式声明字体格式：
+1@font-face { 2 font-family: &amp;#39;MyWebFont&amp;#39;; 3 src: url(&amp;#39;myfont.woff2&amp;#39;) format(&amp;#39;woff2&amp;#39;), 4 url(&amp;#39;myfont.woff&amp;#39;) format(&amp;#39;woff&amp;#39;); 5} 可以使用caniuse网站（http://caniuse.com/woff和http://caniuse.com/woff2）来检查不同字体格式的浏览器兼容性。
+总结
+在Web字体中，包含多种格式是为了兼容不同的浏览器和设备。建议使用WOFF和WOFF2这两种格式，因为它们具有较好的兼容性和压缩性能。希望本教程对你理解Web字体格式以及如何选择和使用适当的格式有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在 Web 浏览器中使用.otf 字体</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8-web-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93/</link>

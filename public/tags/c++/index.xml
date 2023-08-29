@@ -7,7 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 13:45:10 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 08:34:13 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在C&#43;&#43;中使用`noexcept`</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>
+      <pubDate>Tue, 29 Aug 2023 08:34:13 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在C++中使用noexcept关键字的情况。通过示例代码和解释，演示了noexcept的使用场景和效果。
+内容 noexcept关键字是C++11引入的特性之一。它用于指示一个函数不会抛出异常。在实
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>C&#43;&#43;中存在头文件和.cpp文件的原因</title>
       <link>https://techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</link>
