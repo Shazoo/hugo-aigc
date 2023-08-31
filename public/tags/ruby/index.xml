@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 Aug 2023 06:54:45 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Aug 2023 08:10:54 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ruby on Rails中处理货币的最佳方法</title>
+      <link>https://techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 31 Aug 2023 08:10:54 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将回答在Ruby on Rails中处理货币时的最佳方法。您将了解何时使用DECIMAL类型来处理货币，如何在视图中显示价格，并了解处理货币的一些建议。
+内容 在处理货币时，一个常见的做法是使用DECIMAL类型。在您的数据库中，为您的价格列添加一个DECIMAL类型的字段。在迁移中，你可以像下面这样做：
+1add_column :items, :price, :decimal, precision: 8, scale: 2 在Rails中，使用:decimal类型后，返回的数据类型是BigDecimal，对于货币计算非常有用。
+如果您坚持使用整数类型，你需要在各处手动转换成BigDecimal，这会带来麻烦。
+正如之前提到的，为了在视图中显示价格，你可以使用number_to_currency视图助手方法，比如：
+1number_to_currency(price, unit: &amp;#34;€&amp;#34;) 下面总结一些和货币处理相关的问题和建议：
+使用DECIMAL类型处理货币数据。 在显示价格时，使用number_to_currency视图助手方法。 根据需要自定义显示货币符号和精度。 建议使用BigDecimal进行货币计算。 如果您遇到需要使用整数表示货币的特殊情况，可以考虑上述提到的方法。 通过遵循这些指南，您可以在Ruby on Rails应用程序中处理货币数据并正确显示价格。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Ruby中为什么使用`rescue Exception =&gt; e`是不好的风格？</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>

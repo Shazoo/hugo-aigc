@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dom on 技术分享站</title>
+    <link>https://techdocdb.com/tags/dom/</link>
+    <description>Recent content in dom on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 31 Aug 2023 08:42:27 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/dom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#43;# 用JS解析HTML字符串</title>
+      <link>https://techdocdb.com/posts/&#43;#-%E7%94%A8js%E8%A7%A3%E6%9E%90html%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 31 Aug 2023 08:42:27 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/&#43;#-%E7%94%A8js%E8%A7%A3%E6%9E%90html%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中解析包含HTML文本的字符串的方法。我们将讨论如何使用DOM API来解析HTML字符串，并通过示例演示其用法。
+内容 您可以使用DOMParser对象的parseFromString方法来解析HTML字符串。该方法将HTML字符串作为参数，并返回一个Document对象，您可以像操作DOM一样操作它。
+以下是一个示例：
+1const parser = new DOMParser(); 2const htmlString = &amp;#39;&amp;lt;div class=&amp;#34;container&amp;#34;&amp;gt;Hello, World!&amp;lt;/div&amp;gt;&amp;#39;; 3const doc = parser.parseFromString(htmlString, &amp;#39;text/html&amp;#39;); 4 5const element = doc.querySelector(&amp;#39;.container&amp;#39;); 6console.log(element.textContent); // Output: Hello, World! 在这个例子中，我们创建一个DOMParser实例，然后使用parseFromString方法将HTML字符串解析为一个Document对象。我们可以使用querySelector方法来选择并操作解析后的DOM元素。
+这种方法适用于在纯JavaScript环境中解析HTML字符串。在浏览器环境中，您也可以直接使用innerHTML来操作HTML字符串。
+总结 通过使用DOMParser对象的parseFromString方法，您可以将HTML字符串解析为可以在JavaScript中操作的文档对象。这为您提供了灵活的方式来处理HTML字符串，并能够对其进行操作和访问。请记住，解析HTML字符串可能会引入安全风险，因此请谨慎处理不受信任的输入。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

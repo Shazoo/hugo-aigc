@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 07:21:44 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Aug 2023 05:14:03 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Flask请求中获取接收到的数据</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8flask%E8%AF%B7%E6%B1%82%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%8E%A5%E6%94%B6%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Thu, 31 Aug 2023 05:14:03 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8flask%E8%AF%B7%E6%B1%82%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%8E%A5%E6%94%B6%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Flask应用中获取发送到服务器的数据。您将学习到如何访问Flask请求对象中的数据。
+内容 在Flask中，您可以使用以下方法来获取发送到应用的数据：
+使用request.form： 如果数据以表单形式发送，您可以使用request.form来获取数据。例如：
+1name = request.form.get(&amp;#39;name&amp;#39;) 2age = request.form.get(&amp;#39;age&amp;#39;) 使用request.json： 如果数据以JSON形式发送，可以使用request.json或request.get_json()来获取JSON数据。例如：
+1data = request.get_json() 使用request.args： 如果您希望获取URL查询参数中的数据，可以使用request.args。例如：
+1name = request.args.get(&amp;#34;name&amp;#34;) 2age = request.args.get(&amp;#34;age&amp;#34;) 这些方法返回的数据都是类似字典的对象，您可以使用键来获取相应的数据。使用get()方法可以指定默认值，以防键不存在。
+总结 在Flask中，可以使用request.form、request.json和request.args等方法来获取发送到应用的数据。根据数据的形式选择合适的方法，并根据需要处理数据。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Flask路由中如何访问查询字符串</title>
       <link>https://techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>

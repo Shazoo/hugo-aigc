@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 06:23:00 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Aug 2023 09:07:34 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何给span元素添加工具提示</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</link>
+      <pubDate>Thu, 31 Aug 2023 09:07:34 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何给span元素添加工具提示。通过使用title属性，你可以在鼠标悬停在span元素上时显示相应的工具提示。
+内容 在HTML中，你可以通过将title属性添加到span元素中来实现工具提示的功能。当鼠标悬停在该元素上时，浏览器会自动将title属性的内容以工具提示的形式显示出来。
+以下是使用title属性添加工具提示的示例：
+1&amp;lt;span title=&amp;#34;这是我的工具提示&amp;#34;&amp;gt;鼠标悬停在我上面查看工具提示&amp;lt;/span&amp;gt; 在大多数浏览器中，这种简单的工具提示是默认支持的。如果你想要创建更复杂的样式和格式，可以考虑使用一些库或框架，如jQuery UI，来创建自定义的工具提示。
+参考答案： 你可以通过使用title属性来给span元素添加工具提示。当鼠标悬停在span元素上时，浏览器会自动显示title属性的内容作为工具提示。以上是使用title属性添加工具提示的简单示例，你可以根据需要进行相应的样式和内容调整。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何将表格单元格宽度适应内容</title>
       <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</link>

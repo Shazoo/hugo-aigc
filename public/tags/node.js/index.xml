@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node.js on 技术分享站</title>
+    <link>https://techdocdb.com/tags/node.js/</link>
+    <description>Recent content in node.js on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 31 Aug 2023 06:02:40 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Node.js中从一个函数调用另一个函数</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 31 Aug 2023 06:02:40 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何在Node.js中的module.exports声明中从一个函数调用另一个函数。
+内容 如果你想从一个函数中调用另一个函数，可以在module.exports声明中采取以下方法：
+1module.exports = { 2 3 foo: function (req, res, next) { 4 return (&amp;#39;foo&amp;#39;); 5 }, 6 7 bar: function(req, res, next) { 8 module.exports.foo(); 9 } 10 11} 示例 以下是从一个函数调用另一个函数的示例代码：
+1var bla = require(&amp;#39;./bla.js&amp;#39;); 2console.log(bla.bar()); 在上述示例中，我们通过require语句引入了bla.js模块，并在调用bla.bar()时从bar函数中间接调用了foo函数。
+总结 你可以在Node.js的module.exports声明中，通过在另一个函数中使用module.exports.foo()来调用另一个函数。这种方法允许我们在模块的导出对象中间接调用函数。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

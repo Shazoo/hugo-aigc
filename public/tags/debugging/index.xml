@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debugging on 技术分享站</title>
+    <link>https://techdocdb.com/tags/debugging/</link>
+    <description>Recent content in debugging on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 31 Aug 2023 06:13:52 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Google Chrome中如何通过代码设置JavaScript断点</title>
+      <link>https://techdocdb.com/posts/%E5%9C%A8google-chrome%E4%B8%AD%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AEjavascript%E6%96%AD%E7%82%B9/</link>
+      <pubDate>Thu, 31 Aug 2023 06:13:52 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%9C%A8google-chrome%E4%B8%AD%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AEjavascript%E6%96%AD%E7%82%B9/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何在Google Chrome中从代码中设置JavaScript断点来进行调试。通过代码中的debugger;语句或者使用开发者工具在代码行号旁边设置断点，你可以在Chrome中进行调试。
+内容 你可以通过在代码中使用debugger;语句或者在开发者工具中设置断点的方式，在Google Chrome中设置JavaScript断点。
+方法一：使用debugger语句设置断点 在你的代码中插入debugger;语句，当开发者工具打开时，代码执行将会在该语句处中断，实现断点效果。
+例如：
+1function myFunction() { 2 // do something 3 debugger; // 程序将在此处中断执行 4 // do something else 5} 方法二：使用开发者工具设置断点 打开Google Chrome浏览器并访问你的网页。 在开发者工具中打开“Sources”（或者“调试”）选项卡。 导航到你的代码文件，并在代码行号的左侧单击，即可设置断点。设置断点后，你将能够在右侧标签中跟踪断点位置。 以下是具体步骤：
+打开开发者工具。你可以通过右键点击网页并选择&amp;quot;检查&amp;quot;或者使用快捷键Ctrl+Shift+I（Windows/Linux）或者Command+Option+I（Mac）来打开开发者工具。 在开发者工具中，切换到&amp;quot;Sources&amp;quot;（或者&amp;quot;调试&amp;quot;）选项卡。 导航到你的代码文件，并找到要设置断点的行号。 单击代码行号的左侧，即可设置断点。已设置的断点将显示为红色圆点。 请注意，你可以设置多个断点，以便在代码中的多个位置进行调试。
+调试过程 设置断点后，当代码执行到断点处时，程序将在该行暂停执行。此时，你可以查看变量的值、检查函数调用栈，单步执行代码，或者在代码中进行其他调试操作。
+以下是一些常用的调试操作：
+检查变量的值：使用鼠标悬停在变量上方，或者在控制台中使用console.log()来查看变量的值。 单步执行：使用调试工具提供的控制按钮，如&amp;quot;继续&amp;quot;（继续执行代码）、&amp;quot;步入&amp;quot;（进入函数调用）、&amp;quot;步过&amp;quot;（跳过函数调用）和&amp;quot;步出&amp;quot;（退出当前函数）来逐行执行代码。 监视表达式：在调试工具的&amp;quot;监视&amp;quot;面板中添加表达式，以便在每个断点位置查看其值的变化。 调试完成后，你可以关闭开发者工具，并将代码中的debugger;语句或断点删除，以确保代码在生产环境中不再中断执行。
+总结 通过在代码中插入debugger;语句或使用开发者工具在代码行号旁设置断点，你可以在Google Chrome中进行JavaScript代码的调试。通过查看变量的值、单步执行代码等操作，你可以更好地理解代码的执行过程和问题所在。
+参考链接：Chrome DevTools Documentation
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

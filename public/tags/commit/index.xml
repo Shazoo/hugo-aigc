@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>commit on 技术分享站</title>
+    <link>https://techdocdb.com/tags/commit/</link>
+    <description>Recent content in commit on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 31 Aug 2023 05:40:39 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/commit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何修改一个提交（不改变提交信息）？</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Thu, 31 Aug 2023 05:40:39 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何修改一个提交而不改变提交信息。我们将提供多种方法来实现这个操作，并提供相应的示例代码。
+内容 在使用Git进行开发时，修改一个提交而不改变提交信息是一种常见的需求。下面是几种实现这个操作的方法。
+方法一：使用--no-edit选项 你可以使用--no-edit选项来修改一个提交而不改变提交信息。在Git版本1.7.9以后，你可以执行以下命令：
+1git commit --amend --no-edit 这将使用上一个提交的提交信息来修改当前提交。请注意，这不包括上一个提交中的元数据，比如时间戳或标签。
+方法二：使用其他命令 除了--amend选项，还有其他一些命令可以帮助你修改提交信息，比如--C HEAD选项。
+方法三：使用别名 你可以创建一个别名，将上述命令封装起来以简化操作。以创建git oops别名为例，你可以执行以下命令：
+1git config --global alias.oops &amp;#39;commit --amend --no-edit&amp;#39; 然后使用以下命令来修改提交：
+1git oops 这样，你就可以在不改变提交信息的情况下修改提交。
+总结 本教程介绍了如何修改一个提交而不改变提交信息。你可以使用--no-edit选项、其他命令或者创建别名的方式来实现这个操作。通过掌握这些技巧，你可以更好地管理和维护你的Git项目。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

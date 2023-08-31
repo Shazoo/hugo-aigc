@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>system-information on 技术分享站</title>
+    <link>https://techdocdb.com/tags/system-information/</link>
+    <description>Recent content in system-information on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 31 Aug 2023 06:31:53 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/system-information/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用Python查找CPU数量</title>
+      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Thu, 31 Aug 2023 06:31:53 +0800</pubDate>
+      
+      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何使用Python查找本地计算机上的CPU数量。通过使用不同的方法和库，您可以获取用于并行计算的CPU核心数量。
+内容 使用multiprocessing库查找CPU数量 如果您想要获取当前进程可用的CPU数量，您可以使用multiprocessing.cpu_count()方法。
+1import multiprocessing 2print(multiprocessing.cpu_count()) 这将返回当前进程可用的逻辑CPU数量，包括超线程。
+使用os库和其他方法查找CPU数量 如果想要查找物理CPU的数量，您可以使用其他方法。在Python的os库中有一些函数可以实现这个目的。
+使用os.cpu_count()方法 在Python 3.4及以上版本中，您可以使用os.cpu_count()方法来获取CPU的数量。
+1import os 2print(os.cpu_count()) 这将返回计算机上的逻辑CPU数量，包括超线程。
+使用其他库 另外，还可以使用第三方库来获取CPU的数量。例如，psutil库是一个常用的库，可以在不同操作系统上获取系统信息。
+1import psutil 2print(psutil.cpu_count(logical=False)) 这将返回物理CPU的数量，不包括超线程。
+总结 通过使用multiprocessing.cpu_count()、os.cpu_count()或其他库，您可以在Python中获取CPU的数量。根据实际需求选择合适的方法即可。
+参考链接：multiprocessing.cpu_count()，os.cpu_count()，psutil
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
