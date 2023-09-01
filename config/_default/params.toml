@@ -143,13 +143,13 @@ name = "技术分享"
 # photo = "images/jane-doe.png" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
-enable = false                        # to enable plausible analytics set to true.
-websiteDomain = "CoderGasStation.com" # domain name of your website, most cases same as your base url
+enable = false                      # to enable plausible analytics set to true.
+websiteDomain = "www.techdocdb.com" # domain name of your website, most cases same as your base url
 # plausibleDomain = "plausible.io" # default is set to plausible.io, only required if plausible is selfhosted
 # scritpName = "plausible" # default is set to plausible, only required if using a custome name for script
 
 [matomo_analytics]
-enable = false                        # To enable matomo analytics change to `true`.
-websiteDomain = "CoderGasStation.com" # Set the domain name of your website, in most cases same as your base URL this is required.
-matomoDomain = "CoderGasStation.com"  # Set to Matomo domain
-matomoSiteID = "1"                    # Default is set to 1, change this to the siteid being tracked
+enable = false                      # To enable matomo analytics change to `true`.
+websiteDomain = "www.techdocdb.com" # Set the domain name of your website, in most cases same as your base URL this is required.
+matomoDomain = "www.techdocdb.com"  # Set to Matomo domain
+matomoSiteID = "1"                  # Default is set to 1, change this to the siteid being tracked

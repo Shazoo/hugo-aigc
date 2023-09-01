@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rebase on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/rebase/</link>
+    <description>Recent content in rebase on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 07:20:17 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/rebase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从git/GitHub的历史记录中删除文件夹及其内容</title>
+      <link>https://www.techdocdb.com/posts/%E4%BB%8Egit/github%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Fri, 01 Sep 2023 07:20:17 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BB%8Egit/github%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何从git/GitHub的历史记录中删除文件夹及其内容。我们将提供使用不同方法的示例来清理git的历史记录，以减少存储库的大小，并确保用户在克隆时只下载所需的文件。
+方法介绍 以下是在git/GitHub的历史记录中删除文件夹及其内容的几种方法：
+使用git filter-branch命令： 1git filter-branch --tree-filter &amp;#34;rm -rf FOLDER_NAME&amp;#34; --prune-empty HEAD 使用git-filter-repo工具（推荐）： 1git-filter-repo --path FOLDER_NAME --invert-paths 使用BFG Repo-Cleaner工具（不推荐）： 1java -jar bfg.jar --delete-folders FOLDER_NAME 总结 通过使用适当的方法，我们可以从git/GitHub的历史记录中删除文件夹及其内容。面对存储库大小过大的问题时，清理历史记录是一个常见的需求。然而，需要注意的是git filter-branch命令已不再得到官方推荐，因此更推荐使用git-filter-repo工具进行历史记录的清理操作。清理历史记录需要慎重操作，建议提前备份存储库以防意外发生。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>egit on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/egit/</link>
+    <description>Recent content in egit on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 09:17:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/egit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在GitHub上将公共仓库的fork变为私有仓库</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Fri, 01 Sep 2023 09:17:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在GitHub上将公共仓库的fork变为私有仓库。我们将使用示例代码和GitHub上的操作步骤来说明如何实现这一目标。
+内容 在GitHub上，您可以fork公共仓库，并将其变为私有仓库。以下是操作步骤和示例代码：
+首先，按照GitHub的指南，fork一个公共仓库到您的帐户中。
+在GitHub上创建一个空的私有仓库，作为您fork的仓库的副本。
+克隆原始的公共仓库到本地，然后进行配置。
+1git clone --bare https://github.com/exampleuser/public-repo.git 2cd public-repo.git 3git push --mirror https://github.com/yourname/private-repo.git 4cd .. 5rm -rf public-repo.git 克隆私有仓库到本地，进行修改。
+1git clone https://github.com/yourname/private-repo.git 2cd private-repo 3# 进行一些修改 4git commit 5git push origin master 如果您想从公共仓库中获取更新，可以使用以下命令：
+1cd private-repo 2git remote add public https://github.com/exampleuser/public-repo.git 3git pull public master 4git push origin master 通过按照上述步骤进行操作，您可以将公共仓库的fork变为私有仓库，并进行相应的提交和更新。
+总结 在本教程中，我们介绍了如何在GitHub上将公共仓库的fork变为私有仓库。通过使用克隆、修改和推送等Git命令，以及在GitHub上进行相应的操作，您可以成功完成这一过程。
+感谢您阅读本教程！
+请注意，您需要具有相应的订阅才能创建私有仓库。确保您在进行操作之前具备必要的权限。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

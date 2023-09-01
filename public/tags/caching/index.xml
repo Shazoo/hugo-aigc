@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>caching on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/caching/</link>
+    <description>Recent content in caching on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 07:03:25 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/caching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cache-Control中max-age=0和no-cache的区别</title>
+      <link>https://www.techdocdb.com/posts/cache-control%E4%B8%ADmax-age0%E5%92%8Cno-cache%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Fri, 01 Sep 2023 07:03:25 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/cache-control%E4%B8%ADmax-age0%E5%92%8Cno-cache%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 在HTTP的Cache-Control头部中，max-age=0和no-cache具有相似的语义，都表示内容立即被认为是过期的，并且必须重新获取。本教程将解释这两个指令之间的区别，并提供一些使用示例。
+解决方案 在理解max-age=0和no-cache之前，需要明确一些概念。Cache-Control头部有两个方面，一个是服务器（也称为“原始服务器”）可以发送的指令，另一个是浏览器（也称为“用户代理”）可以发送的指令。
+由原始服务器发送的指令 首先，我们来看一下max-age=0在是源服务器端的含义。max-age=0告诉缓存（和用户代理）响应立即就是过期的，因此在使用缓存副本之前，它们应该重新验证响应（例如，使用If-Not-Modified头部）。而no-cache则告诉缓存它必须在使用缓存副本之前进行验证。根据RFC-2616的14.9.1节的规定：
+no-cache的含义是...缓存不允许在没有成功与原始服务器重新验证的情况下使用响应来满足后续请求。这允许原始服务器禁止甚至配置为返回过期响应的缓存。
+换句话说，缓存可能会选择使用过期的响应（尽管它们必须标记一个警告头部），但no-cache表示无论如何都不能使用过期的响应。对于包含订单信息的响应，你可能希望在点击刷新按钮时使用SHOULD重新验证的行为，但在为页面生成的棒球统计中使用MUST重新验证的行为。
+然而，请注意你在评论中提到的，no-cache并不意味着不允许存储，当你在使用no-cache时，可能会遇到某些情况。在Cache Control指令解析页面上指出（我不能保证其准确性）：
+实际上，IE和Firefox都已经开始将no-cache指令视为指示浏览器不要缓存页面。我注意到这种行为已经持续了一年多。我们怀疑这个变化是由于人们广泛（不正确地）使用这个指令来防止缓存。
+此外，通过使用 Cache-Control: max-age=0, must-revalidate，你基本上可以实现与no-cache相同的功能。所以，这可能是一种在避免no-cache以及它似乎将no-cache迁移到做与no-store一样的事情（即完全不缓存）时获取MUST重新验证行为的方式。
+由用户代理发送的指令 其次，我们来看一下max-age=0和no-cache在用户代理端的含义。如果用户代理发送一个带有 Cache-Control: max-age=0 的请求（即“端到端重新验证”），那么每个缓存都会根据需要重新验证其缓存条目，直到原始服务器。如果响应是304（未修改），则可以使用缓存的实体。而发送带有 Cache-Control: no-cache 的请求（即“端到端重新加载”），则不会执行重新验证，缓存不能在响应时使用缓存的副本。
+总结 本教程解释了Cache-Control头部中max-age=0和no-cache之间的区别。当原始服务器发送这些指令时，max-age=0指示缓存在使用缓存的副本之前应该重新验证，而no-cache指示缓存必须重新验证。当用户代理发送这些指令时，max-age=0 指示缓存应该逐个验证缓存条目，直到原始服务器，而 no-cache 指示缓存不能在使用过期的副本时执行重新验证。根据实际需求和使用场景选择适合的指令，并根据需要添加其他指令以实现所需的行为。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

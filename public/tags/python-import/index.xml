@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python-import on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/python-import/</link>
+    <description>Recent content in python-import on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 06:35:56 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python-import/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Python中加载文件夹中的所有模块</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Fri, 01 Sep 2023 06:35:56 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%A8%A1%E5%9D%97/</guid>
+      <description>
+        
+          
+            摘要 在Python中，有时候需要一次性导入文件夹中的所有模块。本教程将介绍如何实现这一目标。
+内容 要导入文件夹中的所有模块，可以按照以下步骤操作：
+获取文件夹中所有的.py文件路径。 使用importlib模块动态导入每个模块，并将其添加到当前命名空间。 以下是具体示例：
+1import importlib 2import pathlib 3import re 4 5# 获取文件夹路径 6path = pathlib.Path(__file__).parent.absolute() 7 8# 获取文件夹中的所有模块名 9names = [x.name[:-3] for x in path.iterdir() if x.is_file() and re.search(&amp;#34;^[a-z]*\.py$&amp;#34;, x.name)] 10 11# 动态导入每个模块 12for name in names: 13 importlib.import_module(f&amp;#34;.{name}&amp;#34;, __name__) 这样，文件夹中的每个模块将被导入并添加到当前命名空间中。你可以直接使用导入的模块进行操作。
+总结 通过使用importlib模块，可以实现一次性导入文件夹中的所有模块。这种方法适用于需要一次性导入多个模块的情况。在导入模块时，可以根据需要对模块进行修改和使用。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

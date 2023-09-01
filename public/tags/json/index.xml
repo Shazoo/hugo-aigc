@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>json on 技术分享站</title>
-    <link>https://techdocdb.com/tags/json/</link>
+    <link>https://www.techdocdb.com/tags/json/</link>
     <description>Recent content in json on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 05:56:04 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 05:56:04 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP中的shell_exec()和exec()命令的区别</title>
-      <link>https://techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://www.techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Tue, 29 Aug 2023 05:56:04 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
       <description>
         
           
@@ -32,10 +32,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>&#34;正确&#34;的JSON日期格式是什么？</title>
-      <link>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://www.techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Mon, 28 Aug 2023 07:40:44 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://www.techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>
         
           

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql on 技术分享站</title>
-    <link>https://techdocdb.com/tags/mysql/</link>
+    <link>https://www.techdocdb.com/tags/mysql/</link>
     <description>Recent content in mysql on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 09:32:58 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 09:32:58 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在MySQL中使用JOIN ON和USING的区别是什么？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Tue, 29 Aug 2023 09:32:58 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>
         
           
@@ -33,10 +33,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>MySQL中 @variable 和 variable 有什么区别？</title>
-      <link>https://techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+      <link>https://www.techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Fri, 25 Aug 2023 08:49:31 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
       <description>
         
           
@@ -54,10 +54,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>在 MySQL 中临时禁用外键约束的方法</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 14:57:45 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           

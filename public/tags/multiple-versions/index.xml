@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>multiple-versions on 技术分享站</title>
-    <link>https://techdocdb.com/tags/multiple-versions/</link>
+    <link>https://www.techdocdb.com/tags/multiple-versions/</link>
     <description>Recent content in multiple-versions on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 15:33:02 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/multiple-versions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 15:33:02 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/multiple-versions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 pip 安装具有最小和最大版本范围的软件包</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</link>
       <pubDate>Thu, 24 Aug 2023 15:33:02 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</guid>
       <description>
         
           

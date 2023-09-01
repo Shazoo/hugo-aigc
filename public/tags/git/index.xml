@@ -2,18 +2,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on 技术分享站</title>
-    <link>https://techdocdb.com/tags/git/</link>
+    <link>https://www.techdocdb.com/tags/git/</link>
     <description>Recent content in git on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 05:40:39 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2023 09:17:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在GitHub上将公共仓库的fork变为私有仓库</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Fri, 01 Sep 2023 09:17:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在GitHub上将公共仓库的fork变为私有仓库。我们将使用示例代码和GitHub上的操作步骤来说明如何实现这一目标。
+内容 在GitHub上，您可以fork公共仓库，并将其变为私有仓库。以下是操作步骤和示例代码：
+首先，按照GitHub的指南，fork一个公共仓库到您的帐户中。
+在GitHub上创建一个空的私有仓库，作为您fork的仓库的副本。
+克隆原始的公共仓库到本地，然后进行配置。
+1git clone --bare https://github.com/exampleuser/public-repo.git 2cd public-repo.git 3git push --mirror https://github.com/yourname/private-repo.git 4cd .. 5rm -rf public-repo.git 克隆私有仓库到本地，进行修改。
+1git clone https://github.com/yourname/private-repo.git 2cd private-repo 3# 进行一些修改 4git commit 5git push origin master 如果您想从公共仓库中获取更新，可以使用以下命令：
+1cd private-repo 2git remote add public https://github.com/exampleuser/public-repo.git 3git pull public master 4git push origin master 通过按照上述步骤进行操作，您可以将公共仓库的fork变为私有仓库，并进行相应的提交和更新。
+总结 在本教程中，我们介绍了如何在GitHub上将公共仓库的fork变为私有仓库。通过使用克隆、修改和推送等Git命令，以及在GitHub上进行相应的操作，您可以成功完成这一过程。
+感谢您阅读本教程！
+请注意，您需要具有相应的订阅才能创建私有仓库。确保您在进行操作之前具备必要的权限。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何解决Git Push出现&#34;Repository not found&#34;错误</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-push%E5%87%BA%E7%8E%B0repository-not-found%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Fri, 01 Sep 2023 08:03:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-push%E5%87%BA%E7%8E%B0repository-not-found%E9%94%99%E8%AF%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何解决Git Push操作出现&amp;quot;Repository not found&amp;quot;错误的问题。
+内容 当执行git push -u origin master命令时，出现&amp;quot;ERROR: Repository not found&amp;quot;错误提示。这可能是由以下原因引起的：
+检查是否具有读写权限：请确保您具有对该仓库的读写权限。这可能是您没有在Github上被授权对仓库进行操作的原因。
+检查远程origin地址：使用git remote -v命令检查远程origin的地址是否正确。如果origin地址不正确，可以使用以下命令重新设置origin地址：
+1git remote rm origin 2git remote add origin git@github.com:account-name/repo-name.git 检查凭据问题：如果您之前使用了错误的凭据进行认证，可以尝试清除凭据并重新认证。具体操作可以参考这个链接：https://help.github.com/articles/updating-credentials-from-the-osx-keychain
+检查SSH配置：如果您正在
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>从git/GitHub的历史记录中删除文件夹及其内容</title>
+      <link>https://www.techdocdb.com/posts/%E4%BB%8Egit/github%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Fri, 01 Sep 2023 07:20:17 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BB%8Egit/github%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何从git/GitHub的历史记录中删除文件夹及其内容。我们将提供使用不同方法的示例来清理git的历史记录，以减少存储库的大小，并确保用户在克隆时只下载所需的文件。
+方法介绍 以下是在git/GitHub的历史记录中删除文件夹及其内容的几种方法：
+使用git filter-branch命令： 1git filter-branch --tree-filter &amp;#34;rm -rf FOLDER_NAME&amp;#34; --prune-empty HEAD 使用git-filter-repo工具（推荐）： 1git-filter-repo --path FOLDER_NAME --invert-paths 使用BFG Repo-Cleaner工具（不推荐）： 1java -jar bfg.jar --delete-folders FOLDER_NAME 总结 通过使用适当的方法，我们可以从git/GitHub的历史记录中删除文件夹及其内容。面对存储库大小过大的问题时，清理历史记录是一个常见的需求。然而，需要注意的是git filter-branch命令已不再得到官方推荐，因此更推荐使用git-filter-repo工具进行历史记录的清理操作。清理历史记录需要慎重操作，建议提前备份存储库以防意外发生。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何修改一个提交（不改变提交信息）？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</link>
       <pubDate>Thu, 31 Aug 2023 05:40:39 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</guid>
       <description>
         
           
@@ -34,10 +99,10 @@
     
     <item>
       <title>撤销Git中的stash操作</title>
-      <link>https://techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</link>
+      <link>https://www.techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Tue, 29 Aug 2023 09:07:55 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://www.techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</guid>
       <description>
         
           
@@ -57,10 +122,10 @@
     
     <item>
       <title>Git中从存储区（stash）中提取单个文件（或文件的更改）</title>
-      <link>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
+      <link>https://www.techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
       <pubDate>Tue, 29 Aug 2023 05:50:51 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
       <description>
         
           
@@ -79,10 +144,10 @@
     
     <item>
       <title>如何判断存储项是否存在于GitHub远程仓库？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
       <pubDate>Fri, 25 Aug 2023 09:00:58 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
       <description>
         
           
@@ -102,10 +167,10 @@
     
     <item>
       <title>如何从Git仓库中删除.DS_Store文件</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</link>
       <pubDate>Fri, 25 Aug 2023 08:56:28 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</guid>
       <description>
         
           
@@ -123,10 +188,10 @@
     
     <item>
       <title>使用Git递归更新子模块</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
       <pubDate>Fri, 25 Aug 2023 07:28:30 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
       <description>
         
           
@@ -143,10 +208,10 @@
     
     <item>
       <title>在.gitignore 文件中可以使用注释</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>
       <pubDate>Thu, 24 Aug 2023 14:02:13 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</guid>
       <description>
         
           

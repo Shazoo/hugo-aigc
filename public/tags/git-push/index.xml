@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-push on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/git-push/</link>
+    <description>Recent content in git-push on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 08:03:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git-push/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何解决Git Push出现&#34;Repository not found&#34;错误</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-push%E5%87%BA%E7%8E%B0repository-not-found%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Fri, 01 Sep 2023 08:03:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-push%E5%87%BA%E7%8E%B0repository-not-found%E9%94%99%E8%AF%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何解决Git Push操作出现&amp;quot;Repository not found&amp;quot;错误的问题。
+内容 当执行git push -u origin master命令时，出现&amp;quot;ERROR: Repository not found&amp;quot;错误提示。这可能是由以下原因引起的：
+检查是否具有读写权限：请确保您具有对该仓库的读写权限。这可能是您没有在Github上被授权对仓库进行操作的原因。
+检查远程origin地址：使用git remote -v命令检查远程origin的地址是否正确。如果origin地址不正确，可以使用以下命令重新设置origin地址：
+1git remote rm origin 2git remote add origin git@github.com:account-name/repo-name.git 检查凭据问题：如果您之前使用了错误的凭据进行认证，可以尝试清除凭据并重新认证。具体操作可以参考这个链接：https://help.github.com/articles/updating-credentials-from-the-osx-keychain
+检查SSH配置：如果您正在
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

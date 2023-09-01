@@ -1,5 +1,5 @@
 <!-- {{$related := where .Site.RegularPages ".Params.series" "eq" .Params.series }} -->
-{{ $related := .Site.RegularPages.Related . | first 20 }}
+{{ $related := .Site.RegularPages.Related . | first 100 }}
 <hr>
 <h3 class="post_related">相关文章推荐</h3>
 <ul>

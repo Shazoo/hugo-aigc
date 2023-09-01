@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>c&#43;&#43; on 技术分享站</title>
-    <link>https://techdocdb.com/tags/c&#43;&#43;/</link>
+    <link>https://www.techdocdb.com/tags/c&#43;&#43;/</link>
     <description>Recent content in c&#43;&#43; on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 08:34:13 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 08:34:13 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在C&#43;&#43;中使用`noexcept`</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>
       <pubDate>Tue, 29 Aug 2023 08:34:13 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</guid>
       <description>
         
           
@@ -27,10 +27,10 @@
     
     <item>
       <title>C&#43;&#43;中存在头文件和.cpp文件的原因</title>
-      <link>https://techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</link>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</link>
       <pubDate>Thu, 24 Aug 2023 13:45:10 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</guid>
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</guid>
       <description>
         
           
@@ -48,10 +48,10 @@
     
     <item>
       <title>将std::string转换为int的方法</title>
-      <link>https://techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 13:00:31 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jquery-selectors on 技术分享站</title>
-    <link>https://techdocdb.com/tags/jquery-selectors/</link>
+    <link>https://www.techdocdb.com/tags/jquery-selectors/</link>
     <description>Recent content in jquery-selectors on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 Aug 2023 06:38:41 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/jquery-selectors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 06:38:41 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/jquery-selectors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>通过jQuery选择具有多个类的元素</title>
-      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
+      <link>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
       <pubDate>Mon, 28 Aug 2023 06:38:41 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
       <description>
         
           

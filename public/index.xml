@@ -2,18 +2,274 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术分享站</title>
-    <link>https://techdocdb.com/</link>
+    <link>https://www.techdocdb.com/</link>
     <description>Recent content on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 09:07:34 +0800</lastBuildDate><atom:link href="https://techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2023 09:17:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在GitHub上将公共仓库的fork变为私有仓库</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Fri, 01 Sep 2023 09:17:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在GitHub上将公共仓库的fork变为私有仓库。我们将使用示例代码和GitHub上的操作步骤来说明如何实现这一目标。
+内容 在GitHub上，您可以fork公共仓库，并将其变为私有仓库。以下是操作步骤和示例代码：
+首先，按照GitHub的指南，fork一个公共仓库到您的帐户中。
+在GitHub上创建一个空的私有仓库，作为您fork的仓库的副本。
+克隆原始的公共仓库到本地，然后进行配置。
+1git clone --bare https://github.com/exampleuser/public-repo.git 2cd public-repo.git 3git push --mirror https://github.com/yourname/private-repo.git 4cd .. 5rm -rf public-repo.git 克隆私有仓库到本地，进行修改。
+1git clone https://github.com/yourname/private-repo.git 2cd private-repo 3# 进行一些修改 4git commit 5git push origin master 如果您想从公共仓库中获取更新，可以使用以下命令：
+1cd private-repo 2git remote add public https://github.com/exampleuser/public-repo.git 3git pull public master 4git push origin master 通过按照上述步骤进行操作，您可以将公共仓库的fork变为私有仓库，并进行相应的提交和更新。
+总结 在本教程中，我们介绍了如何在GitHub上将公共仓库的fork变为私有仓库。通过使用克隆、修改和推送等Git命令，以及在GitHub上进行相应的操作，您可以成功完成这一过程。
+感谢您阅读本教程！
+请注意，您需要具有相应的订阅才能创建私有仓库。确保您在进行操作之前具备必要的权限。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;!DOCTYPE html&gt;</title>
+      <link>https://www.techdocdb.com/posts/doctype-html/</link>
+      <pubDate>Fri, 01 Sep 2023 08:57:53 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/doctype-html/</guid>
+      <description>
+        
+          
+            ErrorPayloadTooLargeError: request entity too large
+&amp;nbsp; &amp;nbsp;at readStream (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:156:17)
+&amp;nbsp; &amp;nbsp;at getRawBody (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:109:12)
+&amp;nbsp; &amp;nbsp;at read (/var/www/server/old2new3/node_modules/express/node_modules/body-parser/lib/read.js:79:3)
+&amp;nbsp; &amp;nbsp;at jsonParser (/var/www/server/old2new3/node_modules/express/node_modules/body-parser/lib/types/json.js:135:5)
+&amp;nbsp; &amp;nbsp;at Layer.handle (/var/www/server/old2new3/node_modules/express/lib/router/layer.js:95:5)
+&amp;nbsp; &amp;nbsp;at trim_prefix (/var/www/server/old2new3/node_modules/express/lib/router/index.js:328:13)
+&amp;nbsp; &amp;nbsp;at &amp;lt;anonymous&amp;gt; (/var/www/server/old2new3/node_modules/express/lib/router/index.js:286:9)
+&amp;nbsp; &amp;nbsp;at Function.process_params (/var/www/server/old2new3/node_modules/express/lib/router/index.js:346:12)
+&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/index.js:280:10)
+&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/route.js:136:14)
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Ruby中如何按值删除数组中的一个元素</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8C%89%E5%80%BC%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Fri, 01 Sep 2023 08:25:54 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8C%89%E5%80%BC%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在Ruby中按值删除数组中的一个元素。我们将使用例子来演示不同的方法来删除数组中的特定元素。
+方法介绍 在Ruby中，你可以使用以下几种方法来按值删除数组中的一个元素：
+使用delete方法来按值删除元素。这种方法会删除所有匹配的元素。如果你不关心元素出现的次数，可以使用这种方法。
+使用delete_at方法来按索引删除元素。如果你已经知道元素的索引，可以使用这种方法。
+使用delete_if方法按条件删除元素。这种方法会根据指定的条件删除满足条件的所有元素。
+使用reject方法创建一个新数组，其中包含条件为假的元素。
+使用reject!方法与delete_if方法相同。数组可能不会立即改变，因为这个方法会调用块。
+使用减法运算符-来删除一个值或多个值。这种方法会返回一个新的数组，其中不包含被删除的值。
+以下是这些方法的具体示例：
+1# 使用delete方法删除值为3的元素 2a = [2, 4, 6, 3, 8] 3a.delete(3) 4# =&amp;gt; 3 5puts a 6# =&amp;gt; [2, 4, 6, 8] 7 8# 使用delete_at方法按索引删除元素 9b = [2, 4, 6, 3, 8] 10b.delete_at(2) 11# =&amp;gt; 6 12puts b 13# =&amp;gt; [2, 4, 3, 8] 14 15# 使用delete_if方法按条件删除元素 16c = [1, 2, 5, 4, 9, 10, 11] 17c.delete_if { |n| n &amp;gt;= 10 } 18# =&amp;gt; [1, 2, 5, 4, 9] 19 20# 使用reject方法创建一个新数组，其中包含条件为假的元素 21d = [1, 2, 5, 4, 9, 10, 11] 22d.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;!DOCTYPE html&gt;</title>
+      <link>https://www.techdocdb.com/posts/doctype-html/</link>
+      <pubDate>Fri, 01 Sep 2023 08:20:20 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/doctype-html/</guid>
+      <description>
+        
+          
+            ErrorPayloadTooLargeError: request entity too large
+&amp;nbsp; &amp;nbsp;at readStream (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:156:17)
+&amp;nbsp; &amp;nbsp;at getRawBody (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:109:12)
+&amp;nbsp; &amp;nbsp;at read (/var/www/server/old2new3/node_modules/express/node_modules/body-parser/lib/read.js:79:3)
+&amp;nbsp; &amp;nbsp;at jsonParser (/var/www/server/old2new3/node_modules/express/node_modules/body-parser/lib/types/json.js:135:5)
+&amp;nbsp; &amp;nbsp;at Layer.handle (/var/www/server/old2new3/node_modules/express/lib/router/layer.js:95:5)
+&amp;nbsp; &amp;nbsp;at trim_prefix (/var/www/server/old2new3/node_modules/express/lib/router/index.js:328:13)
+&amp;nbsp; &amp;nbsp;at &amp;lt;anonymous&amp;gt; (/var/www/server/old2new3/node_modules/express/lib/router/index.js:286:9)
+&amp;nbsp; &amp;nbsp;at Function.process_params (/var/www/server/old2new3/node_modules/express/lib/router/index.js:346:12)
+&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/index.js:280:10)
+&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/route.js:136:14)
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何使用正则表达式匹配DNS主机名或IP地址</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8Ddns%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%88%96ip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Fri, 01 Sep 2023 08:11:43 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8Ddns%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%88%96ip%E5%9C%B0%E5%9D%80/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用正则表达式匹配合法的DNS主机名或IP地址。我们将提供多种方法来实现这个操作，并提供相应的示例代码。
+内容 在正则表达式中，匹配合法的DNS主机名或IP地址是一项常见的需求。以下是几种不同的方法来实现这个操作。
+方法一：匹配合法的IP地址 你可以使用以下正则表达式来匹配合法的IP地址：
+1(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3} 这个正则表达式可以确保匹配有效的IP地址。
+方法二：匹配合法的DNS主机名 你可以使用以下正则表达式来匹配合法的DNS主机名：
+1^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$ 这个正则表达式可以确保匹配有效的DNS主机名。
+根据实际需求，你可以选择使用IP地址匹配的正则表达式、DNS主机名匹配的正则表达式，或者将它们联合起来形成一个匹配的正则表达式。
+总结 本教程介绍了如何使用正则表达式匹配合法的DNS主机名或IP地址。根据实际需求，你可以选择适用于IP地址或DNS主机名的正则表达式。通过了解正则表达式的基本用法，我们可以轻松地匹配合法的DNS主机名或IP地址。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>关于/dev/null 2&gt;&amp;1的含义</title>
+      <link>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E/dev/null-21%E7%9A%84%E5%90%AB%E4%B9%89/</link>
+      <pubDate>Fri, 01 Sep 2023 08:03:54 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E/dev/null-21%E7%9A%84%E5%90%AB%E4%B9%89/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释/dev/null 2&amp;gt;&amp;amp;1的含义。我们将解释每个部分的作用，并提供例子来说明使用该语法的目的。
+内容 在给出对/dev/null 2&amp;gt;&amp;amp;1的详细解释之前，让我们逐个解析这个表达式的不同部分。
+&amp;gt;&amp;gt; 是输出重定向操作符，将输出追加到指定文件中。在这里，&amp;gt;&amp;gt; 用于将输出追加到 /dev/null 文件中。 /dev/null 是一个称为“黑洞”的特殊文件系统对象。将输出重定向到 /dev/null，实际上就将输出丢弃掉。 2&amp;gt;&amp;amp;1 是将标准错误(stderr)重定向到标准输出(stdout)的语法。这意味着标准错误的输出会被重定向到与标准输出相同的位置。 因此，command &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 的含义如下：
+command 的输出被追加到 /dev/null，即被丢弃掉。 2&amp;gt;&amp;amp;1 将标准错误的输出重定向到与标准输出相同的位置，也就是 /dev/null。 这个语法的目的是使程序在执行时不产生任何输出。同时，通过将标准错误重定向到标准输出，任何标准错误的输出也将被丢弃。
+在问题的例子中，/etc/cron.daily/apf 的输出被重定向到 /dev/null，从而取消了防火墙的输出。因此，删除这个cron作业可能会导致防火墙规则的输出恢复，如果你不希望看到这些输出，可以保留这个cron作业。
+总结 使用&amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 的语法可以使程序在执行时变得安静，并且丢弃任何输出。通过将标准错误重定向到标准输出，标准错误的输出也将被丢弃。
+感谢阅读本教程！
+注意：在使用这种语法时，需要理解各个部分的含义，并根据实际情况选择合适的输出重定向方式。根据需要，可以将输出重定向到其他文件，而不仅仅是/dev/null。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何解决Git Push出现&#34;Repository not found&#34;错误</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-push%E5%87%BA%E7%8E%B0repository-not-found%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Fri, 01 Sep 2023 08:03:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-push%E5%87%BA%E7%8E%B0repository-not-found%E9%94%99%E8%AF%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何解决Git Push操作出现&amp;quot;Repository not found&amp;quot;错误的问题。
+内容 当执行git push -u origin master命令时，出现&amp;quot;ERROR: Repository not found&amp;quot;错误提示。这可能是由以下原因引起的：
+检查是否具有读写权限：请确保您具有对该仓库的读写权限。这可能是您没有在Github上被授权对仓库进行操作的原因。
+检查远程origin地址：使用git remote -v命令检查远程origin的地址是否正确。如果origin地址不正确，可以使用以下命令重新设置origin地址：
+1git remote rm origin 2git remote add origin git@github.com:account-name/repo-name.git 检查凭据问题：如果您之前使用了错误的凭据进行认证，可以尝试清除凭据并重新认证。具体操作可以参考这个链接：https://help.github.com/articles/updating-credentials-from-the-osx-keychain
+检查SSH配置：如果您正在
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>从git/GitHub的历史记录中删除文件夹及其内容</title>
+      <link>https://www.techdocdb.com/posts/%E4%BB%8Egit/github%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Fri, 01 Sep 2023 07:20:17 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BB%8Egit/github%E7%9A%84%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何从git/GitHub的历史记录中删除文件夹及其内容。我们将提供使用不同方法的示例来清理git的历史记录，以减少存储库的大小，并确保用户在克隆时只下载所需的文件。
+方法介绍 以下是在git/GitHub的历史记录中删除文件夹及其内容的几种方法：
+使用git filter-branch命令： 1git filter-branch --tree-filter &amp;#34;rm -rf FOLDER_NAME&amp;#34; --prune-empty HEAD 使用git-filter-repo工具（推荐）： 1git-filter-repo --path FOLDER_NAME --invert-paths 使用BFG Repo-Cleaner工具（不推荐）： 1java -jar bfg.jar --delete-folders FOLDER_NAME 总结 通过使用适当的方法，我们可以从git/GitHub的历史记录中删除文件夹及其内容。面对存储库大小过大的问题时，清理历史记录是一个常见的需求。然而，需要注意的是git filter-branch命令已不再得到官方推荐，因此更推荐使用git-filter-repo工具进行历史记录的清理操作。清理历史记录需要慎重操作，建议提前备份存储库以防意外发生。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cache-Control中max-age=0和no-cache的区别</title>
+      <link>https://www.techdocdb.com/posts/cache-control%E4%B8%ADmax-age0%E5%92%8Cno-cache%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Fri, 01 Sep 2023 07:03:25 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/cache-control%E4%B8%ADmax-age0%E5%92%8Cno-cache%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 在HTTP的Cache-Control头部中，max-age=0和no-cache具有相似的语义，都表示内容立即被认为是过期的，并且必须重新获取。本教程将解释这两个指令之间的区别，并提供一些使用示例。
+解决方案 在理解max-age=0和no-cache之前，需要明确一些概念。Cache-Control头部有两个方面，一个是服务器（也称为“原始服务器”）可以发送的指令，另一个是浏览器（也称为“用户代理”）可以发送的指令。
+由原始服务器发送的指令 首先，我们来看一下max-age=0在是源服务器端的含义。max-age=0告诉缓存（和用户代理）响应立即就是过期的，因此在使用缓存副本之前，它们应该重新验证响应（例如，使用If-Not-Modified头部）。而no-cache则告诉缓存它必须在使用缓存副本之前进行验证。根据RFC-2616的14.9.1节的规定：
+no-cache的含义是...缓存不允许在没有成功与原始服务器重新验证的情况下使用响应来满足后续请求。这允许原始服务器禁止甚至配置为返回过期响应的缓存。
+换句话说，缓存可能会选择使用过期的响应（尽管它们必须标记一个警告头部），但no-cache表示无论如何都不能使用过期的响应。对于包含订单信息的响应，你可能希望在点击刷新按钮时使用SHOULD重新验证的行为，但在为页面生成的棒球统计中使用MUST重新验证的行为。
+然而，请注意你在评论中提到的，no-cache并不意味着不允许存储，当你在使用no-cache时，可能会遇到某些情况。在Cache Control指令解析页面上指出（我不能保证其准确性）：
+实际上，IE和Firefox都已经开始将no-cache指令视为指示浏览器不要缓存页面。我注意到这种行为已经持续了一年多。我们怀疑这个变化是由于人们广泛（不正确地）使用这个指令来防止缓存。
+此外，通过使用 Cache-Control: max-age=0, must-revalidate，你基本上可以实现与no-cache相同的功能。所以，这可能是一种在避免no-cache以及它似乎将no-cache迁移到做与no-store一样的事情（即完全不缓存）时获取MUST重新验证行为的方式。
+由用户代理发送的指令 其次，我们来看一下max-age=0和no-cache在用户代理端的含义。如果用户代理发送一个带有 Cache-Control: max-age=0 的请求（即“端到端重新验证”），那么每个缓存都会根据需要重新验证其缓存条目，直到原始服务器。如果响应是304（未修改），则可以使用缓存的实体。而发送带有 Cache-Control: no-cache 的请求（即“端到端重新加载”），则不会执行重新验证，缓存不能在响应时使用缓存的副本。
+总结 本教程解释了Cache-Control头部中max-age=0和no-cache之间的区别。当原始服务器发送这些指令时，max-age=0指示缓存在使用缓存的副本之前应该重新验证，而no-cache指示缓存必须重新验证。当用户代理发送这些指令时，max-age=0 指示缓存应该逐个验证缓存条目，直到原始服务器，而 no-cache 指示缓存不能在使用过期的副本时执行重新验证。根据实际需求和使用场景选择适合的指令，并根据需要添加其他指令以实现所需的行为。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Python中加载文件夹中的所有模块</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Fri, 01 Sep 2023 06:35:56 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%A8%A1%E5%9D%97/</guid>
+      <description>
+        
+          
+            摘要 在Python中，有时候需要一次性导入文件夹中的所有模块。本教程将介绍如何实现这一目标。
+内容 要导入文件夹中的所有模块，可以按照以下步骤操作：
+获取文件夹中所有的.py文件路径。 使用importlib模块动态导入每个模块，并将其添加到当前命名空间。 以下是具体示例：
+1import importlib 2import pathlib 3import re 4 5# 获取文件夹路径 6path = pathlib.Path(__file__).parent.absolute() 7 8# 获取文件夹中的所有模块名 9names = [x.name[:-3] for x in path.iterdir() if x.is_file() and re.search(&amp;#34;^[a-z]*\.py$&amp;#34;, x.name)] 10 11# 动态导入每个模块 12for name in names: 13 importlib.import_module(f&amp;#34;.{name}&amp;#34;, __name__) 这样，文件夹中的每个模块将被导入并添加到当前命名空间中。你可以直接使用导入的模块进行操作。
+总结 通过使用importlib模块，可以实现一次性导入文件夹中的所有模块。这种方法适用于需要一次性导入多个模块的情况。在导入模块时，可以根据需要对模块进行修改和使用。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在SQL Server中为什么表名以&#34;dbo&#34;开头？</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A1%A8%E5%90%8D%E4%BB%A5dbo%E5%BC%80%E5%A4%B4/</link>
+      <pubDate>Fri, 01 Sep 2023 06:27:30 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A1%A8%E5%90%8D%E4%BB%A5dbo%E5%BC%80%E5%A4%B4/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释为什么在SQL Server中创建的表名都以&amp;quot;dbo.&amp;quot;为前缀。通过示例代码，你可以了解“dbo”是什么以及它的作用。
+内容 在SQL Server中，表名以&amp;quot;dbo.&amp;quot;开头是因为以下原因：
+dbo是SQL Server中的默认架构，代表数据库所有者。使用默认架构的好处是可以轻松地管理对象的命名空间。
+通过为表名添加架构前缀，可以避免表名之间的命名冲突。例如，&amp;quot;Financial&amp;quot;信息的表可以以&amp;quot;Financial.&amp;quot;为前缀，&amp;quot;Personal&amp;quot;数据的表可以以&amp;quot;Personal.&amp;quot;为前缀。
+以下是示例代码，演示如何创建自定义架构和使用带有架构前缀的表名：
+1-- 创建自定义架构 2CREATE SCHEMA [EnterSchemaNameHere] AUTHORIZATION [dbo] 3 4-- 在自定义架构下创建表 5CREATE TABLE [EnterSchemaNameHere].[TableName] ( 6 [ColumnName] [DataType] [Constraints] 7) 使用架构前缀的例子：
+1SELECT * FROM Financial.BankAccounts 2SELECT * FROM Financial.Transactions 3SELECT * FROM Personal.Address 通过使用自定义架构和带有架构前缀的表名，你可以更好地组织和管理数据库对象，并避免命名冲突的问题。
+总结 在SQL Server中，表名以&amp;quot;dbo.&amp;quot;开头是因为dbo是默认架构。你可以创建自定义架构来更好地组织和管理数据库对象的命名空间。通过为表名添加架构前缀，可以防止表名之间的命名冲突，并使代码更具可读性和可维护性。感谢阅读本教程！
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何给span元素添加工具提示</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</link>
       <pubDate>Thu, 31 Aug 2023 09:07:34 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</guid>
       <description>
         
           
@@ -30,10 +286,10 @@
     
     <item>
       <title>在SQL Server中获取表的列名</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E7%9A%84%E5%88%97%E5%90%8D/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E7%9A%84%E5%88%97%E5%90%8D/</link>
       <pubDate>Thu, 31 Aug 2023 08:51:47 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E7%9A%84%E5%88%97%E5%90%8D/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E7%9A%84%E5%88%97%E5%90%8D/</guid>
       <description>
         
           
@@ -50,10 +306,10 @@
     
     <item>
       <title>&#43;# 用JS解析HTML字符串</title>
-      <link>https://techdocdb.com/posts/&#43;#-%E7%94%A8js%E8%A7%A3%E6%9E%90html%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://www.techdocdb.com/posts/&#43;#-%E7%94%A8js%E8%A7%A3%E6%9E%90html%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 31 Aug 2023 08:42:27 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/&#43;#-%E7%94%A8js%E8%A7%A3%E6%9E%90html%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://www.techdocdb.com/posts/&#43;#-%E7%94%A8js%E8%A7%A3%E6%9E%90html%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>
         
           
@@ -71,10 +327,10 @@
     
     <item>
       <title>Ruby on Rails中处理货币的最佳方法</title>
-      <link>https://techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 31 Aug 2023 08:10:54 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -93,10 +349,10 @@
     
     <item>
       <title>在Eclipse中自动移除尾随空白字符</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8eclipse%E4%B8%AD%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E5%B0%BE%E9%9A%8F%E7%A9%BA%E7%99%BD%E5%AD%97%E7%AC%A6/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8eclipse%E4%B8%AD%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E5%B0%BE%E9%9A%8F%E7%A9%BA%E7%99%BD%E5%AD%97%E7%AC%A6/</link>
       <pubDate>Thu, 31 Aug 2023 07:47:52 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8eclipse%E4%B8%AD%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E5%B0%BE%E9%9A%8F%E7%A9%BA%E7%99%BD%E5%AD%97%E7%AC%A6/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8eclipse%E4%B8%AD%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E5%B0%BE%E9%9A%8F%E7%A9%BA%E7%99%BD%E5%AD%97%E7%AC%A6/</guid>
       <description>
         
           
@@ -116,10 +372,10 @@
     
     <item>
       <title>如何使用Python查找CPU数量</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</link>
       <pubDate>Thu, 31 Aug 2023 06:31:53 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</guid>
       <description>
         
           
@@ -141,10 +397,10 @@
     
     <item>
       <title>使用正则表达式进行HTML验证</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8Chtml%E9%AA%8C%E8%AF%81/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8Chtml%E9%AA%8C%E8%AF%81/</link>
       <pubDate>Thu, 31 Aug 2023 06:30:37 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8Chtml%E9%AA%8C%E8%AF%81/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8Chtml%E9%AA%8C%E8%AF%81/</guid>
       <description>
         
           
@@ -161,10 +417,10 @@
     
     <item>
       <title>在Google Chrome中如何通过代码设置JavaScript断点</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8google-chrome%E4%B8%AD%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AEjavascript%E6%96%AD%E7%82%B9/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8google-chrome%E4%B8%AD%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AEjavascript%E6%96%AD%E7%82%B9/</link>
       <pubDate>Thu, 31 Aug 2023 06:13:52 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8google-chrome%E4%B8%AD%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AEjavascript%E6%96%AD%E7%82%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8google-chrome%E4%B8%AD%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AEjavascript%E6%96%AD%E7%82%B9/</guid>
       <description>
         
           
@@ -187,10 +443,10 @@
     
     <item>
       <title>在Node.js中从一个函数调用另一个函数</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</link>
       <pubDate>Thu, 31 Aug 2023 06:02:40 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</guid>
       <description>
         
           
@@ -207,10 +463,10 @@
     
     <item>
       <title>如何修改一个提交（不改变提交信息）？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</link>
       <pubDate>Thu, 31 Aug 2023 05:40:39 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E4%B8%8D%E6%94%B9%E5%8F%98%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF/</guid>
       <description>
         
           
@@ -231,10 +487,10 @@
     
     <item>
       <title>在Flask请求中获取接收到的数据</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8flask%E8%AF%B7%E6%B1%82%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%8E%A5%E6%94%B6%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8flask%E8%AF%B7%E6%B1%82%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%8E%A5%E6%94%B6%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
       <pubDate>Thu, 31 Aug 2023 05:14:03 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8flask%E8%AF%B7%E6%B1%82%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%8E%A5%E6%94%B6%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8flask%E8%AF%B7%E6%B1%82%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%8E%A5%E6%94%B6%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
       <description>
         
           
@@ -253,10 +509,10 @@
     
     <item>
       <title>在Python注释中的“# noqa”是什么意思？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8python%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84#-noqa%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8python%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84#-noqa%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/</link>
       <pubDate>Tue, 29 Aug 2023 09:55:04 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8python%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84#-noqa%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8python%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84#-noqa%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/</guid>
       <description>
         
           
@@ -277,10 +533,10 @@ What does &#39;# noqa&#39; mean in Python comments?
     
     <item>
       <title>在AngularJS中控制器之间的正确通讯方式</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8angularjs%E4%B8%AD%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8angularjs%E4%B8%AD%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Tue, 29 Aug 2023 09:53:25 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8angularjs%E4%B8%AD%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8angularjs%E4%B8%AD%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</guid>
       <description>
         
           
@@ -297,10 +553,10 @@ What does &#39;# noqa&#39; mean in Python comments?
     
     <item>
       <title>在MySQL中使用JOIN ON和USING的区别是什么？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Tue, 29 Aug 2023 09:32:58 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E4%BD%BF%E7%94%A8join-on%E5%92%8Cusing%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>
         
           
@@ -320,10 +576,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>撤销Git中的stash操作</title>
-      <link>https://techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</link>
+      <link>https://www.techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Tue, 29 Aug 2023 09:07:55 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://www.techdocdb.com/posts/%E6%92%A4%E9%94%80git%E4%B8%AD%E7%9A%84stash%E6%93%8D%E4%BD%9C/</guid>
       <description>
         
           
@@ -343,10 +599,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>如何禁用Requests库的日志消息？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A6%81%E7%94%A8requests%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E6%B6%88%E6%81%AF/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A6%81%E7%94%A8requests%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E6%B6%88%E6%81%AF/</link>
       <pubDate>Tue, 29 Aug 2023 08:39:04 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A6%81%E7%94%A8requests%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E6%B6%88%E6%81%AF/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A6%81%E7%94%A8requests%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E6%B6%88%E6%81%AF/</guid>
       <description>
         
           
@@ -364,10 +620,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>在Matplotlib中旋转坐标轴文本</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8matplotlib%E4%B8%AD%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E6%9C%AC/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8matplotlib%E4%B8%AD%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E6%9C%AC/</link>
       <pubDate>Tue, 29 Aug 2023 08:34:15 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8matplotlib%E4%B8%AD%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E6%9C%AC/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8matplotlib%E4%B8%AD%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%BD%B4%E6%96%87%E6%9C%AC/</guid>
       <description>
         
           
@@ -383,10 +639,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>在C&#43;&#43;中使用`noexcept`</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>
       <pubDate>Tue, 29 Aug 2023 08:34:13 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</guid>
       <description>
         
           
@@ -400,10 +656,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>在Java中如何确定一个数组是否包含特定的值？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%89%B9%E5%AE%9A%E7%9A%84%E5%80%BC/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%89%B9%E5%AE%9A%E7%9A%84%E5%80%BC/</link>
       <pubDate>Tue, 29 Aug 2023 08:30:42 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%89%B9%E5%AE%9A%E7%9A%84%E5%80%BC/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%89%B9%E5%AE%9A%E7%9A%84%E5%80%BC/</guid>
       <description>
         
           
@@ -421,10 +677,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>如何以最Pythonic的方式删除一个可能不存在的文件</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%A5%E6%9C%80pythonic%E7%9A%84%E6%96%B9%E5%BC%8F%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%96%87%E4%BB%B6/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%A5%E6%9C%80pythonic%E7%9A%84%E6%96%B9%E5%BC%8F%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%96%87%E4%BB%B6/</link>
       <pubDate>Tue, 29 Aug 2023 07:40:34 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%A5%E6%9C%80pythonic%E7%9A%84%E6%96%B9%E5%BC%8F%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%A5%E6%9C%80pythonic%E7%9A%84%E6%96%B9%E5%BC%8F%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%96%87%E4%BB%B6/</guid>
       <description>
         
           
@@ -444,10 +700,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>在Flask路由中如何访问查询字符串</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Tue, 29 Aug 2023 07:21:44 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8flask%E8%B7%AF%E7%94%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>
         
           
@@ -463,10 +719,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>Android资源目录中是否可以包含子目录？</title>
-      <link>https://techdocdb.com/posts/android%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%AD%90%E7%9B%AE%E5%BD%95/</link>
+      <link>https://www.techdocdb.com/posts/android%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%AD%90%E7%9B%AE%E5%BD%95/</link>
       <pubDate>Tue, 29 Aug 2023 07:21:41 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/android%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%AD%90%E7%9B%AE%E5%BD%95/</guid>
+      <guid>https://www.techdocdb.com/posts/android%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%AD%90%E7%9B%AE%E5%BD%95/</guid>
       <description>
         
           
@@ -479,10 +735,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>如何从NumPy数组中删除NaN值？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Enumpy%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4nan%E5%80%BC/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Enumpy%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4nan%E5%80%BC/</link>
       <pubDate>Tue, 29 Aug 2023 07:18:38 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Enumpy%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4nan%E5%80%BC/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Enumpy%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4nan%E5%80%BC/</guid>
       <description>
         
           
@@ -498,10 +754,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>HTML Input 的 accept 属性及文件类型限制 (CSV)</title>
-      <link>https://techdocdb.com/posts/html-input-%E7%9A%84-accept-%E5%B1%9E%E6%80%A7%E5%8F%8A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6-csv/</link>
+      <link>https://www.techdocdb.com/posts/html-input-%E7%9A%84-accept-%E5%B1%9E%E6%80%A7%E5%8F%8A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6-csv/</link>
       <pubDate>Tue, 29 Aug 2023 07:01:04 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/html-input-%E7%9A%84-accept-%E5%B1%9E%E6%80%A7%E5%8F%8A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6-csv/</guid>
+      <guid>https://www.techdocdb.com/posts/html-input-%E7%9A%84-accept-%E5%B1%9E%E6%80%A7%E5%8F%8A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6-csv/</guid>
       <description>
         
           
@@ -520,10 +776,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>使用jQuery实现自动滚动到页面底部</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%BA%95%E9%83%A8/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%BA%95%E9%83%A8/</link>
       <pubDate>Tue, 29 Aug 2023 06:57:11 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%BA%95%E9%83%A8/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%BA%95%E9%83%A8/</guid>
       <description>
         
           
@@ -541,10 +797,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>在Sublime Text 2中进行正则表达式搜索替换</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</link>
       <pubDate>Tue, 29 Aug 2023 06:27:32 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</guid>
       <description>
         
           
@@ -565,10 +821,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>如何将表格单元格宽度适应内容</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</link>
       <pubDate>Tue, 29 Aug 2023 06:23:00 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A1%A8%E6%A0%BC%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E9%80%82%E5%BA%94%E5%86%85%E5%AE%B9/</guid>
       <description>
         
           
@@ -587,10 +843,10 @@ ON用于更一般的表连接。可以使用单个列、多个列甚至条件来
     
     <item>
       <title>Web字体中的font-face和不同格式之间的关系</title>
-      <link>https://techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <link>https://www.techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
       <pubDate>Tue, 29 Aug 2023 06:01:15 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <guid>https://www.techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
       <description>
         
           
@@ -611,10 +867,10 @@ TTF和OTF：这些是常规的字体格式，可以在各种应用程序和操�
     
     <item>
       <title>PHP中的shell_exec()和exec()命令的区别</title>
-      <link>https://techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://www.techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Tue, 29 Aug 2023 05:56:04 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
       <description>
         
           
@@ -633,10 +889,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>Git中从存储区（stash）中提取单个文件（或文件的更改）</title>
-      <link>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
+      <link>https://www.techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
       <pubDate>Tue, 29 Aug 2023 05:50:51 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
       <description>
         
           
@@ -655,10 +911,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>如何去除.NET DateTime中的毫秒</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</link>
       <pubDate>Mon, 28 Aug 2023 09:05:18 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</guid>
       <description>
         
           
@@ -677,10 +933,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>在PHP中如何获取文件扩展名？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8php%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8php%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D/</link>
       <pubDate>Mon, 28 Aug 2023 08:43:44 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8php%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8php%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D/</guid>
       <description>
         
           
@@ -696,10 +952,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>在JavaScript中如何编写行内的IF语句</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</link>
       <pubDate>Mon, 28 Aug 2023 08:32:40 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E8%A1%8C%E5%86%85%E7%9A%84if%E8%AF%AD%E5%8F%A5/</guid>
       <description>
         
           
@@ -716,10 +972,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>逐行添加Pandas Dataframe</title>
-      <link>https://techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</link>
+      <link>https://www.techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</link>
       <pubDate>Mon, 28 Aug 2023 08:05:56 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</guid>
       <description>
         
           
@@ -738,10 +994,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>&#34;正确&#34;的JSON日期格式是什么？</title>
-      <link>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>https://www.techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Mon, 28 Aug 2023 07:40:44 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>https://www.techdocdb.com/posts/%E6%AD%A3%E7%A1%AE%E7%9A%84json%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>
         
           
@@ -759,10 +1015,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>使用Python对包含元组的列表进行排序</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8python%E5%AF%B9%E5%8C%85%E5%90%AB%E5%85%83%E7%BB%84%E7%9A%84%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8python%E5%AF%B9%E5%8C%85%E5%90%AB%E5%85%83%E7%BB%84%E7%9A%84%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Mon, 28 Aug 2023 07:25:43 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8python%E5%AF%B9%E5%8C%85%E5%90%AB%E5%85%83%E7%BB%84%E7%9A%84%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8python%E5%AF%B9%E5%8C%85%E5%90%AB%E5%85%83%E7%BB%84%E7%9A%84%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/</guid>
       <description>
         
           
@@ -781,10 +1037,10 @@ exec()函数 exec()函数执行外部命令，并返回输出的最后一行。�
     
     <item>
       <title>如何从 iptables 中删除特定规则</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</link>
       <pubDate>Mon, 28 Aug 2023 07:19:38 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E-iptables-%E4%B8%AD%E5%88%A0%E9%99%A4%E7%89%B9%E5%AE%9A%E8%A7%84%E5%88%99/</guid>
       <description>
         
           
@@ -806,10 +1062,10 @@ man iptables - 查看 iptables 的手册以了解更多选项和命令使用。
     
     <item>
       <title>在JavaScript中给Date对象添加小时的方法</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 28 Aug 2023 07:03:02 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E7%BB%99date%E5%AF%B9%E8%B1%A1%E6%B7%BB%E5%8A%A0%E5%B0%8F%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -830,10 +1086,10 @@ man iptables - 查看 iptables 的手册以了解更多选项和命令使用。
     
     <item>
       <title>在Ruby中为什么使用`rescue Exception =&gt; e`是不好的风格？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>
       <pubDate>Mon, 28 Aug 2023 06:54:45 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</guid>
       <description>
         
           
@@ -854,10 +1110,10 @@ man iptables - 查看 iptables 的手册以了解更多选项和命令使用。
     
     <item>
       <title>通过jQuery选择具有多个类的元素</title>
-      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
+      <link>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</link>
       <pubDate>Mon, 28 Aug 2023 06:38:41 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87jquery%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
       <description>
         
           
@@ -877,10 +1133,10 @@ man iptables - 查看 iptables 的手册以了解更多选项和命令使用。
     
     <item>
       <title>使用CSS设置背景透明度</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</link>
       <pubDate>Mon, 28 Aug 2023 05:56:44 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%BA%A6/</guid>
       <description>
         
           
@@ -898,10 +1154,10 @@ man iptables - 查看 iptables 的手册以了解更多选项和命令使用。
     
     <item>
       <title>在更改 crontab 文件后需要重启 cron 服务吗？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>
       <pubDate>Fri, 25 Aug 2023 10:49:37 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</guid>
       <description>
         
           
@@ -919,10 +1175,10 @@ man iptables - 查看 iptables 的手册以了解更多选项和命令使用。
     
     <item>
       <title>如何在 HashMap 中保留插入顺序?</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</link>
       <pubDate>Fri, 25 Aug 2023 09:22:32 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-hashmap-%E4%B8%AD%E4%BF%9D%E7%95%99%E6%8F%92%E5%85%A5%E9%A1%BA%E5%BA%8F/</guid>
       <description>
         
           
@@ -937,10 +1193,10 @@ Java 提供了一个类
     
     <item>
       <title>通过 UNIX 时间戳将时间转换为 Ruby DateTime 格式</title>
-      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</link>
       <pubDate>Fri, 25 Aug 2023 09:14:58 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</guid>
       <description>
         
           
@@ -956,10 +1212,10 @@ Java 提供了一个类
     
     <item>
       <title>如何判断存储项是否存在于GitHub远程仓库？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
       <pubDate>Fri, 25 Aug 2023 09:00:58 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AD%98%E5%82%A8%E9%A1%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8Egithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
       <description>
         
           
@@ -979,10 +1235,10 @@ Java 提供了一个类
     
     <item>
       <title>如何将 --no-ri --no-rdoc 设置为 gem install 的默认选项</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</link>
       <pubDate>Fri, 25 Aug 2023 09:00:46 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</guid>
       <description>
         
           
@@ -1000,10 +1256,10 @@ Java 提供了一个类
     
     <item>
       <title>如何从Git仓库中删除.DS_Store文件</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</link>
       <pubDate>Fri, 25 Aug 2023 08:56:28 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Egit%E4%BB%93%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4.ds_store%E6%96%87%E4%BB%B6/</guid>
       <description>
         
           
@@ -1021,10 +1277,10 @@ Java 提供了一个类
     
     <item>
       <title>MySQL中 @variable 和 variable 有什么区别？</title>
-      <link>https://techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+      <link>https://www.techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Fri, 25 Aug 2023 08:49:31 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/mysql%E4%B8%AD-@variable-%E5%92%8C-variable-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
       <description>
         
           
@@ -1042,10 +1298,10 @@ Java 提供了一个类
     
     <item>
       <title>使用`px`还是`rem`作为CSS中的尺寸单位？</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</link>
       <pubDate>Fri, 25 Aug 2023 08:31:48 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8px%E8%BF%98%E6%98%AFrem%E4%BD%9C%E4%B8%BAcss%E4%B8%AD%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D/</guid>
       <description>
         
           
@@ -1062,10 +1318,10 @@ Java 提供了一个类
     
     <item>
       <title>在Vim中如何移动到行末？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8vim%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A7%BB%E5%8A%A8%E5%88%B0%E8%A1%8C%E6%9C%AB/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8vim%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A7%BB%E5%8A%A8%E5%88%B0%E8%A1%8C%E6%9C%AB/</link>
       <pubDate>Fri, 25 Aug 2023 08:23:28 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8vim%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A7%BB%E5%8A%A8%E5%88%B0%E8%A1%8C%E6%9C%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8vim%E4%B8%AD%E5%A6%82%E4%BD%95%E7%A7%BB%E5%8A%A8%E5%88%B0%E8%A1%8C%E6%9C%AB/</guid>
       <description>
         
           
@@ -1085,10 +1341,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>Python代码为什么在函数中运行更快？</title>
-      <link>https://techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</link>
+      <link>https://www.techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</link>
       <pubDate>Fri, 25 Aug 2023 08:17:25 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</guid>
       <description>
         
           
@@ -1111,10 +1367,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>如何克隆一个 Date 对象？</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA-date-%E5%AF%B9%E8%B1%A1/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA-date-%E5%AF%B9%E8%B1%A1/</link>
       <pubDate>Fri, 25 Aug 2023 07:44:17 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA-date-%E5%AF%B9%E8%B1%A1/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA-date-%E5%AF%B9%E8%B1%A1/</guid>
       <description>
         
           
@@ -1133,10 +1389,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>为什么1970年1月1日是“纪元时间”？</title>
-      <link>https://techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%881970%E5%B9%B41%E6%9C%881%E6%97%A5%E6%98%AF%E7%BA%AA%E5%85%83%E6%97%B6%E9%97%B4/</link>
+      <link>https://www.techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%881970%E5%B9%B41%E6%9C%881%E6%97%A5%E6%98%AF%E7%BA%AA%E5%85%83%E6%97%B6%E9%97%B4/</link>
       <pubDate>Fri, 25 Aug 2023 07:28:40 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%881970%E5%B9%B41%E6%9C%881%E6%97%A5%E6%98%AF%E7%BA%AA%E5%85%83%E6%97%B6%E9%97%B4/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%881970%E5%B9%B41%E6%9C%881%E6%97%A5%E6%98%AF%E7%BA%AA%E5%85%83%E6%97%B6%E9%97%B4/</guid>
       <description>
         
           
@@ -1153,10 +1409,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>使用Git递归更新子模块</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
       <pubDate>Fri, 25 Aug 2023 07:28:30 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E9%80%92%E5%BD%92%E6%9B%B4%E6%96%B0%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
       <description>
         
           
@@ -1173,10 +1429,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>使用.otf 字体在网页中</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</link>
       <pubDate>Thu, 24 Aug 2023 16:15:55 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD/</guid>
       <description>
         
           
@@ -1194,10 +1450,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在 AngularJS 中从子控制器访问父作用域</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8-angularjs-%E4%B8%AD%E4%BB%8E%E5%AD%90%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BF%E9%97%AE%E7%88%B6%E4%BD%9C%E7%94%A8%E5%9F%9F/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-angularjs-%E4%B8%AD%E4%BB%8E%E5%AD%90%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BF%E9%97%AE%E7%88%B6%E4%BD%9C%E7%94%A8%E5%9F%9F/</link>
       <pubDate>Thu, 24 Aug 2023 16:00:15 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8-angularjs-%E4%B8%AD%E4%BB%8E%E5%AD%90%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BF%E9%97%AE%E7%88%B6%E4%BD%9C%E7%94%A8%E5%9F%9F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-angularjs-%E4%B8%AD%E4%BB%8E%E5%AD%90%E6%8E%A7%E5%88%B6%E5%99%A8%E8%AE%BF%E9%97%AE%E7%88%B6%E4%BD%9C%E7%94%A8%E5%9F%9F/</guid>
       <description>
         
           
@@ -1216,10 +1472,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>使用 pip 安装具有最小和最大版本范围的软件包</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</link>
       <pubDate>Thu, 24 Aug 2023 15:33:02 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-pip-%E5%AE%89%E8%A3%85%E5%85%B7%E6%9C%89%E6%9C%80%E5%B0%8F%E5%92%8C%E6%9C%80%E5%A4%A7%E7%89%88%E6%9C%AC%E8%8C%83%E5%9B%B4%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85/</guid>
       <description>
         
           
@@ -1238,10 +1494,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>使用 Fetch API 进行 GET 请求设置查询字符串</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 24 Aug 2023 14:57:59 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-fetch-api-%E8%BF%9B%E8%A1%8C-get-%E8%AF%B7%E6%B1%82%E8%AE%BE%E7%BD%AE%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>
         
           
@@ -1259,10 +1515,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在 MySQL 中临时禁用外键约束的方法</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 14:57:45 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-mysql-%E4%B8%AD%E4%B8%B4%E6%97%B6%E7%A6%81%E7%94%A8%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -1280,10 +1536,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在目标机器上通过 ssh 执行后台命令</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8A%E9%80%9A%E8%BF%87-ssh-%E6%89%A7%E8%A1%8C%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8A%E9%80%9A%E8%BF%87-ssh-%E6%89%A7%E8%A1%8C%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 24 Aug 2023 14:32:09 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8A%E9%80%9A%E8%BF%87-ssh-%E6%89%A7%E8%A1%8C%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8A%E9%80%9A%E8%BF%87-ssh-%E6%89%A7%E8%A1%8C%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4/</guid>
       <description>
         
           
@@ -1300,10 +1556,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>使用 Python 求多个集合的交集</title>
-      <link>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-python-%E6%B1%82%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E7%9A%84%E4%BA%A4%E9%9B%86/</link>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-python-%E6%B1%82%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E7%9A%84%E4%BA%A4%E9%9B%86/</link>
       <pubDate>Thu, 24 Aug 2023 14:15:42 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E4%BD%BF%E7%94%A8-python-%E6%B1%82%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E7%9A%84%E4%BA%A4%E9%9B%86/</guid>
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-python-%E6%B1%82%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E7%9A%84%E4%BA%A4%E9%9B%86/</guid>
       <description>
         
           
@@ -1322,10 +1578,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在.gitignore 文件中可以使用注释</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</link>
       <pubDate>Thu, 24 Aug 2023 14:02:13 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8.gitignore-%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A/</guid>
       <description>
         
           
@@ -1343,10 +1599,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>如何从JavaScript对象中删除项</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Ejavascript%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%88%A0%E9%99%A4%E9%A1%B9/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Ejavascript%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%88%A0%E9%99%A4%E9%A1%B9/</link>
       <pubDate>Thu, 24 Aug 2023 13:52:29 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Ejavascript%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%88%A0%E9%99%A4%E9%A1%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8Ejavascript%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%88%A0%E9%99%A4%E9%A1%B9/</guid>
       <description>
         
           
@@ -1362,10 +1618,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>C&#43;&#43;中存在头文件和.cpp文件的原因</title>
-      <link>https://techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</link>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</link>
       <pubDate>Thu, 24 Aug 2023 13:45:10 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</guid>
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C.cpp%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</guid>
       <description>
         
           
@@ -1383,10 +1639,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>301（永久重定向）和 302（临时重定向）的区别</title>
-      <link>https://techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://www.techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Thu, 24 Aug 2023 13:23:10 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://www.techdocdb.com/posts/301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C-302%E4%B8%B4%E6%97%B6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
       <description>
         
           
@@ -1404,10 +1660,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在 Web 浏览器中使用.otf 字体</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8-web-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-web-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93/</link>
       <pubDate>Thu, 24 Aug 2023 13:18:05 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8-web-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-web-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%BD%BF%E7%94%A8.otf-%E5%AD%97%E4%BD%93/</guid>
       <description>
         
           
@@ -1427,10 +1683,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>Python中定义类变量的正确方法</title>
-      <link>https://techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 13:17:56 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -1449,10 +1705,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>将Linq查询结果转换为字典</title>
-      <link>https://techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</link>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</link>
       <pubDate>Thu, 24 Aug 2023 13:12:20 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86linq%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</guid>
       <description>
         
           
@@ -1469,10 +1725,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>将std::string转换为int的方法</title>
-      <link>https://techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 13:00:31 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86stdstring%E8%BD%AC%E6%8D%A2%E4%B8%BAint%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -1490,10 +1746,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>阻止双击后文本选择的方法</title>
-      <link>https://techdocdb.com/posts/%E9%98%BB%E6%AD%A2%E5%8F%8C%E5%87%BB%E5%90%8E%E6%96%87%E6%9C%AC%E9%80%89%E6%8B%A9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/%E9%98%BB%E6%AD%A2%E5%8F%8C%E5%87%BB%E5%90%8E%E6%96%87%E6%9C%AC%E9%80%89%E6%8B%A9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 12:33:25 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%98%BB%E6%AD%A2%E5%8F%8C%E5%87%BB%E5%90%8E%E6%96%87%E6%9C%AC%E9%80%89%E6%8B%A9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%98%BB%E6%AD%A2%E5%8F%8C%E5%87%BB%E5%90%8E%E6%96%87%E6%9C%AC%E9%80%89%E6%8B%A9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -1513,10 +1769,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在 Java 中使用 switch 语句和枚举</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-switch-%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9E%9A%E4%B8%BE/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-switch-%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9E%9A%E4%B8%BE/</link>
       <pubDate>Thu, 24 Aug 2023 12:31:06 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-switch-%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9E%9A%E4%B8%BE/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-switch-%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9E%9A%E4%B8%BE/</guid>
       <description>
         
           
@@ -1532,10 +1788,10 @@ g_键将光标移动到最后一个非空字符。
     
     <item>
       <title>在Razor视图引擎中转义@字符</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8razor%E8%A7%86%E5%9B%BE%E5%BC%95%E6%93%8E%E4%B8%AD%E8%BD%AC%E4%B9%89@%E5%AD%97%E7%AC%A6/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8razor%E8%A7%86%E5%9B%BE%E5%BC%95%E6%93%8E%E4%B8%AD%E8%BD%AC%E4%B9%89@%E5%AD%97%E7%AC%A6/</link>
       <pubDate>Thu, 24 Aug 2023 12:20:46 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8razor%E8%A7%86%E5%9B%BE%E5%BC%95%E6%93%8E%E4%B8%AD%E8%BD%AC%E4%B9%89@%E5%AD%97%E7%AC%A6/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8razor%E8%A7%86%E5%9B%BE%E5%BC%95%E6%93%8E%E4%B8%AD%E8%BD%AC%E4%B9%89@%E5%AD%97%E7%AC%A6/</guid>
       <description>
         
           

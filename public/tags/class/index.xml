@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>class on 技术分享站</title>
-    <link>https://techdocdb.com/tags/class/</link>
+    <link>https://www.techdocdb.com/tags/class/</link>
     <description>Recent content in class on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 13:17:56 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/class/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 13:17:56 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/class/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python中定义类变量的正确方法</title>
-      <link>https://techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 24 Aug 2023 13:17:56 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/python%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 技术分享站</title>
-    <link>https://techdocdb.com/categories/</link>
+    <link>https://www.techdocdb.com/categories/</link>
     <description>Recent content in Categories on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://techdocdb.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://www.techdocdb.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dataframe on 技术分享站</title>
-    <link>https://techdocdb.com/tags/dataframe/</link>
+    <link>https://www.techdocdb.com/tags/dataframe/</link>
     <description>Recent content in dataframe on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 Aug 2023 08:05:56 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/dataframe/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 08:05:56 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/dataframe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>逐行添加Pandas Dataframe</title>
-      <link>https://techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</link>
+      <link>https://www.techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</link>
       <pubDate>Mon, 28 Aug 2023 08:05:56 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%80%90%E8%A1%8C%E6%B7%BB%E5%8A%A0pandas-dataframe/</guid>
       <description>
         
           

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git-stash on 技术分享站</title>
-    <link>https://techdocdb.com/tags/git-stash/</link>
+    <link>https://www.techdocdb.com/tags/git-stash/</link>
     <description>Recent content in git-stash on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 05:50:51 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/git-stash/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 05:50:51 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git-stash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git中从存储区（stash）中提取单个文件（或文件的更改）</title>
-      <link>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
+      <link>https://www.techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
       <pubDate>Tue, 29 Aug 2023 05:50:51 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/git%E4%B8%AD%E4%BB%8E%E5%AD%98%E5%82%A8%E5%8C%BAstash%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
       <description>
         
           

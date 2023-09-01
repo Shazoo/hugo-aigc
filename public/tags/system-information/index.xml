@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>system-information on 技术分享站</title>
-    <link>https://techdocdb.com/tags/system-information/</link>
+    <link>https://www.techdocdb.com/tags/system-information/</link>
     <description>Recent content in system-information on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 06:31:53 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/system-information/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Aug 2023 06:31:53 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/system-information/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何使用Python查找CPU数量</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</link>
       <pubDate>Thu, 31 Aug 2023 06:31:53 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8python%E6%9F%A5%E6%89%BEcpu%E6%95%B0%E9%87%8F/</guid>
       <description>
         
           

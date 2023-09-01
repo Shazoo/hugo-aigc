@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cron-task on 技术分享站</title>
-    <link>https://techdocdb.com/tags/cron-task/</link>
+    <link>https://www.techdocdb.com/tags/cron-task/</link>
     <description>Recent content in cron-task on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 10:49:37 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/cron-task/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 10:49:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/cron-task/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在更改 crontab 文件后需要重启 cron 服务吗？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>
       <pubDate>Fri, 25 Aug 2023 10:49:37 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</guid>
       <description>
         
           

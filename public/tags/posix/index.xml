@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>posix on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/posix/</link>
+    <description>Recent content in posix on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 08:03:54 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/posix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于/dev/null 2&gt;&amp;1的含义</title>
+      <link>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E/dev/null-21%E7%9A%84%E5%90%AB%E4%B9%89/</link>
+      <pubDate>Fri, 01 Sep 2023 08:03:54 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E/dev/null-21%E7%9A%84%E5%90%AB%E4%B9%89/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释/dev/null 2&amp;gt;&amp;amp;1的含义。我们将解释每个部分的作用，并提供例子来说明使用该语法的目的。
+内容 在给出对/dev/null 2&amp;gt;&amp;amp;1的详细解释之前，让我们逐个解析这个表达式的不同部分。
+&amp;gt;&amp;gt; 是输出重定向操作符，将输出追加到指定文件中。在这里，&amp;gt;&amp;gt; 用于将输出追加到 /dev/null 文件中。 /dev/null 是一个称为“黑洞”的特殊文件系统对象。将输出重定向到 /dev/null，实际上就将输出丢弃掉。 2&amp;gt;&amp;amp;1 是将标准错误(stderr)重定向到标准输出(stdout)的语法。这意味着标准错误的输出会被重定向到与标准输出相同的位置。 因此，command &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 的含义如下：
+command 的输出被追加到 /dev/null，即被丢弃掉。 2&amp;gt;&amp;amp;1 将标准错误的输出重定向到与标准输出相同的位置，也就是 /dev/null。 这个语法的目的是使程序在执行时不产生任何输出。同时，通过将标准错误重定向到标准输出，任何标准错误的输出也将被丢弃。
+在问题的例子中，/etc/cron.daily/apf 的输出被重定向到 /dev/null，从而取消了防火墙的输出。因此，删除这个cron作业可能会导致防火墙规则的输出恢复，如果你不希望看到这些输出，可以保留这个cron作业。
+总结 使用&amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1 的语法可以使程序在执行时变得安静，并且丢弃任何输出。通过将标准错误重定向到标准输出，标准错误的输出也将被丢弃。
+感谢阅读本教程！
+注意：在使用这种语法时，需要理解各个部分的含义，并根据实际情况选择合适的输出重定向方式。根据需要，可以将输出重定向到其他文件，而不仅仅是/dev/null。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

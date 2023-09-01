@@ -2,18 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ruby on 技术分享站</title>
-    <link>https://techdocdb.com/tags/ruby/</link>
+    <link>https://www.techdocdb.com/tags/ruby/</link>
     <description>Recent content in ruby on 技术分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 08:10:54 +0800</lastBuildDate><atom:link href="https://techdocdb.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2023 08:25:54 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Ruby中如何按值删除数组中的一个元素</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8C%89%E5%80%BC%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Fri, 01 Sep 2023 08:25:54 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8C%89%E5%80%BC%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在Ruby中按值删除数组中的一个元素。我们将使用例子来演示不同的方法来删除数组中的特定元素。
+方法介绍 在Ruby中，你可以使用以下几种方法来按值删除数组中的一个元素：
+使用delete方法来按值删除元素。这种方法会删除所有匹配的元素。如果你不关心元素出现的次数，可以使用这种方法。
+使用delete_at方法来按索引删除元素。如果你已经知道元素的索引，可以使用这种方法。
+使用delete_if方法按条件删除元素。这种方法会根据指定的条件删除满足条件的所有元素。
+使用reject方法创建一个新数组，其中包含条件为假的元素。
+使用reject!方法与delete_if方法相同。数组可能不会立即改变，因为这个方法会调用块。
+使用减法运算符-来删除一个值或多个值。这种方法会返回一个新的数组，其中不包含被删除的值。
+以下是这些方法的具体示例：
+1# 使用delete方法删除值为3的元素 2a = [2, 4, 6, 3, 8] 3a.delete(3) 4# =&amp;gt; 3 5puts a 6# =&amp;gt; [2, 4, 6, 8] 7 8# 使用delete_at方法按索引删除元素 9b = [2, 4, 6, 3, 8] 10b.delete_at(2) 11# =&amp;gt; 6 12puts b 13# =&amp;gt; [2, 4, 3, 8] 14 15# 使用delete_if方法按条件删除元素 16c = [1, 2, 5, 4, 9, 10, 11] 17c.delete_if { |n| n &amp;gt;= 10 } 18# =&amp;gt; [1, 2, 5, 4, 9] 19 20# 使用reject方法创建一个新数组，其中包含条件为假的元素 21d = [1, 2, 5, 4, 9, 10, 11] 22d.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Ruby on Rails中处理货币的最佳方法</title>
-      <link>https://techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
+      <link>https://www.techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 31 Aug 2023 08:10:54 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://www.techdocdb.com/posts/ruby-on-rails%E4%B8%AD%E5%A4%84%E7%90%86%E8%B4%A7%E5%B8%81%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
       <description>
         
           
@@ -32,10 +57,10 @@
     
     <item>
       <title>在Ruby中为什么使用`rescue Exception =&gt; e`是不好的风格？</title>
-      <link>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</link>
       <pubDate>Mon, 28 Aug 2023 06:54:45 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8ruby%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8rescue-exception-e%E6%98%AF%E4%B8%8D%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%A0%BC/</guid>
       <description>
         
           
@@ -56,10 +81,10 @@
     
     <item>
       <title>通过 UNIX 时间戳将时间转换为 Ruby DateTime 格式</title>
-      <link>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</link>
+      <link>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</link>
       <pubDate>Fri, 25 Aug 2023 09:14:58 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</guid>
+      <guid>https://www.techdocdb.com/posts/%E9%80%9A%E8%BF%87-unix-%E6%97%B6%E9%97%B4%E6%88%B3%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E4%B8%BA-ruby-datetime-%E6%A0%BC%E5%BC%8F/</guid>
       <description>
         
           
@@ -75,10 +100,10 @@
     
     <item>
       <title>如何将 --no-ri --no-rdoc 设置为 gem install 的默认选项</title>
-      <link>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</link>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</link>
       <pubDate>Fri, 25 Aug 2023 09:00:46 +0800</pubDate>
       
-      <guid>https://techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</guid>
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%B0%86--no-ri--no-rdoc-%E8%AE%BE%E7%BD%AE%E4%B8%BA-gem-install-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9/</guid>
       <description>
         
           
