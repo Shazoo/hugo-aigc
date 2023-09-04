@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 08:34:13 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:02:19 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Git查看特定文件的更改</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
+      <pubDate>Mon, 04 Sep 2023 00:02:19 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
+      <description>
+        
+          
+            概述 在日常开发中，我们经常需要查看某个文件在Git版本控制系统中的更改情况。本教程将介绍如何使用Git命令来查看特定文件的更改。
+内容 要查看特定文件的更改，可以使用以下命令：
+1git diff 文件名 这将显示特定文件的更改信息。git diff命令用于显示整个仓库的更改，但通过指定文件名，我们可以只显示特定文件的更改。
+在使用git diff命令时，可以使用一些选项来进一步定制输出。例如，可以使用--color选项以着色方式显示更改，或者使用--stat选项以简洁的统计信息显示更改。
+总结 通过使用git diff命令并指定文件名，我们可以轻松查看特定文件的更改。掌握这些技巧可以提
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在C&#43;&#43;中使用`noexcept`</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>

@@ -7,7 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 01 Sep 2023 09:17:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:29:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在 Git 仓库中保留文件但不跟踪其变化</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E4%BD%86%E4%B8%8D%E8%B7%9F%E8%B8%AA%E5%85%B6%E5%8F%98%E5%8C%96/</link>
+      <pubDate>Mon, 04 Sep 2023 00:29:15 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E4%BD%86%E4%B8%8D%E8%B7%9F%E8%B8%AA%E5%85%B6%E5%8F%98%E5%8C%96/</guid>
+      <description>
+        
+          
+            摘要： 在 Git 仓库中，有时我们希望将某些文件包含在版本控制中，但不跟踪其变化。本文将介绍如何做到这一点，并提供了一些示例用例。
+有时候，我们希望将某些文件包含在 Git 仓库中，但又不希望 Git 跟踪这些文件的变化，例如包含敏感用户信息的文件（如登录凭证）。
+对于这种需求，Git 提供了一种解决方案：使用 git update-index 命令来设置文件的标志位。下面是一些示例代码，演示了如何实现。
+首先，假设我们有下面的文件列表：
+1application/config/production/config.php 2application/config/production/database.php 3application/config/production/tank_auth.php 4/index.php 5/assets/cache/* 6/assets/frontend/css/user/frontend-user.css 我们希望这些文件在仓库中存在，但不跟踪其变化。
+我们可以使用以下命令来实现：
+1git update-index --assume-unchanged FILE_NAME 这样，这些文件就被标记为“假设未更改”，Git 将不再跟踪它们的变化。如果之后需要恢复对文件的跟踪，可以使用以下命令：
+1git update-index --no-assume-unchanged FILE_NAME 需要注意的是，FILE_NAME 是文件的相对路径或绝对路径。
+通过以上的方式，我们就可以在 Git 仓库中保留文件，但不跟踪其变化。这样，当我们进行 git pull 操作时，这些文件的变化不会被覆盖掉。
+需要特别注意的是，通过上述方式标记的文件将不再出现在 git status 或 git diff 的输出中。这意味着在一些情况下，你可能需要手动检查这些文件的变化并进行相应的操作。
+总结一下，通过使用 git update-index 命令来设置文件的标志位，我们可以在 Git 仓库中保留文件，但不跟踪其变化。这为我们提供了一种灵活的方式来管理需要包含但不需要跟踪的文件。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在GitHub上将公共仓库的fork变为私有仓库</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</link>

@@ -7,7 +7,251 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 01 Sep 2023 09:17:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:29:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在 Git 仓库中保留文件但不跟踪其变化</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E4%BD%86%E4%B8%8D%E8%B7%9F%E8%B8%AA%E5%85%B6%E5%8F%98%E5%8C%96/</link>
+      <pubDate>Mon, 04 Sep 2023 00:29:15 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E4%BD%86%E4%B8%8D%E8%B7%9F%E8%B8%AA%E5%85%B6%E5%8F%98%E5%8C%96/</guid>
+      <description>
+        
+          
+            摘要： 在 Git 仓库中，有时我们希望将某些文件包含在版本控制中，但不跟踪其变化。本文将介绍如何做到这一点，并提供了一些示例用例。
+有时候，我们希望将某些文件包含在 Git 仓库中，但又不希望 Git 跟踪这些文件的变化，例如包含敏感用户信息的文件（如登录凭证）。
+对于这种需求，Git 提供了一种解决方案：使用 git update-index 命令来设置文件的标志位。下面是一些示例代码，演示了如何实现。
+首先，假设我们有下面的文件列表：
+1application/config/production/config.php 2application/config/production/database.php 3application/config/production/tank_auth.php 4/index.php 5/assets/cache/* 6/assets/frontend/css/user/frontend-user.css 我们希望这些文件在仓库中存在，但不跟踪其变化。
+我们可以使用以下命令来实现：
+1git update-index --assume-unchanged FILE_NAME 这样，这些文件就被标记为“假设未更改”，Git 将不再跟踪它们的变化。如果之后需要恢复对文件的跟踪，可以使用以下命令：
+1git update-index --no-assume-unchanged FILE_NAME 需要注意的是，FILE_NAME 是文件的相对路径或绝对路径。
+通过以上的方式，我们就可以在 Git 仓库中保留文件，但不跟踪其变化。这样，当我们进行 git pull 操作时，这些文件的变化不会被覆盖掉。
+需要特别注意的是，通过上述方式标记的文件将不再出现在 git status 或 git diff 的输出中。这意味着在一些情况下，你可能需要手动检查这些文件的变化并进行相应的操作。
+总结一下，通过使用 git update-index 命令来设置文件的标志位，我们可以在 Git 仓库中保留文件，但不跟踪其变化。这为我们提供了一种灵活的方式来管理需要包含但不需要跟踪的文件。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E%E6%88%91/</link>
+      <pubDate>Mon, 04 Sep 2023 00:15:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E%E6%88%91/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了一位来自新西兰的活跃在 Stack Overflow 平台上的用户 slugster。读者将了解到这位用户的特点、活跃领域以及目标，以及他的贡献和参与度。
+内容 slugster 是一位来自新西兰的 Stack Overflow 用户，他具有公正、客观和表达清晰的特点，并且没有明确的个人目标。他在各个领域的活动都很活跃，因为作为一个♦级别的管理员，他需要具备对任何领域的问题进行判断的能力。slugster 在 Stack Overflow 平台已经活跃了接近四年的时间（Meta 平台接近三年），因此他对现有的管理团队非常熟悉，深知如何与他们进行良好的合作。
+除了 Stack Overflow，slugster 还是其他几个 Stack Exchange 社区的成员，但他在 Stack Overflow 和 Meta.SO 上花费了绝大部分的时间。他的活动主要集中在编辑和清理帖子，以及审核任务。他每天在屏幕上保持着 Stack Overflow 网站的打开状态，大约有 12 至 16 个小时的时间。
+slugster 的目标是保持 Stack Overflow 的整洁与有序，并协助分担工作负担，以确保 Stack Overflow 作为最优秀的编程问题解答平台的地位得以保持。
+他没有特定的个人目标，但是他有一些个人偏好和习惯，比如不喜欢标题中出现不必要的标签，以及对建议修改任务中发布低质量修改的审查。此外，他也喜欢在可能的情况下整理与 Facebook 相关的帖子。
+总结 slugster 是一位来自新西兰的 Stack Overflow 用户，他以其活跃程度和贡献而闻名。他致力于保持 Stack Overflow 的整洁与有序，并协助分担工作负担，以确保平台成为顶尖编程问题解答的首选站点。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的ENOSPC错误及解决方法</title>
+      <link>https://www.techdocdb.com/posts/node.js%E4%B8%AD%E7%9A%84enospc%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 04 Sep 2023 00:11:22 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/node.js%E4%B8%AD%E7%9A%84enospc%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 在本教程中，我们将讨论Node.js中的ENOSPC错误以及如何解决此问题。我们将查看导致该错误的原因，并提供多个解决方法以便修复该错误。
+内容 在使用Node.js上传文件到服务器时，您可能会遇到ENOSPC错误。这个错误通常表示磁盘空间不足。解决该问题的方法如下：
+增加inotify监听文件的数量：在Linux系统上，开启Node.js会使用inotify进行文件监视。您可以尝试增加系统的inotify文件监听数量。可以通过如下命令解决： 1echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p 清理临时文件：您可以尝试删除临时文件夹（如/tmp）中的内容。这可能会释放磁盘空间，从而解决ENOSPC错误。
+增加文件系统的文件限制：有些情况下，操作系统对用户文件数量设置了限制。您可以尝试通过更改系统配置来增加文件限制。比如，在Ubuntu上可以这样做：
+1sudo nano /etc/sysctl.conf 在文件末尾添加以下内容：
+1fs.inotify.max_user_watches=524288 保存文件后执行以下命令使配置生效：
+1sudo sysctl -p 总结 通过增加inotify的文件监听数量、清理临时文件或增加文件系统的文件限制，您可以解决Node.js中的ENOSPC错误。请根据具体情况选择适合的解决方法。
+希望本教程对您有帮助！
+参考答案：
+Node.js: what is ENOSPC error and how to solve? 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Git查看特定文件的更改</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>
+      <pubDate>Mon, 04 Sep 2023 00:02:19 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</guid>
+      <description>
+        
+          
+            概述 在日常开发中，我们经常需要查看某个文件在Git版本控制系统中的更改情况。本教程将介绍如何使用Git命令来查看特定文件的更改。
+内容 要查看特定文件的更改，可以使用以下命令：
+1git diff 文件名 这将显示特定文件的更改信息。git diff命令用于显示整个仓库的更改，但通过指定文件名，我们可以只显示特定文件的更改。
+在使用git diff命令时，可以使用一些选项来进一步定制输出。例如，可以使用--color选项以着色方式显示更改，或者使用--stat选项以简洁的统计信息显示更改。
+总结 通过使用git diff命令并指定文件名，我们可以轻松查看特定文件的更改。掌握这些技巧可以提
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Stack Overflow之旅</title>
+      <link>https://www.techdocdb.com/posts/stack-overflow%E4%B9%8B%E6%97%85/</link>
+      <pubDate>Sun, 03 Sep 2023 23:58:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/stack-overflow%E4%B9%8B%E6%97%85/</guid>
+      <description>
+        
+          
+            摘要 本文讲述了我的Stack Overflow之旅，以及我在该网络社区的活动和贡献。
+内容 关于我 我在40多岁的时候开始学习编程，而Stack Overflow一直是我学习过程中的重要助力。我于2012年首次加入Stack Overflow，并始终对该社区充满热情。我始终积极参与管理工作，并严格执行投票欺诈和抄袭的规定。
+我是一个公正、深思熟虑、善于理解的人。凭借我的管理经验和在该社区的6年经验，我希望成为一名有效且易于接近的版主。
+网络活动 以下是我在网络社区的活动：
+Pets.se的版主 Charcoal小组的成员 在Stack Overflow的元网站上积极参与 在Stack Exchange的元网站上积极参与 在Area 51上参与活动 参与Pets.SE的启动 参与InterPersonalSkills.SE的启动 在整个网络中超过12k次有益的举报 Stack Overflow 以下是我在Stack Overflow的贡献统计：
+进行了6.5k次审查 进行了2k次修订 提出了101个问题 发表了473个答案 发表了2.8k个评论 投出了21.5k票 提交了4k个有益的举报 你可以在这里找到我的元回答。
+总结 本文向您展示了我在Stack Overflow的社区之旅，包括我在该社区的活动和贡献。我对该社区充满热情，并希望成为一名具有影响力和易于接近的版主。希望通过我的努力能够对Stack Overflow社区做出积极的贡献。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;11中Reflector的开源替代品</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;11%E4%B8%ADreflector%E7%9A%84%E5%BC%80%E6%BA%90%E6%9B%BF%E4%BB%A3%E5%93%81/</link>
+      <pubDate>Sun, 03 Sep 2023 22:45:22 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;11%E4%B8%ADreflector%E7%9A%84%E5%BC%80%E6%BA%90%E6%9B%BF%E4%BB%A3%E5%93%81/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍C++11中替代Reflector的开源工具。我们将介绍一些使用开源工具进行反射的方法，并提供几个可供选择的开源项目。
+内容 在C++11中，有一些开源替代品可用于替代RedGate的Reflector工具，用于反射。以下是一些可用的开源项目和工具：
+Common Compiler Infrastructure (CCI)
+CCI是一个开源项目，用于生成和分析.NET程序的中间语言（IL）代码。它提供了一组用于操作、检查和修改IL代码的工具和库。可以在此处找到更多信息。 Mono Cecil
+Mono Cecil是一个开源的.NET元数据读取和操作库，用于分析和修改IL代码。它提供了一组简单的API，可以轻松地读取和操作程序集的元数据。可以在此处找到更多信息。 ILSpy
+ILSpy是一个开源的.NET程序集反编译器和浏览器，允许用户查看和分析.NET程序集的源代码。它提供了一个用户友好的界面，可以浏览程序集的类型、方法和属性，并将IL代码转换为C#等高级语言代码。可以在此处找到更多信息。 这些开源工具提供了类似于Reflector的功能，可以帮助开发人员进行反射和IL代码分析。你可以根据需求选择合适的工具和库来处理C++11中的反射需求。
+参考答案： 根据C++11的标准，有几个开源项目可用于替代Reflector工具。这些项目提供了类似于Reflector的功能，可以让开发人员浏览、分析和修改.NET程序集的源代码和IL代码。你可以根据具体需求选择合适的项目，并根据需要进行配置和使用。这些开源工具为C++11中的反射提供了一些有用的选项。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>将逗号分隔的字符串转换为数组的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86%E9%80%97%E5%8F%B7%E5%88%86%E9%9A%94%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 03 Sep 2023 22:40:08 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86%E9%80%97%E5%8F%B7%E5%88%86%E9%9A%94%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中将逗号分隔的字符串转换为数组的几种方法。您可以使用split方法、正则表达式以及其他方法来实现这个功能。
+内容 在JavaScript中，有多种方法可以将逗号分隔的字符串转换为数组。以下是几种常见的方法：
+使用split方法 您可以使用JavaScript中的split方法将逗号分隔的字符串拆分成数组。下面是使用split方法的示例：
+1var str = &amp;#34;January,February,March,April,May,June,July,August,September,October,November,December&amp;#34;; 2var array = str.split(&amp;#39;,&amp;#39;); 以上代码将根据逗号将字符串拆分为一个由元素组成的数组。
+使用正则表达式 您还可以使用正则表达式来匹配逗号并拆分字符串。下面是使用正则表达式的示例：
+1var str = &amp;#34;January,February,March,April,May,June,July,August,September,October,November,December&amp;#34;; 2var array = str.split(/,\s*/); 以上代码使用正则表达式/,\s*/，可以处理逗号前后的空格，并将字符串拆分为数组。
+其他方法 除了使用split方法和正则表达式外，您还可以使用其他方法来实现类似的功能，比如自定义函数或第三方库。
+使用自定义函数：
+1function stringToArray(str, separator) { 2 return str.split(separator); 3} 4 5var myString = &amp;#34;January,February,March,April,May,June,July,August,September,October,November,December&amp;#34;; 6var array = stringToArray(myString, &amp;#34;,&amp;#34;); 使用第三方库：
+1// 使用PapaParse库 2var myString = &amp;#34;January,February,March,April,May,June,July,August,September,October,November,December&amp;#34;; 3var array = Papa.parse(myString, { delimiter: &amp;#39;,&amp;#39; }).data[0]; 通过以上方法，您可以将逗号分隔的字符串转换为数组，从而对其中的元素进行操作。
+总结 通过本教程，我们学习了在JavaScript中将逗号分隔的字符串转换为数组的几种方法。您可以根据需要选择使用split方法、正则表达式或其他方法来实现这个功能。这些方法可以帮助您轻松地将逗号分隔的字符串拆分为数组，并对其中的元素进行操作。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何修复Homebrew的权限问题</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E5%A4%8Dhomebrew%E7%9A%84%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 03 Sep 2023 21:56:41 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E5%A4%8Dhomebrew%E7%9A%84%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何修复Homebrew的权限问题。通过使用命令行和相应的命令，可以解决Homebrew安装过程中的权限拒绝问题。阅读本教程后，您将学会如何修复Homebrew权限问题，使其正常工作。
+内容 引言 在使用Homebrew进行软件包安装时，有时会遇到权限拒绝的问题。这会导致安装失败或无法正常使用Homebrew命令。本教程将介绍如何修复Homebrew的权限问题，以确保顺利安装和使用软件包。
+使用chown命令修复权限问题 使用chown命令可以更改文件或文件夹的所有者和组，从而解决权限问题。以下是使用该命令的示例：
+1sudo chown -R &amp;#34;$USER&amp;#34;:admin /usr/local 这个命令将更改/usr/local文件夹的所有者为当前用户，并将组设置为admin。
+示例 以下是一个使用chown命令修复Homebrew权限问题的示例：
+1sudo chown -R &amp;#34;$USER&amp;#34;:admin /usr/local 这个命令将更改/usr/local文件夹的所有者为当前用户，并将组设置为admin，从而解决权限问题。
+总结 通过使用chown命令，我们可以更改文件或文件夹的所有者和组，从而解决Homebrew安装过程中的权限问题。这对于确保Homebrew正常工作非常重要，并能够顺利安装和使用软件包。在实际应用中，可以根据具体的问题和需求，灵活地使用chown命令来解决权限问题。通过修复权限问题，我们可以顺利地使用Homebrew进行软件包管理，并在开发过程中提高效率。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Java 5中如何合并两个列表</title>
+      <link>https://www.techdocdb.com/posts/java-5%E4%B8%AD%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Sun, 03 Sep 2023 21:42:23 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/java-5%E4%B8%AD%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E5%88%97%E8%A1%A8/</guid>
+      <description>
+        
+          
+            概述 本教程将介绍如何在Java 5中合并两个列表。我们将使用具体的例子来说明这一过程。
+合并两个列表 如果您想要合并两个列表，可以尝试以下几种方法：
+使用addAll()方法： 你可以使用addAll()方法将一个列表中的元素添加到另一个列表中。例如：
+1List&amp;lt;String&amp;gt; newList = new ArrayList&amp;lt;String&amp;gt;(); 2newList.addAll 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在正则表达式中如何取非特定词？</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD%E5%A6%82%E4%BD%95%E5%8F%96%E9%9D%9E%E7%89%B9%E5%AE%9A%E8%AF%8D/</link>
+      <pubDate>Sun, 03 Sep 2023 21:37:08 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD%E5%A6%82%E4%BD%95%E5%8F%96%E9%9D%9E%E7%89%B9%E5%AE%9A%E8%AF%8D/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在正则表达式中如何取非特定词，即匹配除特定词之外的内容。我们将讨论在正则表达式中使用否定预查来实现这一操作，并提供几个示例来说明如何使用。
+内容 在正则表达式中，可以使用否定预查来取非特定词。否定预查是一种特殊的模式，它允许我们在正则表达式中指定一个条件，用于匹配不符合该条件的内容。
+以下是几种常见的取非特定词的方法：
+使用否定预查： ^(?!.*word).*：这个正则表达式使用否定预查 (?!.*word) 来匹配不包含特定词的任何内容。例如，如果我们要取非单词&amp;quot;bar&amp;quot;，我们可以使用 ^(?!.*bar).*$。 使用基本规则： ^(?:[^b]+|b(?:$|[^a]|a(?:$|[^r])))*$：这个正则表达式使用基本规则来匹配不包含特定词的任何内容。它会扫描输入字符串并排除包含&amp;quot;bar&amp;quot;的部分。 使用语言内置方法： 有些编程语言（如Python）提供了字符串切割方法，可以根据特定词将字符串分割成多个部分。我们可以使用这种方法，并跳过包含特定词的部分。 无论采用哪种方法，我们需要根据具体需求和编程环境选择适合的方式。在处理正则表达式时，我们应根据可读性、理解性和易于维护性来选择解决方案。
+总结： 在正则表达式中，取非特定词可以使用否定预查或基本规则来实现。否定预查可以在正则表达式中指定一个条件，用于匹配不符合该条件的内容。基本规则则是通过排除包含特定词的部分来匹配不包含特定词的内容。根据个人需求和编程环境选择合适的方法，并确保代码的可读性和易于维护性。
+参考链接：
+正则表达式指南 正则表达式否定预查 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Python中的defaultdict与普通字典的区别</title>
+      <link>https://www.techdocdb.com/posts/python%E4%B8%AD%E7%9A%84defaultdict%E4%B8%8E%E6%99%AE%E9%80%9A%E5%AD%97%E5%85%B8%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 03 Sep 2023 20:55:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/python%E4%B8%AD%E7%9A%84defaultdict%E4%B8%8E%E6%99%AE%E9%80%9A%E5%AD%97%E5%85%B8%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 Python中的defaultdict是collections类中的一种容器。它与普通的字典容器在使用上有所不同。本教程将介绍defaultdict的用法和与普通字典的区别，并提供一些示例代码来演示。
+内容 在Python中，默认的字典（dict）容器在尝试获取一个不存在的键（key）时，会抛出KeyError异常。而defaultdict则不同，它会根据传入的参数来创建一个默认值，而不抛出异常。我们可以通过给defaultdict传递一个可调用对象（比如函数）来设置默认值。
+下面是相关示例代码：
+1from collections import defaultdict 2 3# 示例1：使用int作为默认值 4s = &amp;#39;mississippi&amp;#39; 5d = defaultdict(int) 6for k in s: 7 d[k] += 1 8print(d.items()) # 输出：dict_items([(&amp;#39;m&amp;#39;, 1), (&amp;#39;i&amp;#39;, 4), (&amp;#39;s&amp;#39;, 4), (&amp;#39;p&amp;#39;, 2)]) 9 10# 示例2：使用list作为默认值 11s = [(&amp;#39;yellow&amp;#39;, 1), (&amp;#39;blue&amp;#39;, 2), (&amp;#39;yellow&amp;#39;, 3), (&amp;#39;blue&amp;#39;, 4), (&amp;#39;red&amp;#39;, 1)] 12d = defaultdict(list) 13for k, v in s: 14 d[k].append(v) 15print(d.items()) # 输出：dict_items([(&amp;#39;blue&amp;#39;, [2, 4]), (&amp;#39;red&amp;#39;, [1]), (&amp;#39;yellow&amp;#39;, [1, 3])]) 在示例1中，我们使用int作为默认值，当访问一个不存在的键时，会返回整数类型的默认值0。在示例2中，我们使用list作为默认值，当访问一个不存在的键时，会返回一个空列表。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在GitHub上将公共仓库的fork变为私有仓库</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8github%E4%B8%8A%E5%B0%86%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93%E7%9A%84fork%E5%8F%98%E4%B8%BA%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</link>
@@ -43,7 +287,7 @@
       <description>
         
           
-            ErrorPayloadTooLargeError: request entity too large
+             Error PayloadTooLargeError: request entity too large
 &amp;nbsp; &amp;nbsp;at readStream (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:156:17)
 &amp;nbsp; &amp;nbsp;at getRawBody (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:109:12)
 &amp;nbsp; &amp;nbsp;at read (/var/www/server/old2new3/node_modules/express/node_modules/body-parser/lib/read.js:79:3)
@@ -53,7 +297,7 @@
 &amp;nbsp; &amp;nbsp;at &amp;lt;anonymous&amp;gt; (/var/www/server/old2new3/node_modules/express/lib/router/index.js:286:9)
 &amp;nbsp; &amp;nbsp;at Function.process_params (/var/www/server/old2new3/node_modules/express/lib/router/index.js:346:12)
 &amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/index.js:280:10)
-&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/route.js:136:14)
+&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/route.js:136:14) 
           
           
         
@@ -94,7 +338,7 @@
       <description>
         
           
-            ErrorPayloadTooLargeError: request entity too large
+             Error PayloadTooLargeError: request entity too large
 &amp;nbsp; &amp;nbsp;at readStream (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:156:17)
 &amp;nbsp; &amp;nbsp;at getRawBody (/var/www/server/old2new3/node_modules/express/node_modules/raw-body/index.js:109:12)
 &amp;nbsp; &amp;nbsp;at read (/var/www/server/old2new3/node_modules/express/node_modules/body-parser/lib/read.js:79:3)
@@ -104,7 +348,7 @@
 &amp;nbsp; &amp;nbsp;at &amp;lt;anonymous&amp;gt; (/var/www/server/old2new3/node_modules/express/lib/router/index.js:286:9)
 &amp;nbsp; &amp;nbsp;at Function.process_params (/var/www/server/old2new3/node_modules/express/lib/router/index.js:346:12)
 &amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/index.js:280:10)
-&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/route.js:136:14)
+&amp;nbsp; &amp;nbsp;at next (/var/www/server/old2new3/node_modules/express/lib/router/route.js:136:14) 
           
           
         

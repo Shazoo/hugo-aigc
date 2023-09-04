@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 Aug 2023 09:05:18 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Sep 2023 22:45:22 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;11中Reflector的开源替代品</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;11%E4%B8%ADreflector%E7%9A%84%E5%BC%80%E6%BA%90%E6%9B%BF%E4%BB%A3%E5%93%81/</link>
+      <pubDate>Sun, 03 Sep 2023 22:45:22 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;11%E4%B8%ADreflector%E7%9A%84%E5%BC%80%E6%BA%90%E6%9B%BF%E4%BB%A3%E5%93%81/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍C++11中替代Reflector的开源工具。我们将介绍一些使用开源工具进行反射的方法，并提供几个可供选择的开源项目。
+内容 在C++11中，有一些开源替代品可用于替代RedGate的Reflector工具，用于反射。以下是一些可用的开源项目和工具：
+Common Compiler Infrastructure (CCI)
+CCI是一个开源项目，用于生成和分析.NET程序的中间语言（IL）代码。它提供了一组用于操作、检查和修改IL代码的工具和库。可以在此处找到更多信息。 Mono Cecil
+Mono Cecil是一个开源的.NET元数据读取和操作库，用于分析和修改IL代码。它提供了一组简单的API，可以轻松地读取和操作程序集的元数据。可以在此处找到更多信息。 ILSpy
+ILSpy是一个开源的.NET程序集反编译器和浏览器，允许用户查看和分析.NET程序集的源代码。它提供了一个用户友好的界面，可以浏览程序集的类型、方法和属性，并将IL代码转换为C#等高级语言代码。可以在此处找到更多信息。 这些开源工具提供了类似于Reflector的功能，可以帮助开发人员进行反射和IL代码分析。你可以根据需求选择合适的工具和库来处理C++11中的反射需求。
+参考答案： 根据C++11的标准，有几个开源项目可用于替代Reflector工具。这些项目提供了类似于Reflector的功能，可以让开发人员浏览、分析和修改.NET程序集的源代码和IL代码。你可以根据具体需求选择合适的项目，并根据需要进行配置和使用。这些开源工具为C++11中的反射提供了一些有用的选项。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何去除.NET DateTime中的毫秒</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4.net-datetime%E4%B8%AD%E7%9A%84%E6%AF%AB%E7%A7%92/</link>

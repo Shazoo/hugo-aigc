@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 06:02:40 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:11:22 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node.js中的ENOSPC错误及解决方法</title>
+      <link>https://www.techdocdb.com/posts/node.js%E4%B8%AD%E7%9A%84enospc%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 04 Sep 2023 00:11:22 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/node.js%E4%B8%AD%E7%9A%84enospc%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 在本教程中，我们将讨论Node.js中的ENOSPC错误以及如何解决此问题。我们将查看导致该错误的原因，并提供多个解决方法以便修复该错误。
+内容 在使用Node.js上传文件到服务器时，您可能会遇到ENOSPC错误。这个错误通常表示磁盘空间不足。解决该问题的方法如下：
+增加inotify监听文件的数量：在Linux系统上，开启Node.js会使用inotify进行文件监视。您可以尝试增加系统的inotify文件监听数量。可以通过如下命令解决： 1echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p 清理临时文件：您可以尝试删除临时文件夹（如/tmp）中的内容。这可能会释放磁盘空间，从而解决ENOSPC错误。
+增加文件系统的文件限制：有些情况下，操作系统对用户文件数量设置了限制。您可以尝试通过更改系统配置来增加文件限制。比如，在Ubuntu上可以这样做：
+1sudo nano /etc/sysctl.conf 在文件末尾添加以下内容：
+1fs.inotify.max_user_watches=524288 保存文件后执行以下命令使配置生效：
+1sudo sysctl -p 总结 通过增加inotify的文件监听数量、清理临时文件或增加文件系统的文件限制，您可以解决Node.js中的ENOSPC错误。请根据具体情况选择适合的解决方法。
+希望本教程对您有帮助！
+参考答案：
+Node.js: what is ENOSPC error and how to solve? 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Node.js中从一个函数调用另一个函数</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8node.js%E4%B8%AD%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</link>
