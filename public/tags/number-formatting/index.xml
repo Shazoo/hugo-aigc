@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>number-formatting on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/number-formatting/</link>
+    <description>Recent content in number-formatting on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Sep 2023 04:34:51 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/number-formatting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用字符串格式化显示带两位小数或整数的数字</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%98%BE%E7%A4%BA%E5%B8%A6%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E6%88%96%E6%95%B4%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Mon, 04 Sep 2023 04:34:51 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%98%BE%E7%A4%BA%E5%B8%A6%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E6%88%96%E6%95%B4%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>
+        
+          
+            摘要 本文将解释如何使用字符串格式化来显示带两位小数或整数的数字。将提供相关示例代码以阐明知识点。
+内容 在开发中，当需要显示价格字段时，有时价格可以是100、100.99或100.9等不同形式。我们希望在价格输入小数时仅显示两位小数，例如100应显示为100，而100.2应显示为100.20，100.22应保持不变。
+这里是一些实现这个需求的示例代码，使用了简单的字符串格式化：
+1var price1 = 100; 2var formattedPrice1 = String.Format(&amp;#34;{0:#,##0}&amp;#34;, price1); // 输出：100 3 4var price2 = 100.2; 5var formattedPrice2 = String.Format(&amp;#34;{0:#,##0.00}&amp;#34;, price2); // 输出：100.20 6 7var price3 = 100.22; 8var formattedPrice3 = String.Format(&amp;#34;{0:#,##0.00}&amp;#34;, price3); // 输出：100.22 在上述代码中，我们使用了 {0:#,##0} 的格式化方式来满足需求。对于整数，我们简单地使用 {0:#,##0} 来格式化为整数形式，不显示小数位。对于带小数的数字，我们使用 {0:#,##0.00} 来格式化为两位小数形式。
+总结 通过使用字符串格式化，我们可以轻松地实现将数字格式化为带两位小数或整数的形式。通过简单的字符串格式化，我们可以满足不同显示需求的要求，并将数字以符合预期的方式呈现给用户。
+参考链接：无
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

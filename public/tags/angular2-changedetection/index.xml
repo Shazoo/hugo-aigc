@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>angular2-changedetection on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/angular2-changedetection/</link>
+    <description>Recent content in angular2-changedetection on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Sep 2023 04:53:14 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/angular2-changedetection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Angular 中手动触发变更检测</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-angular-%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Mon, 04 Sep 2023 04:53:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-angular-%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B/</guid>
+      <description>
+        
+          
+            摘要 本教程介绍了在 Angular 中如何手动触发变更检测。我们将探讨一些方法并提供相应的代码示例来解决在没有浏览器事件的情况下，模板绑定无法更新的问题。
+内容 在 Angular 中，有几种方法可以手动触发变更检测。以下是一些常用的方法：
+使用 ApplicationRef.tick() 方法来手动触发变更检测。类似于 AngularJS 的 $rootScope.$digest() 方法，这个方法会检查整个组件树。示例代码如下： 1constructor(private appRef: ApplicationRef) {} 2 3// 手动触发变更检测 4this.appRef.tick(); 使用 NgZone.run() 方法来在 Angular 区域内执行回调函数。类似于 AngularJS 的 $rootScope.$apply(callback) 方法，这个方法会在 Angular 区域内评估回调函数，并在执行完回调函数后检查整个组件树。示例代码如下： 1constructor(private ngZone: NgZone) {} 2 3// 手动触发变更检测 4this.ngZone.run(() =&amp;gt; { 5 // 执行需要在 Angular 区域内完成的操作 6}); 使用 ChangeDetectorRef.detectChanges() 方法来手动触发变更检测。类似于 AngularJS 的 $scope.$digest() 方法，这个方法只会检查当前组件及其子组件。示例代码如下： 1constructor(private changeDetectorRef: ChangeDetectorRef) {} 2 3// 手动触发变更检测 4this.changeDetectorRef.detectChanges(); 你可以将 ApplicationRef、NgZone 或 ChangeDetectorRef 注入到你的组件中，然后在需要手动触发变更检测的地方调用相应的方法。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

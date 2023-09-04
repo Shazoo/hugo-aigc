@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>powershell on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/powershell/</link>
+    <description>Recent content in powershell on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Sep 2023 06:00:26 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Bash脚本中的自动错误退出</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8bash%E8%84%9A%E6%9C%AC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E9%94%99%E8%AF%AF%E9%80%80%E5%87%BA/</link>
+      <pubDate>Mon, 04 Sep 2023 06:00:26 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8bash%E8%84%9A%E6%9C%AC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E9%94%99%E8%AF%AF%E9%80%80%E5%87%BA/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Bash脚本中实现自动错误退出。我们将提供多种解决方案，并通过示例代码演示每种解决方案的用法和效果。
+内容 在编写Bash脚本时，有时候希望在任何命令失败时自动退出脚本。下面是几种解决方案：
+解决方案1：使用set -e 在脚本
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 01 Sep 2023 08:57:53 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 03:27:36 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在ASP.NET中创建文件夹（文件夹不存在时）</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8asp.net%E4%B8%AD%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%97%B6/</link>
+      <pubDate>Mon, 04 Sep 2023 03:27:36 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8asp.net%E4%B8%AD%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%97%B6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在ASP.NET中创建文件夹。我们将讨论使用System.IO.Directory.CreateDirectory函数来创建文件夹的方法，并给出一些示例代码。
+内容 在ASP.NET应用程序中，有时我们需要在保存文件之前检查文件夹是否存在，并在文件夹不存在时创建它。以下是创建文件夹的常用方法。
+方法1：使用System.IO.Directory.CreateDirectory函数 1string subPath = HttpContext.Current.Server.MapPath(@&amp;#34;~/Images/RequisitionBarCode/&amp;#34;); 2 3bool exists = System.IO.Directory.Exists(subPath); 4if(!exists) 5 System.IO.Directory.CreateDirectory(subPath); 使用System.IO.Directory.CreateDirectory函数可以根据指定的路径创建文件夹。我们首先检查文件夹是否存在，如果不存在，则调用CreateDirectory函数创建文件夹。
+总结 在ASP.NET应用程序中创建文件夹的方法很简单。我们可以使用System.IO.Directory.CreateDirectory函数来检查文件夹是否存在并在不存在时创建它。根据您的需求和个人偏好选择适合的方法即可。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>&lt;!DOCTYPE html&gt;</title>
       <link>https://www.techdocdb.com/posts/doctype-html/</link>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>virtual-machine on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/virtual-machine/</link>
+    <description>Recent content in virtual-machine on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Sep 2023 05:56:30 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/virtual-machine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在VirtualBox中退出缩放模式的快捷键</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8virtualbox%E4%B8%AD%E9%80%80%E5%87%BA%E7%BC%A9%E6%94%BE%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 04 Sep 2023 05:56:30 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8virtualbox%E4%B8%AD%E9%80%80%E5%87%BA%E7%BC%A9%E6%94%BE%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在Oracle VM VirtualBox中退出缩放模式的快捷键。我们将提供几种不同的方法来实现这个目标，并提供一些代码示例。
+内容 在Oracle VM VirtualBox中，有几种方法可以退出缩放模式。下面是几种常用的方法：
+方法一：使用快捷键 按下以下快捷键可退出缩放模式：
+右Ctrl（Host键） + c
+请注意，你的Host键可能与右Ctrl不同，请前往“VirtualBox首选项 &amp;gt; 输入 &amp;gt; 虚拟机 &amp;gt; Host键组合”来查看当前设置。
+方法二：虚拟机设置中修改Host键组合 如果右Ctrl（Host键） + c无效（在Ubuntu上可能会出现问题），请按以下步骤操作：
+菜单栏中选择“文件 &amp;gt; 首选项 &amp;gt; 输入”。 更改或重置Host键的设置。 重新打开虚拟机后，缩放模式将被重置。
+方法三：修改虚拟机配置文件 如果你无法退出缩放模式，你可以尝试修改虚拟机的配置文件，这可能会帮助你解决问题。按照以下步骤进行操作：
+找到虚拟机的配置文件（例如：/home/&amp;lt;username&amp;gt;/VirtualBox VMs/ANKSVM/ANKSVM.vbox）。 编辑文件，将&amp;lt;ExtraDataItem name=&amp;quot;GUI/Scale&amp;quot; value=&amp;quot;on&amp;quot;/&amp;gt;修改为&amp;lt;ExtraDataItem name=&amp;quot;GUI/Scale&amp;quot; value=&amp;quot;off&amp;quot;/&amp;gt;。 重启VirtualBox。 这些方法可以帮助你退出VirtualBox中的缩放模式。根据具体情况选择合适的方法。
+总结 在VirtualBox中，我们可以使用不同的方法退出缩放模式。通过使用快捷键、修改虚拟机设置或修改虚拟机配置文件，我们可以轻松地退出缩放模式。选择合适的方法取决于个人偏好和具体情况。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

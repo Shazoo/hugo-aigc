@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 00:02:19 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 06:11:29 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;中&#34;.&#34;运算符和&#34;-&gt;&#34;运算符的区别</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD.%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 04 Sep 2023 06:11:29 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD.%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍C++中&amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的区别。&amp;quot;.&amp;quot;运算符用于直接访问成员，而&amp;quot;-&amp;gt;&amp;quot;运算符用于首先解引用指针，然后访问所指向的对象的成员。
+内容 &amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的应用场景 在C++中，&amp;quot;.&amp;quot;运算符用于直接访问对象的成员，而&amp;quot;-&amp;gt;&amp;quot;运算符用于首先解引用指针，然后访问所指向的对象的成员。具体的使用场景如下所示：
+&amp;quot;.&amp;quot;运算符用于访问对象的成员，例如：
+1object.Field &amp;quot;-&amp;gt;&amp;quot;运算符用于解引用指针并访问所指向的对象的成员，例如：
+1pClass-&amp;gt;Field 或者可以等价地写为：
+1(*pClass).Field 示例代码 下面是一些示例代码，用来说明&amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的用法。
+1std::string str(&amp;#34;foo&amp;#34;); 2std::string * pstr = new std::string(&amp;#34;foo&amp;#34;); 3 4str.size (); 5pstr-&amp;gt;size (); 上述代码中，可以看到对于对象str，我们可以使用&amp;quot;.&amp;quot;运算符来访问其成员；而对于指针pstr，我们需要使用&amp;quot;-&amp;gt;&amp;quot;运算符来解引用指针并访问所指向的对象的成员。
+注意事项 需要注意的是，&amp;quot;-&amp;gt;&amp;quot;运算符不能用于某些情况，例如访问operator[]运算符。
+1#include &amp;lt;vector&amp;gt; 2 3int main() 4{ 5 std::vector&amp;lt;int&amp;gt; iVec; 6 iVec.push_back(42); 7 std::vector&amp;lt;int&amp;gt;* iVecPtr = &amp;amp;iVec; 8 9 //int i = iVecPtr-&amp;gt;[0]; // 无法编译通过 10 int i = (*iVecPtr)[0]; // 编译通过 11} 上述代码中，如果使用&amp;quot;-&amp;gt;&amp;quot;运算符访问operator[]运算符的话，无法编译通过，所以需要使用&amp;quot;(*iVecPtr)[0]&amp;quot;进行访问。
+总结 本文介绍了C++中&amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的区别和用法。&amp;quot;.&amp;quot;运算符用于直接访问对象的成员，而&amp;quot;-&amp;gt;&amp;quot;运算符用于首先解引用指针，然后访问所指向的对象的成员。希望本文能够帮助你理解和正确使用这两个运算符。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用Git查看特定文件的更改</title>
       <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%94%B9/</link>

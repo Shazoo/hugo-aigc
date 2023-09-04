@@ -7,7 +7,243 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 00:29:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 06:21:16 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么OAuth2中需要“Authorization Code”流程而“Implicit”流程已经很好用了</title>
+      <link>https://www.techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%88oauth2%E4%B8%AD%E9%9C%80%E8%A6%81authorization-code%E6%B5%81%E7%A8%8B%E8%80%8Cimplicit%E6%B5%81%E7%A8%8B%E5%B7%B2%E7%BB%8F%E5%BE%88%E5%A5%BD%E7%94%A8%E4%BA%86/</link>
+      <pubDate>Mon, 04 Sep 2023 06:21:16 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%88oauth2%E4%B8%AD%E9%9C%80%E8%A6%81authorization-code%E6%B5%81%E7%A8%8B%E8%80%8Cimplicit%E6%B5%81%E7%A8%8B%E5%B7%B2%E7%BB%8F%E5%BE%88%E5%A5%BD%E7%94%A8%E4%BA%86/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍为什么在OAuth2中存在“Authorization Code”流程，以及为什么不仅使用“Implicit”流程来处理认证和授权。您将了解不同流程的设计考虑因素以及它们在安全性和实现上的差异。
+内容 在OAuth2中，有两种常见的流程用于进行认证和授权：Authorization Code流程和Implicit流程。虽然这两种流程都可以获得访问令牌，但它们在设计和用途上存在一些差异。
+Implicit流程 Implicit流程适用于需要通过简化的方式获得访问令牌的场景。在这种流程中，客户端（通常是浏览器）在资源所有者（用户）授权后直接获得访问令牌。这个流程相对简单明了，但安全性方面存在一些考量。
+设计考虑因素： 访问令牌直接传递给客户端，并且仅由浏览器端JavaScript使用，避免了中间服务器或路由器的访问和拦截。 浏览器本身具有隔离环境，使得其他应用无法访问访问令牌。 仅适用于需要临时访问权限的场景，因为访问令牌的有效期相对较短。 Authorization Code流程 Authorization Code流程适用于需要更高安全性的场景，特别是服务器端应用程序。在这个流程中，客户端（通常是Web服务器）只能获取到授权码（authorization code），需要通过使用客户端ID和客户端密钥以及授权码向API服务器发起另一个请求以获取访问令牌。这个流程相对复杂，但提供了更高级的安全保护。
+设计考虑因素： 为了避免访问令牌被中间服务器拦截，授权码作为一次性的中间码传递给客户端，并且只有合法的接收方才能使用该授权码（因为需要客户端密钥）。 通过授权码交换访问令牌，避免了在URL参数中直接传递访问令牌，因为URL参数可能会被中间服务器和路由器读取和拦截。 需要进行额外的安全检查，比如验证授权码和访问令牌是否与客户端ID匹配，以避免恶意攻击。 安全性与实现 Implicit流程相对简单，但安全性不如Authorization Code流程，因为在URL中直接传递访问令牌可能存在泄漏的风险。而Authorization Code流程可以更好地控制访问令牌的传递，避免了直接暴露访问令牌。
+对于需要更高级安全保护并且需要在服务器端进行访问令牌处理的场景，使用Authorization Code流程是更合适的选择。对于仅需要临时访问权限并且在客户端（例如浏览器）中运行的应用程序，可以选择使用Implicit流程。
+总结 OAuth2中存在“Authorization Code”流程的原因是为了提供更高级的安全保护，并允许更复杂的授权和认证操作。虽然Implicit流程在某些情况下更简单方便，但安全性上存在一些考虑。因此，根据具体的应用场景和安全需求，选择合适的授权流程非常重要。
+参考文献：
+OAuth 2.0 授权框架（RFC 6749）：https://tools.ietf.org/html/rfc6749 Aaron Parecki&#39;s OAuth 2.0 简化流程：https://aaronparecki.com/articles/2012/07/29/1/oauth2-simplified 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;中&#34;.&#34;运算符和&#34;-&gt;&#34;运算符的区别</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD.%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 04 Sep 2023 06:11:29 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;%E4%B8%AD.%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍C++中&amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的区别。&amp;quot;.&amp;quot;运算符用于直接访问成员，而&amp;quot;-&amp;gt;&amp;quot;运算符用于首先解引用指针，然后访问所指向的对象的成员。
+内容 &amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的应用场景 在C++中，&amp;quot;.&amp;quot;运算符用于直接访问对象的成员，而&amp;quot;-&amp;gt;&amp;quot;运算符用于首先解引用指针，然后访问所指向的对象的成员。具体的使用场景如下所示：
+&amp;quot;.&amp;quot;运算符用于访问对象的成员，例如：
+1object.Field &amp;quot;-&amp;gt;&amp;quot;运算符用于解引用指针并访问所指向的对象的成员，例如：
+1pClass-&amp;gt;Field 或者可以等价地写为：
+1(*pClass).Field 示例代码 下面是一些示例代码，用来说明&amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的用法。
+1std::string str(&amp;#34;foo&amp;#34;); 2std::string * pstr = new std::string(&amp;#34;foo&amp;#34;); 3 4str.size (); 5pstr-&amp;gt;size (); 上述代码中，可以看到对于对象str，我们可以使用&amp;quot;.&amp;quot;运算符来访问其成员；而对于指针pstr，我们需要使用&amp;quot;-&amp;gt;&amp;quot;运算符来解引用指针并访问所指向的对象的成员。
+注意事项 需要注意的是，&amp;quot;-&amp;gt;&amp;quot;运算符不能用于某些情况，例如访问operator[]运算符。
+1#include &amp;lt;vector&amp;gt; 2 3int main() 4{ 5 std::vector&amp;lt;int&amp;gt; iVec; 6 iVec.push_back(42); 7 std::vector&amp;lt;int&amp;gt;* iVecPtr = &amp;amp;iVec; 8 9 //int i = iVecPtr-&amp;gt;[0]; // 无法编译通过 10 int i = (*iVecPtr)[0]; // 编译通过 11} 上述代码中，如果使用&amp;quot;-&amp;gt;&amp;quot;运算符访问operator[]运算符的话，无法编译通过，所以需要使用&amp;quot;(*iVecPtr)[0]&amp;quot;进行访问。
+总结 本文介绍了C++中&amp;quot;.&amp;quot;运算符和&amp;quot;-&amp;gt;&amp;quot;运算符的区别和用法。&amp;quot;.&amp;quot;运算符用于直接访问对象的成员，而&amp;quot;-&amp;gt;&amp;quot;运算符用于首先解引用指针，然后访问所指向的对象的成员。希望本文能够帮助你理解和正确使用这两个运算符。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Bash脚本中的自动错误退出</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8bash%E8%84%9A%E6%9C%AC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E9%94%99%E8%AF%AF%E9%80%80%E5%87%BA/</link>
+      <pubDate>Mon, 04 Sep 2023 06:00:26 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8bash%E8%84%9A%E6%9C%AC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E9%94%99%E8%AF%AF%E9%80%80%E5%87%BA/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Bash脚本中实现自动错误退出。我们将提供多种解决方案，并通过示例代码演示每种解决方案的用法和效果。
+内容 在编写Bash脚本时，有时候希望在任何命令失败时自动退出脚本。下面是几种解决方案：
+解决方案1：使用set -e 在脚本
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在VirtualBox中退出缩放模式的快捷键</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8virtualbox%E4%B8%AD%E9%80%80%E5%87%BA%E7%BC%A9%E6%94%BE%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 04 Sep 2023 05:56:30 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8virtualbox%E4%B8%AD%E9%80%80%E5%87%BA%E7%BC%A9%E6%94%BE%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在Oracle VM VirtualBox中退出缩放模式的快捷键。我们将提供几种不同的方法来实现这个目标，并提供一些代码示例。
+内容 在Oracle VM VirtualBox中，有几种方法可以退出缩放模式。下面是几种常用的方法：
+方法一：使用快捷键 按下以下快捷键可退出缩放模式：
+右Ctrl（Host键） + c
+请注意，你的Host键可能与右Ctrl不同，请前往“VirtualBox首选项 &amp;gt; 输入 &amp;gt; 虚拟机 &amp;gt; Host键组合”来查看当前设置。
+方法二：虚拟机设置中修改Host键组合 如果右Ctrl（Host键） + c无效（在Ubuntu上可能会出现问题），请按以下步骤操作：
+菜单栏中选择“文件 &amp;gt; 首选项 &amp;gt; 输入”。 更改或重置Host键的设置。 重新打开虚拟机后，缩放模式将被重置。
+方法三：修改虚拟机配置文件 如果你无法退出缩放模式，你可以尝试修改虚拟机的配置文件，这可能会帮助你解决问题。按照以下步骤进行操作：
+找到虚拟机的配置文件（例如：/home/&amp;lt;username&amp;gt;/VirtualBox VMs/ANKSVM/ANKSVM.vbox）。 编辑文件，将&amp;lt;ExtraDataItem name=&amp;quot;GUI/Scale&amp;quot; value=&amp;quot;on&amp;quot;/&amp;gt;修改为&amp;lt;ExtraDataItem name=&amp;quot;GUI/Scale&amp;quot; value=&amp;quot;off&amp;quot;/&amp;gt;。 重启VirtualBox。 这些方法可以帮助你退出VirtualBox中的缩放模式。根据具体情况选择合适的方法。
+总结 在VirtualBox中，我们可以使用不同的方法退出缩放模式。通过使用快捷键、修改虚拟机设置或修改虚拟机配置文件，我们可以轻松地退出缩放模式。选择合适的方法取决于个人偏好和具体情况。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>从pandas数据帧的列或行获取列表</title>
+      <link>https://www.techdocdb.com/posts/%E4%BB%8Epandas%E6%95%B0%E6%8D%AE%E5%B8%A7%E7%9A%84%E5%88%97%E6%88%96%E8%A1%8C%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Mon, 04 Sep 2023 05:52:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BB%8Epandas%E6%95%B0%E6%8D%AE%E5%B8%A7%E7%9A%84%E5%88%97%E6%88%96%E8%A1%8C%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何从pandas数据帧的列或行中获取列表。在使用pandas进行数据处理和分析时，经常需要将数据帧的特定列或行提取为列表，以便进行进一步的操作。本教程将给出几种方法来实现从数据帧提取列表的操作。
+内容 在pandas中，可以使用以下几种方法从数据帧的列或行中获取列表：
+方法一：使用tolist()方法
+使用tolist()方法可以将pandas的Series对象转换为Python列表。例如：
+1import pandas as pd 2 3data_dict = {&amp;#39;one&amp;#39;: pd.Series([1, 2, 3], index=[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]), 4 &amp;#39;two&amp;#39;: pd.Series([1, 2, 3, 4], index=[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;])} 5 6df = pd.DataFrame(data_dict) 7 8column_one_list = df[&amp;#39;one&amp;#39;].tolist() 9 10print(column_one_list) 方法二：使用values属性
+1column_one_list = df[&amp;#39;one&amp;#39;].values.tolist() 在上述示例中，我们使用values属性获取列的值，并使用tolist()方法将其转换为列表。
+方法三：使用values属性和reshape()方法
+1import numpy as np 2 3column_one_list = df[&amp;#39;one&amp;#39;].values.reshape(1, -1).ravel().tolist() 在上述示例中，我们使用values属性获取列的值，并使用reshape()方法将其重塑为numpy数组，然后使用ravel()方法展平数组，并最后使用tolist()方法将其转换为列表。
+无论选择哪种方法，都可以从数据帧的列或行中获取列表，并进行后续的操作。
+总结
+在pandas中，我们可以使用tolist()方法或values属性配合tolist()方法来从数据帧的列或行中获取列表。根据实际需求选择合适的方法进行操作。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Github 提示在按照屏幕上的说明进行操作和推送新仓库时要求输入用户名/密码</title>
+      <link>https://www.techdocdb.com/posts/github-%E6%8F%90%E7%A4%BA%E5%9C%A8%E6%8C%89%E7%85%A7%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%9A%84%E8%AF%B4%E6%98%8E%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%92%8C%E6%8E%A8%E9%80%81%E6%96%B0%E4%BB%93%E5%BA%93%E6%97%B6%E8%A6%81%E6%B1%82%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D/%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 04 Sep 2023 05:31:10 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/github-%E6%8F%90%E7%A4%BA%E5%9C%A8%E6%8C%89%E7%85%A7%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%9A%84%E8%AF%B4%E6%98%8E%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%92%8C%E6%8E%A8%E9%80%81%E6%96%B0%E4%BB%93%E5%BA%93%E6%97%B6%E8%A6%81%E6%B1%82%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D/%E5%AF%86%E7%A0%81/</guid>
+      <description>
+        
+          
+            摘要 当按照屏幕上的说明进行操作并推送新仓库时，Github提示要求输入用户名和密码。本教程将介绍如何解决这个问题。
+内容 要解决Github提示要求输入用户名和密码的问题，可以按照以下步骤进行操作。
+使用SSH而不是HTTP 将远程仓库的URL从HTTP更改为SSH。使用SSH可以通过配置让Git知道你在这台计算机上具有访问权限，而不需要每次都输入用户名和密码。在示例中，将URL改为：
+1git@github.com:WEMP/project-slideshow.git 修改配置文件 可以直接编辑.git/config文件，将URL进行修改。找到对应的仓库配置，将URL从HTTP改为SSH。
+增加引号 确保URL的用户名部分加入引号。例如，将URL修改为：
+1https://*username*@github.com/WEMP/project-slideshow.git 在以上步骤中，通过使用SSH而不是HTTP，或者修改URL使其包含引号，可以解决Github提示要求输入用户名和密码的问题。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何获取当前日期和时间的秒数</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%9A%84%E7%A7%92%E6%95%B0/</link>
+      <pubDate>Mon, 04 Sep 2023 04:56:41 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%9A%84%E7%A7%92%E6%95%B0/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用JavaScript获取当前日期和时间的秒数。
+内容 解决方案 以下是几种使用JavaScript获取当前日期和时间秒数的方法：
+使用new Date().getTime() / 1000方法可以获取从1970年1月1日午夜以来的秒数。 使用Date.now() / 1000方法可以获取从1970年1月1日午夜以来的秒数。 使用Math.round(Date.now() / 1000)方法可以获取从1970年1月1日午夜以来的整数秒数。 使用new Date().getTime() / 1000方法示例 以下是使用new Date().getTime() / 1000方法获取当前日期和时间秒数的示例：
+1var seconds = new Date().getTime() / 1000; 使用Date.now() / 1000方法示例 以下是使用Date.now() / 1000方法获取当前日期和时间秒数的示例：
+1var seconds = Date.now() / 1000; 使用Math.round(Date.now() / 1000)方法示例 以下是使用Math.round(Date.now() / 1000)方法获取当前日期和时间秒数的示例：
+1var seconds = Math.round(Date.now() / 1000); 注意事项 确保使用正确的方法和语法。 请注意，使用浮点数秒数可能会导致精度问题，根据具体需求进行取整或四舍五入。 确保在使用时将毫秒数转换为秒数，以避免混淆和计算错误。 总结 本教程介绍了使用JavaScript获取当前日期和时间秒数的几种方法。您可以根据需要选择适合的方法来获取秒数。希望本教程对您有所帮助。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在 Angular 中手动触发变更检测</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-angular-%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Mon, 04 Sep 2023 04:53:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-angular-%E4%B8%AD%E6%89%8B%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B/</guid>
+      <description>
+        
+          
+            摘要 本教程介绍了在 Angular 中如何手动触发变更检测。我们将探讨一些方法并提供相应的代码示例来解决在没有浏览器事件的情况下，模板绑定无法更新的问题。
+内容 在 Angular 中，有几种方法可以手动触发变更检测。以下是一些常用的方法：
+使用 ApplicationRef.tick() 方法来手动触发变更检测。类似于 AngularJS 的 $rootScope.$digest() 方法，这个方法会检查整个组件树。示例代码如下： 1constructor(private appRef: ApplicationRef) {} 2 3// 手动触发变更检测 4this.appRef.tick(); 使用 NgZone.run() 方法来在 Angular 区域内执行回调函数。类似于 AngularJS 的 $rootScope.$apply(callback) 方法，这个方法会在 Angular 区域内评估回调函数，并在执行完回调函数后检查整个组件树。示例代码如下： 1constructor(private ngZone: NgZone) {} 2 3// 手动触发变更检测 4this.ngZone.run(() =&amp;gt; { 5 // 执行需要在 Angular 区域内完成的操作 6}); 使用 ChangeDetectorRef.detectChanges() 方法来手动触发变更检测。类似于 AngularJS 的 $scope.$digest() 方法，这个方法只会检查当前组件及其子组件。示例代码如下： 1constructor(private changeDetectorRef: ChangeDetectorRef) {} 2 3// 手动触发变更检测 4this.changeDetectorRef.detectChanges(); 你可以将 ApplicationRef、NgZone 或 ChangeDetectorRef 注入到你的组件中，然后在需要手动触发变更检测的地方调用相应的方法。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用字符串格式化显示带两位小数或整数的数字</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%98%BE%E7%A4%BA%E5%B8%A6%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E6%88%96%E6%95%B4%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Mon, 04 Sep 2023 04:34:51 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%98%BE%E7%A4%BA%E5%B8%A6%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E6%88%96%E6%95%B4%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>
+        
+          
+            摘要 本文将解释如何使用字符串格式化来显示带两位小数或整数的数字。将提供相关示例代码以阐明知识点。
+内容 在开发中，当需要显示价格字段时，有时价格可以是100、100.99或100.9等不同形式。我们希望在价格输入小数时仅显示两位小数，例如100应显示为100，而100.2应显示为100.20，100.22应保持不变。
+这里是一些实现这个需求的示例代码，使用了简单的字符串格式化：
+1var price1 = 100; 2var formattedPrice1 = String.Format(&amp;#34;{0:#,##0}&amp;#34;, price1); // 输出：100 3 4var price2 = 100.2; 5var formattedPrice2 = String.Format(&amp;#34;{0:#,##0.00}&amp;#34;, price2); // 输出：100.20 6 7var price3 = 100.22; 8var formattedPrice3 = String.Format(&amp;#34;{0:#,##0.00}&amp;#34;, price3); // 输出：100.22 在上述代码中，我们使用了 {0:#,##0} 的格式化方式来满足需求。对于整数，我们简单地使用 {0:#,##0} 来格式化为整数形式，不显示小数位。对于带小数的数字，我们使用 {0:#,##0.00} 来格式化为两位小数形式。
+总结 通过使用字符串格式化，我们可以轻松地实现将数字格式化为带两位小数或整数的形式。通过简单的字符串格式化，我们可以满足不同显示需求的要求，并将数字以符合预期的方式呈现给用户。
+参考链接：无
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在 JavaScript 中给今天的日期添加指定天数</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-javascript-%E4%B8%AD%E7%BB%99%E4%BB%8A%E5%A4%A9%E7%9A%84%E6%97%A5%E6%9C%9F%E6%B7%BB%E5%8A%A0%E6%8C%87%E5%AE%9A%E5%A4%A9%E6%95%B0/</link>
+      <pubDate>Mon, 04 Sep 2023 03:49:19 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-javascript-%E4%B8%AD%E7%BB%99%E4%BB%8A%E5%A4%A9%E7%9A%84%E6%97%A5%E6%9C%9F%E6%B7%BB%E5%8A%A0%E6%8C%87%E5%AE%9A%E5%A4%A9%E6%95%B0/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用 JavaScript 给今天的日期添加指定的天数。我们可以使用 JavaScript 的内置方法来进行计算，无需依赖于 jQuery 或其他库。本文将通过代码示例演示具体的实现方法。
+内容 在 JavaScript 中，我们可以使用以下方法给今天的日期添加指定的天数：
+使用 JavaScript 的 Date 对象来表示日期。可以使用 new Date() 创建当前日期的实例，并使用 setDate() 方法来设置日期的天数。 1var someDate = new Date(); 2var numberOfDaysToAdd = 6; 3someDate.setDate(someDate.getDate() + numberOfDaysToAdd); 4console.log(someDate); // 输出添加指定天数后的日期 可以通过扩展 JavaScript 的 Date 对象原型来创建自定义的方法，以便更方便地添加指定的天数。 1Date.prototype.addDays = function(days) { 2 this.setDate(this.getDate() + parseInt(days)); 3 return this; 4}; 5 6var currentDate = new Date(); 7currentDate.addDays(4); // 添加 4 天到当前日期 希望上述方法能帮助你在 JavaScript 中给今天的日期添加指定天数！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在ASP.NET中创建文件夹（文件夹不存在时）</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8asp.net%E4%B8%AD%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%97%B6/</link>
+      <pubDate>Mon, 04 Sep 2023 03:27:36 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8asp.net%E4%B8%AD%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%97%B6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在ASP.NET中创建文件夹。我们将讨论使用System.IO.Directory.CreateDirectory函数来创建文件夹的方法，并给出一些示例代码。
+内容 在ASP.NET应用程序中，有时我们需要在保存文件之前检查文件夹是否存在，并在文件夹不存在时创建它。以下是创建文件夹的常用方法。
+方法1：使用System.IO.Directory.CreateDirectory函数 1string subPath = HttpContext.Current.Server.MapPath(@&amp;#34;~/Images/RequisitionBarCode/&amp;#34;); 2 3bool exists = System.IO.Directory.Exists(subPath); 4if(!exists) 5 System.IO.Directory.CreateDirectory(subPath); 使用System.IO.Directory.CreateDirectory函数可以根据指定的路径创建文件夹。我们首先检查文件夹是否存在，如果不存在，则调用CreateDirectory函数创建文件夹。
+总结 在ASP.NET应用程序中创建文件夹的方法很简单。我们可以使用System.IO.Directory.CreateDirectory函数来检查文件夹是否存在并在不存在时创建它。根据您的需求和个人偏好选择适合的方法即可。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何在 Git 仓库中保留文件但不跟踪其变化</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E4%BF%9D%E7%95%99%E6%96%87%E4%BB%B6%E4%BD%86%E4%B8%8D%E8%B7%9F%E8%B8%AA%E5%85%B6%E5%8F%98%E5%8C%96/</link>

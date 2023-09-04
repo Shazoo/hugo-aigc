@@ -7,7 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 03 Sep 2023 20:55:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 05:52:14 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从pandas数据帧的列或行获取列表</title>
+      <link>https://www.techdocdb.com/posts/%E4%BB%8Epandas%E6%95%B0%E6%8D%AE%E5%B8%A7%E7%9A%84%E5%88%97%E6%88%96%E8%A1%8C%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Mon, 04 Sep 2023 05:52:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BB%8Epandas%E6%95%B0%E6%8D%AE%E5%B8%A7%E7%9A%84%E5%88%97%E6%88%96%E8%A1%8C%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何从pandas数据帧的列或行中获取列表。在使用pandas进行数据处理和分析时，经常需要将数据帧的特定列或行提取为列表，以便进行进一步的操作。本教程将给出几种方法来实现从数据帧提取列表的操作。
+内容 在pandas中，可以使用以下几种方法从数据帧的列或行中获取列表：
+方法一：使用tolist()方法
+使用tolist()方法可以将pandas的Series对象转换为Python列表。例如：
+1import pandas as pd 2 3data_dict = {&amp;#39;one&amp;#39;: pd.Series([1, 2, 3], index=[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]), 4 &amp;#39;two&amp;#39;: pd.Series([1, 2, 3, 4], index=[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;])} 5 6df = pd.DataFrame(data_dict) 7 8column_one_list = df[&amp;#39;one&amp;#39;].tolist() 9 10print(column_one_list) 方法二：使用values属性
+1column_one_list = df[&amp;#39;one&amp;#39;].values.tolist() 在上述示例中，我们使用values属性获取列的值，并使用tolist()方法将其转换为列表。
+方法三：使用values属性和reshape()方法
+1import numpy as np 2 3column_one_list = df[&amp;#39;one&amp;#39;].values.reshape(1, -1).ravel().tolist() 在上述示例中，我们使用values属性获取列的值，并使用reshape()方法将其重塑为numpy数组，然后使用ravel()方法展平数组，并最后使用tolist()方法将其转换为列表。
+无论选择哪种方法，都可以从数据帧的列或行中获取列表，并进行后续的操作。
+总结
+在pandas中，我们可以使用tolist()方法或values属性配合tolist()方法来从数据帧的列或行中获取列表。根据实际需求选择合适的方法进行操作。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Python中的defaultdict与普通字典的区别</title>
       <link>https://www.techdocdb.com/posts/python%E4%B8%AD%E7%9A%84defaultdict%E4%B8%8E%E6%99%AE%E9%80%9A%E5%AD%97%E5%85%B8%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
