@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>version-control on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/version-control/</link>
+    <description>Recent content in version-control on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 08:04:47 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/version-control/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将composer.lock提交至版本控制吗？</title>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86composer.lock%E6%8F%90%E4%BA%A4%E8%87%B3%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%90%97/</link>
+      <pubDate>Wed, 06 Sep 2023 08:04:47 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86composer.lock%E6%8F%90%E4%BA%A4%E8%87%B3%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%90%97/</guid>
+      <description>
+        
+          
+            摘要 本教程将探讨是否应该将composer.lock文件提交至版本控制，并对该问题给出了明确的回答。您将了解到composer.lock文件的作用以及提交该文件的重要性。
+内容 在使用Composer进行PHP项目依赖管理时，有一个文件叫做composer.lock。该文件记录了当前项目的所有依赖以及其具体版本。composer.lock文件对于确保不同开发者和团队成员使用相同的依赖版本非常重要。
+以下是关于是否应该将composer.lock文件提交至版本控制的一些观点：
+应该提交composer.lock文件：将composer.lock文件提交至版本控制是明确的建议。这样可以确保团队中的所有人都使用相同的依赖版本，并且可以避免因依赖版本不一致而引发的问题。
+不应该提交composer.lock文件：有些人认为composer.lock文件属于构建元数据，不应包含在项目中。他们认为依赖的状态应该通过版本控制系统和自动化构建过程中的其它方式进行控制，而不是通过手动提交composer.lock文件。
+综上所述，如果您希望确保团队内的每个人使用相同的依赖版本，并避免因依赖版本不一致而引发的问题，应该将composer.lock文件提交至版本控制。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

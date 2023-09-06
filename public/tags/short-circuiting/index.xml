@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>short-circuiting on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/short-circuiting/</link>
+    <description>Recent content in short-circuiting on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 08:42:40 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/short-circuiting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VB.NET中是否存在条件三元运算符？</title>
+      <link>https://www.techdocdb.com/posts/vb.net%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%9D%A1%E4%BB%B6%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Wed, 06 Sep 2023 08:42:40 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/vb.net%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%9D%A1%E4%BB%B6%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>
+        
+          
+            摘要 在本教程中，我们将讨论在VB.NET中是否存在条件三元运算符。在较新版本的VB.NET中，可以使用条件运算符（If Operator）作为三元运算符来实现类似的功能。
+内容 在一些编程语言中，我们可以使用条件三元运算符来简化条件表达式。在Perl等语言中，可以通过以下方式实现：
+1my $foo = $bar == $buz ? $cat : $dog; 那么在VB.NET中是否有类似的运算符呢？
+在较新的版本的VB.NET中，引入了一个名为If运算符（If Operator）的特性，它可以作为条件三元运算符来使用。以下是一些示例代码：
+1Dim foo As String = If(bar = buz, cat, dog) 在较早的版本的VB.NET中，可以使用IIf函数来实现类似的功能，用法几乎相同：
+1Dim foo As String = IIf(bar = buz, cat, dog) 关于If运算符和IIf函数的使用，有一些注意事项：
+在较新版本的VB.NET中，默认使用If运算符更为推荐。 在较早版本的VB.NET中，使用IIf函数也是可行的。 注意在使用If运算符时，两个条件分支的类型应该相同，否则会引发异常。 如果需要在条件分支中使用选择的对象的方法或属性，需要进行类型转换。 以下是一些例子：
+1Dim foo As String = If(bar = buz, cat, dog) 通过以上方法，你可以在VB.NET中实现类似条件三元运算符的功能。根据你使用的VB.NET版本，选择适合的运算符即可。
+总结： 在较新版本的VB.NET中，可以使用If运算符作为条件三元运算符来简化条件表达式。对于较早版本的VB.NET，可以使用IIf函数来实现相同的功能。根据你的需求和VB.NET版本，选择适合的运算符来实现条件判断和赋值。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

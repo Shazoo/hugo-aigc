@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 03:49:19 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 09:55:45 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用jQuery即时检测&lt;input type=&#34;text&#34;&gt;的所有更改</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%8D%B3%E6%97%B6%E6%A3%80%E6%B5%8Binput-typetext%E7%9A%84%E6%89%80%E6%9C%89%E6%9B%B4%E6%94%B9/</link>
+      <pubDate>Wed, 06 Sep 2023 09:55:45 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%8D%B3%E6%97%B6%E6%A3%80%E6%B5%8Binput-typetext%E7%9A%84%E6%89%80%E6%9C%89%E6%9B%B4%E6%94%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答如何使用jQuery在即时检测的所有更改的问题。我们将提供一些解决方案，帮助你理解如何使用jQuery绑定事件来实时监测输入框的值的变化，并通过示例代码进行说明。
+内容 根据你提供的问题描述和答案，你想知道如何使用jQuery在即时检测的所有更改。以下是一些解决方案。
+使用jQuery绑定事件可以实现即时检测输入框的所有更改，并调用相应的函数。以下是一些方法：
+使用setInterval方法： 1&amp;lt;input type=&amp;#34;text&amp;#34; id=&amp;#34;input_id&amp;#34; /&amp;gt; 2&amp;lt;script&amp;gt; 3setInterval(function() { 4 ObserveInputValue($(&amp;#39;#input_id&amp;#39;).val()); 5}, 100); 6&amp;lt;/script&amp;gt; 这种方法是最简洁的，只需一行代码即可实现。而且它的可靠性也很高，因为不需要担心不同事件和途径对的值进行更改。
+使用事件绑定： 1$(&amp;#39;.myElements&amp;#39;).on(&amp;#39;input&amp;#39;, function() { 2 var elem = $(this); 3 var oldValue = elem.data(&amp;#39;oldValue&amp;#39;); 4 var currentValue = elem.val(); 5 6 if (oldValue !== currentValue) { 7 console.log(&amp;#39;Value changed from &amp;#39; + oldValue + &amp;#39; to &amp;#39; + currentValue); 8 elem.data(&amp;#39;oldValue&amp;#39;, currentValue); 9 // 调用相应的函数 10 // ... 11 } 12}); 这种方法使用&#39;input&#39;事件来绑定所有元素的更改。如果的值发生更改，就会调用相应的函数。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在 JavaScript 中给今天的日期添加指定天数</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8-javascript-%E4%B8%AD%E7%BB%99%E4%BB%8A%E5%A4%A9%E7%9A%84%E6%97%A5%E6%9C%9F%E6%B7%BB%E5%8A%A0%E6%8C%87%E5%AE%9A%E5%A4%A9%E6%95%B0/</link>

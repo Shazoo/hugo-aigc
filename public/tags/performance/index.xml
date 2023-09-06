@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 08:17:25 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 08:10:13 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在JavaScript中将数字转换为字符串的最佳方式</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%B0%86%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Wed, 06 Sep 2023 08:10:13 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%B0%86%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E5%BC%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中将数字转换为字符串的最佳方式。我们将通过例子来说明这个问题。
+内容 在JavaScript中，有多种方法可以将数字转换为字符串。以下是几种常见的方法：
+使用.toString()方法： n.toString() 使用模板字符串（template string）：${n} 使用String()函数： String(n) 使用字符串拼接：n + &#39;&#39; 根据性能测试，这些方法的性能差异不大。因此，可以根据个人偏好和可读性选择其中之一。
+以下是使用模板字符串的示例代码：
+1const num = 42; 2const str = `${num}`; 3console.log(str); // 输出：&amp;#34;42&amp;#34; 这种方法简单明了，易于理解。它与使用.toString()方法的性能相当。
+使用模板字符串还可以在字符串中插入其他
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Python代码为什么在函数中运行更快？</title>
       <link>https://www.techdocdb.com/posts/python%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%87%BD%E6%95%B0%E4%B8%AD%E8%BF%90%E8%A1%8C%E6%9B%B4%E5%BF%AB/</link>

@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 00:37:10 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 10:32:48 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Twig中如何进行字符串拼接</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8twig%E4%B8%AD%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/</link>
+      <pubDate>Wed, 06 Sep 2023 10:32:48 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8twig%E4%B8%AD%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Twig中进行字符串拼接的最佳实践。我们将提供一些示例代码来演示如何进行拼接。
+内容 要在Twig中进行字符串拼接，可以使用以下方法之一：
+使用~操作符将字符串和变量进行拼接。
+1{{ &amp;#39;http://&amp;#39; ~ app.request.host }} 可以使用format过滤器将字符串和变量进行格式化和拼接。
+1{{ &amp;#39;The %s in %s falls mainly on the %s!&amp;#39;|format(&amp;#39;alpha&amp;#39;, &amp;#39;bravo&amp;#39;, &amp;#39;charlie&amp;#39;) }} 无论选择哪种方法，都可以根据具体需求进行调整和选择。
+总结 通过使用~操作符或format过滤器，我们可以在Twig中实现字符串的拼接。拼接字符串可以用于组装URL、动态生成文本等多种场景。希望本教程能够帮助您成功进行字符串拼接。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何修改MySQL列以允许NULL值？</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9mysql%E5%88%97%E4%BB%A5%E5%85%81%E8%AE%B8null%E5%80%BC/</link>

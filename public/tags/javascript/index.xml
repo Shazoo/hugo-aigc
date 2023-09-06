@@ -7,7 +7,133 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 00:42:49 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 11:30:11 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何检查一个对象是否为日期对象？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Wed, 06 Sep 2023 11:30:11 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何检查一个对象是否为日期对象，并给出几种不同的方法。您将学习到一些示例代码，了解如何判断一个对象是否为日期对象。
+内容 当您需要在Javascript中检查一个对象是否为日期对象时，有几种不同的方法。以下是一些方法供您参考：
+使用typeof操作符检查日期对象的类型：您可以使用typeof操作符检查对象的类型是否为函数。 1typeof date.getMonth === &amp;#39;function&amp;#39; 使用instanceof操作符检查对象是否为日期对象：使用instanceof操作符，可以判断对象是否为指定类型的实例。在这里，您可以使用instanceof操作符检查对象是否为Date类型的实例。 1date instanceof Date 注意：这种方法也会返回true，即使对象是无效的日期对象，例如new Date(&#39;random_string&#39;)也会被认为是Date类型的实例。
+使用Object.prototype.toString.call()方法，检查对象的类：通过调用Object.prototype.toString.call()方法，可以获得该对象的类型的字符串形式。您可以使用这种方法来检查对象的类是否为Date类型。 1Object.prototype.toString.call(date) === &amp;#39;[object Date]&amp;#39; 请注意，当对象跨帧边界传递时，这种方法可能会失败。为了解决这个问题，可以使用如下方法，通过检查对象的类来进行判断：
+1Object.prototype.toString.call(date) === &amp;#39;[object Date]&amp;#39; 通过上面的方法，您可以判断对象是否为Date类型的实例，并在需要时对代码进行防御性处理，以避免对非日期对象进行格式化操作。
+总结 本教程介绍了如何检查一个对象是否为日期对象
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在JavaScript中创建静态变量</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Wed, 06 Sep 2023 10:57:39 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中创建静态变量。静态变量是与类相关联而不是与类的实例相关联的变量。本教程将提供多种方法来创建和访问静态变量。
+内容 使用类属性和原型链 在JavaScript中，可以通过在类函数对象上定义属性来实现静态变量。这样的属性不会与实例相关联，而是与类对象本身相关联。
+示例代码 1function MyClass() { 2 // 实例变量 3 this.instanceVar = &amp;#34;instance variable&amp;#34;; 4} 5 6// 静态变量 7MyClass.staticVar = &amp;#34;static variable&amp;#34;; 8 9// 实例方法 10MyClass.prototype 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用JavaScript源映射（.map文件）</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E6%BA%90%E6%98%A0%E5%B0%84.map%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 06 Sep 2023 10:34:49 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E6%BA%90%E6%98%A0%E5%B0%84.map%E6%96%87%E4%BB%B6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中使用源映射（.map文件）。
+内容 最近，我注意到一些JavaScript库（如Angular）随附了一个以.js.map为扩展名的文件，这引发了几个问题：
+这是用来做什么的？为什么Angular团队要提供一个.js.map文件？ 作为JavaScript开发人员，我应该如何使用angular.min.js.map文件？ 我需要关心为我的JavaScript应用程序创建.js.map文件吗？ 它是如何创建的？我查看了angular.min.js.map文件，发现其中充满了奇怪格式的字符串，所以我认为它不是手动创建的。 件下面是最终被大家认可的答案： 源映射（source maps）文件适用于已被压缩的JavaScript和CSS（现在也适用于TypeScript）文件。当你将一个文件进行压缩（例如angular.js文件），它会将数千行的易读代码变为只有几行的难以理解的代码。在将代码部署到生产环境时，最好使用压缩后的代码而不是完整的、未压缩的版本。在应用程序处于生产环境并出现错误时，源映射文件将帮助你查看原始版本的代码。如果没有源映射文件，任何错误信息看起来都会晦涩难懂。
+对CSS文件也是一样的。一旦将Sass或Less文件编译为CSS，它看起来完全不同于原始形式。如果启用源映射，你就可以查看文件的原始状态，而不是修改后的状态。
+因此，按照先后顺序回答你的问题：
+源映射文件的作用是解析压缩后的代码。 作为开发人员，你可以在调试生产环境的应用程序时使用它。在开发模式下，你可以使用完整版本的Angular，而在生产环境中，你将使用压缩版本。 如果你希望更容易地调试生产代码，那么是的，你应该关心创建js.map文件。 它是在构建时由构建工具生成的。有一些构建工具可以像处理其他文件一样处理.js.map文件。 希望这有所帮助。
+参考答案： 只关注最后一个问题：如何创建源映射文件。下面是一些可以生成源映射的构建工具：
+Grunt，使用插件：grunt-contrib-uglify Gulp，使用插件：gulp-uglify Google Closure，使用参数：--create_source_map 参考答案： 源映射文件（source map files）将混淆（压缩）后的文件映射为未混淆（未压缩）的文件。如果在未混淆文件中进行了更改，这些更改将自动应用到混淆后的文件中。
+参考答案： 开发者可以按照以下步骤使用源映射文件：
+不要在index.html文件中链接.js.map文件（没有必要）。
+当使用好的混淆工具时，被混淆的.js文件会添加一条注释：
+//# sourceMappingURL=yourFileName.min.js.map
+该注释将连接你的.map文件。
+在Chrome浏览器中，打开开发者工具，切换到&amp;quot;Sources&amp;quot;选项卡。你会看到&amp;quot;sources&amp;quot;文件夹，其中包含未混淆的应用程序文件。
+希望这对你有帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用jQuery即时检测&lt;input type=&#34;text&#34;&gt;的所有更改</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%8D%B3%E6%97%B6%E6%A3%80%E6%B5%8Binput-typetext%E7%9A%84%E6%89%80%E6%9C%89%E6%9B%B4%E6%94%B9/</link>
+      <pubDate>Wed, 06 Sep 2023 09:55:45 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%8D%B3%E6%97%B6%E6%A3%80%E6%B5%8Binput-typetext%E7%9A%84%E6%89%80%E6%9C%89%E6%9B%B4%E6%94%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答如何使用jQuery在即时检测的所有更改的问题。我们将提供一些解决方案，帮助你理解如何使用jQuery绑定事件来实时监测输入框的值的变化，并通过示例代码进行说明。
+内容 根据你提供的问题描述和答案，你想知道如何使用jQuery在即时检测的所有更改。以下是一些解决方案。
+使用jQuery绑定事件可以实现即时检测输入框的所有更改，并调用相应的函数。以下是一些方法：
+使用setInterval方法： 1&amp;lt;input type=&amp;#34;text&amp;#34; id=&amp;#34;input_id&amp;#34; /&amp;gt; 2&amp;lt;script&amp;gt; 3setInterval(function() { 4 ObserveInputValue($(&amp;#39;#input_id&amp;#39;).val()); 5}, 100); 6&amp;lt;/script&amp;gt; 这种方法是最简洁的，只需一行代码即可实现。而且它的可靠性也很高，因为不需要担心不同事件和途径对的值进行更改。
+使用事件绑定： 1$(&amp;#39;.myElements&amp;#39;).on(&amp;#39;input&amp;#39;, function() { 2 var elem = $(this); 3 var oldValue = elem.data(&amp;#39;oldValue&amp;#39;); 4 var currentValue = elem.val(); 5 6 if (oldValue !== currentValue) { 7 console.log(&amp;#39;Value changed from &amp;#39; + oldValue + &amp;#39; to &amp;#39; + currentValue); 8 elem.data(&amp;#39;oldValue&amp;#39;, currentValue); 9 // 调用相应的函数 10 // ... 11 } 12}); 这种方法使用&#39;input&#39;事件来绑定所有元素的更改。如果的值发生更改，就会调用相应的函数。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Wed, 06 Sep 2023 09:25:07 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在JavaScript中将数字转换为字符串的最佳方式</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%B0%86%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Wed, 06 Sep 2023 08:10:13 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%B0%86%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E5%BC%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在JavaScript中将数字转换为字符串的最佳方式。我们将通过例子来说明这个问题。
+内容 在JavaScript中，有多种方法可以将数字转换为字符串。以下是几种常见的方法：
+使用.toString()方法： n.toString() 使用模板字符串（template string）：${n} 使用String()函数： String(n) 使用字符串拼接：n + &#39;&#39; 根据性能测试，这些方法的性能差异不大。因此，可以根据个人偏好和可读性选择其中之一。
+以下是使用模板字符串的示例代码：
+1const num = 42; 2const str = `${num}`; 3console.log(str); // 输出：&amp;#34;42&amp;#34; 这种方法简单明了，易于理解。它与使用.toString()方法的性能相当。
+使用模板字符串还可以在字符串中插入其他
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在JavaScript中执行整数除法和取余操作</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E6%89%A7%E8%A1%8C%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95%E5%92%8C%E5%8F%96%E4%BD%99%E6%93%8D%E4%BD%9C/</link>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>closures on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/closures/</link>
+    <description>Recent content in closures on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 10:57:39 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/closures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在JavaScript中创建静态变量</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Wed, 06 Sep 2023 10:57:39 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中创建静态变量。静态变量是与类相关联而不是与类的实例相关联的变量。本教程将提供多种方法来创建和访问静态变量。
+内容 使用类属性和原型链 在JavaScript中，可以通过在类函数对象上定义属性来实现静态变量。这样的属性不会与实例相关联，而是与类对象本身相关联。
+示例代码 1function MyClass() { 2 // 实例变量 3 this.instanceVar = &amp;#34;instance variable&amp;#34;; 4} 5 6// 静态变量 7MyClass.staticVar = &amp;#34;static variable&amp;#34;; 8 9// 实例方法 10MyClass.prototype 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

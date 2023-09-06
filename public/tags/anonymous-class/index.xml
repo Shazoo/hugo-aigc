@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anonymous-class on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/anonymous-class/</link>
+    <description>Recent content in anonymous-class on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 09:47:31 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/anonymous-class/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在匿名内部类中只有final变量是可访问的的原因</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E4%B8%AD%E5%8F%AA%E6%9C%89final%E5%8F%98%E9%87%8F%E6%98%AF%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%9A%84%E5%8E%9F%E5%9B%A0/</link>
+      <pubDate>Wed, 06 Sep 2023 09:47:31 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E4%B8%AD%E5%8F%AA%E6%9C%89final%E5%8F%98%E9%87%8F%E6%98%AF%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%9A%84%E5%8E%9F%E5%9B%A0/</guid>
+      <description>
+        
+          
+            摘要 在Java中，只有final变量可以在匿名内部类中访问。这篇文章将解释为什么只有final变量可以在匿名内部类中访问，并提供几种解决方案。
+内容 在Java中，只有final变量可以在匿名内部类中访问。这是因为在匿名内部类中，当变量被匿名内部类引用时，其值被复制到内部类的实例中。这样做的目的是为了避免复杂的编译器生成代码来处理不同作用域变量的状态。
+以下是解决这个问题的一些方法：
+在变量前添加final关键字。 1private void f(Button b, final int a){ 2 b.addClickHandler(new ClickHandler() { 3 @Override 4 public void onClick(ClickEvent event) { 5 int b = a*5; 6 } 7 }); 8} 将变量提升为类级别的字段。 1class Example { 2 private int a; 3 4 private void f(Button b, int a) { 5 this.a = a; 6 7 b.addClickHandler(new ClickHandler() { 8 @Override 9 public void onClick(ClickEvent event) { 10 int b = Example.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
