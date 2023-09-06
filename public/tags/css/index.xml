@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 09:07:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 17:51:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用CSS实现HTML表格的交替行颜色</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E5%AE%9E%E7%8E%B0html%E8%A1%A8%E6%A0%BC%E7%9A%84%E4%BA%A4%E6%9B%BF%E8%A1%8C%E9%A2%9C%E8%89%B2/</link>
+      <pubDate>Wed, 06 Sep 2023 17:51:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E5%AE%9E%E7%8E%B0html%E8%A1%A8%E6%A0%BC%E7%9A%84%E4%BA%A4%E6%9B%BF%E8%A1%8C%E9%A2%9C%E8%89%B2/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用CSS来实现HTML表格的交替行颜色。我们将通过示例来说明这个知识点。
+内容 在HTML中，我们可以使用CSS来实现表格的交替行颜色，使表格更易于阅读和区分。下面是使用CSS的示例代码：
+1table tr:nth-child(odd) td{ 2 background-color:#ccc; 3} 4table tr:nth-child(even) td{ 5 background-color:#fff; 6} 上述代码利用了CSS的nth-child选择器来选择奇数行和偶数行，并分别应用不同的背景颜色。这样，就可以轻松实现交替行颜色的效果。
+下面是一个示例HTML表格的代码：
+1&amp;lt;table&amp;gt; 2 &amp;lt;tr&amp;gt; 3 &amp;lt;td&amp;gt;One&amp;lt;/td&amp;gt; 4 &amp;lt;td&amp;gt;one&amp;lt;/td&amp;gt; 5 &amp;lt;/tr&amp;gt; 6 &amp;lt;tr&amp;gt; 7 &amp;lt;td&amp;gt;Two&amp;lt;/td&amp;gt; 8 &amp;lt;td&amp;gt;two&amp;lt;/td&amp;gt; 9 &amp;lt;/tr&amp;gt; 10&amp;lt;/table&amp;gt; 将上述CSS代码添加到HTML文件中的标签内，即可实现表格的交替行颜色效果。
+总结：使用CSS的nth-child选择器，我们可以轻松地实现HTML表格的交替行颜色效果。这样可以使表格更易于阅读和理解。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何给span元素添加工具提示</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</link>

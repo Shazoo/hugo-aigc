@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ios-enterprise on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/ios-enterprise/</link>
+    <description>Recent content in ios-enterprise on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 16:34:21 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/ios-enterprise/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS9 中的不受信任企业开发者问题及解决方法</title>
+      <link>https://www.techdocdb.com/posts/ios9-%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%97%E4%BF%A1%E4%BB%BB%E4%BC%81%E4%B8%9A%E5%BC%80%E5%8F%91%E8%80%85%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 06 Sep 2023 16:34:21 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/ios9-%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%8F%97%E4%BF%A1%E4%BB%BB%E4%BC%81%E4%B8%9A%E5%BC%80%E5%8F%91%E8%80%85%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            概述 本教程将解答有关iOS9中不受信任企业开发者问题的疑问，并提供解决方法。iOS9中不再提供信任企业构建的选项，但我们可以使用以下方法解决此问题。
+示例 在iOS9及以下版本中，可按照以下步骤解决不受信任企业开发者的问题：
+打开iOS设备的 设置 - 通用 - 描述文件。 点击你的描述文件。 点击 &amp;quot;信任&amp;quot; 按钮。 在iOS9.2、 iOS11及以上版本中，按照以下步骤进行操作：
+打开iOS设备的 设置 - 通用 - 设备管理。 点击你的描述文件。 点击 &amp;quot;信任&amp;quot; 按钮。 在iOS10及以上版本中，按照以下步骤进行操作：
+打开iOS设备的 设置 - 通用 - 设备管理。 点击你的描述文件。 点击 &amp;quot;信任&amp;quot; 按钮。 总结 通过本教程，我们解决了iOS9中的不受信任企业开发者的问题。根据使用的iOS版本，我们提供了不同的解决方法，使得我们可以信任企业构建的应用程序。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

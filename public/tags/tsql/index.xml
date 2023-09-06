@@ -7,7 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 08:51:47 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/tsql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 16:49:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/tsql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Server中的SELECT INTO现有表的插入操作</title>
+      <link>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E7%9A%84select-into%E7%8E%B0%E6%9C%89%E8%A1%A8%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Wed, 06 Sep 2023 16:49:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E7%9A%84select-into%E7%8E%B0%E6%9C%89%E8%A1%A8%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C/</guid>
+      <description>
+        
+          
+            摘要 在SQL Server中，如果您想要从一个表中选择某些字段，并将它们插入到现有表中，可以使用INSERT INTO SELECT语句。本教程将介绍如何执行这样的操作，并提供使用示例。
+内容 如果您想要将一个表中的多行数据插入到另一个现有表中，有几种方法可以实现：
+使用INSERT INTO SELECT语句插入数据 在SQL Server中，可以使用INSERT INTO SELECT语句将数据从一个表插入到另一个表。下面是一个示例，展示了如何执行这样的操作：
+1INSERT INTO dbo.TableTwo 2SELECT col1, col2 3FROM dbo.TableOne 4WHERE col3 LIKE @search_key 如果目标表（TableTwo）中的列与SELECT语句中的列相匹配，则不必指定列名。但为了可读性和可扩展性的原因，最好始终指定列名。例如：
+1INSERT INTO dbo.TableTwo 2(col1, col2) 3SELECT col1, col2 4FROM dbo.TableOne 5WHERE col3 LIKE @search_key 使用SELECT INTO创建新表并插入数据 另一种方法是使用SELECT INTO语句创建一个新表，并从另一个表中选择和插入数据。新表将以与SELECT语句中所选列相同的数据类型创建。
+下面是一个示例，展示了如何执行这样的操作：
+1SELECT col1, col2 2INTO dbo.TableTwo 3FROM dbo.TableOne 4WHERE col3 LIKE @search_key 使用特定列插入数据 如果目标表中有多个列，并且和源表中的列不完全匹配，可以使用以下示例中的方法在插入数据时指定列名：
+1INSERT INTO dbo.TABLETWO 2(col1, col2) 3SELECT col1, col2 4FROM dbo.TABLEONE 5WHERE col3 LIKE @search_key 这个示例假设dbo.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在SQL Server中获取表的列名</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8sql-server%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%A1%A8%E7%9A%84%E5%88%97%E5%90%8D/</link>

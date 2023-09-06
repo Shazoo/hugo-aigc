@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 03 Sep 2023 22:45:22 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 17:31:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在C#中将字节数组写入文件</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8c#%E4%B8%AD%E5%B0%86%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 06 Sep 2023 17:31:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8c#%E4%B8%AD%E5%B0%86%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在C#中将字节数组写入文件。您可以使用File.WriteAllBytes方法或FileStream类来实现这一目的。通过这些方法，您可以将字节数组保存为文件，以便在以后进行读取或处理。
+内容 引言 在C#开发中，有时候我们需要将字节数组存储为文件。这可以用于保存接收到的数据，或将数据写入文件以供后续处理。本教程将介绍几种方法来实现这一目标。
+解决方案：使用File.WriteAllBytes方法 File.WriteAllBytes是一个静态方法，它允许您直接将字节数组写入文件。以下是使用File.WriteAllBytes方法的示例代码：
+1File.WriteAllBytes(string path, byte[] bytes); 解决方案：使用FileStream类 如果您想在写入文件的过程中有更多的灵活性，您可以使用FileStream类。使用FileStream类，您可以手动控制写入位置和写入的字节数。以下是使用FileStream类的示例代码：
+1using (FileStream fs = new FileStream(&amp;#34;filename&amp;#34;, FileMode.OpenOrCreate)) 2{ 3 fs.Write(byteArray, 0, byteArray.Length); 4} 总结 通过使用File.WriteAllBytes方法或FileStream类，您可以将字节数组写入文件。File.WriteAllBytes方法提供了一种简单的方法，适用于大多数情况。而FileStream类则允许更多的灵活性和控制。希望本教程对您有所帮助。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>C&#43;&#43;11中Reflector的开源替代品</title>
       <link>https://www.techdocdb.com/posts/c&#43;&#43;11%E4%B8%ADreflector%E7%9A%84%E5%BC%80%E6%BA%90%E6%9B%BF%E4%BB%A3%E5%93%81/</link>

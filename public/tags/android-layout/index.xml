@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android-layout on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/android-layout/</link>
+    <description>Recent content in android-layout on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 16:21:07 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android-layout/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Android中如何使用`setCompoundDrawables()`显示组合Drawable</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8android%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8setcompounddrawables%E6%98%BE%E7%A4%BA%E7%BB%84%E5%90%88drawable/</link>
+      <pubDate>Wed, 06 Sep 2023 16:21:07 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8android%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8setcompounddrawables%E6%98%BE%E7%A4%BA%E7%BB%84%E5%90%88drawable/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Android中使用setCompoundDrawables()方法显示组合Drawable。我们将提供几种不同的方法来实现这个目标，并提供代码示例。
+内容 在Android中，我们可以通过几种不同的方法使用setCompoundDrawables()方法显示组合Drawable。下面是几种常用的方法：
+方法一：使用setCompoundDrawables() 1Drawable myDrawable = getResources().getDrawable(R.drawable.btn); 2btn.setCompoundDrawables(myDrawable, null, null, null); 在这个例子中，我们使用getResources().getDrawable()方法获取Drawable对象，并使用setCompoundDrawables()方法将Drawable对象设置到指定的TextView上。
+方法二：使用setBounds() 1Drawable myDrawable = getResources().getDrawable(R.drawable.btn); 2myDrawable.setBounds(0, 0, myDrawable.getIntrinsicWidth(), myDrawable.getIntrinsicHeight()); 3btn.setCompoundDrawables(myDrawable, null, null, null); 在这个例子中，我们使用getResources().getDrawable()方法获取Drawable对象，并使用setBounds()方法为Drawable对象设置边界。然后将Drawable对象设置到指定的TextView上。
+这些方法可以帮助我们使用setCompoundDrawables()方法显示组合Drawable。根据具体需求选择合适的方法即可。
+总结 在Android中，使用setCompoundDrawables()方法显示组合Drawable非常简单。通过获取Drawable对象并设置边界，然后将Drawable对象设置到相应的TextView上，我们可以轻松地实现组合Drawable的显示。选择合适的方法取决于具体的使用场景和需求。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

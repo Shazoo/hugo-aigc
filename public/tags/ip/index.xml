@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ip on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/ip/</link>
+    <description>Recent content in ip on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 15:58:41 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/ip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Express.js中获取远程客户端IP地址</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8express.js%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AFip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Wed, 06 Sep 2023 15:58:41 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8express.js%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AFip%E5%9C%B0%E5%9D%80/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Express.js中获取远程客户端的IP地址。当我们使用Express.js构建Web应用时，有时需要获取发送请求的客户端的真实IP地址。我们将提供示例代码来演示如何在Express.js中获取远程客户端的IP地址。
+方法介绍 由于Express.js应用可能会运行在反向代理（如Nginx）之后，所以我们不能直接使用req.connection.remoteAddress来获取客户端IP地址。相反，我们需要查看请求头中的特定字段来获取客户端的真实IP地址。以下是一些常用的字段：
+x-forwarded-for: 包含客户端的真实IP地址，如果有多个代理，则IP地址以逗号分隔。我们可以通过解析该字段获取客户端的IP地址。 x-real-ip: 一些代理服务器（如Nginx）将客户端的真实IP地址存储在该字段中。 示例 以下是在Express.js中获取远程客户端IP地址的示例代码：
+1app.get(&amp;#39;/&amp;#39;, function (req, res) { 2 var ip = req.headers[&amp;#39;x-forwarded-for&amp;#39;] || req.headers[&amp;#39;x-real-ip&amp;#39;] || req.connection.remoteAddress; 3 console.log(&amp;#39;Remote client IP:&amp;#39;, ip); 4}); 总结 通过本教程，我们了解了在Express.js中获取远程客户端IP地址的方法。我们可以通过查看请求头中的特定字段，如x-forwarded-for和x-real-ip，来获取客户端的真实IP地址。在实际应用中，我们可以根据需要选择合适的字段来获取客户端IP地址，并进行相应的处理。获取远程客户端IP地址对于分析访问日志、实现IP限制等功能非常重要。在开发Express.js应用时，我们应该了解如何获取并使用客户端的真实IP地址。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
