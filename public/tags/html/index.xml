@@ -7,7 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 09:07:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 00:02:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>multipart/form-data中的boundary边界</title>
+      <link>https://www.techdocdb.com/posts/multipart/form-data%E4%B8%AD%E7%9A%84boundary%E8%BE%B9%E7%95%8C/</link>
+      <pubDate>Wed, 06 Sep 2023 00:02:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/multipart/form-data%E4%B8%AD%E7%9A%84boundary%E8%BE%B9%E7%95%8C/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在multipart/form-data中边界（boundary）的概念。我们将讨论boundary在HTTP请求中的作用以及如何定义和使用boundary，并提供具体的代码示例和说明。
+内容 在HTTP头部中，我们经常会看到类似以下的内容：Content-Type: multipart/form-data; boundary=???
+那么这个&amp;quot;???&amp;quot;代表什么呢？它是由用户自定义的吗？还是由HTML生成的？我能否自定义这个&amp;quot;???&amp;quot;为&amp;quot;abcdefg&amp;quot;呢？
+答案是，&amp;quot;???&amp;quot;可以由用户自定义。你可以使用任意值作为boundary，只需满足以下条件：它的长度不能超过70个字节，而且只能使用7位ASCII可打印字符。
+当使用multipart/*类型的内容类型时，你实际上需要在Content-Type头部中指定boundary参数，这样服务器才能正确解析请求的内容。否则，服务器将无法解析请求负载。
+除非你确信在负载中只使用了US-ASCII字符集，否则建议为每个部分的Content-Type头部中添加charset参数，并将其设置为UTF-8。
+根据具体的需求和环境，选择合适的boundary值。以上方法都可以实现目标，在请求消息中保持一致地使用相同的boundary值，
+参考文献：
+使用MIME的多用途互联网邮件扩展（MIME）第二部分：媒体类型 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Sublime Text 2重新格式化HTML代码</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8sublime-text-2%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96html%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Tue, 05 Sep 2023 23:25:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8sublime-text-2%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96html%E4%BB%A3%E7%A0%81/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Sublime Text 2中使用命令自动重新格式化HTML代码，从而使代码更整洁易读。您将学习使用内置命令或安装插件来实现HTML代码的重新格式化。
+内容 在Sublime Text 2中，有多种方法可以重新格式化HTML代码，以下是几种常见的方法：
+使用内置命令。选择要重新格式化的HTML代码（使用Ctrl+A选择全部），然后从菜单选择Edit → Line → Reindent。如果您的文件扩展名是包含HTML的，例如.html或.php，该命令将 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何给span元素添加工具提示</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%BB%99span%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA/</link>

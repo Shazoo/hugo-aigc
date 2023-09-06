@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 03 Sep 2023 21:42:23 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 23:53:21 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Java中遍历HashMap</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E9%81%8D%E5%8E%86hashmap/</link>
+      <pubDate>Tue, 05 Sep 2023 23:53:21 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E9%81%8D%E5%8E%86hashmap/</guid>
+      <description>
+        
+          
+            在Java中，遍历HashMap有多种方法。让我们来看看最常见的几种方法，以及它们的优缺点。由于所有的Map都实现了Map接口，下面的技术对于任何的Map实现（HashMap、TreeMap、LinkedHashMap、Hashtable等）都适用。
+方法1：使用For-Each循环遍历entrySet 这是最常见的方法，在大多数情况下都是首选。如果在循环中需要同时使用Map的键和值，请使用这种方法。
+1Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;(); 2for (Map.Entry&amp;lt;Integer, Integer&amp;gt; entry : map.entrySet()) { 3 System.out.println(&amp;#34;Key = &amp;#34; + entry.getKey() + &amp;#34;, Value = &amp;#34; + entry.getValue()); 4} 需要注意的是，For-Each循环是从Java 5版本引入的，所以只适用于较新的版本。此外，如果尝试对一个null的Map进行迭代，For-Each循环会抛出NullPointerException异常，因此在进行迭代之前应该始终检查null引用的情况。
+方法2：使用For-Each循环遍历keySet或values 如果只需要Map的键或值，可以使用keySet或values方法进行迭代。
+1Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;(); 2 3// 只迭代键 4for (Integer key : map.keySet()) { 5 System.out.println(&amp;#34;Key = &amp;#34; + key); 6} 7 8// 只迭代值 9for (Integer value : map.values()) { 10 System.out.println(&amp;#34;Value = &amp;#34; + value); 11} 这种方法相较于entrySet迭代略微提升了性能（大约快了10%），并且更简洁。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Java 5中如何合并两个列表</title>
       <link>https://www.techdocdb.com/posts/java-5%E4%B8%AD%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E5%88%97%E8%A1%A8/</link>

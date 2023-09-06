@@ -7,7 +7,242 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 06:21:16 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 00:42:49 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在JavaScript中执行整数除法和取余操作</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E6%89%A7%E8%A1%8C%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95%E5%92%8C%E5%8F%96%E4%BD%99%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Wed, 06 Sep 2023 00:42:49 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E6%89%A7%E8%A1%8C%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95%E5%92%8C%E5%8F%96%E4%BD%99%E6%93%8D%E4%BD%9C/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中执行整数除法和取余操作。我们将给出代码示例来说明如何获取商和余数的值。
+内容 在JavaScript中，如何获取以下值？
+一个整数除以另一个整数的商是多少？ 取余操作的结果是多少？ 我们可以使用以下代码来实现：
+1const quotient = Math.floor(dividend / divisor); 2const remainder = dividend % divisor; 例如：
+1const dividend = 13; 2const divisor = 3; 3 4const quotient = Math.floor(dividend / divisor); // 商：4，3可以整除13的次数 5const remainder = dividend % divisor; // 余数：1 注意：在该代码中，Math.floor函数用于获取商的整数部分，%操作符用于获取余数的值。
+总结 在JavaScript中，可以使用Math.floor函数获取整数除法的商，使用%操作符获取取余操作的结果。通过组合这两个操作，我们可以准确地计算整数除法和取余操作的结果。
+感谢阅读本教程！
+请注意，在进行整数除法和取余操作时，请确保输入的数字是整数类型，以避免意外的结果。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何修改MySQL列以允许NULL值？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9mysql%E5%88%97%E4%BB%A5%E5%85%81%E8%AE%B8null%E5%80%BC/</link>
+      <pubDate>Wed, 06 Sep 2023 00:37:10 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9mysql%E5%88%97%E4%BB%A5%E5%85%81%E8%AE%B8null%E5%80%BC/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用MySQL语法修改表以允许列接受NULL值。我们将提供多种方法来实现这个目标，并给出示例代码。
+内容 在MySQL中，要修改一个表以允许列接受NULL值，可以使用以下语法：
+1ALTER TABLE 表名 MODIFY 列名 数据类型 NULL; 例如，要将列mycolumn的数据类型修改为VARCHAR(255)，并允许接受NULL值，可以使用以下代码：
+1ALTER TABLE mytable MODIFY mycolumn VARCHAR(255) NULL; 在上述代码中，我们使用MODIFY关键字指定要修改的列和新的数据类型。使用NULL关键字将该列设置为可接受NULL值。
+请注意，如果列未声明为UNIQUE或NOT NULL，则列在默认情况下就是可接受NULL值的，因此不需要进行任何特殊的修改。
+总结 通过本教程，你了解了如何使用MySQL语法修改表以允许列接受NULL值。你可以使用MODIFY关键字指定要修改的列和新的数据类型，并使用NULL关键字将该列设置为可接受NULL值。这些方法可以帮助你根据需要灵活地修改表的列定义，以适应不同的数据需求。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>multipart/form-data中的boundary边界</title>
+      <link>https://www.techdocdb.com/posts/multipart/form-data%E4%B8%AD%E7%9A%84boundary%E8%BE%B9%E7%95%8C/</link>
+      <pubDate>Wed, 06 Sep 2023 00:02:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/multipart/form-data%E4%B8%AD%E7%9A%84boundary%E8%BE%B9%E7%95%8C/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在multipart/form-data中边界（boundary）的概念。我们将讨论boundary在HTTP请求中的作用以及如何定义和使用boundary，并提供具体的代码示例和说明。
+内容 在HTTP头部中，我们经常会看到类似以下的内容：Content-Type: multipart/form-data; boundary=???
+那么这个&amp;quot;???&amp;quot;代表什么呢？它是由用户自定义的吗？还是由HTML生成的？我能否自定义这个&amp;quot;???&amp;quot;为&amp;quot;abcdefg&amp;quot;呢？
+答案是，&amp;quot;???&amp;quot;可以由用户自定义。你可以使用任意值作为boundary，只需满足以下条件：它的长度不能超过70个字节，而且只能使用7位ASCII可打印字符。
+当使用multipart/*类型的内容类型时，你实际上需要在Content-Type头部中指定boundary参数，这样服务器才能正确解析请求的内容。否则，服务器将无法解析请求负载。
+除非你确信在负载中只使用了US-ASCII字符集，否则建议为每个部分的Content-Type头部中添加charset参数，并将其设置为UTF-8。
+根据具体的需求和环境，选择合适的boundary值。以上方法都可以实现目标，在请求消息中保持一致地使用相同的boundary值，
+参考文献：
+使用MIME的多用途互联网邮件扩展（MIME）第二部分：媒体类型 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Java中遍历HashMap</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E9%81%8D%E5%8E%86hashmap/</link>
+      <pubDate>Tue, 05 Sep 2023 23:53:21 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8java%E4%B8%AD%E9%81%8D%E5%8E%86hashmap/</guid>
+      <description>
+        
+          
+            在Java中，遍历HashMap有多种方法。让我们来看看最常见的几种方法，以及它们的优缺点。由于所有的Map都实现了Map接口，下面的技术对于任何的Map实现（HashMap、TreeMap、LinkedHashMap、Hashtable等）都适用。
+方法1：使用For-Each循环遍历entrySet 这是最常见的方法，在大多数情况下都是首选。如果在循环中需要同时使用Map的键和值，请使用这种方法。
+1Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;(); 2for (Map.Entry&amp;lt;Integer, Integer&amp;gt; entry : map.entrySet()) { 3 System.out.println(&amp;#34;Key = &amp;#34; + entry.getKey() + &amp;#34;, Value = &amp;#34; + entry.getValue()); 4} 需要注意的是，For-Each循环是从Java 5版本引入的，所以只适用于较新的版本。此外，如果尝试对一个null的Map进行迭代，For-Each循环会抛出NullPointerException异常，因此在进行迭代之前应该始终检查null引用的情况。
+方法2：使用For-Each循环遍历keySet或values 如果只需要Map的键或值，可以使用keySet或values方法进行迭代。
+1Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;(); 2 3// 只迭代键 4for (Integer key : map.keySet()) { 5 System.out.println(&amp;#34;Key = &amp;#34; + key); 6} 7 8// 只迭代值 9for (Integer value : map.values()) { 10 System.out.println(&amp;#34;Value = &amp;#34; + value); 11} 这种方法相较于entrySet迭代略微提升了性能（大约快了10%），并且更简洁。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Sublime Text 2重新格式化HTML代码</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8sublime-text-2%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96html%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Tue, 05 Sep 2023 23:25:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8sublime-text-2%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96html%E4%BB%A3%E7%A0%81/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Sublime Text 2中使用命令自动重新格式化HTML代码，从而使代码更整洁易读。您将学习使用内置命令或安装插件来实现HTML代码的重新格式化。
+内容 在Sublime Text 2中，有多种方法可以重新格式化HTML代码，以下是几种常见的方法：
+使用内置命令。选择要重新格式化的HTML代码（使用Ctrl+A选择全部），然后从菜单选择Edit → Line → Reindent。如果您的文件扩展名是包含HTML的，例如.html或.php，该命令将 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Python中隐藏子进程的输出</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E9%9A%90%E8%97%8F%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Tue, 05 Sep 2023 22:59:07 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E9%9A%90%E8%97%8F%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%BE%93%E5%87%BA/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Python中隐藏子进程的输出。我们将提供一些不同的方法来解决这个问题。
+内容 以下是一些常用的方法：
+方法一：对于Python 3及以上版本，你可以使用subprocess.DEVNULL来隐藏输出。例如：
+1import subprocess 2text = &amp;#39;Hello World.&amp;#39; 3print(text) 4subprocess.call([&amp;#39;espeak&amp;#39;, text], stderr=subprocess.DEVNULL) 方法二：对于Python 2.7及以下版本，你可以使用os.devnull文件来隐藏输出。例如：
+1import os 2import subprocess 3text = &amp;#39;Hello World.&amp;#39; 4print(text) 5with open(os.devnull, &amp;#39;w&amp;#39;) as FNULL: 6 subprocess.call([&amp;#39;espeak&amp;#39;, text], stdout=FNULL, stderr=FNULL) 通过以上方法，我们可以在Python中隐藏子进程的输出。
+总结 在Python中隐藏子进程的输出可以使用subprocess.DEVNULL或os.devnull来实现。根据Python版本选择合适的方式，并确保子进程的输出不会干扰到主程序。
+相关链接 Python subprocess官方文档 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在 Windows 上替代 cat 命令的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-windows-%E4%B8%8A%E6%9B%BF%E4%BB%A3-cat-%E5%91%BD%E4%BB%A4%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 05 Sep 2023 22:49:31 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-windows-%E4%B8%8A%E6%9B%BF%E4%BB%A3-cat-%E5%91%BD%E4%BB%A4%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在 Windows 上替代 cat 命令的方法。我们将分享多种解决方案和命令，以实现对二进制文件的合并。
+内容 在 Windows 上，可以使用以下命令来替代 cat 命令：
+使用 type 命令：Windows 的 type 命令与 UNIX 的 cat 命令类似。
+例子 1：
+1type file1 file2 &amp;gt; file3 等价于 UNIX 的：
+1cat file1 file2 &amp;gt; file3 例子 2：
+1type *.vcf &amp;gt; all_in_one.vcf 该命令将合并所有的 vcard 文件为一个文件。
+使用 copy 命令：可以使用 copy /b 命令来实现文件的合并。
+1copy /b file1+file2 destfile 总结 在 Windows 上，可以使用 type 命令或 copy /b 命令来替代 cat 命令，实现对文件的合并操作。
+相关链接 Windows 类型命令文档 Windows 复制命令文档 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用pandas对列进行排序的方法</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8pandas%E5%AF%B9%E5%88%97%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 05 Sep 2023 22:39:38 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8pandas%E5%AF%B9%E5%88%97%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用pandas对DataFrame的列进行排序。我们将演示如何使用sort_index和reindex_axis方法来按照指定顺序对列进行排序。
+内容 如果你想对DataFrame的列按照特定的顺序进行排序，可以使用sort_index和reindex_axis方法。
+首先，我们可以使用sort_index方法来按照索引进行排序。sort_index方法可以接收一个axis参数，用于指定按照行还是列进行排序。例如，如果我们要按照列名进行排序，可以使用以下代码：
+1df = df.sort_index(axis=1) 如果我们希望按照特定顺序对列进行排序，可以使用reindex_axis方法。reindex_axis方法可以根据指定的列名的顺序重新排序列。以下是一个示例：
+1sequence = [&amp;#39;Q1.1&amp;#39;, &amp;#39;Q1.2&amp;#39;, &amp;#39;Q1.3&amp;#39;, ...] 2df = df.reindex_axis(sequence, axis=1) 通过这种方式，你可以按照指定的顺序对DataFrame的列进行重新排序。
+总结 使用pandas的sort_index和reindex_axis方法可以对DataFrame的列
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Ubuntu中使用Cron定时任务</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8ubuntu%E4%B8%AD%E4%BD%BF%E7%94%A8cron%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Tue, 05 Sep 2023 22:22:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8ubuntu%E4%B8%AD%E4%BD%BF%E7%94%A8cron%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Ubuntu中使用Cron定时任务。我们将讨论如何设置、运行和管理定时任务，以及如何执行秒级的定时任务。
+内容 Cron是一个在Linux系统上常用的定时任务调度器。它允许你设置在特定时间或间隔执行的任务。在Ubuntu中使用Cron定时任务非常简单，只需要按照以下步骤操作：
+编辑Cron配置文件: 使用命令crontab -e在终端中打开Cron配置文件。如果是第一次设置Cron任务，系统会提示你选择一个文本编辑器。
+设置定时任务: 在打开的Cron配置文件中，每一行代表一个定时任务。语法如下：
+1* * * * * command_to_be_executed 第一个星号表示分钟（0-59） 第二个星号表示小时（0-23） 第三个星号表示日期（1-31） 第四个星号表示月份（1-12） 第五个星号表示星期几（0-7，其中0和7都表示星期日） 例如，要在每天的14:30执行一个命令，可以添加以下行：
+130 14 * * * command_to_be_executed 保存和退出: 在编辑完成后，保存文件并退出编辑器。
+查看和管理定时任务: 要查看和管理已设置的定时任务，可以使用以下命令：
+crontab -l：查看当前用户的定时任务列表。 crontab -e：编辑当前用户的定时任务列表。 crontab -r：删除当前用户的定时任务列表。 总结 使用Cron在Ubuntu中设置定时任务非常简单。通过编辑Cron配置文件，你可以设置在特定时间或间隔执行的任务。定时任务的语法非常灵活，可以根据自己的需求进行调整。通过查看和管理Cron配置文件，你可以轻松控制和修改定时任务。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何检查变量的类型是否为字符串</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%98%AF%E5%90%A6%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Tue, 05 Sep 2023 22:04:00 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%98%AF%E5%90%A6%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Python中检查变量的类型是否为字符串。
+内容 在Python中，我们可以使用多种方法来检查变量的类型是否为字符串。下面是一些常见的方法。
+使用type函数 我们可以使用type函数来判断变量的类型是否为字符串。
+1my_str = &amp;#34;hello&amp;#34; 2my_int = 7 3 4print(type(my_str) is str) # True 5print(type(my_int) is str) # False 以上代码通过使用type函数来判断变量的类型，然后将结果与str类型进行比较，从而判断变量的类型是否为字符串。
+使用isinstance函数 我们也可以使用isinstance函数来判断变量的类型是否为字符串。
+1my_str = &amp;#34;hello&amp;#34; 2my_int = 7 3 4print(isinstance(my_str, str)) # True 5print(isinstance(my_int, str)) # False 以上代码使用isinstance函数来判断变量的类型是否为字符串。isinstance函数会检查变量的类型是否与指定类型匹配，如果匹配则返回True，否则返回False。
+总结 通过使用type函数或isinstance函数，我们可以轻松地检查变量的类型是否为字符串。type函数可以直接判断变量的类型，而isinstance函数可以同时检查变量是否为指定类型或其子类。根据具体需求，选择合适的方法来检查变量的类型是否为字符串。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Python数据分析：使用pandas在Python 2.7中按多个列排序数据帧</title>
+      <link>https://www.techdocdb.com/posts/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BD%BF%E7%94%A8pandas%E5%9C%A8python-2.7%E4%B8%AD%E6%8C%89%E5%A4%9A%E4%B8%AA%E5%88%97%E6%8E%92%E5%BA%8F%E6%95%B0%E6%8D%AE%E5%B8%A7/</link>
+      <pubDate>Tue, 05 Sep 2023 21:07:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BD%BF%E7%94%A8pandas%E5%9C%A8python-2.7%E4%B8%AD%E6%8C%89%E5%A4%9A%E4%B8%AA%E5%88%97%E6%8E%92%E5%BA%8F%E6%95%B0%E6%8D%AE%E5%B8%A7/</guid>
+      <description>
+        
+          
+            概要 在Python的数据分析中，经常需要根据多个列对数据进行排序
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>为什么OAuth2中需要“Authorization Code”流程而“Implicit”流程已经很好用了</title>
       <link>https://www.techdocdb.com/posts/%E4%B8%BA%E4%BB%80%E4%B9%88oauth2%E4%B8%AD%E9%9C%80%E8%A6%81authorization-code%E6%B5%81%E7%A8%8B%E8%80%8Cimplicit%E6%B5%81%E7%A8%8B%E5%B7%B2%E7%BB%8F%E5%BE%88%E5%A5%BD%E7%94%A8%E4%BA%86/</link>

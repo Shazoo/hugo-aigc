@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 06:27:32 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/sublimetext2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 23:25:03 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/sublimetext2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Sublime Text 2重新格式化HTML代码</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8sublime-text-2%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96html%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Tue, 05 Sep 2023 23:25:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8sublime-text-2%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96html%E4%BB%A3%E7%A0%81/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Sublime Text 2中使用命令自动重新格式化HTML代码，从而使代码更整洁易读。您将学习使用内置命令或安装插件来实现HTML代码的重新格式化。
+内容 在Sublime Text 2中，有多种方法可以重新格式化HTML代码，以下是几种常见的方法：
+使用内置命令。选择要重新格式化的HTML代码（使用Ctrl+A选择全部），然后从菜单选择Edit → Line → Reindent。如果您的文件扩展名是包含HTML的，例如.html或.php，该命令将 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Sublime Text 2中进行正则表达式搜索替换</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8sublime-text-2%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2/</link>

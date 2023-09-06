@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>subprocess on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/subprocess/</link>
+    <description>Recent content in subprocess on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 05 Sep 2023 22:59:07 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/subprocess/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Python中隐藏子进程的输出</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E9%9A%90%E8%97%8F%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Tue, 05 Sep 2023 22:59:07 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8python%E4%B8%AD%E9%9A%90%E8%97%8F%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%BE%93%E5%87%BA/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Python中隐藏子进程的输出。我们将提供一些不同的方法来解决这个问题。
+内容 以下是一些常用的方法：
+方法一：对于Python 3及以上版本，你可以使用subprocess.DEVNULL来隐藏输出。例如：
+1import subprocess 2text = &amp;#39;Hello World.&amp;#39; 3print(text) 4subprocess.call([&amp;#39;espeak&amp;#39;, text], stderr=subprocess.DEVNULL) 方法二：对于Python 2.7及以下版本，你可以使用os.devnull文件来隐藏输出。例如：
+1import os 2import subprocess 3text = &amp;#39;Hello World.&amp;#39; 4print(text) 5with open(os.devnull, &amp;#39;w&amp;#39;) as FNULL: 6 subprocess.call([&amp;#39;espeak&amp;#39;, text], stdout=FNULL, stderr=FNULL) 通过以上方法，我们可以在Python中隐藏子进程的输出。
+总结 在Python中隐藏子进程的输出可以使用subprocess.DEVNULL或os.devnull来实现。根据Python版本选择合适的方式，并确保子进程的输出不会干扰到主程序。
+相关链接 Python subprocess官方文档 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

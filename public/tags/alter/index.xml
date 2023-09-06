@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alter on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/alter/</link>
+    <description>Recent content in alter on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 00:37:10 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/alter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何修改MySQL列以允许NULL值？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9mysql%E5%88%97%E4%BB%A5%E5%85%81%E8%AE%B8null%E5%80%BC/</link>
+      <pubDate>Wed, 06 Sep 2023 00:37:10 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9mysql%E5%88%97%E4%BB%A5%E5%85%81%E8%AE%B8null%E5%80%BC/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用MySQL语法修改表以允许列接受NULL值。我们将提供多种方法来实现这个目标，并给出示例代码。
+内容 在MySQL中，要修改一个表以允许列接受NULL值，可以使用以下语法：
+1ALTER TABLE 表名 MODIFY 列名 数据类型 NULL; 例如，要将列mycolumn的数据类型修改为VARCHAR(255)，并允许接受NULL值，可以使用以下代码：
+1ALTER TABLE mytable MODIFY mycolumn VARCHAR(255) NULL; 在上述代码中，我们使用MODIFY关键字指定要修改的列和新的数据类型。使用NULL关键字将该列设置为可接受NULL值。
+请注意，如果列未声明为UNIQUE或NOT NULL，则列在默认情况下就是可接受NULL值的，因此不需要进行任何特殊的修改。
+总结 通过本教程，你了解了如何使用MySQL语法修改表以允许列接受NULL值。你可以使用MODIFY关键字指定要修改的列和新的数据类型，并使用NULL关键字将该列设置为可接受NULL值。这些方法可以帮助你根据需要灵活地修改表的列定义，以适应不同的数据需求。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

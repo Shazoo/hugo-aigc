@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scheduled-tasks on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/scheduled-tasks/</link>
+    <description>Recent content in scheduled-tasks on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 05 Sep 2023 22:22:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/scheduled-tasks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Ubuntu中使用Cron定时任务</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8ubuntu%E4%B8%AD%E4%BD%BF%E7%94%A8cron%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Tue, 05 Sep 2023 22:22:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8ubuntu%E4%B8%AD%E4%BD%BF%E7%94%A8cron%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Ubuntu中使用Cron定时任务。我们将讨论如何设置、运行和管理定时任务，以及如何执行秒级的定时任务。
+内容 Cron是一个在Linux系统上常用的定时任务调度器。它允许你设置在特定时间或间隔执行的任务。在Ubuntu中使用Cron定时任务非常简单，只需要按照以下步骤操作：
+编辑Cron配置文件: 使用命令crontab -e在终端中打开Cron配置文件。如果是第一次设置Cron任务，系统会提示你选择一个文本编辑器。
+设置定时任务: 在打开的Cron配置文件中，每一行代表一个定时任务。语法如下：
+1* * * * * command_to_be_executed 第一个星号表示分钟（0-59） 第二个星号表示小时（0-23） 第三个星号表示日期（1-31） 第四个星号表示月份（1-12） 第五个星号表示星期几（0-7，其中0和7都表示星期日） 例如，要在每天的14:30执行一个命令，可以添加以下行：
+130 14 * * * command_to_be_executed 保存和退出: 在编辑完成后，保存文件并退出编辑器。
+查看和管理定时任务: 要查看和管理已设置的定时任务，可以使用以下命令：
+crontab -l：查看当前用户的定时任务列表。 crontab -e：编辑当前用户的定时任务列表。 crontab -r：删除当前用户的定时任务列表。 总结 使用Cron在Ubuntu中设置定时任务非常简单。通过编辑Cron配置文件，你可以设置在特定时间或间隔执行的任务。定时任务的语法非常灵活，可以根据自己的需求进行调整。通过查看和管理Cron配置文件，你可以轻松控制和修改定时任务。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

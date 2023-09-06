@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>command-line on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/command-line/</link>
+    <description>Recent content in command-line on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 05 Sep 2023 22:49:31 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Windows 上替代 cat 命令的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-windows-%E4%B8%8A%E6%9B%BF%E4%BB%A3-cat-%E5%91%BD%E4%BB%A4%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 05 Sep 2023 22:49:31 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-windows-%E4%B8%8A%E6%9B%BF%E4%BB%A3-cat-%E5%91%BD%E4%BB%A4%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在 Windows 上替代 cat 命令的方法。我们将分享多种解决方案和命令，以实现对二进制文件的合并。
+内容 在 Windows 上，可以使用以下命令来替代 cat 命令：
+使用 type 命令：Windows 的 type 命令与 UNIX 的 cat 命令类似。
+例子 1：
+1type file1 file2 &amp;gt; file3 等价于 UNIX 的：
+1cat file1 file2 &amp;gt; file3 例子 2：
+1type *.vcf &amp;gt; all_in_one.vcf 该命令将合并所有的 vcard 文件为一个文件。
+使用 copy 命令：可以使用 copy /b 命令来实现文件的合并。
+1copy /b file1+file2 destfile 总结 在 Windows 上，可以使用 type 命令或 copy /b 命令来替代 cat 命令，实现对文件的合并操作。
+相关链接 Windows 类型命令文档 Windows 复制命令文档 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

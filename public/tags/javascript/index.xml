@@ -7,7 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 04:56:41 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 00:42:49 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在JavaScript中执行整数除法和取余操作</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E6%89%A7%E8%A1%8C%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95%E5%92%8C%E5%8F%96%E4%BD%99%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Wed, 06 Sep 2023 00:42:49 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E6%89%A7%E8%A1%8C%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95%E5%92%8C%E5%8F%96%E4%BD%99%E6%93%8D%E4%BD%9C/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在JavaScript中执行整数除法和取余操作。我们将给出代码示例来说明如何获取商和余数的值。
+内容 在JavaScript中，如何获取以下值？
+一个整数除以另一个整数的商是多少？ 取余操作的结果是多少？ 我们可以使用以下代码来实现：
+1const quotient = Math.floor(dividend / divisor); 2const remainder = dividend % divisor; 例如：
+1const dividend = 13; 2const divisor = 3; 3 4const quotient = Math.floor(dividend / divisor); // 商：4，3可以整除13的次数 5const remainder = dividend % divisor; // 余数：1 注意：在该代码中，Math.floor函数用于获取商的整数部分，%操作符用于获取余数的值。
+总结 在JavaScript中，可以使用Math.floor函数获取整数除法的商，使用%操作符获取取余操作的结果。通过组合这两个操作，我们可以准确地计算整数除法和取余操作的结果。
+感谢阅读本教程！
+请注意，在进行整数除法和取余操作时，请确保输入的数字是整数类型，以避免意外的结果。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何获取当前日期和时间的秒数</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%9A%84%E7%A7%92%E6%95%B0/</link>
