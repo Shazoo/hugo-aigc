@@ -7,7 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Aug 2023 10:49:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 17:00:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在命令行中对 diff 进行着色</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E5%AF%B9-diff-%E8%BF%9B%E8%A1%8C%E7%9D%80%E8%89%B2/</link>
+      <pubDate>Thu, 07 Sep 2023 17:00:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E5%AF%B9-diff-%E8%BF%9B%E8%A1%8C%E7%9D%80%E8%89%B2/</guid>
+      <description>
+        
+          
+            摘要 本教程将向你展示如何对 diff 进行着色，以便在命令行中更好地显示。通过为 diff 添加颜色，可以增加可读性和易用性。
+内容 当你需要比较两个文件的差异时，你可以使用 diff 命令。然而，默认情况下，diff 的输出通常是以纯文本的形式显示的，不易阅读。为了改善这种情况，我们可以通过为 diff 添加颜色，使其在命令行中以更好的方式呈现。
+下面是几种在命令行中对 diff 进行着色的方法：
+1. 使用 colordiff 命令 colordiff 是 diff 的一个包装器，它以与 diff 相同的格式显示输出，但使用彩色语法高亮增加可读性。你可以通过以下命令安装 colordiff：
+1sudo apt-get install colordiff 安装后，你可以使用以下命令显示着色的 diff：
+1diff file_a file_b | colordiff 或者：
+1colordiff file_a file_b 2. 使用 Vim 或 VimDiff Vim 是一个功能强大的文本编辑器，可以用于显示 diff 的差异。你可以使用以下命令来显示差异：
+1diff file_a file_b | vim -R - 或者使用 VimDiff（也可以使用 &#39;vim -d&#39; 来代替）以并排显示两个文件的差异：
+1vimdiff file_a file_b 3. 使用 grc 命令 grc（Generic Colouriser）是一个通用的颜色着色工具，可以为多个命令的输出添加颜色，包括 diff。grc 是一个 Python 脚本，可以包装任何命令。所以，你可以使用以下命令来显示着色的 diff：
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Shell脚本中进行逻辑OR运算的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%80%BB%E8%BE%91or%E8%BF%90%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 07 Sep 2023 16:00:48 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%80%BB%E8%BE%91or%E8%BF%90%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Shell脚本中进行逻辑OR运算。我们将讨论几种不同的方法，并提供具体的代码示例和说明。
+内容 在Shell脚本中，有几种方式可以执行逻辑OR运算。以下是常用的方法：
+使用||运算符：
+使用 || 运算符可以在条件语句中执行逻辑OR运算。如果条件中的任一表达式为真，则整个条件为真。
+1if [ &amp;#34;$#&amp;#34; -eq 0 ] || [ &amp;#34;$#&amp;#34; -gt 1 ] ; then 2 echo &amp;#34;hello&amp;#34; 3fi 使用 -o 或 -or：
+使用 -o 或 -or 运算符也可以执行逻辑OR运算。如果条件中的任一表达式为真，则整个条件为真。
+1if [ &amp;#34;$#&amp;#34; -eq 0 -o &amp;#34;$#&amp;#34; -gt 1 ] ; then 2 echo &amp;#34;hello&amp;#34; 3fi 使用 [[ ... ]]：
+使用 [[ ... ]] 来包含条件语句，可以执行逻辑OR运算。与方括号 [ ... ] 不同，双方括号支持更多的逻辑操作符。
+1if [[ &amp;#34;$#&amp;#34; -eq 0 || &amp;#34;$#&amp;#34; -gt 1 ]] ; then 2 echo &amp;#34;hello&amp;#34; 3fi 以上是在Shell脚本中执行逻辑OR运算的几种常见方法。根据具体的场景和需求，选择适合的方法来实现逻辑OR运算。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在更改 crontab 文件后需要重启 cron 服务吗？</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8%E6%9B%B4%E6%94%B9-crontab-%E6%96%87%E4%BB%B6%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF-cron-%E6%9C%8D%E5%8A%A1%E5%90%97/</link>

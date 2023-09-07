@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>branch on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/branch/</link>
+    <description>Recent content in branch on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 17:51:05 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Git，显示在一个分支中但不在其他分支中的所有提交</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%98%BE%E7%A4%BA%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%E4%B8%AD%E4%BD%86%E4%B8%8D%E5%9C%A8%E5%85%B6%E4%BB%96%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%90%E4%BA%A4/</link>
+      <pubDate>Thu, 07 Sep 2023 17:51:05 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%98%BE%E7%A4%BA%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%E4%B8%AD%E4%BD%86%E4%B8%8D%E5%9C%A8%E5%85%B6%E4%BB%96%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%90%E4%BA%A4/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Git中显示在一个分支中但不在其他分支中的所有提交。当我们想要删除一个旧分支之前，我们通常需要检查该分支上的所有提交是否在其他分支中进行过合并。因此，我们想要查看当前分支上的所有提交，但这些提交没有被应用到任何其他分支上。我们将提供示例代码来演示如何显示在一个分支中但不在其他给定分支中的所有提交。
+方法介绍 在Git中，可以使用不同的命令和选项来显示在一个分支中但不在其他分支中的所有提交。以下是一些常用的方法：
+git log: 使用git log命令可以显示提交日志。可以使用特定的选项和范围来过滤要显示的提交。 示例 以下是显示在一个分支中但不在其他分支中的所有提交的示例代码：
+1git log oldbranch..newbranch 这将显示在oldbranch中但不在newbranch中的所有提交。
+总结 通过本教程，我们了解了如何在Git中显示在一个分支中但不在其他分支中的所有提交。使用git log命令和合适的选项，我们可以过滤并显示特定范围内的提交。在实际使用中，我们可以根据需要调整命令和选项来满足不同的需求。清楚地了解如何查看和比较不同分支中的提交对于代码管理和版本控制非常重要。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

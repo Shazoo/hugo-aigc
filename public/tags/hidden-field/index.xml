@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hidden-field on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/hidden-field/</link>
+    <description>Recent content in hidden-field on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 15:27:55 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/hidden-field/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用jQuery动态创建隐藏的表单元素</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E9%9A%90%E8%97%8F%E7%9A%84%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Thu, 07 Sep 2023 15:27:55 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8jquery%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E9%9A%90%E8%97%8F%E7%9A%84%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/</guid>
+      <description>
+        
+          
+            本教程将介绍使用jQuery动态创建隐藏的表单元素的最简单方法，并提供一些示例代码来说明。
+示例代码 使用以下代码片段可以动态创建一个隐藏的表单元素并将其添加到表单中：
+1$(&amp;#39;&amp;lt;input&amp;gt;&amp;#39;).attr(&amp;#39;type&amp;#39;, &amp;#39;hidden&amp;#39;).appendTo(&amp;#39;form&amp;#39;); 如果需要添加更多的属性，可以使用以下代码：
+1$(&amp;#39;&amp;lt;input&amp;gt;&amp;#39;).attr({ 2 type: &amp;#39;hidden&amp;#39;, 3 id: &amp;#39;foo&amp;#39;, 4 name: &amp;#39;bar&amp;#39; 5}).appendTo(&amp;#39;form&amp;#39;); 参考答案 以下是其他一些参考答案，它们提供了类似的功能，但略有不同的代码实现。
+使用append()方法将隐藏的表单元素添加到指定的元素中：
+1$(&amp;#39;#myformelement&amp;#39;).append(&amp;#39;&amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;myfieldname&amp;#34; value=&amp;#34;myvalue&amp;#34; /&amp;gt;&amp;#39;); 如果需要添加更多的属性，可以使用以下代码：
+1$(&amp;#39;&amp;lt;input&amp;gt;&amp;#39;).attr(&amp;#39;type&amp;#39;, &amp;#39;hidden&amp;#39;).attr(&amp;#39;name&amp;#39;, &amp;#39;foo[]&amp;#39;).attr(&amp;#39;value&amp;#39;, &amp;#39;bar&amp;#39;).appendTo(&amp;#39;form&amp;#39;); 或者可以使用以下代码：
+1$(&amp;#39;&amp;lt;input&amp;gt;&amp;#39;).attr({ 2 type: &amp;#39;hidden&amp;#39;, 3 id: &amp;#39;foo&amp;#39;, 4 name: &amp;#39;foo[]&amp;#39;, 5 value: &amp;#39;bar&amp;#39; 6}).appendTo(&amp;#39;form&amp;#39;); 总结 通过使用jQuery动态创建隐藏的表单元素，我们可以在表单中添加与用户不可见的数据。根据具体的需求，我们可以选择适合自己的代码实现方式。无论是使用attr()方法来设置属性，还是使用HTML字符串来创建元素，都可以实现动态创建隐藏的表单元素的功能。
+需要注意的是，在操作表单元素之前，请确保DOM已加载完成，并选择适当的选择器来选择表单元素。
+本教程提供了不同的参考答案，你可以根据自己的需求和项目要求选择最适合的代码实现方式。根据当前的jQuery版本和相关文档，也可以使用新的语法和API来实现相同的功能。
+参考资料：
+参考答案链接1 参考答案链接2 参考答案链接3 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

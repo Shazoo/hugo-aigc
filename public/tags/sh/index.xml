@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sh on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/sh/</link>
+    <description>Recent content in sh on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:00:48 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/sh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Shell脚本中进行逻辑OR运算的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%80%BB%E8%BE%91or%E8%BF%90%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 07 Sep 2023 16:00:48 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%80%BB%E8%BE%91or%E8%BF%90%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Shell脚本中进行逻辑OR运算。我们将讨论几种不同的方法，并提供具体的代码示例和说明。
+内容 在Shell脚本中，有几种方式可以执行逻辑OR运算。以下是常用的方法：
+使用||运算符：
+使用 || 运算符可以在条件语句中执行逻辑OR运算。如果条件中的任一表达式为真，则整个条件为真。
+1if [ &amp;#34;$#&amp;#34; -eq 0 ] || [ &amp;#34;$#&amp;#34; -gt 1 ] ; then 2 echo &amp;#34;hello&amp;#34; 3fi 使用 -o 或 -or：
+使用 -o 或 -or 运算符也可以执行逻辑OR运算。如果条件中的任一表达式为真，则整个条件为真。
+1if [ &amp;#34;$#&amp;#34; -eq 0 -o &amp;#34;$#&amp;#34; -gt 1 ] ; then 2 echo &amp;#34;hello&amp;#34; 3fi 使用 [[ ... ]]：
+使用 [[ ... ]] 来包含条件语句，可以执行逻辑OR运算。与方括号 [ ... ] 不同，双方括号支持更多的逻辑操作符。
+1if [[ &amp;#34;$#&amp;#34; -eq 0 || &amp;#34;$#&amp;#34; -gt 1 ]] ; then 2 echo &amp;#34;hello&amp;#34; 3fi 以上是在Shell脚本中执行逻辑OR运算的几种常见方法。根据具体的场景和需求，选择适合的方法来实现逻辑OR运算。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

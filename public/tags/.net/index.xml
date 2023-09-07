@@ -7,7 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 17:31:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 17:57:58 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#中的throw和throw ex的区别</title>
+      <link>https://www.techdocdb.com/posts/c#%E4%B8%AD%E7%9A%84throw%E5%92%8Cthrow-ex%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Thu, 07 Sep 2023 17:57:58 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c#%E4%B8%AD%E7%9A%84throw%E5%92%8Cthrow-ex%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍C#中的throw和throw ex的区别。我们将讨论这两者之间的区别，并提供示例代码来说明它们的使用方法和效果。
+throw和throw ex的区别 使用throw语句时，异常的堆栈跟踪将被保留，即异常的堆栈跟踪包括了异常抛出的位置以及所有调用此方法的上级方法的信息。
+使用throw ex语句时，异常的堆栈跟踪将被重置。只有当前方法抛出的异常信息会被保留，上级方法的信息不会包含在异常堆栈跟踪中。
+示例代码 下面的示例代码演示了throw和throw ex的区别：
+1static void Main(string[] args) 2{ 3 try 4 { 5 Method1(); 6 } 7 catch (Exception ex) 8 { 9 Console.WriteLine(&amp;#34;Using throw:&amp;#34;); 10 Console.WriteLine(ex.StackTrace); 11 } 12 13 try 14 { 15 Method2(); 16 } 17 catch (Exception ex) 18 { 19 Console.WriteLine(&amp;#34;Using throw ex:&amp;#34;); 20 Console.WriteLine(ex.StackTrace); 21 } 22 23 Console.ReadKey(); 24} 25 26static void Method1() 27{ 28 try 29 { 30 throw new Exception(&amp;#34;Exception in Method1&amp;#34;); 31 } 32 catch (Exception ex) 33 { 34 throw; 35 } 36} 37 38static void Method2() 39{ 40 try 41 { 42 throw new Exception(&amp;#34;Exception in Method2&amp;#34;); 43 } 44 catch (Exception ex) 45 { 46 throw ex; 47 } 48} 输出结果如下：
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在使用String.Format时转义花括号</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E4%BD%BF%E7%94%A8string.format%E6%97%B6%E8%BD%AC%E4%B9%89%E8%8A%B1%E6%8B%AC%E5%8F%B7/</link>
+      <pubDate>Thu, 07 Sep 2023 16:29:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E4%BD%BF%E7%94%A8string.format%E6%97%B6%E8%BD%AC%E4%B9%89%E8%8A%B1%E6%8B%AC%E5%8F%B7/</guid>
+      <description>
+        
+          
+            摘要 本教程将说明如何在使用String.Format方法时显示字面的花括号字符。我们将使用示例代码来说明如何转义花括号，以确保输出时能正确显示。
+内容 当使用String.Format方法时，如果要显示字面的花括号字符，需要进行转义。为了在输出中正确显示花括号字符，我们可以使用双花括号作为转义。
+下面是一个示例代码：
+1sb.AppendLine(String.Format(&amp;#34;public {0} {1} {{ get; private set; }}&amp;#34;, prop.Type, prop.Name)); 上述代码中，我们希望输出结果如下：
+1public Int32 MyProperty { get; private set; } 为了实现这个效果，我们使用了双花括号，将代码修改为如下形式：
+1sb.AppendLine(String.Format(&amp;#34;public {0} {1} {{ get; private set; }}&amp;#34;, prop.Type, prop.Name)); 通过使用双花括号，我们告诉String.Format方法将花括号视为字面字符而不是格式化标记。
+总结 在使用String.Format方法时，如果要显示字面的花括号字符，我们需要使用双花括号进行转义。通过将花括号用双花括号括起来，我们可以确保在输出中正确显示花括号字符。
+感谢阅读本教程！
+请注意，在使用String.Format方法时，根据需要正确转义花括号字符，以避免错误的输出。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在C#中将字节数组写入文件</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8c#%E4%B8%AD%E5%B0%86%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/</link>

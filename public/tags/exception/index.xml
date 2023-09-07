@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 08:34:13 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/exception/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 17:57:58 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/exception/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#中的throw和throw ex的区别</title>
+      <link>https://www.techdocdb.com/posts/c#%E4%B8%AD%E7%9A%84throw%E5%92%8Cthrow-ex%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Thu, 07 Sep 2023 17:57:58 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c#%E4%B8%AD%E7%9A%84throw%E5%92%8Cthrow-ex%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍C#中的throw和throw ex的区别。我们将讨论这两者之间的区别，并提供示例代码来说明它们的使用方法和效果。
+throw和throw ex的区别 使用throw语句时，异常的堆栈跟踪将被保留，即异常的堆栈跟踪包括了异常抛出的位置以及所有调用此方法的上级方法的信息。
+使用throw ex语句时，异常的堆栈跟踪将被重置。只有当前方法抛出的异常信息会被保留，上级方法的信息不会包含在异常堆栈跟踪中。
+示例代码 下面的示例代码演示了throw和throw ex的区别：
+1static void Main(string[] args) 2{ 3 try 4 { 5 Method1(); 6 } 7 catch (Exception ex) 8 { 9 Console.WriteLine(&amp;#34;Using throw:&amp;#34;); 10 Console.WriteLine(ex.StackTrace); 11 } 12 13 try 14 { 15 Method2(); 16 } 17 catch (Exception ex) 18 { 19 Console.WriteLine(&amp;#34;Using throw ex:&amp;#34;); 20 Console.WriteLine(ex.StackTrace); 21 } 22 23 Console.ReadKey(); 24} 25 26static void Method1() 27{ 28 try 29 { 30 throw new Exception(&amp;#34;Exception in Method1&amp;#34;); 31 } 32 catch (Exception ex) 33 { 34 throw; 35 } 36} 37 38static void Method2() 39{ 40 try 41 { 42 throw new Exception(&amp;#34;Exception in Method2&amp;#34;); 43 } 44 catch (Exception ex) 45 { 46 throw ex; 47 } 48} 输出结果如下：
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在C&#43;&#43;中使用`noexcept`</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8c&#43;&#43;%E4%B8%AD%E4%BD%BF%E7%94%A8noexcept/</link>
