@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android-recyclerview on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/android-recyclerview/</link>
+    <description>Recent content in android-recyclerview on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 08:31:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android-recyclerview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何更新RecyclerView Adapter数据</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0recyclerview-adapter%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Thu, 07 Sep 2023 08:31:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0recyclerview-adapter%E6%95%B0%E6%8D%AE/</guid>
+      <description>
+        
+          
+            摘要： 本文介绍了如何更新RecyclerView Adapter的数据。提供了多种方法来更新Adapter的数据集，并给出了示例代码。
+内容： 当需要更新RecyclerView的数据时，有多种方法可供选择。下面列举了几种常见的更新方法：
+直接更新数据集，然后调用notifyDataSetChanged()方法，通知Adapter数据发生变化。 1adapter.setData(newData); 2adapter.notifyDataSetChanged(); 使用DiffUtil类进行数据差异计算，然后将计算结果应用到Adapter中。 1DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtilCallback(oldData, newData)); 2adapter.setData(newData); 3diffResult.dispatchUpdatesTo(adapter); 使用AsyncListDiffer类进行异步数据差异计算。 1AsyncListDiffer&amp;lt;T&amp;gt; differ = new AsyncListDiffer&amp;lt;&amp;gt;(adapter, diffCallback); 2differ.submitList(newData); 在使用AsyncListDiffer时，需要提供一个DiffUtil.ItemCallback来比较新旧数据集中的数据差异，并使用submitList()方法提交新的数据集。AsyncListDiffer将自动计算差异并分发更新事件给Adapter。
+总结： 更新RecyclerView Adapter的数据，可以直接更新数据集并调用notifyDataSetChanged()方法，也可以使用DiffUtil类或AsyncListDiffer类来计算数据差异并将差异应用到Adapter中。根据实际需求选择合适的方法来更新数据，并确保调用相应的刷新方法，以便在用户界面上正确显示更新后的数据。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

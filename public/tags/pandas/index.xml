@@ -7,7 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 05 Sep 2023 22:39:38 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 09:15:59 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将Pandas DataFrame转换为字典</title>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86pandas-dataframe%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</link>
+      <pubDate>Thu, 07 Sep 2023 09:15:59 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86pandas-dataframe%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E5%85%B8/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何将Pandas DataFrame转换为Python字典。通过示例代码演示了如何将DataFrame的行转换为字典的键，并将其他列作为对应键的值。
+内容 如果你有一个包含多个列的DataFrame，在转换为字典时，可以按照以下步骤操作：
+使用to_dict()方法将DataFrame转换为字典。根据需求选择适当的orient参数，以确定字典的形式。在本例中，我们将使用index作为参数，这样字典的键将是DataFrame的索引值。
+为了保留每个键对应的多个值，我们可以使用列表（即嵌套列表）来存储值。可以使用Groupby功能按键对DataFrame进行分组，并将不同列的值添加到列表中。
+以下是示例代码：
+1result = {k: [g[&amp;#39;A&amp;#39;].tolist(), g[&amp;#39;B&amp;#39;].tolist(), g[&amp;#39;C&amp;#39;].tolist()] for k,g in df.groupby(&amp;#39;ID&amp;#39;)} 2print(result) 这样将创建一个以每个唯一键为键，每个键对应的包含多个列值的列表的字典。
+总结 通过使用to_dict()方法和Groupby功能，可以将Pandas DataFrame转换为字典。根据实际需求选择合适的参数和方法，并在操作前了解DataFrame的结构以及数据的一致性。
+参考资料：
+Pandas官方文档文档 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用pandas对列进行排序的方法</title>
       <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8pandas%E5%AF%B9%E5%88%97%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E7%9A%84%E6%96%B9%E6%B3%95/</link>

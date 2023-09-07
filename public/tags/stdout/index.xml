@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stdout on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/stdout/</link>
+    <description>Recent content in stdout on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 10:59:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/stdout/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Bash中将stderr管道到另一个命令，而不是stdout</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8bash%E4%B8%AD%E5%B0%86stderr%E7%AE%A1%E9%81%93%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E8%80%8C%E4%B8%8D%E6%98%AFstdout/</link>
+      <pubDate>Thu, 07 Sep 2023 10:59:15 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8bash%E4%B8%AD%E5%B0%86stderr%E7%AE%A1%E9%81%93%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E8%80%8C%E4%B8%8D%E6%98%AFstdout/</guid>
+      <description>
+        
+          
+            摘要 在Bash中，有时候我们想将stdout和stderr分别导向不同的命令进行处理。本教程将介绍如何使用命名管道(named pipes)实现这一目的，将stdout传递给一个命令，将stderr传递给另一个命令。
+内容 要将stderr管道到另一个命令，可以按照以下步骤进行操作：
+创建命名管道(named pipes)： 1mkfifo stdout-target 2mkfifo stderr-target 将stdout导向stdout-target管道，将stderr导向stderr-target管道，同时运行两个接收管道输入的命令： 1cat &amp;lt; stdout-target | command-for-stdout &amp;amp; 2cat &amp;lt; stderr-target | command-for-stderr &amp;amp; 运行主命令，将stdout导向stdout-target管道，将stderr导向stderr-target管道： 1main-command 1&amp;gt;stdout-target 2&amp;gt;stderr-target 运行完主命令后，记得删除命名管道： 1rm stdout-target stderr-target 总结 通过使用命名管道，我们可以将stdout和stderr分别导向不同的命令进行处理。这种方法比较灵活，可以将输出导向任何你想要的命令进行进一步处理。记得在使用命名管道后，及时删除它们，以避免占用过多的系统资源。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

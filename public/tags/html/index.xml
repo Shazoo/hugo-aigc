@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 17:51:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 09:08:50 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用原生JavaScript选择具有&#34;data-xxx&#34;属性的所有元素（无需使用jQuery）</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9Fjavascript%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89data-xxx%E5%B1%9E%E6%80%A7%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E6%97%A0%E9%9C%80%E4%BD%BF%E7%94%A8jquery/</link>
+      <pubDate>Thu, 07 Sep 2023 09:08:50 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9Fjavascript%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89data-xxx%E5%B1%9E%E6%80%A7%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E6%97%A0%E9%9C%80%E4%BD%BF%E7%94%A8jquery/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍使用原生JavaScript的方法，来选择具有特定&amp;quot;data-&amp;quot;属性的所有DOM元素。我们将演示几种方式来实现这个需求，并提供相应的代码示例。
+内容 在使用原生JavaScript时，我们可以使用querySelectorAll方法来选择具有特定&amp;quot;data-&amp;quot;属性的所有元素。
+使用querySelectorAll 您可以使用以下方式来选择带有特定&amp;quot;data-&amp;quot;属性的所有元素：
+1document.querySelectorAll(&amp;#39;[data-foo]&amp;#39;); 这个方法会返回一个NodeList，其中包含了所有符合选择器条件的元素。
+示例 让我们使用以下HTML代码作为示例：
+1&amp;lt;p data-foo=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/p&amp;gt; 2&amp;lt;br/&amp;gt; 3&amp;lt;h6 data-foo=&amp;#34;1&amp;#34;&amp;gt;&amp;lt;/h6&amp;gt; 我们可以使用以下代码来选择所有具有&amp;quot;data-foo&amp;quot;属性的元素，并进行进一步的操作：
+1var elements = document.querySelectorAll(&amp;#39;[data-foo]&amp;#39;); 2 3for (var i = 0; i &amp;lt; elements.length; i++) { 4 var element = elements[i]; 5 // 对符合条件的元素进行操作 6 // 例如，获取属性值：element.getAttribute(&amp;#39;data-foo&amp;#39;) 7} 总结 使用原生JavaScript的querySelectorAll方法，可以轻松选择具有特定&amp;quot;data-&amp;quot;属性的所有元素。这种方法与使用jQuery的方式类似，但不需要引入额外的库。根据具体需求，选择合适的方法来操作选中的元素。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用CSS实现HTML表格的交替行颜色</title>
       <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8css%E5%AE%9E%E7%8E%B0html%E8%A1%A8%E6%A0%BC%E7%9A%84%E4%BA%A4%E6%9B%BF%E8%A1%8C%E9%A2%9C%E8%89%B2/</link>

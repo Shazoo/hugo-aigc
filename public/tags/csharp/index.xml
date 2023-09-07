@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 17:31:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 11:42:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决JSON.NET的&#34;Self referencing loop detected for type&#34;错误</title>
+      <link>https://www.techdocdb.com/posts/%E8%A7%A3%E5%86%B3json.net%E7%9A%84self-referencing-loop-detected-for-type%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Thu, 07 Sep 2023 11:42:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E8%A7%A3%E5%86%B3json.net%E7%9A%84self-referencing-loop-detected-for-type%E9%94%99%E8%AF%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何解决使用JSON.NET时出现的&amp;quot;Self referencing loop detected for type&amp;quot;错误。我们将介绍几种方法，包括使用JsonSerializerSettings和添加属性的JsonIgnore特性来解决循环引用的问题。
+解决方法 以下是解决&amp;quot;Self referencing loop detected for type&amp;quot;错误的几种方法：
+使用JsonSerializerSettings： 1JsonSerializerSettings 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在C#中将字节数组写入文件</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8c#%E4%B8%AD%E5%B0%86%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/</link>

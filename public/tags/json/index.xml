@@ -7,7 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 05:56:04 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 11:42:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决JSON.NET的&#34;Self referencing loop detected for type&#34;错误</title>
+      <link>https://www.techdocdb.com/posts/%E8%A7%A3%E5%86%B3json.net%E7%9A%84self-referencing-loop-detected-for-type%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Thu, 07 Sep 2023 11:42:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E8%A7%A3%E5%86%B3json.net%E7%9A%84self-referencing-loop-detected-for-type%E9%94%99%E8%AF%AF/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何解决使用JSON.NET时出现的&amp;quot;Self referencing loop detected for type&amp;quot;错误。我们将介绍几种方法，包括使用JsonSerializerSettings和添加属性的JsonIgnore特性来解决循环引用的问题。
+解决方法 以下是解决&amp;quot;Self referencing loop detected for type&amp;quot;错误的几种方法：
+使用JsonSerializerSettings： 1JsonSerializerSettings 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用 PHP 脚本返回 JSON 数据</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-php-%E8%84%9A%E6%9C%AC%E8%BF%94%E5%9B%9E-json-%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Thu, 07 Sep 2023 11:27:58 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-php-%E8%84%9A%E6%9C%AC%E8%BF%94%E5%9B%9E-json-%E6%95%B0%E6%8D%AE/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何从 PHP 脚本中返回 JSON 数据。你需要了解如何设置 Content-Type 头部以及如何使用 echo 输出 JSON 数据。
+内容 要返回 JSON 数据，你需要在脚本开始的地方设置 Content-Type 头部为 application/json：
+1header(&amp;#39;Content-Type: application/json; charset=utf-8&amp;#39;); 然后，你可以使用 echo 输出经过 JSON 编码的数据：
+1$data = /** 这里填入你要序列化的数据 **/; 2echo json_encode($data); 这样就可以将 PHP 数据序列化为 JSON 字符串并输出给客户端。
+以下是一个完整的示例：
+1$data = [ 2 &amp;#39;name&amp;#39; =&amp;gt; &amp;#39;John Doe&amp;#39;, 3 &amp;#39;age&amp;#39; =&amp;gt; 25, 4 &amp;#39;email&amp;#39; =&amp;gt; &amp;#39;johndoe@example.com&amp;#39; 5]; 6 7header(&amp;#39;Content-Type: application/json; charset=utf-8&amp;#39;); 8echo json_encode($data); 这个示例将一个包含姓名、年龄和电子邮件的关联数组转换为 JSON 字符串并返回给客户端。
+请注意，如果要返回 JSON 数据，最好设置 Content-Type 头部以确保客户端正确解析数据。同时，确保你要输出的数据已经通过 json_encode 进行了正确的 JSON 编码。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>PHP中的shell_exec()和exec()命令的区别</title>
       <link>https://www.techdocdb.com/posts/php%E4%B8%AD%E7%9A%84shell_exec%E5%92%8Cexec%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
