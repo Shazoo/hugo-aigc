@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>casting on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/casting/</link>
+    <description>Recent content in casting on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 10:18:33 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/casting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;-FAQ：类型转换和类型转换规则</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;-faq%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/</link>
+      <pubDate>Fri, 08 Sep 2023 10:18:33 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;-faq%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍C++中常用的四种类型转换操作符：static_cast、dynamic_cast、const_cast和reinterpret_cast的使用场景和规则。对于每一种类型转换，我们将提供具体的用例和代码示例，让读者能够更好地理解和应用。
+内容 static_cast的使用 static_cast是C++中最常用的类型转换操作符。它能够执行各种隐式转换和显式转换操作，包括数字类型之间的转换，以及类之间的上行转换（base class to derived class）。
+用例：
+1int i = 10; 2float f = static_cast&amp;lt;float&amp;gt;(i); // 隐式类型转换 3int j = static_cast&amp;lt;int&amp;gt;(3.14); // 显式类型转换 dynamic_cast的使用 dynamic_cast用于处理多态（polymorphism）的类型转换。只有在将指向派生类的指针或引用转换为指向基类的指针或引用时，才需要使用dynamic_cast。
+用例：
+1class Base { 2public: 3 virtual ~Base() {} 4}; 5 6class Derived : public Base { 7public: 8 void foo() {} 9}; 10 11void someFunction(Base* ptr) { 12 Derived* dptr = dynamic_cast&amp;lt;Derived*&amp;gt;(ptr); 13 if (dptr != nullptr) { 14 dptr-&amp;gt;foo(); 15 } 16} const_cast的使用 const_cast用于添加或移除const限定符。它只能用于转换指向非const对象的指针或引用。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>delegates on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/delegates/</link>
+    <description>Recent content in delegates on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 09:41:03 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/delegates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pass Method as Parameter using C\#</title>
+      <link>https://www.techdocdb.com/posts/pass-method-as-parameter-using-c%5C#/</link>
+      <pubDate>Fri, 08 Sep 2023 09:41:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/pass-method-as-parameter-using-c%5C#/</guid>
+      <description>
+        
+          
+            该教程将向您展示如何在C＃中将方法作为参数传递。为了实现这一目标，我们将使用.NET中的Func委托。
+概述 您有多个方法，它们的参数类型和返回值相同，但名称和代码块不同。您想将要运行的方法的名称传递给另一个方法，然后由该方法调用传递的方法。
+1public int Method1(string input) 2{ 3 // 执行某些操作 4 return 0; 5} 6 7public int Method2(string input) 8{ 9 // 执行其他操作 10 return 1; 11} 12 13public bool RunTheMethod(Func&amp;lt;string, int&amp;gt; myMethodName) 14{ 15 // 执行一些操作 16 int result = myMethodName(&amp;#34;My String&amp;#34;); 17 // 执行更多操作 18 return result == 0; // 返回该方法是否成功运行 19} 20 21public bool Test() 22{ 23 return RunTheMethod(Method1); 24} 这段代码无法正常工作，但您想要做的事情是，在RunTheMethod方法的参数中定义传递的方法。
+实现方法 要解决这个问题，您可以使用.NET 3.5中的Func委托作为RunTheMethod方法的参数。Func委托允许您指定一个带有特定类型的多个参数和一个特定类型的返回值的方法。以下是一个示例，应该可以工作：
+1public class MyClass 2{ 3 public int Method1(string input) 4 { 5 //.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

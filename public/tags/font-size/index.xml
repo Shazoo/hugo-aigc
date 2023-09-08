@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>font-size on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/font-size/</link>
+    <description>Recent content in font-size on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 08:14:14 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/font-size/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>相应式字体大小在CSS中的应用</title>
+      <link>https://www.techdocdb.com/posts/%E7%9B%B8%E5%BA%94%E5%BC%8F%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%9C%A8css%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Fri, 08 Sep 2023 08:14:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E7%9B%B8%E5%BA%94%E5%BC%8F%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%9C%A8css%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将教你如何在CSS中使用相应式字体大小。你将学到如何根据浏览器窗口的大小来调整字体大小，以适应不同的屏幕尺寸。
+内容 在响应式设计中，我们经常遇到一个问题：当浏览器窗口缩小到移动设备尺寸时，字体大小没有自动调整，导致文本过大而出现水平滚动条。那么我们该如何解决这个问题呢？
+使用媒体查询 为了解决这个问题，我们可以使用媒体查询。媒体查询允许我们根据浏览器窗口的大小来应用不同的CSS样式。我们可以使用媒体查询来减小字体大小，以防止设计被破坏并出现滚动条。
+例如，你可以在CSS的末尾添加以下代码，根据设计开始崩溃的320像素宽度，设置字体大小为2em：
+1@media only screen and (max-width: 320px) { 2 body { 3 font-size: 2em; 4 } 5} 使用视口百分比长度 除了使用媒体查询外，你还可以使用视口百分比长度。视口百分比长度是相对于初始包含块（即视口）的大小而定义的，当初始包含块的高度或宽度发生变化时，它们会相应调整。
+在这个W3C文档中，每个单位都有如下定义：
+vw单位 - 相当于初始包含块的宽度的1%。 vh单位 - 相当于初始包含块的高度的1%。 vmin单位 - 相当于vw和vh中较小的那个。 vmax单位 - 相当于vw和vh中较大的那个。 你可以像使用其他CSS值一样使用它们，例如：
+1.text { 2 font-size: 3vw; 3} 4 5.other-text { 6 font-size: 5vh; 7} 这种方法的兼容性相对较好，具体可以参考这里。但是请注意，某些版本的Internet Explorer和Edge不支持vmax。此外，iOS 6和7存在对vh单位的问题，iOS 8中已修复。
+使用JavaScript插件 如果你不介意使用JavaScript解决方案，你可以尝试一些jQuery插件。例如，TextFill插件可以根据容器的大小来调整文本大小，使其尽可能大。你可以在GitHub上找到TextFill插件。
+考虑其他解决方案 除了上述方法外，还有一些其他解决方案可供选择。你可以使用rem单位来实现响应式字体大小。你可以设置根元素的基准字体大小，并在媒体查询中调整所有字体大小。
+还可以使用Javascript库如FlowType.js和FitText.js来实现相应式字体大小。这些库可以根据容器大小自动调整文本大小。
+总结 在本教程中，我们学习了如何在CSS中使用相应式字体大小。我们介绍了使用媒体查询和视口百分比长度的方法，以及一些JavaScript插件和其他解决方案。根据你的具体需求和项目要求，选择合适的方法来实现相应式字体大小。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

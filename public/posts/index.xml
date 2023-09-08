@@ -7,7 +7,233 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 01:23:48 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 11:53:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Facebook Graph API v2.0&#43; - /me/friends 返回空或者只返回使用我应用程序的好友</title>
+      <link>https://www.techdocdb.com/posts/facebook-graph-api-v2.0&#43;-/me/friends-%E8%BF%94%E5%9B%9E%E7%A9%BA%E6%88%96%E8%80%85%E5%8F%AA%E8%BF%94%E5%9B%9E%E4%BD%BF%E7%94%A8%E6%88%91%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%A5%BD%E5%8F%8B/</link>
+      <pubDate>Fri, 08 Sep 2023 11:53:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/facebook-graph-api-v2.0&#43;-/me/friends-%E8%BF%94%E5%9B%9E%E7%A9%BA%E6%88%96%E8%80%85%E5%8F%AA%E8%BF%94%E5%9B%9E%E4%BD%BF%E7%94%A8%E6%88%91%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%A5%BD%E5%8F%8B/</guid>
+      <description>
+        
+          
+            在Graph API v2.0版本中，调用/me/friends接口将只返回使用该应用程序的好友信息。
+此外，在v2.0中，您需要为每个用户请求user_friends权限。默认情况下，每个登录用户的user_friends权限不再包含在内。所以每个用户必须授予user_friends权限才能在/me/friends的响应中出现。详细信息可以参考Facebook升级指南，下面是摘要信息。
+如果您想要访问不使用您的应用的好友列表，有两种选择：
+如果您想要让用户在发布到Facebook的故事中标记他们的好友，您可以使用/me/taggable_friends接口。您需要通过Facebook的审核才能使用这个接口，而且这个接口只能用于在帖子中渲染好友列表以供用户标记的情况下。
+如果您的应用是一个游戏，并且您的游戏支持Facebook Canvas，您可以使用/me/invitable_friends接口来呈现自定义邀请对话框，然后使用该API返回的令牌传递给标准的请求对话框。
+其他情况下，应用程序将无法获取用户好友的完整列表，只能获取那些明确授权了您的应用的好友。这是Facebook官方对设计的确认。对于想要允许用户邀请好友使用应用的应用程序，您仍然可以在Web上使用发送对话框或新的iOS和Android平台上的消息对话框。
+请注意，Facebook已发布了一份常见问题解答（FAQ），详细介绍了这些更改，请参考https://developers.facebook.com/docs/apps/faq。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Fri, 08 Sep 2023 11:43:21 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Fri, 08 Sep 2023 11:13:18 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Fri, 08 Sep 2023 10:26:49 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;-FAQ：类型转换和类型转换规则</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;-faq%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/</link>
+      <pubDate>Fri, 08 Sep 2023 10:18:33 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;-faq%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍C++中常用的四种类型转换操作符：static_cast、dynamic_cast、const_cast和reinterpret_cast的使用场景和规则。对于每一种类型转换，我们将提供具体的用例和代码示例，让读者能够更好地理解和应用。
+内容 static_cast的使用 static_cast是C++中最常用的类型转换操作符。它能够执行各种隐式转换和显式转换操作，包括数字类型之间的转换，以及类之间的上行转换（base class to derived class）。
+用例：
+1int i = 10; 2float f = static_cast&amp;lt;float&amp;gt;(i); // 隐式类型转换 3int j = static_cast&amp;lt;int&amp;gt;(3.14); // 显式类型转换 dynamic_cast的使用 dynamic_cast用于处理多态（polymorphism）的类型转换。只有在将指向派生类的指针或引用转换为指向基类的指针或引用时，才需要使用dynamic_cast。
+用例：
+1class Base { 2public: 3 virtual ~Base() {} 4}; 5 6class Derived : public Base { 7public: 8 void foo() {} 9}; 10 11void someFunction(Base* ptr) { 12 Derived* dptr = dynamic_cast&amp;lt;Derived*&amp;gt;(ptr); 13 if (dptr != nullptr) { 14 dptr-&amp;gt;foo(); 15 } 16} const_cast的使用 const_cast用于添加或移除const限定符。它只能用于转换指向非const对象的指针或引用。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Fri, 08 Sep 2023 10:10:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Pass Method as Parameter using C\#</title>
+      <link>https://www.techdocdb.com/posts/pass-method-as-parameter-using-c%5C#/</link>
+      <pubDate>Fri, 08 Sep 2023 09:41:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/pass-method-as-parameter-using-c%5C#/</guid>
+      <description>
+        
+          
+            该教程将向您展示如何在C＃中将方法作为参数传递。为了实现这一目标，我们将使用.NET中的Func委托。
+概述 您有多个方法，它们的参数类型和返回值相同，但名称和代码块不同。您想将要运行的方法的名称传递给另一个方法，然后由该方法调用传递的方法。
+1public int Method1(string input) 2{ 3 // 执行某些操作 4 return 0; 5} 6 7public int Method2(string input) 8{ 9 // 执行其他操作 10 return 1; 11} 12 13public bool RunTheMethod(Func&amp;lt;string, int&amp;gt; myMethodName) 14{ 15 // 执行一些操作 16 int result = myMethodName(&amp;#34;My String&amp;#34;); 17 // 执行更多操作 18 return result == 0; // 返回该方法是否成功运行 19} 20 21public bool Test() 22{ 23 return RunTheMethod(Method1); 24} 这段代码无法正常工作，但您想要做的事情是，在RunTheMethod方法的参数中定义传递的方法。
+实现方法 要解决这个问题，您可以使用.NET 3.5中的Func委托作为RunTheMethod方法的参数。Func委托允许您指定一个带有特定类型的多个参数和一个特定类型的返回值的方法。以下是一个示例，应该可以工作：
+1public class MyClass 2{ 3 public int Method1(string input) 4 { 5 //.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在iPhone应用程序中嵌入自定义字体？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+      <pubDate>Fri, 08 Sep 2023 09:06:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
+      <description>
+        
+          
+            iOS 3.2及更高版本支持在应用程序中嵌入自定义字体。直接从“What&#39;s New in iPhone OS 3.2”文档中摘录了以下内容：
+Custom Font Support(自定义字体支持): 应用程序想要使用自定义字体，现在可以将那些字体包含在其应用程序捆绑包中，并通过在其 Info.plist 文件中包括 UIAppFonts 键来将这些字体注册到系统。该键的值是一个字符串数组，标识应用程序捆绑包中的字体文件。当系统看到这个键时，会加载指定的字体并使它们对应用程序可用。
+在 Info.plist 中设置 UIAppFonts：
+步骤如下：
+将自定义字体文件添加到Xcode的资源文件夹中。 打开项目中的 Info.plist 文件。 添加一个 UIAppFonts 键，并将其类型设置为数组。 对于每个字体文件，将其完整的文件名（包括扩展名）作为 UIAppFonts 数组的项之一。 保存 Info.plist 文件。 现在，在应用程序中，您可以像使用其他字体一样使用自定义字体，无论是通过 Interface Builder 还是通过编程方式。
+下面是一个示例代码，展示了如何加载字体文件并在 drawRect: 方法中使用自定义字体绘制文本：
+1- (void)loadFont{ 2 NSString *fontPath = [[NSBundle mainBundle] pathForResource:@&amp;#34;mycustomfont&amp;#34; ofType:@&amp;#34;ttf&amp;#34;]; 3 CGDataProviderRef fontDataProvider = CGDataProviderCreateWithFilename([fontPath UTF8String]); 4 5 customFont = CGFontCreateWithDataProvider(fontDataProvider); 6 CGDataProviderRelease(fontDataProvider); 7} 8 9- (void)drawRect:(CGRect)rect { 10 CGContextRef context = UIGraphicsGetCurrentContext(); 11 CGContextSetFont(context, customFont); 12 13 // Set other font properties like color, size, etc.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>GitHub pull request 显示已经在目标分支中的提交</title>
+      <link>https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/</link>
+      <pubDate>Fri, 08 Sep 2023 08:31:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/</guid>
+      <description>
+        
+          
+            GitHub的pull request功能是开发团队协作开发的重要工具。然而，在某些情况下，当我们进行pull request时，我们会发现显示的提交和差异与我们预期的不符。特别是在目标分支有新提交时，已经合并的提交可能仍然在pull request中显示。
+解决方法 这个问题是由于GitHub pull request的工作原理导致的。默认情况下，pull request会显示源分支和目标分支的共同祖先之后的所有变更，在此过程中不会考虑到目标分支上所发生的任何更改。这就是为什么即使在目标分支上进行了合并，pull request仍然显示已经合并的提交的原因。
+以下是一些解决该问题的方法。
+方法一：使用URL比较链接 您可以通过以下URL链接来显示更新后的变更：
+1http://githuburl/org/repo/compare/targetbranch...currentbranch 请根据实际情况替换githuburl、org、repo、targetbranch和currentbranch。通过使用这个URL链接，您将看到更新后的变更以及差异。
+方法二：修改基准分支 另一种解决方法是通过修改pull request的基准分支来强制更新。您可以通过点击pull request界面上的“Edit”按钮，将基准分支临时修改为其他分支，然后再修改回原来的基准分支。这样做会在pull request中产生一个警告，告诉您可能会导致一些旧的提交被移除，以及旧的评论可能会变得过时。这样修改后，pull request将只显示最新提交的变更。
+方法三：定期合并目标分支 为了避免这个问题，您可以定期将目标分支合并到pull request的分支中。通过定期合并目标分支，您将不会遇到任何意外的问题，并且pull request将始终显示最新的变更。
+方法四：使用git rebase命令 如果上述方法无法解决问题，您可以尝试使用git rebase命令来重新应用提交。具体步骤如下：
+更新本地目标分支：git pull origin targetbranch 切换到包含更改的分支：git checkout currentbranch 使用git rebase命令重新应用提交：git rebase origin/targetbranch 用git push --force targetbranch命令强制推送更改。 但请小心使用该方法，如果您不确定自己在做什么，建议先创建一个测试分支进行操作，并使用git diff targetbranch命令确保更改后的分支与预期一致。
+方法五：修改git配置 如果您不喜欢手动重复上述操作，可以在您的~/.gitconfig文件中添加以下配置：
+1[rebase] 2 autosquash = true 这将自动执行与使用git rebase命令相同的操作。
+方法六：创建新的pull request 如果上述方法都无法解决问题，您还可以尝试创建一个新的pull request。具体步骤如下：
+切换到包含更改的分支：git checkout currentbranch 在该分支上创建一个新的分支：git checkout -b new-branch-name 推送新的分支到远程仓库：git push -u origin new-branch-name 然后在GitHub上打开一个新的pull request，并关闭旧的pull request。 方法七：编辑pull request 您还可以通过编辑pull request来解决这个问题。您可以点击GitHub上pull request界面的“Edit”按钮，并将基准分支更改为不同于之前的分支，然后再改回原来的基准分支。这样才能确保pull request正确显示最新的提交变更。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>相应式字体大小在CSS中的应用</title>
+      <link>https://www.techdocdb.com/posts/%E7%9B%B8%E5%BA%94%E5%BC%8F%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%9C%A8css%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Fri, 08 Sep 2023 08:14:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E7%9B%B8%E5%BA%94%E5%BC%8F%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%9C%A8css%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将教你如何在CSS中使用相应式字体大小。你将学到如何根据浏览器窗口的大小来调整字体大小，以适应不同的屏幕尺寸。
+内容 在响应式设计中，我们经常遇到一个问题：当浏览器窗口缩小到移动设备尺寸时，字体大小没有自动调整，导致文本过大而出现水平滚动条。那么我们该如何解决这个问题呢？
+使用媒体查询 为了解决这个问题，我们可以使用媒体查询。媒体查询允许我们根据浏览器窗口的大小来应用不同的CSS样式。我们可以使用媒体查询来减小字体大小，以防止设计被破坏并出现滚动条。
+例如，你可以在CSS的末尾添加以下代码，根据设计开始崩溃的320像素宽度，设置字体大小为2em：
+1@media only screen and (max-width: 320px) { 2 body { 3 font-size: 2em; 4 } 5} 使用视口百分比长度 除了使用媒体查询外，你还可以使用视口百分比长度。视口百分比长度是相对于初始包含块（即视口）的大小而定义的，当初始包含块的高度或宽度发生变化时，它们会相应调整。
+在这个W3C文档中，每个单位都有如下定义：
+vw单位 - 相当于初始包含块的宽度的1%。 vh单位 - 相当于初始包含块的高度的1%。 vmin单位 - 相当于vw和vh中较小的那个。 vmax单位 - 相当于vw和vh中较大的那个。 你可以像使用其他CSS值一样使用它们，例如：
+1.text { 2 font-size: 3vw; 3} 4 5.other-text { 6 font-size: 5vh; 7} 这种方法的兼容性相对较好，具体可以参考这里。但是请注意，某些版本的Internet Explorer和Edge不支持vmax。此外，iOS 6和7存在对vh单位的问题，iOS 8中已修复。
+使用JavaScript插件 如果你不介意使用JavaScript解决方案，你可以尝试一些jQuery插件。例如，TextFill插件可以根据容器的大小来调整文本大小，使其尽可能大。你可以在GitHub上找到TextFill插件。
+考虑其他解决方案 除了上述方法外，还有一些其他解决方案可供选择。你可以使用rem单位来实现响应式字体大小。你可以设置根元素的基准字体大小，并在媒体查询中调整所有字体大小。
+还可以使用Javascript库如FlowType.js和FitText.js来实现相应式字体大小。这些库可以根据容器大小自动调整文本大小。
+总结 在本教程中，我们学习了如何在CSS中使用相应式字体大小。我们介绍了使用媒体查询和视口百分比长度的方法，以及一些JavaScript插件和其他解决方案。根据你的具体需求和项目要求，选择合适的方法来实现相应式字体大小。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何成为一个有效的论坛版主</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%9C%89%E6%95%88%E7%9A%84%E8%AE%BA%E5%9D%9B%E7%89%88%E4%B8%BB/</link>
+      <pubDate>Fri, 08 Sep 2023 08:07:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%9C%89%E6%95%88%E7%9A%84%E8%AE%BA%E5%9D%9B%E7%89%88%E4%B8%BB/</guid>
+      <description>
+        
+          
+            在一个活跃的社区中，版主的作用不可忽视。他们是维护秩序、促进构建社区的重要角色。如果你想成为一个优秀的版主，以下是一些关键要点。
+全心投入 成为一个版主需要全心全意地为社区服务。举例来说，Sathya就是一个非常有热情和奉献精神的版主。他在过去的3年里一直是一个活跃的成员，访问了超过1100天。
+社区建设 要想成为一个受欢迎的版主，积极参与社区建设是至关重要的。作为版主，要主动参与各个子论坛的讨论，并给出有价值的建议。例如，Sathya在Meta Stack Overflow、Super User、Super User Meta、Web Apps和Web Apps meta等论坛活跃，经常参与讨论并给出成员改善体验的建议。
+丰富的版主经验 在成为一个版主之前，具备相关的版主经验是非常重要的。这样可以帮助你更好地理解和适应版主的工作。例如，Sathya在Super User担任版主已经两年了，在Web Apps上担任版主也有半年的经验。他深知成为一个版主所需要的要素。
+具备特殊优势 作为一个版主，尤其是在全球化的社区中，具备一些特殊的优势是非常有帮助的。Sathya就是一个例子。他位于印度，与美国相差半个地球，因此在不同的时区提供了另一种观察和监管的角度。
+总之，如果你希望成为一个优秀的版主，你需要全心投入、积极参与社区建设、具备丰富的版主经验，并且具备一些特殊的优势。感谢你花时间阅读这篇文章！
+原文链接
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>提名自己成为Stack Overflow的版主</title>
       <link>https://www.techdocdb.com/posts/%E6%8F%90%E5%90%8D%E8%87%AA%E5%B7%B1%E6%88%90%E4%B8%BAstack-overflow%E7%9A%84%E7%89%88%E4%B8%BB/</link>

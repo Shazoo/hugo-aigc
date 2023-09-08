@@ -7,7 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 10:40:33 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 08:31:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub pull request 显示已经在目标分支中的提交</title>
+      <link>https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/</link>
+      <pubDate>Fri, 08 Sep 2023 08:31:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/</guid>
+      <description>
+        
+          
+            GitHub的pull request功能是开发团队协作开发的重要工具。然而，在某些情况下，当我们进行pull request时，我们会发现显示的提交和差异与我们预期的不符。特别是在目标分支有新提交时，已经合并的提交可能仍然在pull request中显示。
+解决方法 这个问题是由于GitHub pull request的工作原理导致的。默认情况下，pull request会显示源分支和目标分支的共同祖先之后的所有变更，在此过程中不会考虑到目标分支上所发生的任何更改。这就是为什么即使在目标分支上进行了合并，pull request仍然显示已经合并的提交的原因。
+以下是一些解决该问题的方法。
+方法一：使用URL比较链接 您可以通过以下URL链接来显示更新后的变更：
+1http://githuburl/org/repo/compare/targetbranch...currentbranch 请根据实际情况替换githuburl、org、repo、targetbranch和currentbranch。通过使用这个URL链接，您将看到更新后的变更以及差异。
+方法二：修改基准分支 另一种解决方法是通过修改pull request的基准分支来强制更新。您可以通过点击pull request界面上的“Edit”按钮，将基准分支临时修改为其他分支，然后再修改回原来的基准分支。这样做会在pull request中产生一个警告，告诉您可能会导致一些旧的提交被移除，以及旧的评论可能会变得过时。这样修改后，pull request将只显示最新提交的变更。
+方法三：定期合并目标分支 为了避免这个问题，您可以定期将目标分支合并到pull request的分支中。通过定期合并目标分支，您将不会遇到任何意外的问题，并且pull request将始终显示最新的变更。
+方法四：使用git rebase命令 如果上述方法无法解决问题，您可以尝试使用git rebase命令来重新应用提交。具体步骤如下：
+更新本地目标分支：git pull origin targetbranch 切换到包含更改的分支：git checkout currentbranch 使用git rebase命令重新应用提交：git rebase origin/targetbranch 用git push --force targetbranch命令强制推送更改。 但请小心使用该方法，如果您不确定自己在做什么，建议先创建一个测试分支进行操作，并使用git diff targetbranch命令确保更改后的分支与预期一致。
+方法五：修改git配置 如果您不喜欢手动重复上述操作，可以在您的~/.gitconfig文件中添加以下配置：
+1[rebase] 2 autosquash = true 这将自动执行与使用git rebase命令相同的操作。
+方法六：创建新的pull request 如果上述方法都无法解决问题，您还可以尝试创建一个新的pull request。具体步骤如下：
+切换到包含更改的分支：git checkout currentbranch 在该分支上创建一个新的分支：git checkout -b new-branch-name 推送新的分支到远程仓库：git push -u origin new-branch-name 然后在GitHub上打开一个新的pull request，并关闭旧的pull request。 方法七：编辑pull request 您还可以通过编辑pull request来解决这个问题。您可以点击GitHub上pull request界面的“Edit”按钮，并将基准分支更改为不同于之前的分支，然后再改回原来的基准分支。这样才能确保pull request正确显示最新的提交变更。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何在克隆git仓库时删除已添加到.gitignore的目录</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86git%E4%BB%93%E5%BA%93%E6%97%B6%E5%88%A0%E9%99%A4%E5%B7%B2%E6%B7%BB%E5%8A%A0%E5%88%B0.gitignore%E7%9A%84%E7%9B%AE%E5%BD%95/</link>

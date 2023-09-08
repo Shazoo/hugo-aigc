@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 06:01:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/fonts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 09:06:06 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/fonts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在iPhone应用程序中嵌入自定义字体？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+      <pubDate>Fri, 08 Sep 2023 09:06:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
+      <description>
+        
+          
+            iOS 3.2及更高版本支持在应用程序中嵌入自定义字体。直接从“What&#39;s New in iPhone OS 3.2”文档中摘录了以下内容：
+Custom Font Support(自定义字体支持): 应用程序想要使用自定义字体，现在可以将那些字体包含在其应用程序捆绑包中，并通过在其 Info.plist 文件中包括 UIAppFonts 键来将这些字体注册到系统。该键的值是一个字符串数组，标识应用程序捆绑包中的字体文件。当系统看到这个键时，会加载指定的字体并使它们对应用程序可用。
+在 Info.plist 中设置 UIAppFonts：
+步骤如下：
+将自定义字体文件添加到Xcode的资源文件夹中。 打开项目中的 Info.plist 文件。 添加一个 UIAppFonts 键，并将其类型设置为数组。 对于每个字体文件，将其完整的文件名（包括扩展名）作为 UIAppFonts 数组的项之一。 保存 Info.plist 文件。 现在，在应用程序中，您可以像使用其他字体一样使用自定义字体，无论是通过 Interface Builder 还是通过编程方式。
+下面是一个示例代码，展示了如何加载字体文件并在 drawRect: 方法中使用自定义字体绘制文本：
+1- (void)loadFont{ 2 NSString *fontPath = [[NSBundle mainBundle] pathForResource:@&amp;#34;mycustomfont&amp;#34; ofType:@&amp;#34;ttf&amp;#34;]; 3 CGDataProviderRef fontDataProvider = CGDataProviderCreateWithFilename([fontPath UTF8String]); 4 5 customFont = CGFontCreateWithDataProvider(fontDataProvider); 6 CGDataProviderRelease(fontDataProvider); 7} 8 9- (void)drawRect:(CGRect)rect { 10 CGContextRef context = UIGraphicsGetCurrentContext(); 11 CGContextSetFont(context, customFont); 12 13 // Set other font properties like color, size, etc.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Web字体中的font-face和不同格式之间的关系</title>
       <link>https://www.techdocdb.com/posts/web%E5%AD%97%E4%BD%93%E4%B8%AD%E7%9A%84font-face%E5%92%8C%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
