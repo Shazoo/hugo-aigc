@@ -2,31 +2,139 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.techdocdb.com/posts/</loc>
+    <lastmod>2023-09-08T01:23:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/</loc>
+    <lastmod>2023-09-08T01:23:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E6%8F%90%E5%90%8D%E8%87%AA%E5%B7%B1%E6%88%90%E4%B8%BAstack-overflow%E7%9A%84%E7%89%88%E4%B8%BB/</loc>
+    <lastmod>2023-09-08T01:23:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/case-sensitive/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/interop/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/mysql/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/sql/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/string-comparison/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83/</loc>
+    <lastmod>2023-09-08T01:20:11+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/git/</loc>
+    <lastmod>2023-09-08T01:18:25+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/git-squash/</loc>
+    <lastmod>2023-09-08T01:18:25+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%9C%A8git%E4%B8%AD%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%90%8E%E5%86%8D%E6%8E%A8%E9%80%81/</loc>
+    <lastmod>2023-09-08T01:18:25+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/.net-core/</loc>
+    <lastmod>2023-09-07T23:29:57+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E6%9E%84%E5%BB%BA.net-core%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BB%A5%E7%94%9F%E6%88%90exe%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2023-09-07T23:29:57+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/path/</loc>
+    <lastmod>2023-09-07T22:54:24+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/python/</loc>
+    <lastmod>2023-09-07T22:54:24+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/working-directory/</loc>
+    <lastmod>2023-09-07T22:54:24+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%A1%AE%E5%AE%9A%E5%BD%93%E5%89%8D%E8%84%9A%E6%9C%AC%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2023-09-07T22:54:24+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/dns/</loc>
+    <lastmod>2023-09-07T22:51:45+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/javascript/</loc>
+    <lastmod>2023-09-07T22:51:45+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/javascript%E4%B8%AD%E4%BB%8Eurl%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%8D%8F%E8%AE%AE%E5%9F%9F%E5%90%8D%E5%92%8C%E7%AB%AF%E5%8F%A3/</loc>
+    <lastmod>2023-09-07T22:51:45+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/port/</loc>
+    <lastmod>2023-09-07T22:51:45+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/protocols/</loc>
+    <lastmod>2023-09-07T22:51:45+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/url/</loc>
+    <lastmod>2023-09-07T22:51:45+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/command-line/</loc>
+    <lastmod>2023-09-07T22:35:51+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/csharp/</loc>
+    <lastmod>2023-09-07T22:35:51+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8c#%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%90%8D/</loc>
+    <lastmod>2023-09-07T22:35:51+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%9F%A5%E6%89%BE%E5%9F%9F%E5%90%8D%E7%9A%84%E6%9D%83%E5%A8%81%E5%90%8D%E7%A7%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2023-09-07T22:13:18+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/select/</loc>
+    <lastmod>2023-09-07T22:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/sql-update/</loc>
+    <lastmod>2023-09-07T22:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%9F%BA%E4%BA%8Eselect%E6%9F%A5%E8%AF%A2%E8%BF%9B%E8%A1%8Cupdate%E6%9F%A5%E8%AF%A2/</loc>
+    <lastmod>2023-09-07T22:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/function/</loc>
+    <lastmod>2023-09-07T21:52:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/named-parameters/</loc>
+    <lastmod>2023-09-07T21:52:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/optional-parameters/</loc>
+    <lastmod>2023-09-07T21:52:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%9C%A8-javascript-%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E5%8F%82%E6%95%B0/</loc>
+    <lastmod>2023-09-07T21:52:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/bash/</loc>
+    <lastmod>2023-09-07T21:46:15+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/mongodb/</loc>
+    <lastmod>2023-09-07T21:46:15+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/sh/</loc>
+    <lastmod>2023-09-07T21:46:15+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/tags/shell/</loc>
+    <lastmod>2023-09-07T21:46:15+08:00</lastmod>
+  </url><url>
+    <loc>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E6%89%A7%E8%A1%8Cmongo%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2023-09-07T21:46:15+08:00</lastmod>
+  </url><url>
     <loc>https://www.techdocdb.com/tags/.net/</loc>
     <lastmod>2023-09-07T17:57:58+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/posts/c#%E4%B8%AD%E7%9A%84throw%E5%92%8Cthrow-ex%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2023-09-07T17:57:58+08:00</lastmod>
   </url><url>
-    <loc>https://www.techdocdb.com/tags/csharp/</loc>
-    <lastmod>2023-09-07T17:57:58+08:00</lastmod>
-  </url><url>
     <loc>https://www.techdocdb.com/tags/exception/</loc>
     <lastmod>2023-09-07T17:57:58+08:00</lastmod>
   </url><url>
-    <loc>https://www.techdocdb.com/posts/</loc>
-    <lastmod>2023-09-07T17:57:58+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/</loc>
-    <lastmod>2023-09-07T17:57:58+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/</loc>
-    <lastmod>2023-09-07T17:57:58+08:00</lastmod>
-  </url><url>
     <loc>https://www.techdocdb.com/tags/branch/</loc>
-    <lastmod>2023-09-07T17:51:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/git/</loc>
     <lastmod>2023-09-07T17:51:05+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/tags/git-branch/</loc>
@@ -35,16 +143,10 @@
     <loc>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%98%BE%E7%A4%BA%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%E4%B8%AD%E4%BD%86%E4%B8%8D%E5%9C%A8%E5%85%B6%E4%BB%96%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%90%E4%BA%A4/</loc>
     <lastmod>2023-09-07T17:51:05+08:00</lastmod>
   </url><url>
-    <loc>https://www.techdocdb.com/tags/javascript/</loc>
-    <lastmod>2023-09-07T17:34:33+08:00</lastmod>
-  </url><url>
     <loc>https://www.techdocdb.com/posts/%E5%9C%A8javascript%E4%B8%AD%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%85%B7%E6%9C%89%E7%89%B9%E5%AE%9A%E5%B1%9E%E6%80%A7/</loc>
     <lastmod>2023-09-07T17:34:33+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/tags/colors/</loc>
-    <lastmod>2023-09-07T17:00:01+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/command-line/</loc>
     <lastmod>2023-09-07T17:00:01+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/tags/diff/</loc>
@@ -65,13 +167,7 @@
     <loc>https://www.techdocdb.com/posts/%E9%80%8F%E6%98%8E%E4%B8%8E%E9%97%AE%E8%B4%A3%E5%88%B6%E5%A2%9E%E5%8A%A0%E7%A4%BE%E5%8C%BA%E7%89%88%E4%B8%BB%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6%E4%B8%8E%E5%8F%AF%E9%9D%A0%E6%80%A7/</loc>
     <lastmod>2023-09-07T16:03:26+08:00</lastmod>
   </url><url>
-    <loc>https://www.techdocdb.com/tags/bash/</loc>
-    <lastmod>2023-09-07T16:00:48+08:00</lastmod>
-  </url><url>
     <loc>https://www.techdocdb.com/tags/if-statement/</loc>
-    <lastmod>2023-09-07T16:00:48+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/sh/</loc>
     <lastmod>2023-09-07T16:00:48+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%80%BB%E8%BE%91or%E8%BF%90%E7%AE%97%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
@@ -173,9 +269,6 @@
     <loc>https://www.techdocdb.com/tags/min/</loc>
     <lastmod>2023-09-07T09:16:28+08:00</lastmod>
   </url><url>
-    <loc>https://www.techdocdb.com/tags/python/</loc>
-    <lastmod>2023-09-07T09:16:28+08:00</lastmod>
-  </url><url>
     <loc>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8max/min%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8%E4%B8%AD%E6%9C%80%E5%A4%A7/%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0%E7%9A%84%E7%B4%A2%E5%BC%95/</loc>
     <lastmod>2023-09-07T09:16:28+08:00</lastmod>
   </url><url>
@@ -262,9 +355,6 @@
   </url><url>
     <loc>https://www.techdocdb.com/tags/windows/</loc>
     <lastmod>2023-09-06T17:05:33+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/sql/</loc>
-    <lastmod>2023-09-06T16:49:34+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E7%9A%84select-into%E7%8E%B0%E6%9C%89%E8%A1%A8%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2023-09-06T16:49:34+08:00</lastmod>
@@ -444,9 +534,6 @@
     <lastmod>2023-09-06T00:42:49+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/tags/alter/</loc>
-    <lastmod>2023-09-06T00:37:10+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/mysql/</loc>
     <lastmod>2023-09-06T00:37:10+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9mysql%E5%88%97%E4%BB%A5%E5%85%81%E8%AE%B8null%E5%80%BC/</loc>
@@ -710,9 +797,6 @@
     <loc>https://www.techdocdb.com/tags/uuid/</loc>
     <lastmod>2023-09-01T08:20:20+08:00</lastmod>
   </url><url>
-    <loc>https://www.techdocdb.com/tags/dns/</loc>
-    <lastmod>2023-09-01T08:11:43+08:00</lastmod>
-  </url><url>
     <loc>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8Ddns%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%88%96ip%E5%9C%B0%E5%9D%80/</loc>
     <lastmod>2023-09-01T08:11:43+08:00</lastmod>
   </url><url>
@@ -720,9 +804,6 @@
     <lastmod>2023-09-01T08:03:54+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/tags/posix/</loc>
-    <lastmod>2023-09-01T08:03:54+08:00</lastmod>
-  </url><url>
-    <loc>https://www.techdocdb.com/tags/shell/</loc>
     <lastmod>2023-09-01T08:03:54+08:00</lastmod>
   </url><url>
     <loc>https://www.techdocdb.com/posts/%E5%85%B3%E4%BA%8E/dev/null-21%E7%9A%84%E5%90%AB%E4%B9%89/</loc>

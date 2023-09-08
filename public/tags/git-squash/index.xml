@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-squash on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/git-squash/</link>
+    <description>Recent content in git-squash on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 01:18:25 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git-squash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Git中合并多个提交后再推送</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8git%E4%B8%AD%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%90%8E%E5%86%8D%E6%8E%A8%E9%80%81/</link>
+      <pubDate>Fri, 08 Sep 2023 01:18:25 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8git%E4%B8%AD%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%90%8E%E5%86%8D%E6%8E%A8%E9%80%81/</guid>
+      <description>
+        
+          
+            摘要 在Git中，我们可以使用交互式变基（Interactive Rebase）来合并多个提交。本教程将演示如何使用交互式变基实现这一目标。
+内容 要合并多个提交，可以按照以下步骤操作：
+运行交互式变基命令git rebase -i HEAD~n，其中n是要合并的提交数。 根据提示，将要合并的提交的命令行前的pick替换为squash或s。确保保留第一个提交的pick命令。 保存文件并关闭编辑器。 对于合并后的提交消息，编辑器会再次打开，以便将所有提交的提交消息合并为一个大的提交消息。 保存文件并关闭编辑器。 以下是具体示例：
+1git rebase -i HEAD~4 这将打开一个文本编辑器，并显示类似于以下的文件：
+1pick 16b5fcc Code in, tests not passing 2pick c964dea Getting closer 3pick 06cf8ee Something changed 4pick 396b4a3 Tests pass 5pick 9be7fdb Better comments 6pick 7dba9cb All done 将除第一个提交之外的所有pick替换为squash或s，文件应修改为：
+1pick 16b5fcc Code in, tests not passing 2squash c964dea Getting closer 3squash 06cf8ee Something changed 4squash 396b4a3 Tests pass 5squash 9be7fdb Better comments 6squash 7dba9cb All done 保存并关闭文件后，编辑器会再次打开，以便将所有提交的提交消息合并为一个大的提交消息。在此编辑器中，你可以编辑合并后的提交消息。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

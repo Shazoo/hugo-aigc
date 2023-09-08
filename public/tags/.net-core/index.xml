@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.net-core on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/.net-core/</link>
+    <description>Recent content in .net-core on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 23:29:57 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/.net-core/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>构建.NET Core控制台应用程序以生成EXE文件</title>
+      <link>https://www.techdocdb.com/posts/%E6%9E%84%E5%BB%BA.net-core%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BB%A5%E7%94%9F%E6%88%90exe%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 07 Sep 2023 23:29:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E6%9E%84%E5%BB%BA.net-core%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BB%A5%E7%94%9F%E6%88%90exe%E6%96%87%E4%BB%B6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何构建.NET Core控制台应用程序并在构建过程中生成EXE文件。
+内容 对于目标为.NET Core 1.0的控制台应用程序项目，如果在构建过程中无法生成EXE文件，可以尝试以下方法解决该问题。该项目在调试时运行正常。
+已经尝试了发布项目，但也无法生成EXE文件。这是合理的，因为EXE文件是特定于平台的，但是肯定有办法解决这个问题。搜索结果只提到了旧版本的.NET Core使用的project.json文件。
+每次构建或发布时，只能获得以下内容：
+最终被认可的答案是：
+调试目的上可以使用DLL文件，可以使用dotnet ConsoleApp2.dll运行。如果想要生成EXE文件，必须生成一个自包含的应用程序。
+生成一个自包含的应用程序需要指定目标运行时（特定于所选择的操作系统）。
+之前的版本：在.csproj文件中添加目标运行时的运行时标识符（参考支持的RID列表）：
+1&amp;lt;PropertyGroup&amp;gt; 2 &amp;lt;RuntimeIdentifiers&amp;gt;win10-x64;ubuntu.16.10-x64&amp;lt;/RuntimeIdentifiers&amp;gt; 3&amp;lt;/PropertyGroup&amp;gt; .NET Core 2.0 版本及更高版本无需进行上述步骤。
+在发布应用程序时设置所需的目标运行时：
+1dotnet publish -c Release -r win10-x64 2dotnet publish -c Release -r ubuntu.16.10-x64 参考答案：
+如果接受使用批处理文件（bat文件），可以创建与DLL文件同名的批处理文件（放在同一文件夹中），然后复制以下内容：
+1dotnet %~n0.dll %* 需要注意的是，此方法假定机器已经安装并全局可用.NET Core。
+使用jo + curl + jq（或fx）的组合：
+1jo value=30 type=&amp;#34;Tip 3&amp;#34; targetModule=&amp;#34;Target 3&amp;#34; configurationGroup=null name=&amp;#34;Configuration Deneme 3&amp;#34; description=null identity=&amp;#34;Configuration Deneme 3&amp;#34; | \ 2curl --json @- \ 3 -X POST \ 4 http://localhost:8080/xx/xxx/xxxx | \ 5jq 使用带有替代执行路径的Project.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

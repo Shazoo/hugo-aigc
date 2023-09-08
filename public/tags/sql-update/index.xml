@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql-update on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/sql-update/</link>
+    <description>Recent content in sql-update on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 22:12:29 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/sql-update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在MySQL中基于SELECT查询进行UPDATE查询</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%9F%BA%E4%BA%8Eselect%E6%9F%A5%E8%AF%A2%E8%BF%9B%E8%A1%8Cupdate%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Thu, 07 Sep 2023 22:12:29 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%9F%BA%E4%BA%8Eselect%E6%9F%A5%E8%AF%A2%E8%BF%9B%E8%A1%8Cupdate%E6%9F%A5%E8%AF%A2/</guid>
+      <description>
+        
+          
+            摘要 本教程将讨论如何在MySQL中使用SELECT查询来执行基于条件的UPDATE查询，以及如何使用临时表来处理复杂的更新操作。
+内容 在MySQL中，可以通过执行SELECT查询来执行基于条件的UPDATE查询。同时，使用临时表可以处理复杂的更新操作。
+以下是一种方法，可以使用临时表来处理复杂的查询，并基于查询结果执行UPDATE查询：
+创建临时表保存查询结果： 1CREATE TEMPORARY TABLE temp_table AS ( 2 SELECT column1, column2, ... 3 FROM table1 4 WHERE condition 5); 使用临时表来执行UPDATE查询： 1UPDATE table2 2JOIN temp_table ON table2.column = temp_table.column 3SET table2.column = temp_table.new_value; 这样，可以使用临时表来存储查询结果，并在UPDATE查询中引用临时表来更新目标表。
+希望本教程对您有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

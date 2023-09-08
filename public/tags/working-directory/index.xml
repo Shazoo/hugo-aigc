@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>working-directory on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/working-directory/</link>
+    <description>Recent content in working-directory on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 22:54:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/working-directory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何正确确定当前脚本所在目录</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%A1%AE%E5%AE%9A%E5%BD%93%E5%89%8D%E8%84%9A%E6%9C%AC%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95/</link>
+      <pubDate>Thu, 07 Sep 2023 22:54:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%A1%AE%E5%AE%9A%E5%BD%93%E5%89%8D%E8%84%9A%E6%9C%AC%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍在Python中正确确定当前脚本所在目录的方法。我们将提供使用不同方式调用Python代码时的解决方案。
+内容 要确定当前脚本所在的目录，您可以尝试以下方法之一：
+使用os.getcwd()来获取当前工作目录。
+使用os.path.dirname(os.path.abspath(__file__))，这是一个常用的方法。
+以下是每种方法的具体步骤：
+使用os.getcwd() 确认导入os模块。
+使用os.getcwd()方法获取当前工作目录。
+使用os.path.dirname(os.path.abspath(file)) 确认导入os.path模块。
+使用os.path.abspath(__file__)获取当前脚本的绝对路径。
+使用os.path.dirname()方法获取当前脚本所在目录。
+这些方法可以帮助您确定当前脚本所在的目录，以便在需要读取或写入文件时，可以方便地使用相对路径。
+总结 通过使用Python的os和os.path模块，您可以确定当前脚本所在的目录。这可以帮助您轻松处理文件路径的读取和写入。请记住，文件路径可能会因不同的调用方式而有所不同，所以请根据实际需要选择适当的方法。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

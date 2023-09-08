@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>optional-parameters on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/optional-parameters/</link>
+    <description>Recent content in optional-parameters on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 21:52:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/optional-parameters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 JavaScript 中如何使用命名参数</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-javascript-%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Thu, 07 Sep 2023 21:52:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-javascript-%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E5%8F%82%E6%95%B0/</guid>
+      <description>
+        
+          
+            摘要 本教程将向你展示如何在 JavaScript 中实现命名参数。通过使用命名参数，你可以更清晰地传递参数，并提高代码的可读性和可维护性。
+内容 在 JavaScript 中，并没有内置的命名参数的功能。但我们可以使用一些技巧来模拟命名参数。
+使用对象传递命名参数 一种常见的方法是使用对象来传递命名参数。你可以创建一个包含所有参数的对象，并将其作为函数的单个参数传递。
+以下是一个示例：
+1function myFunction(params) { 2 // 使用命名参数 3 console.log(params.param1); 4 console.log(params.param2); 5} 6 7// 调用函数时传递命名参数 8myFunction({ param1: 70, param2: 175 }); 使用对象传递命名参数的好处是
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>url on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/url/</link>
+    <description>Recent content in url on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 22:51:45 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/url/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript中从URL中获取协议、域名和端口</title>
+      <link>https://www.techdocdb.com/posts/javascript%E4%B8%AD%E4%BB%8Eurl%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%8D%8F%E8%AE%AE%E5%9F%9F%E5%90%8D%E5%92%8C%E7%AB%AF%E5%8F%A3/</link>
+      <pubDate>Thu, 07 Sep 2023 22:51:45 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/javascript%E4%B8%AD%E4%BB%8Eurl%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%8D%8F%E8%AE%AE%E5%9F%9F%E5%90%8D%E5%92%8C%E7%AB%AF%E5%8F%A3/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何从给定的URL中提取完整的协议、域名和端口。我们将提供示例代码并解释具体用法。
+内容 有时我们需要从一个URL中提取出协议、域名和端口等信息。我们可以使用JavaScript来实现这个功能。
+1var url = &amp;#34;https://localhost:8181/ContactUs-1.0/contact?lang=it&amp;amp;report_type=consumer&amp;#34;; 2var arr = url.split(&amp;#34;/&amp;#34;); 3var result = arr[0] + &amp;#34;//&amp;#34; + arr[2]; 4console.log(result); 上述代码中，我们首先将URL按照/进行分割，然后从分割后的数组中提取出需要的部分，再通过字符串拼接的方式得到完整的协议、域名和端口信息。
+另外，如果是在浏览器环境下，还可以使用window.location.protocol、window.location.hostname和window.location.port来获取当前页面的协议、域名和端口信息。
+1var protocol = window.location.protocol; 2var domain = window.location.hostname; 3var port = window.location.port; 通过上述代码，我们可以获取到当前页面的协议、域名和端口信息。
+总结 通过JavaScript的字符串处理操作和浏览器提供的API，我们可以从URL中提取出协议、域名和端口等信息。希望本教程对你有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

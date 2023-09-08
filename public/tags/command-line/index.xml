@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 17:00:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 22:35:51 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在C#中获取当前可执行文件名</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8c#%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <pubDate>Thu, 07 Sep 2023 22:35:51 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8c#%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <description>
+        
+          
+            摘要 本教程将解答如何在C#中获取当前正在运行的程序的可执行文件名。通过提供示例代码和详细说明，你将学会如何实现这一操作。
+内容 要获取当前正在运行的程序的可执行文件名，你可以使用以下方法之一：
+方法一：使用AppDomain
+1System.AppDomain.CurrentDomain.FriendlyName 方法二：使用Assembly
+1System.Reflection.Assembly.GetExecutingAssembly().Location 方法三：使用Process
+1System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName 这个方法会返回你当前运行的程序的可执行文件名。
+下面是一个示例的控制台应用程序：
+1using System; 2 3class Program 4{ 5 static void Main(string[] args) 6 { 7 string executableName = System.AppDomain.CurrentDomain.FriendlyName; 8 Console.WriteLine(executableName); 9 Console.ReadLine(); 10 } 11} 在这个示例中，我们使用System.AppDomain.CurrentDomain.FriendlyName来获取当前程序的可执行文件名，并将其打印输出。
+总结 通过使用AppDomain、Assembly或Process，你可以获取当前正在运行的程序的可执行文件名。根据实际需求选择合适的方法即可。感谢阅读本教程！
+注意：根据你的情况，你可能需要根据实际需求和代码进行适当的调整。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在命令行中对 diff 进行着色</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E5%AF%B9-diff-%E8%BF%9B%E8%A1%8C%E7%9D%80%E8%89%B2/</link>
