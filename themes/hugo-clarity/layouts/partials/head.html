@@ -9,6 +9,17 @@
 {{- end }}
 {{- end }}
 <title>{{ with $title }}{{ . }} {{ $separator }} {{ end }}{{ .Site.Title }}</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXK8KN4L4D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MXK8KN4L4D');
+</script>
+
 <meta charset="utf-8">
 <meta name="baidu-site-verification" content="codeva-9s2sFWJ6uB" />
 {{- with $params.ga_verify }}
