@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android-toolbar on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/android-toolbar/</link>
+    <description>Recent content in android-toolbar on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 15:34:47 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android-toolbar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Toolbar 标题居中和自定义字体</title>
+      <link>https://www.techdocdb.com/posts/android-toolbar-%E6%A0%87%E9%A2%98%E5%B1%85%E4%B8%AD%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+      <pubDate>Fri, 08 Sep 2023 15:34:47 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/android-toolbar-%E6%A0%87%E9%A2%98%E5%B1%85%E4%B8%AD%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
+      <description>
+        
+          
+            摘要：了解如何在 Android Toolbar 中居中标题并使用自定义字体。
+要在 Android Toolbar 中使用自定义标题并居中显示，只需要记住 Toolbar 实际上就是一个特殊的 ViewGroup，所以你可以像下面这样添加一个自定义标题：
+1&amp;lt;Toolbar 2 android:id=&amp;#34;@+id/toolbar_top&amp;#34; 3 android:layout_height=&amp;#34;wrap_content&amp;#34; 4 android:layout_width=&amp;#34;match_parent&amp;#34; 5 android:minHeight=&amp;#34;?android:attr/actionBarSize&amp;#34; 6 android:background=&amp;#34;@color/action_bar_bkgnd&amp;#34; 7 app:theme=&amp;#34;@style/ToolBarTheme&amp;#34;&amp;gt; 8 9 &amp;lt;TextView 10 android:layout_width=&amp;#34;wrap_content&amp;#34; 11 android:layout_height=&amp;#34;wrap_content&amp;#34; 12 android:text=&amp;#34;Toolbar Title&amp;#34; 13 android:layout_gravity=&amp;#34;center&amp;#34; 14 android:id=&amp;#34;@+id/toolbar_title&amp;#34; /&amp;gt; 15 16&amp;lt;/Toolbar&amp;gt; 这样你就可以自定义 TextView 的样式，因为它只是一个普通的 TextView。因此，在你的 Activity 中，你可以像这样访问标题：
+1Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top); 2TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title); 如果你想使用自定义字体，可以在样式中设置 TextView 的字体，比如：
+1&amp;lt;style name=&amp;#34;ToolBarTheme&amp;#34; parent=&amp;#34;Theme.AppCompat.Light&amp;#34;&amp;gt; 2 &amp;lt;item name=&amp;#34;android:fontFamily&amp;#34;&amp;gt;@font/custom_font&amp;lt;/item&amp;gt; 3&amp;lt;/style&amp;gt; 除此之外，你还可以通过使用自定义 View 或通过使用反射来访问 Toolbar 内部的 TextView，但这些方法并不推荐使用。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

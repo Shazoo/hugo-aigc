@@ -7,7 +7,74 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 11:43:21 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 16:38:32 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在Maven 2构建类路径中添加jar包而不需要安装它们</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8maven-2%E6%9E%84%E5%BB%BA%E7%B1%BB%E8%B7%AF%E5%BE%84%E4%B8%AD%E6%B7%BB%E5%8A%A0jar%E5%8C%85%E8%80%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%AE%89%E8%A3%85%E5%AE%83%E4%BB%AC/</link>
+      <pubDate>Fri, 08 Sep 2023 16:38:32 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8maven-2%E6%9E%84%E5%BB%BA%E7%B1%BB%E8%B7%AF%E5%BE%84%E4%B8%AD%E6%B7%BB%E5%8A%A0jar%E5%8C%85%E8%80%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%AE%89%E8%A3%85%E5%AE%83%E4%BB%AC/</guid>
+      <description>
+        
+          
+            Maven 2 是一个用于构建和管理Java项目的强大工具。在使用Maven 2期间，有时候需要在项目中添加第三方库，但是这些库并没有定义对应的pom.xml文件。通常来说，为了使用这些库，我们需要手动创建相应的pom.xml文件，并将其安装到本地仓库中，然后再将其作为依赖添加到项目的pom.xml中。但是，有没有一种简单的方法，可以告诉Maven:“除了我的已定义依赖之外，还请在/lib目录中包含所有的jar包。”这篇文章将介绍如何实现这个需求。
+引言 Maven 2是一个非常强大的构建工具，但在开发过程中，有时候需要快速创建一些原型或临时代码。在这种情况下，我们可能会遇到添加第三方库的需求，这些库没有提供Maven坐标和pom.xml文件，这就使得我们新增依赖变得有些麻烦。本文将探讨如何在不安装第三方库的情况下，将它们添加到Maven 2构建类路径中。
+步骤 步骤如下：
+创建一个名为lib的文件夹，用于存放第三方库的jar包。 手动下载所需的jar包，并将其放入lib文件夹下。 打开项目的 pom.xml 文件，将以下代码添加到dependencies标签中： 1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;local.dummy&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;example&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;1.0&amp;lt;/version&amp;gt; 5 &amp;lt;scope&amp;gt;system&amp;lt;/scope&amp;gt; 6 &amp;lt;systemPath&amp;gt;${project.basedir}/lib/example.jar&amp;lt;/systemPath&amp;gt; 7&amp;lt;/dependency&amp;gt; 其中，local.dummy可以替换为你喜欢的任何groupId，example可以替换为jar包的实际名称，1.0可以替换为任何版本号。
+运行Maven命令进行构建。 1mvn clean install 这样，Maven就会在构建过程中将lib目录下的jar包添加到项目的类路径中，供项目使用。
+总结 通过上述步骤，你可以在Maven 2构建类路径中添加jar包而不需要手动安装它们。这种方法非常适用于临时代码和原型开发阶段，但不建议将其用于生产环境中。使用Maven 2构建和管理项目可以极大地提高开发效率和代码的可维护性，建议开发人员尽量使用公共的Maven仓库来管理项目的依赖。在添加第三方库时，最好通过Maven安装插件或将库添加到公共仓库来管理依赖。这样可以确保项目的依赖清晰可见，并有助于提高团队协作的效率。
+参考资料 Stack Overflow: How to include system dependencies in war built using maven Maven官方文档（英文） 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>生成Java代码的UML图（特别是序列图）的方法</title>
+      <link>https://www.techdocdb.com/posts/%E7%94%9F%E6%88%90java%E4%BB%A3%E7%A0%81%E7%9A%84uml%E5%9B%BE%E7%89%B9%E5%88%AB%E6%98%AF%E5%BA%8F%E5%88%97%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 08 Sep 2023 15:50:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E7%94%9F%E6%88%90java%E4%BB%A3%E7%A0%81%E7%9A%84uml%E5%9B%BE%E7%89%B9%E5%88%AB%E6%98%AF%E5%BA%8F%E5%88%97%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了多种生成Java代码的UML图的方法和工具。这些方法和工具可以帮助开发者从现有的Java代码中生成UML图，特别是序列图。我们将介绍几个开源工具，它们基于Eclipse或IntelliJ IDEA等开发环境，并提供了丰富的功能。
+内容 如果你想从现有的Java代码中生成UML图，可以考虑以下几种方法和工具：
+使用eUML2 for Java插件：eUML2 for Java是一个强大的UML建模工具，专为在Eclipse中进行Java开发的开发者设计。它支持各种功能，包括代码和模型的实时同步、UML2.1标准兼容、反向工程等。你可以在Eclipse Marketplace上下载并安装这个插件。
+使用Borland&#39;s Together工具：Borland&#39;s Together是一个基于Eclipse的UML建模工具，它可以实现Java代码和UML之间的往返转换。Together基于Eclipse平台，非常稳定和易于使用。
+使用EclipseUML from Omondo：EclipseUML from Omondo是一个功能强大的UML建模工具，它适用于广泛的用途。你可以为你的Java项目创建类图、序列图等。这个工具还支持反向工程，并提供了一些高级功能，例如数据库工具和模板支持。
+使用Netbeans UML模型编辑器：Netbeans UML模型编辑器是一个简单易用的UML建模工具，它可以从Java代码中生成类图。你可以将Eclipse项目导入到Netbeans中，并保持两个开发环境的设置同步。
+使用PlantUML：PlantUML是一个可以帮助你在编码之前进行工程建模的工具，它支持多种建模语法和图形化渲染。你可以使用PlantUML的插件或在线工具，将Java代码转换为UML图。
+使用IntelliJ IDEA的插件：IntelliJ IDEA是一个流行的Java开发工具，它提供了多个插件来生成UML图。例如，ZenUML可以从Java代码中生成序列图、控制流图等。你可以通过IntelliJ的插件管理器安装这些插件。
+使用GitUML：GitUML是一个基于GitHub仓库的在线UML建模工具。它可以从Java或Python代码中生成UML图，并自动更新UML图与代码同步。你可以浏览社区中其他开发者创建的UML图，也可以生成自己项目的UML图。
+总结 本文介绍了多种生成Java代码的UML图的方法和工具。你可以根据自己的需求选择合适的工具，并根据实际情况使用。这些工具可以帮助你更好地理解和分析Java代码，提高开发效率。希望本文对你有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>并发列表的实现方式与Java中的列表</title>
+      <link>https://www.techdocdb.com/posts/%E5%B9%B6%E5%8F%91%E5%88%97%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E4%B8%8Ejava%E4%B8%AD%E7%9A%84%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Fri, 08 Sep 2023 15:49:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%B9%B6%E5%8F%91%E5%88%97%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E4%B8%8Ejava%E4%B8%AD%E7%9A%84%E5%88%97%E8%A1%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将讨论如何在Java的JDK中创建并发列表实例，并通过例子来说明这些知识点。我们将介绍JDK中的相关类和工厂方法。
+内容 在Java的JDK中，有一种名为&amp;quot;CopyOnWriteArrayList&amp;quot;的类，它可以用作并发列表的实现。这个类位于“java.util.concurrent”包中，你可以在官方文档中查看具体细节。
+并发列表的关键思想在于，每个操作本身都是原子的，并且可以在没有显式锁定/同步的情况下完成。因此，在预期存在并发访问的情况下，对给定列表的位置进行索引操作本身并没有太多意义。
+下面是一些示例代码，展示了创建并发列表实例的几种方式。
+1List&amp;lt;Object&amp;gt; objList = Collections.synchronizedList(new ArrayList&amp;lt;Object&amp;gt;()); 2 3Queue&amp;lt;String&amp;gt; globalQueue = new ConcurrentLinkedQueue&amp;lt;String&amp;gt;(); 4// 多个线程可以安全地调用globalQueue.add()... 5for (String href : globalQueue) { 6 // 对href进行处理 7} 8 9// 另一种方式是使用CopyOnWriteArrayList 10List&amp;lt;Object&amp;gt; copyOnWriteArrayList = new CopyOnWriteArrayList&amp;lt;Object&amp;gt;(); 总结 本教程介绍了如何在Java的JDK中创建并发列表实例。我们提到了&amp;quot;CopyOnWriteArrayList&amp;quot;类和其他一些相关类和方法。通过使用这些类和方法，你可以实现并发访问列表，并确保操作的原子性。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>&lt;html&gt;</title>
       <link>https://www.techdocdb.com/posts/html/</link>

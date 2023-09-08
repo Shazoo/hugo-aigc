@@ -7,7 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 21:46:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 14:42:46 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何从命令行重新加载.bash_profile</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD.bash_profile/</link>
+      <pubDate>Fri, 08 Sep 2023 14:42:46 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD.bash_profile/</guid>
+      <description>
+        
+          
+            摘要 本教程将向您展示如何从命令行重新加载.bash_profile文件，以便立即应用更改。通过以下几种方法，您可以避免退出并重新登录来使更改生效，并在需要时按需执行重新加载。本教程的示例将提供具体的命令和步骤，以便您轻松理解和操作。
+内容 无需退出登录，您只需在命令行中执行以下命令即可重新加载.bash_profile文件：
+1source ~/.bash_profile 或者，如果您想要键入更少的字符，您可以使用以下命令：
+1. ~/.bash_profile 只需确保您的.bash_profile文件中没有依赖于当前状态的内容。这些命令将使您的终端立即加载最新的.bash_profile文件。
+您还可以使用以下命令重新加载特定用户的.bash_profile文件：
+1su - username 请注意，在执行这些命令之前，请将.bash_profile文件保存好，并通过cd命令进入用户的主目录。然后，使用. .bash_profile命令重新加载文件。
+实际上，如果您希望终端每次启动时自动运行.bash_profile文件而不是每次打开终端时手动运行它，您可以将. ~/.bash_profile添加到~/.bashrc文件中。
+请注意，当您打开终端时，终端会以（非登录）交互模式启动bash，这意味着它将加载.bashrc文件。.bash_profile仅在bash以交互登录模式启动时加载。通常，这仅在您通过终端登录（Ctrl+Alt+F1..F6），或通过ssh连接时才会发生。
+如果您想要为重新加载.bash_profile命令设置别名，您可以将以下命令添加到Bash文件中：
+1alias bashs=&amp;#34;source ~/.bash_profile&amp;#34; 这样，您下一次只需键入bashs即可重新加载.bash_profile文件。
+如果.bash_profile文件不存在，您可以尝试运行以下命令来重新加载.bashrc文件：
+1. ~/.bashrc 或者
+1source ~/.bashrc 请注意，这将加载.bashrc文件而不是.bash_profile文件。您可以在这里找到有关bashrc文件的更多信息。
+还有一种方法是通过以下方式重新加载最近编辑过的文件历史记录：
+1. !$ 这将重新加载您刚刚在历史记录中编辑的文件。有关“bang dollar”在bash中的更多信息，请参阅这里。
+如果您使用的是Debian系统，您可以简单地键入exec bash来实现重新加载.bash_profile文件。对于其他发行版，可能需要尝试其他方法。
+如果您运行的是macOS v10.12（Sierra），并且使用其他方法后仍然无法重新加载.bash_profile文件，您可以尝试重新启动计算机，有时候需要进行硬重启。但是，请注意，这不是解决问题的最佳方法。
+在某些情况下，通过重新加载.bash_profile可能不会在所有标签页/终端中生效。除了使用之前提到的命令外，您还可以使用以下方法在每个标签页中重新加载bash profile。
+如果您使用iTerm，您可以使用CMD⌘+Shift+I将命令输入到所有当前标签页。对于终端，您可以参考这里。
+如果您想要在bash文件中添加别名以便下次调用，可以使用以下命令：
+1alias reload!=&amp;#34;. ~/.bash_profile&amp;#34; 或者，如果想要通过函数添加日志：
+1function reload! () { 2 echo &amp;#34;Reloading bash profile...!&amp;#34; 3 source ~/.bash_profile 4 echo &amp;#34;Reloaded!!!&amp;#34; 5} 简单地输入. ~/.bash_profile即可重新加载文件。有关source命令的更多信息，请参阅这里。
+如果您不介意丢失当前shell终端的历史记录，您还可以执行以下命令：
+1bash -l 这将fork一个新的bash子进程，并以登录shell的形式运行。这是必需的，因为非登录shell不会运行.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Shell脚本中执行Mongo命令</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8shell%E8%84%9A%E6%9C%AC%E4%B8%AD%E6%89%A7%E8%A1%8Cmongo%E5%91%BD%E4%BB%A4/</link>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iterable on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/iterable/</link>
+    <description>Recent content in iterable on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 16:02:48 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/iterable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何确定Python中的对象是否可迭代</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9Apython%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%BF%AD%E4%BB%A3/</link>
+      <pubDate>Fri, 08 Sep 2023 16:02:48 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9Apython%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%BF%AD%E4%BB%A3/</guid>
+      <description>
+        
+          
+            摘要 本教程介绍了确定Python对象是否可迭代的不同方法。它包括检查对象是否具有__iter__方法、使用isinstance()函数检查对象是否是Iterable类的实例、以及使用iter()函数进行尝试的方法。此外，还讨论了每种方法的优缺点和适用情况。
+内容 在Python中，确定一个对象是否可迭代有多种方法。下面是一些常用的方法：
+方法1：检查__iter__方法 检查对象是否具有__iter__方法是一种常见的方法。__iter__方法用于定义一个迭代器对象，可以通过调用iter()函数来获取该迭代器。
+1if hasattr(obj, &amp;#39;__iter__&amp;#39;): 2 # obj is iterable 3else: 4 # obj is not iterable 这种方法的好处是，它适用于大多数可迭代对象。但它不能检测到实现了__getitem__方法但没有__iter__方法的特殊情况。
+方法2：使用isinstance()函数检查对象是否是Iterable类的实例 Iterable是Python标准库中的一个抽象基类，它定义了一个可迭代对象必须实现的接口。我们可以使用isinstance()函数来检查一个对象是否是Iterable类的实例，从而确定它是否可迭代。
+1from collections.abc import Iterable 2 3if isinstance(obj, Iterable): 4 # obj is iterable 5else: 6 # obj is not iterable 这种方法的好处是，它可以检测到实现了__iter__方法的自定义类，并且可以应用于Python2和Python3。然而，它不能检测到仅实现了__getitem__方法但没有__iter__方法的特殊情况。
+方法3：使用iter()函数进行尝试 iter()函数用于返回一个迭代器对象。如果一个对象是可迭代的，那么调用iter()函数应该不会引发异常。因此，这种方法可以用于尝试判断一个对象是否可迭代。
+1try: 2 iter(obj) 3 # obj is iterable 4except TypeError: 5 # obj is not iterable 这种方法的优点是，在大多数情况下，它可以正确地确定一个对象是否可迭代。然而，它对一些特殊情况可能会出现假阳性，即将不可迭代的对象错误地判断为可迭代的对象。
+总结 本教程介绍了确定Python对象是否可迭代的几种常见方法。每种方法都有不同的优缺点，适用于不同的情况。大多数情况下，我们可以使用isinstance()函数来检查对象是否是Iterable类的实例。然而，如果需要更准确地判断一个对象是否可迭代，可以尝试使用iter()函数并捕获异常来判断。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

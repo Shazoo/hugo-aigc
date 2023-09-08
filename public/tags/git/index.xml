@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 08:31:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 17:35:48 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git-diff基础教程</title>
+      <link>https://www.techdocdb.com/posts/git-diff%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Fri, 08 Sep 2023 17:35:48 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/git-diff%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在git提交之前查看文件差异。当你在一天或两天的时间里同时进行多个相关的更改，并在提交时忘记某个特定文件发生了什么变化时，这种情况经常发生。你可以使用git diff命令来预览本地文件与上一次提交的文件之间的差异。
+内容 你可以通过以下方式来查看尚未通过git add添加的更改：
+1git diff myfile.txt 如果你想查看已添加更改，可以使用以下命令：
+1git diff --cached myfile.txt 你还可以使用git difftool来查看差异，它可以使用图形界面工具（如Meld、DiffMerge或OpenDiff）。只需运行以下命令：
+1git difftool myfile.txt 如果你想查看当前目录下的所有更改，可以使用git diff .命令。另外，使用git blame命令可以查看每行更改，它会显示每行在哪次提交中被修改。
+如果你想在提交之前查看文件的实际内容（假设master是你的分支），运行以下命令：
+1git show master:path/my_file 如果你想要一种更方便的方式来比较文件与最后一次提交的差异，可以使用git difftool -d命令。这将打开目录比较模式，比较HEAD与当前的文件夹。
+另一种比较文件与最后一次提交差异的技巧是使用git diff master myfile.txt命令。这种方法的优势是可以使用git diff master^来与倒数第二次提交进行比较，还可以使用git diff master^^与倒数第三次提交进行比较。如果你不在主分支上，你可以用你的分支名替换&#39;master&#39;。
+总结 以上是如何在git提交之前查看文件差异的几种方法。你可以根据自己的需求选择不同的方式来查看文件的变化。通过使用git提供的差异比较工具，你可以更轻松地理解自己在文件中所做的更改。
+如果你在macOS上使用git，你可以使用git diff *命令在git根目录下查看所有文件的差异。另外，你也可以使用git difftool -d HEAD filename.txt命令在终端的VI分屏窗口中查看比较结果。选用合适的工具可以使你更便捷地查看和管理代码的差异。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>GitHub pull request 显示已经在目标分支中的提交</title>
       <link>https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/</link>

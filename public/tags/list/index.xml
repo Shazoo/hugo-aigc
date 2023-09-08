@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 09:16:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/list/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 15:49:03 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/list/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>并发列表的实现方式与Java中的列表</title>
+      <link>https://www.techdocdb.com/posts/%E5%B9%B6%E5%8F%91%E5%88%97%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E4%B8%8Ejava%E4%B8%AD%E7%9A%84%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Fri, 08 Sep 2023 15:49:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%B9%B6%E5%8F%91%E5%88%97%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E4%B8%8Ejava%E4%B8%AD%E7%9A%84%E5%88%97%E8%A1%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将讨论如何在Java的JDK中创建并发列表实例，并通过例子来说明这些知识点。我们将介绍JDK中的相关类和工厂方法。
+内容 在Java的JDK中，有一种名为&amp;quot;CopyOnWriteArrayList&amp;quot;的类，它可以用作并发列表的实现。这个类位于“java.util.concurrent”包中，你可以在官方文档中查看具体细节。
+并发列表的关键思想在于，每个操作本身都是原子的，并且可以在没有显式锁定/同步的情况下完成。因此，在预期存在并发访问的情况下，对给定列表的位置进行索引操作本身并没有太多意义。
+下面是一些示例代码，展示了创建并发列表实例的几种方式。
+1List&amp;lt;Object&amp;gt; objList = Collections.synchronizedList(new ArrayList&amp;lt;Object&amp;gt;()); 2 3Queue&amp;lt;String&amp;gt; globalQueue = new ConcurrentLinkedQueue&amp;lt;String&amp;gt;(); 4// 多个线程可以安全地调用globalQueue.add()... 5for (String href : globalQueue) { 6 // 对href进行处理 7} 8 9// 另一种方式是使用CopyOnWriteArrayList 10List&amp;lt;Object&amp;gt; copyOnWriteArrayList = new CopyOnWriteArrayList&amp;lt;Object&amp;gt;(); 总结 本教程介绍了如何在Java的JDK中创建并发列表实例。我们提到了&amp;quot;CopyOnWriteArrayList&amp;quot;类和其他一些相关类和方法。通过使用这些类和方法，你可以实现并发访问列表，并确保操作的原子性。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用max()/min()函数获取列表中最大/最小元素的索引</title>
       <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8max/min%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8%E4%B8%AD%E6%9C%80%E5%A4%A7/%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0%E7%9A%84%E7%B4%A2%E5%BC%95/</link>

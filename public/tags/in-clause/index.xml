@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>in-clause on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/in-clause/</link>
+    <description>Recent content in in-clause on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2023 17:25:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/in-clause/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQLAlchemy中的IN子句</title>
+      <link>https://www.techdocdb.com/posts/sqlalchemy%E4%B8%AD%E7%9A%84in%E5%AD%90%E5%8F%A5/</link>
+      <pubDate>Fri, 08 Sep 2023 17:25:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/sqlalchemy%E4%B8%AD%E7%9A%84in%E5%AD%90%E5%8F%A5/</guid>
+      <description>
+        
+          
+            在SQLAlchemy中，要使用IN子句进行查询非常简单。本教程将向您展示如何使用in_方法在SQLAlchemy中构建IN子句以及一些示例。
+摘要 使用SQLAlchemy进行查询时，我们经常需要使用IN子句来匹配一列中的多个值。可以使用in_方法来构建此类查询。以下是在SQLAlchemy中使用IN子句的示例。
+1session.query(MyUserClass).filter(MyUserClass.id.in_((123, 456))).all() 内容 假设您正在使用SQLAlchemy的ORM（对象关系映射）方式进行查询，那么使用IN子句非常简单。只需按照以下示例进行操作即可：
+1query = db_session.query(User.id, User.name).filter(User.id.in_([123, 456])) 2results = query.all() 在这个例子中，db_session是您的数据库会话对象，而User是ORM类，其中__tablename__的值为&amp;quot;users&amp;quot;。
+如果您不使用ORM，而是使用SQLAlchemy的表达式API，可以使用相关列的in_方法。以下是一个示例：
+1myList = [123, 456] 2select = sqlalchemy.sql.select([user_table.c.id, user_table.c.name], user_table.c.id.in_(myList)) 3result = conn.execute(select) 4for row in result: 5 process(row) 在这个例子中，假设user_table和conn已经适当地定义。
+另一种方法是使用SQLAlchemy的原始SQL模式，下面是一个使用此方法的示例：
+1id_list = [1, 2, 3, 4, 5] # 多数情况下我们有一个整数列表或集合 2s = text(&amp;#39;SELECT id, content FROM myTable WHERE id IN :id_list&amp;#39;) 3conn = engine.connect() # 获取一个mysql连接 4rs = conn.execute(s, id_list=tuple(id_list)).fetchall() 此示例假设engine是您的数据库引擎对象。
+另外，如果您使用Python 3并且想结合SQLAlchemy和pandas使用，可以考虑以下示例：
+1import sqlalchemy as sa 2import pandas as pd 3engine = sa.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
