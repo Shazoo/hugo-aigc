@@ -7,7 +7,233 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 11:52:32 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 17:20:33 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android ActionBarCompat主题问题解决方案</title>
+      <link>https://www.techdocdb.com/posts/android-actionbarcompat%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sat, 09 Sep 2023 17:20:33 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/android-actionbarcompat%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>
+        
+          
+            摘要 本教程旨在帮助解决在使用Android ActionBarCompat库时遇到的问题。在使用新的ActionBar支持库时，用户报告了无法找到Theme.AppCompat.Light的问题。本教程将提供多种解决方案，以帮助用户解决此问题。
+内容 用户在尝试使用Google几天前发布的新的ActionBar支持库时遇到了问题。他们之前成功地使用了ActionBarSherlock，用相同的方法加载资源文件，并将库项目加载到自己的项目中。
+尽管库的加载没有问题，但用户却无法更改主题或成功构建项目。他们在构建过程中收到了以下错误：
+1error: Error retrieving parent for item: No resource found that matches the given name &amp;#39;@style/Theme.AppCompat.Light&amp;#39;. 为了解决这个问题，用户尝试了以下方法：
+在AndroidManifest.xml的和标签中直接添加android:theme=&amp;quot;@style/Theme.AppCompat.Light&amp;quot;。 调整了style.xml文件中的主题。 然而，他们的尝试都没有解决问题。
+在Stack Overflow和开发者社区上，人们提出了多种解决方案，使得用户能够成功运行项目。以下是一些解决方案的例子：
+导入并添加AppCompat库。 检查两个项目的minSdkVersion和targetSdkVersion是否相同。 将APL（Android Support Library）作为MP（Main Project）的依赖库。 检查Eclipse中的库和项目是否位于同一硬盘上。 删除项目中的android-support-v4.jar文件，避免与appcompat版本冲突。 在styles.xml文件中修改AppBaseTheme的父主题。 检查并删除项目中的其他jar包。 在build.gradle文件中添加相关依赖。 重新安装Android Support Library和Android Support Repository。 从项目中删除android-support-v7-appcompat，然后重新导入。 在项目中选择appcompat-v7作为库依赖。 在Project Structure Modules中重新添加依赖。 手动导入appcompat-v7项目。 在Android Studio中添加对appcompat-v7的依赖。 总结 在使用Android ActionBarCompat库时，有时会遇到无法找到Theme.AppCompat.Light的问题。本教程提供了多种解决方案，以帮助用户解决此问题。用户可以尝试这些解决方案，根据自己的情况选择最合适的方法。希望这些解决方案能够帮助解决用户的问题，并顺利运行项目。
+更多解决方案和教程，请参考相关的开发者社区和Stack Overflow上的帖子。祝您成功！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cannot delete directory with Directory.Delete(path, true)</title>
+      <link>https://www.techdocdb.com/posts/cannot-delete-directory-with-directory.deletepath-true/</link>
+      <pubDate>Sat, 09 Sep 2023 17:08:27 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/cannot-delete-directory-with-directory.deletepath-true/</guid>
+      <description>
+        
+          
+            在.NET 3.5中，使用Directory.Delete(myPath, true)进行递归删除目录时，可能会遇到以下问题:
+1System.IO.IOException: The directory is not empty. 2 at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath) 3 at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive) 4 at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive) 5 ... 根据我的理解，当目录中有文件被占用或存在权限问题时，这个方法会抛出异常。但通常情况下，它应该能够删除目录及其所有内容。
+然而，有时会出现上述异常，即使指定了recursive参数为true。（我清楚地知道目录不是空的。）
+这种情况是因为有其他线程或进程正在向目录中添加文件，导致删除过程中抛出异常。具体的执行顺序如下:
+删除器进程 A:
+清空目录。 删除（现在为空的）目录。 如果在步骤1和步骤2之间的某个时刻，有其他线程向目录中添加了一个文件，那么步骤2就会抛出上述异常。
+解决这个问题的方法是找到锁定目录或文件的来源，并尝试消除这个锁定。你可以使用下面的代码来删除目录及其内容:
+1public static void DeleteDirectory(string target_dir) 2{ 3 string[] files = Directory.GetFiles(target_dir); 4 string[] dirs = Directory.GetDirectories(target_dir); 5 6 foreach (string file in files) 7 { 8 File.SetAttributes(file, FileAttributes.Normal); 9 File.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sat, 09 Sep 2023 16:49:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>下载 Java JDK 安装包</title>
+      <link>https://www.techdocdb.com/posts/%E4%B8%8B%E8%BD%BD-java-jdk-%E5%AE%89%E8%A3%85%E5%8C%85/</link>
+      <pubDate>Sat, 09 Sep 2023 16:42:44 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%B8%8B%E8%BD%BD-java-jdk-%E5%AE%89%E8%A3%85%E5%8C%85/</guid>
+      <description>
+        
+          
+            本教程将向您展示如何通过wget命令在Linux上下载Java JDK安装包。
+下载命令 您可以使用如下命令下载Java JDK安装包的特定版本：
+JDK 17 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz JDK 16 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/otn-pub/java/jdk/16.0.2%2B7/d4a915d82b4c4fbb9bde534da945d746/jdk-16.0.2_linux-x64_bin.rpm JDK 15 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/otn-pub/java/jdk/15.0.1+9/51f4f36ad4ef43e39d0dfdbaf6549e32/jdk-15.0.1_linux-x64_bin.rpm JDK 14 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/otn-pub/java/jdk/14.0.1+7/664493ef4a6946b186ff29eb326336a2/jdk-14.0.1_linux-x64_bin.rpm -O ~/Downloads/jdk-14.0.1_linux-x64_bin.rpm JDK 11 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; http://download.oracle.com/otn-pub/java/jdk/11+28/55eed80b163941c8885ad9298e6d786a/jdk-11_linux-x64_bin.tar.gz JDK 10.0.2 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz JDK 10.0.1 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz JDK 9 1wget http://download.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Invalid argument supplied for foreach()</title>
+      <link>https://www.techdocdb.com/posts/invalid-argument-supplied-for-foreach/</link>
+      <pubDate>Sat, 09 Sep 2023 16:04:12 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/invalid-argument-supplied-for-foreach/</guid>
+      <description>
+        
+          
+            摘要： 在使用foreach循环遍历数据之前，经常会遇到数据可能是数组或者null的情况。当将非数组类型的数据传递给foreach时，就会出现警告。本文将介绍一些处理此警告的方法，包括将变量转换为数组、对变量进行初始化、使用条件语句包裹foreach等。
+内容 经常会遇到处理既可能是数组又可能是null的数据，并将其传递给foreach循环的情况。下面是一个例子：
+1$values = get_values(); 2 3foreach ($values as $value){ 4 ... 5} 在将一个非数组的数据传递给foreach循环时，会出现如下警告：
+1Warning: Invalid argument supplied for foreach() in [...] 除了重新设计get_values()函数始终返回数组（因为向后兼容、无法获取源代码等原因），我们要想办法避免这个警告。以下是一些可以避免警告的方法：
+将变量转换为数组 对变量进行初始化为数组 使用条件语句包裹foreach循环 其他方法（请提出建议） 在上述方法中，以下是我认为最干净的方法，尽管不确定是否是最高效的：
+1if (is_array($values) || is_object($values)) 2{ 3 foreach ($values as $value) 4 { 5 ... 6 } 7} 我之所以更喜欢这种方式，是因为它不会在本来就没有数据的情况下分配一个空数组。
+总结 上述提供的所有答案本质上都是通过抑制错误来解决问题。PHP给出的警告是告诉你正在尝试使用错误类型的变量，并且可能存在错误。但是上述提供的所有答案都只是简单地忽略了这条警告。最好的解决办法是在使用变量之前对其进行初始化，并且明确声明返回类型。我们应该问自己，为什么get_values()会返回不是数组的数据？如果没有数据，它为什么不能返回一个空数组呢？理论上是可以做到的。
+另外，为了在模板代码中使用，可以使用类似于以下的结构：
+1&amp;lt;?php foreach (secure_iterable($values) as $value): ?&amp;gt; 2 ... 3&amp;lt;?php endforeach; ?&amp;gt; 最后，请注意不要过于依赖类型转换作为解决方法。虽然其他答案中提到了将变量强制转换为数组的方法，实际上，这可能会引发另一个错误。当你期望返回特定形式的数组时，可能会出现问题，因此还需要进行更多的检查。
+以上就是处理Invalid argument supplied for foreach()警告的一些常见方法，希望对你有帮助。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sat, 09 Sep 2023 15:58:59 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sat, 09 Sep 2023 15:58:12 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sat, 09 Sep 2023 15:54:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用 &#39;const&#39; 修饰函数参数</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-const-%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Sat, 09 Sep 2023 15:20:15 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-const-%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/</guid>
+      <description>
+        
+          
+            注意：下面是相同问题的问题解答，并将其优化成了一篇说明性的教程文章。
+摘要 本教程将介绍在函数参数中使用 &#39;const&#39; 的使用方式。我们将通过例子来说明如何使用 &#39;const&#39; 修饰函数参数，以及这种用法是否有实际意义。
+内容 通常情况下，对于按值传递的参数来说，在函数声明中加上 &#39;const&#39; 是没有意义的，因为这对调用者没有任何影响。以下是一个简单的例子：
+1void func(const int n, const long l) 在上面的例子中，&#39;const&#39; 只是限制了参数的实现，对于函数的接口没有任何贡献。添加这种限制只会让代码变得更复杂，并且注意力会从真正必要使用 &#39;const&#39; 的地方分散开来。
+然而，对于指针或引用传递的参数来说，使用 &#39;const&#39; 是至关重要的。当参数被作为输入值传递时，使用 &#39;const&#39; 可以防止函数对参数修改，从而避免意外的副作用。在这种情况下，应该在指针或引用参数上使用 &#39;const&#39;。使用 &#39;const&#39; 修饰参数可以使指针或引用参数更加明显，从而提醒其他开发人员注意这些参数是指针或引用。
+以下是使用 &#39;const&#39; 修饰指针和引用参数的示例：
+1void func(const int* ptr); // Good: const is not top level 2void func(const int&amp;amp; ref); // Good: const is not top level 这样的函数声明可以让人一眼看出参数是指针或引用。
+需要注意的是，只有在函数定义中的 &#39;const&#39; 修饰才会影响编译过程，而在函数实现时，函数声明中的 &#39;const&#39; 是无意义的。
+总结 综上所述，对于按值传递的函数参数来说，在函数声明中使用 &#39;const&#39; 是没有意义的。它只会增加代码的复杂性，而没有对调用者产生任何影响。然而，对于指针或引用传递的参数来说，根据需要使用 &#39;const&#39; 是非常重要的，它可以防止对参数进行意外的修改。
+为了减少 &#39;const&#39; 的滥用，我们建议遵循以下原则：
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>静态方法重写</title>
+      <link>https://www.techdocdb.com/posts/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</link>
+      <pubDate>Sat, 09 Sep 2023 14:29:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</guid>
+      <description>
+        
+          
+            摘要 在Java中，无法重写静态方法。这是因为静态方法与类的实例无关，因此重写的概念不适用于静态方法。
+内容 重写依赖于存在一个类的实例。多态的关键在于你可以对一个类进行子类化，并且实现这些子类中的方法可以对超类中定义的相同方法具有不同的行为（并在子类中重写这些方法）。静态方法与类的任何实例都没有关联，因此重写的概念不适用。
+Java的设计有两个考虑因素对此产生了影响。一个是对性能的关注：曾经有很多关于Smalltalk的批评，认为它运行速度太慢（垃圾回收和多态调用是其中的一部分），Java的创造者决心避免这种情况。另一个是Java的目标受众是C++开发人员。让静态方法按照目前的方式工作对于C++程序员来说很熟悉，也非常快速，因为在运行时无需等待以确定调用哪个方法。
+在Java中，static方法在JVM中被视为全局方法，它们不与任何对象实例绑定在一起。理论上，如果可以从类对象（类似于Smalltalk之类的语言）调用静态方法，那么这是有可能的，但在Java中并不是这种情况。
+由于静态方法无关紧要的是对象实例，因此无法访问对象变量和方法，因为上下文是未知的。
+1class MyClass { ... } 2class MySubClass extends MyClass { ... } 3 4MyClass obj1 = new MyClass(); 5MySubClass obj2 = new MySubClass(); 6 7ob2 instanceof MyClass --&amp;amp;gt; true 8 9Class clazz1 = obj1.getClass(); 10Class clazz2 = obj2.getClass(); 11 12clazz2 instanceof clazz1 --&amp;amp;gt; false 你可以反射访问这些类，但仅限于此。你无法使用clazz1.staticMethod()调用静态方法，而是使用MyClass.staticMethod()。静态方法不与对象绑定在一起，因此在静态方法中不存在this或super的概念。静态方法是全局函数；因此也没有多态的概念，因此方法重写没有意义。
+但是，如果MyClass在运行时是一个对象，你可以通过对象obj1.staticMethod()调用静态方法，但这实际上是语法糖，等效于MyClass.staticMethod()。这种做法通常会在现代IDE中引发警告。我不知道为什么他们曾经允许这种缩写。
+总结 重写是保留给实例成员以支持多态行为的。静态类成员不属于特定的实例，而是属于类本身。继承只继承受保护和公有实例成员而不是静态成员。你可能想要定义一个接口并研究工厂模式和/或策略设计模式来评估替代方法。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Google AJAX Libraries教程</title>
+      <link>https://www.techdocdb.com/posts/google-ajax-libraries%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Sep 2023 14:12:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/google-ajax-libraries%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            在Web开发中，使用CDN（内容分发网络）是一种常见的优化性能和加载速度的方法。Google AJAX Libraries是一个非常受欢迎的CDN，它提供了许多常用的JavaScript库，包括jQuery。
+摘要 本教程将介绍如何在使用Google的托管版本的jQuery时，当加载失败时，切换到自己托管的版本。我们还将讨论同时引入两个版本的风险，并提供了一种备份计划。以下是解决方案：
+1&amp;lt;script src=&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 2 3&amp;lt;script&amp;gt; 4 window.jQuery || document.write(&amp;#39;&amp;lt;script src=&amp;#34;/path/to/your/jquery&amp;#34;&amp;gt;&amp;lt;\/script&amp;gt;&amp;#39;); 5&amp;lt;/script&amp;gt; 内容 在Web开发中，使用jQuery是一种非常常见的选择，因为它简化了JavaScript编码，并提供了许多实用的功能和插件。而在使用jQuery时，使用托管在CDN上的版本可以带来多个好处，例如：
+加载速度更快：CDN通常具有全球分布的服务器，可以提供更快的加载速度，特别是对于全球用户而言。 高可用性：CDN通常具有冗余服务器，可以提供更高的可用性和故障转移能力。 然而，有时访问Google的CDN可能遇到问题。比如，在一些地区，Google的域名可能被屏蔽，这将导致无法加载Google托管的jQuery。那么，在这种情况下，我们应该如何处理呢？
+我们可以通过添加一个条件判断来检查是否成功加载了jQuery对象。如果没有成功加载，我们可以切换到自己托管的版本。以下是解决方案的代码示例：
+1&amp;lt;script src=&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 2 3&amp;lt;script&amp;gt; 4 window.jQuery || document.write(&amp;#39;&amp;lt;script src=&amp;#34;/path/to/your/jquery&amp;#34;&amp;gt;&amp;lt;\/script&amp;gt;&amp;#39;); 5&amp;lt;/script&amp;gt; 在这个示例中，我们首先尝试加载Google CDN上的托管版本的jQuery。如果加载成功，那么就可以直接使用这个版本。如果加载失败（window.jQuery为假），我们使用document.write动态地添加了一个script标签来引入我们自己托管的版本。
+需要注意的是，我们在&amp;lt;head&amp;gt;标签中引入Google的托管版本，而将任何需要在jQuery准备就绪事件中执行的代码放在&amp;lt;body&amp;gt;标签中，以避免错误（虽然这并不是绝对可靠的）。
+需要注意的是，我们将自己托管的版本放在Google之后，这意味着如果Google的托管版本加载失败，我们将使用自己的版本作为备份。这样，我们就可以在Google CDN无法访问的情况下保证我们的网页正常工作。
+另外，记住自己托管版本的加载速度可能会比Google的托管版本稍慢，所以我们应该尽量保持Google的托管版本可用。
+总之，使用Google的CDN托管jQuery可以提供许多优势，但有时可能会出现加载失败的情况。为了解决这个问题，我们可以通过条件判断加载失败时切换到自己托管的版本。这样，无论是在Google加载失败还是在Google被屏蔽的地区，我们都能保证网页的正常工作。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Angular2 Routing教程</title>
       <link>https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/</link>

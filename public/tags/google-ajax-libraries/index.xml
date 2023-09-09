@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google-ajax-libraries on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/google-ajax-libraries/</link>
+    <description>Recent content in google-ajax-libraries on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 14:12:57 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/google-ajax-libraries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google AJAX Libraries教程</title>
+      <link>https://www.techdocdb.com/posts/google-ajax-libraries%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Sep 2023 14:12:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/google-ajax-libraries%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            在Web开发中，使用CDN（内容分发网络）是一种常见的优化性能和加载速度的方法。Google AJAX Libraries是一个非常受欢迎的CDN，它提供了许多常用的JavaScript库，包括jQuery。
+摘要 本教程将介绍如何在使用Google的托管版本的jQuery时，当加载失败时，切换到自己托管的版本。我们还将讨论同时引入两个版本的风险，并提供了一种备份计划。以下是解决方案：
+1&amp;lt;script src=&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 2 3&amp;lt;script&amp;gt; 4 window.jQuery || document.write(&amp;#39;&amp;lt;script src=&amp;#34;/path/to/your/jquery&amp;#34;&amp;gt;&amp;lt;\/script&amp;gt;&amp;#39;); 5&amp;lt;/script&amp;gt; 内容 在Web开发中，使用jQuery是一种非常常见的选择，因为它简化了JavaScript编码，并提供了许多实用的功能和插件。而在使用jQuery时，使用托管在CDN上的版本可以带来多个好处，例如：
+加载速度更快：CDN通常具有全球分布的服务器，可以提供更快的加载速度，特别是对于全球用户而言。 高可用性：CDN通常具有冗余服务器，可以提供更高的可用性和故障转移能力。 然而，有时访问Google的CDN可能遇到问题。比如，在一些地区，Google的域名可能被屏蔽，这将导致无法加载Google托管的jQuery。那么，在这种情况下，我们应该如何处理呢？
+我们可以通过添加一个条件判断来检查是否成功加载了jQuery对象。如果没有成功加载，我们可以切换到自己托管的版本。以下是解决方案的代码示例：
+1&amp;lt;script src=&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 2 3&amp;lt;script&amp;gt; 4 window.jQuery || document.write(&amp;#39;&amp;lt;script src=&amp;#34;/path/to/your/jquery&amp;#34;&amp;gt;&amp;lt;\/script&amp;gt;&amp;#39;); 5&amp;lt;/script&amp;gt; 在这个示例中，我们首先尝试加载Google CDN上的托管版本的jQuery。如果加载成功，那么就可以直接使用这个版本。如果加载失败（window.jQuery为假），我们使用document.write动态地添加了一个script标签来引入我们自己托管的版本。
+需要注意的是，我们在&amp;lt;head&amp;gt;标签中引入Google的托管版本，而将任何需要在jQuery准备就绪事件中执行的代码放在&amp;lt;body&amp;gt;标签中，以避免错误（虽然这并不是绝对可靠的）。
+需要注意的是，我们将自己托管的版本放在Google之后，这意味着如果Google的托管版本加载失败，我们将使用自己的版本作为备份。这样，我们就可以在Google CDN无法访问的情况下保证我们的网页正常工作。
+另外，记住自己托管版本的加载速度可能会比Google的托管版本稍慢，所以我们应该尽量保持Google的托管版本可用。
+总之，使用Google的CDN托管jQuery可以提供许多优势，但有时可能会出现加载失败的情况。为了解决这个问题，我们可以通过条件判断加载失败时切换到自己托管的版本。这样，无论是在Google加载失败还是在Google被屏蔽的地区，我们都能保证网页的正常工作。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

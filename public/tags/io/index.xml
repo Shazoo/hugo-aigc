@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>io on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/io/</link>
+    <description>Recent content in io on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 17:08:27 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cannot delete directory with Directory.Delete(path, true)</title>
+      <link>https://www.techdocdb.com/posts/cannot-delete-directory-with-directory.deletepath-true/</link>
+      <pubDate>Sat, 09 Sep 2023 17:08:27 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/cannot-delete-directory-with-directory.deletepath-true/</guid>
+      <description>
+        
+          
+            在.NET 3.5中，使用Directory.Delete(myPath, true)进行递归删除目录时，可能会遇到以下问题:
+1System.IO.IOException: The directory is not empty. 2 at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath) 3 at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive) 4 at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive) 5 ... 根据我的理解，当目录中有文件被占用或存在权限问题时，这个方法会抛出异常。但通常情况下，它应该能够删除目录及其所有内容。
+然而，有时会出现上述异常，即使指定了recursive参数为true。（我清楚地知道目录不是空的。）
+这种情况是因为有其他线程或进程正在向目录中添加文件，导致删除过程中抛出异常。具体的执行顺序如下:
+删除器进程 A:
+清空目录。 删除（现在为空的）目录。 如果在步骤1和步骤2之间的某个时刻，有其他线程向目录中添加了一个文件，那么步骤2就会抛出上述异常。
+解决这个问题的方法是找到锁定目录或文件的来源，并尝试消除这个锁定。你可以使用下面的代码来删除目录及其内容:
+1public static void DeleteDirectory(string target_dir) 2{ 3 string[] files = Directory.GetFiles(target_dir); 4 string[] dirs = Directory.GetDirectories(target_dir); 5 6 foreach (string file in files) 7 { 8 File.SetAttributes(file, FileAttributes.Normal); 9 File.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

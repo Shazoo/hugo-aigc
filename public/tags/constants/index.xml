@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>constants on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/constants/</link>
+    <description>Recent content in constants on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 15:20:15 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/constants/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 &#39;const&#39; 修饰函数参数</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-const-%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Sat, 09 Sep 2023 15:20:15 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-const-%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/</guid>
+      <description>
+        
+          
+            注意：下面是相同问题的问题解答，并将其优化成了一篇说明性的教程文章。
+摘要 本教程将介绍在函数参数中使用 &#39;const&#39; 的使用方式。我们将通过例子来说明如何使用 &#39;const&#39; 修饰函数参数，以及这种用法是否有实际意义。
+内容 通常情况下，对于按值传递的参数来说，在函数声明中加上 &#39;const&#39; 是没有意义的，因为这对调用者没有任何影响。以下是一个简单的例子：
+1void func(const int n, const long l) 在上面的例子中，&#39;const&#39; 只是限制了参数的实现，对于函数的接口没有任何贡献。添加这种限制只会让代码变得更复杂，并且注意力会从真正必要使用 &#39;const&#39; 的地方分散开来。
+然而，对于指针或引用传递的参数来说，使用 &#39;const&#39; 是至关重要的。当参数被作为输入值传递时，使用 &#39;const&#39; 可以防止函数对参数修改，从而避免意外的副作用。在这种情况下，应该在指针或引用参数上使用 &#39;const&#39;。使用 &#39;const&#39; 修饰参数可以使指针或引用参数更加明显，从而提醒其他开发人员注意这些参数是指针或引用。
+以下是使用 &#39;const&#39; 修饰指针和引用参数的示例：
+1void func(const int* ptr); // Good: const is not top level 2void func(const int&amp;amp; ref); // Good: const is not top level 这样的函数声明可以让人一眼看出参数是指针或引用。
+需要注意的是，只有在函数定义中的 &#39;const&#39; 修饰才会影响编译过程，而在函数实现时，函数声明中的 &#39;const&#39; 是无意义的。
+总结 综上所述，对于按值传递的函数参数来说，在函数声明中使用 &#39;const&#39; 是没有意义的。它只会增加代码的复杂性，而没有对调用者产生任何影响。然而，对于指针或引用传递的参数来说，根据需要使用 &#39;const&#39; 是非常重要的，它可以防止对参数进行意外的修改。
+为了减少 &#39;const&#39; 的滥用，我们建议遵循以下原则：
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

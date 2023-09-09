@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 29 Aug 2023 09:55:04 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 16:42:44 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载 Java JDK 安装包</title>
+      <link>https://www.techdocdb.com/posts/%E4%B8%8B%E8%BD%BD-java-jdk-%E5%AE%89%E8%A3%85%E5%8C%85/</link>
+      <pubDate>Sat, 09 Sep 2023 16:42:44 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%B8%8B%E8%BD%BD-java-jdk-%E5%AE%89%E8%A3%85%E5%8C%85/</guid>
+      <description>
+        
+          
+            本教程将向您展示如何通过wget命令在Linux上下载Java JDK安装包。
+下载命令 您可以使用如下命令下载Java JDK安装包的特定版本：
+JDK 17 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz JDK 16 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/otn-pub/java/jdk/16.0.2%2B7/d4a915d82b4c4fbb9bde534da945d746/jdk-16.0.2_linux-x64_bin.rpm JDK 15 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/otn-pub/java/jdk/15.0.1+9/51f4f36ad4ef43e39d0dfdbaf6549e32/jdk-15.0.1_linux-x64_bin.rpm JDK 14 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; https://download.oracle.com/otn-pub/java/jdk/14.0.1+7/664493ef4a6946b186ff29eb326336a2/jdk-14.0.1_linux-x64_bin.rpm -O ~/Downloads/jdk-14.0.1_linux-x64_bin.rpm JDK 11 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; http://download.oracle.com/otn-pub/java/jdk/11+28/55eed80b163941c8885ad9298e6d786a/jdk-11_linux-x64_bin.tar.gz JDK 10.0.2 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz JDK 10.0.1 1wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz JDK 9 1wget http://download.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Python注释中的“# noqa”是什么意思？</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8python%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84#-noqa%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/</link>

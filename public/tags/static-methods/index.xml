@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>static-methods on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/static-methods/</link>
+    <description>Recent content in static-methods on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 14:29:42 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/static-methods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>静态方法重写</title>
+      <link>https://www.techdocdb.com/posts/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</link>
+      <pubDate>Sat, 09 Sep 2023 14:29:42 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</guid>
+      <description>
+        
+          
+            摘要 在Java中，无法重写静态方法。这是因为静态方法与类的实例无关，因此重写的概念不适用于静态方法。
+内容 重写依赖于存在一个类的实例。多态的关键在于你可以对一个类进行子类化，并且实现这些子类中的方法可以对超类中定义的相同方法具有不同的行为（并在子类中重写这些方法）。静态方法与类的任何实例都没有关联，因此重写的概念不适用。
+Java的设计有两个考虑因素对此产生了影响。一个是对性能的关注：曾经有很多关于Smalltalk的批评，认为它运行速度太慢（垃圾回收和多态调用是其中的一部分），Java的创造者决心避免这种情况。另一个是Java的目标受众是C++开发人员。让静态方法按照目前的方式工作对于C++程序员来说很熟悉，也非常快速，因为在运行时无需等待以确定调用哪个方法。
+在Java中，static方法在JVM中被视为全局方法，它们不与任何对象实例绑定在一起。理论上，如果可以从类对象（类似于Smalltalk之类的语言）调用静态方法，那么这是有可能的，但在Java中并不是这种情况。
+由于静态方法无关紧要的是对象实例，因此无法访问对象变量和方法，因为上下文是未知的。
+1class MyClass { ... } 2class MySubClass extends MyClass { ... } 3 4MyClass obj1 = new MyClass(); 5MySubClass obj2 = new MySubClass(); 6 7ob2 instanceof MyClass --&amp;amp;gt; true 8 9Class clazz1 = obj1.getClass(); 10Class clazz2 = obj2.getClass(); 11 12clazz2 instanceof clazz1 --&amp;amp;gt; false 你可以反射访问这些类，但仅限于此。你无法使用clazz1.staticMethod()调用静态方法，而是使用MyClass.staticMethod()。静态方法不与对象绑定在一起，因此在静态方法中不存在this或super的概念。静态方法是全局函数；因此也没有多态的概念，因此方法重写没有意义。
+但是，如果MyClass在运行时是一个对象，你可以通过对象obj1.staticMethod()调用静态方法，但这实际上是语法糖，等效于MyClass.staticMethod()。这种做法通常会在现代IDE中引发警告。我不知道为什么他们曾经允许这种缩写。
+总结 重写是保留给实例成员以支持多态行为的。静态类成员不属于特定的实例，而是属于类本身。继承只继承受保护和公有实例成员而不是静态成员。你可能想要定义一个接口并研究工厂模式和/或策略设计模式来评估替代方法。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
