@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>managed-bean on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/managed-bean/</link>
+    <description>Recent content in managed-bean on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 11:23:05 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/managed-bean/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Choose the Right Bean Scope?</title>
+      <link>https://www.techdocdb.com/posts/how-to-choose-the-right-bean-scope/</link>
+      <pubDate>Sat, 09 Sep 2023 11:23:05 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/how-to-choose-the-right-bean-scope/</guid>
+      <description>
+        
+          
+            Introduction 在JSF中，选择正确的bean scope非常重要。bean scope决定了bean的生命周期以及数据的存储方式。本教程将详细介绍JSF中各种bean scope的作用和如何选择适合你的bean的scope。
+@Request/View/Flow/Session/ApplicationScoped @RequestScoped: 一个标记有@RequestScoped注解的bean的生命周期与一个HTTP请求-响应周期相同。也就是说，每个HTTP请求都会创建一个新的@RequestScoped bean实例。这种scope适合简单的非Ajax表单提交和展示页面。 @ViewScoped: 一个标记有@ViewScoped注解的bean的生命周期与同一个JSF页面的交互相同。只要在同一个页面进行Postback（即调用返回null或void的action方法）而没有导航或重定向，@ViewScoped bean就会一直存在。这种scope适合动态页面，包括Ajax验证、渲染和对话框等。 @FlowScoped: 一个标记有@FlowScoped注解的bean的生命周期取决于JSF面向切面编程中定义的一组页面。只要在这组页面中导航，@FlowScoped bean就会一直存在。这种scope适用于将表单分散在多个页面上的“向导”或“问卷”模式。 @SessionScoped: 一个标记有@SessionScoped注解的bean的生命周期与HTTP会话的建立相同。只要HTTP会话存在，@SessionScoped bean就会一直存在。这种scope适用于保存客户端特定的数据，例如已登录的用户和用户的首选项（语言等）。 @ApplicationScoped: 一个标记有@ApplicationScoped注解的bean的生命周期与web应用程序的运行时间相同。只要web应用程序在运行，@ApplicationScoped bean就会一直存在。这种scope适用于全局的数据和常量，例如对所有人都相同的下拉列表或只包含方法而不包含实例变量的托管bean。 请根据你的bean所持有和表示的数据来选择scope。对于简单的非Ajax表单提交和展示页面，选择@RequestScoped；对于动态页面，选择@ViewScoped；对于将表单分散在多个页面上的“向导”或“问卷”模式，选择@FlowScoped；对于保存客户端特定的数据，选择@SessionScoped；对于全局的数据和常量，选择@ApplicationScoped。
+注意，不要滥用@ApplicationScoped bean来保存会话/视图/请求作用域的数据，这样会导致数据在所有用户之间共享，而这是错误的。滥用@SessionScoped bean来保存视图/请求作用域的数据，会导致数据在同一个浏览器会话的所有标签/窗口之间共享，这对用户体验不利。滥用@RequestScoped bean来保存视图作用域的数据，会导致视图作用域的数据在每个（Ajax）Postback时被重新初始化为默认值，可能导致表单无法正常工作。滥用@ViewScoped bean来保存请求/会话/应用程序作用域的数据，以及滥用@SessionScoped bean来保存应用程序作用域的数据，对客户端没有影响，但会占用服务器内存并且效率低下。
+@CustomScoped/NoneScoped/Dependent 除了上述提到的bean scopes之外，JSF还支持一些其他的bean scopes。
+@CustomScoped: 一个标记有@CustomScoped注解的bean需要指定一个自定义的Map类型的实现，该Map需要覆盖put()和/或get()方法，以便更精细地控制bean的创建和销毁过程。 @NoneScoped/Dependent: 一个标记有@NoneScoped注解的bean和一个标记有@Dependent注解的CDI bean的生命周期都与一个EL表达式的求值过程相同。例如，如果一个登录表单有两个输入字段引用了bean的属性，还有一个按钮引用了bean的方法，则会创建三个实例。一个实例保存用户名，一个实例保存密码，一个实例用于执行操作。通常情况下，你只会在应该与注入它的bean具有相同生命周期的bean上使用这种scope。如果@NoneScoped或@Dependent被@Inject到一个@SessionScoped bean中，则它将与@SessionScoped bean具有相同的生命周期。 Flash Scope JSF还支持Flash scope。Flash scope使用一个短暂的cookie与会话作用域中的数据条目相关联。在重定向之前，一个带有与会话作用域中的数据条目相关联的唯一值的cookie将被设置在HTTP响应中。重定向后，会检查Flash scope cookie的存在，并将与cookie相关联的数据条目从会话作用域中移除，并放入重定向请求的请求作用域中。最后，将从HTTP响应中删除cookie。这样，重定向的请求就可以访问在初始请求中准备好的请求作用域数据。
+Flash scope实际上不是作为管理bean scope提供的，也就是说，没有类似于@FlashScoped的bean scope。Flash scope只能通过在托管bean中使用ExternalContext#getFlash()方法或EL表达式中的#{flash}来作为一个Map进行访问。
+以上就是如何选择合适的bean scope的说明。相信通过本教程，你已经理解了各种bean scope的作用和如何选择合适的bean scope。如果你需要更多信息，请参考相关文档。
+参考资料： How do servlets work? Instantiation, sessions, shared variables and multithreading Difference between View and Request scope in managed beans Advantages of using JSF Faces Flow instead of the normal navigation system Communication in JSF2 - Managed bean scopes Expire specific managed bean instance after time interval what is none scope bean and when to use it?
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

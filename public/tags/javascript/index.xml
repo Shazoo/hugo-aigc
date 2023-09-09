@@ -7,7 +7,96 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 14:20:29 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 11:52:32 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular2 Routing教程</title>
+      <link>https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Sep 2023 11:52:32 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            摘要 在Angular应用程序中，如何确定当前活动的路由？
+内容 在Angular应用程序中，我们经常需要知道当前活动的路由，以便在导航链接或按钮上添加活动状态的类。在不同版本的Angular中，有多种方法可以实现这一目标。本教程将介绍一些常用的方法。
+标记导航链接为活动状态 在Angular中,我们可以使用[routerLinkActive]指令来将导航链接标记为活动状态。通过给[routerLinkActive]指令添加一个用于活动状态的CSS类名，当链接的路由与当前路由匹配时，该类名将被添加到链接上。
+下面是一个带有活动状态的导航链接的示例：
+1- &amp;lt;a [routerLink]=&amp;#34;[&amp;#39;/home&amp;#39;]&amp;#34; [routerLinkActive]=&amp;#34;[&amp;#39;is-active&amp;#39;]&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; 或者，如果只需要一个类，可以简化为：
+1- &amp;lt;a [routerLink]=&amp;#34;[&amp;#39;/home&amp;#39;]&amp;#34; [routerLinkActive]=&amp;#34;&amp;#39;is-active&amp;#39;&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; 或者，如果只需要一个类，还可以进一步简化为：
+1- &amp;lt;a [routerLink]=&amp;#34;[&amp;#39;/home&amp;#39;]&amp;#34; routerLinkActive=&amp;#34;is-active&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; 有关更多信息，请参见routerLinkActive指令的文档。
+通过注入Location对象来检测当前路由 在Angular中，我们还可以通过注入Location对象来检测当前路由。Location对象提供了一种方便的方式，通过调用path()方法获取当前路由的路径。
+下面是使用Location对象检测当前活动路由的示例：
+1import { Location } from &amp;#39;@angular/common&amp;#39;; 2 3class MyController { 4 constructor(private location: Location) {} 5 6 // 获取当前路径 7 getCurrentRoute() { 8 return this.location.path(); 9 } 10} 请确保首先导入Location对象：
+1import { Location } from &amp;#39;@angular/common&amp;#39;; 注意，无论使用哪种LocationStrategy，Location类都会返回一个规范化的路径，而不会返回具体的路径片段。
+参考答案 以下是一些不同版本的Angular中确定活动路由的参考答案：
+1- With the new Angular router, you can add a `[routerLinkActive]=&amp;#34;[&amp;#39;your-class-name&amp;#39;]&amp;#34;` attribute to all your links.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>(heading level 1)</title>
+      <link>https://www.techdocdb.com/posts/heading-level-1/</link>
+      <pubDate>Sat, 09 Sep 2023 11:52:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/heading-level-1/</guid>
+      <description>
+        
+          
+            IIFE和JavaScript中的 (function() { } )() 构造是什么？ (p) 我想了解这个的含义：
+1(function () { 2 3})(); (p) 这是否基本上等同于 document.onload？
+这是一个Immediately-Invoked Function Expression (IIFE)。它在创建后立即执行。
+这与任何事件处理程序（如 document.onload ）无关。 考虑括号内的部分：(&amp;lt;b&amp;gt;function(){}&amp;lt;/b&amp;gt;)();....它是一个常规的函数表达式。然后看最后一对括号 (function(){})&amp;lt;b&amp;gt;()&amp;lt;/b&amp;gt;;，这通常用于在表达式中调用一个函数；在这种情况下，我们先前的表达式。
+这种模式通常用于避免污染全局命名空间，因为 IIFE 中使用的所有变量（如任何其他常规函数中的变量）在其作用域外不可见。 这可能是为什么你将此结构与 window.onload 的事件处理程序混淆，因为通常用于此：
+1(function(){ 2 // 你的所有代码在这里 3 var foo = function() {}; 4 window.onload = foo; 5 // ... 6})(); 7// 这里 foo 是不可访问的（undefined） （Guffa 提出的更正：）
+函数在创建后立即执行，而不是解析后执行。在执行其中的代码之前，会先解析整个脚本块。此外，解析代码并不意味着它会被执行，例如，如果 IIFE 处于函数内部，则在调用函数之前不会执行。
+（更新） 由于这是一个非常流行的主题，值得提到的是 IIFE 也可以使用 ES6 的箭头函数来编写（如 Gajus 在评论中指出的）：
+1((foo) =&amp;gt; { 2 // 在这里使用 foo 3})(&amp;#39;foo value&amp;#39;) 这是一个假设与你的问答原始文本一一对应的陈述性教程。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Random Color Generator</title>
+      <link>https://www.techdocdb.com/posts/random-color-generator/</link>
+      <pubDate>Sat, 09 Sep 2023 10:43:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/random-color-generator/</guid>
+      <description>
+        
+          
+            这篇文章将介绍如何使用JavaScript生成随机颜色。我们将展示一个例子来说明这个知识点。
+摘要 使用JavaScript生成随机颜色是一种常见的需求。我们可以使用不同的方法来实现这个目标。在本教程中，我们将介绍一个简单的方法，它可以确保生成的颜色代码始终是有效的六位16进制值。这个方法使用正则表达式和替换函数来生成随机的颜色代码。
+内容 要替换给定的color代码为一个随机颜色生成器，我们可以使用如下的方法：
+1document.overlay = GPolyline.fromEncoded({ 2 color: getRandomColor(), 3 weight: 10, 4 points: encoded_points, 5 zoomFactor: 32, 6 levels: encoded_levels, 7 numLevels: 4 8}); 我们需要定义一个getRandomColor函数，它可以生成随机的颜色代码。以下是一个可以使用的getRandomColor函数的例子：
+1function getRandomColor() { 2 var letters = &amp;#39;0123456789ABCDEF&amp;#39;; 3 var color = &amp;#39;#&amp;#39;; 4 for (var i = 0; i &amp;lt; 6; i++) { 5 color += letters[Math.floor(Math.random() * 16)]; 6 } 7 return color; 8} 使用这个函数，我们可以将color替换为一个随机的颜色代码。这个函数通过在letters字符串中获取随机的字符来生成随机的颜色代码。我们循环重复这个过程直到生成一个六位颜色代码，然后将其返回。
+总结 通过使用上述方法，我们可以在JavaScript中生成随机的颜色代码。这个方法可以确保颜色代码始终是有效的六位16进制值。希望这个教程能够对你有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sat, 09 Sep 2023 10:43:21 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>获取触发事件的元素的ID</title>
       <link>https://www.techdocdb.com/posts/%E8%8E%B7%E5%8F%96%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%85%83%E7%B4%A0%E7%9A%84id/</link>

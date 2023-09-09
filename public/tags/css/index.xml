@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 11:13:18 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 10:40:47 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS中如何为div设置内边框而不是边缘？</title>
+      <link>https://www.techdocdb.com/posts/css%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BAdiv%E8%AE%BE%E7%BD%AE%E5%86%85%E8%BE%B9%E6%A1%86%E8%80%8C%E4%B8%8D%E6%98%AF%E8%BE%B9%E7%BC%98/</link>
+      <pubDate>Sat, 09 Sep 2023 10:40:47 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/css%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BAdiv%E8%AE%BE%E7%BD%AE%E5%86%85%E8%BE%B9%E6%A1%86%E8%80%8C%E4%B8%8D%E6%98%AF%E8%BE%B9%E7%BC%98/</guid>
+      <description>
+        
+          
+            设置box-sizing属性为border-box可以实现将边框置于&amp;lt;div&amp;gt;元素内部而不是边缘的效果：
+1div { 2 box-sizing: border-box; 3 -moz-box-sizing: border-box; 4 -webkit-box-sizing: border-box; 5 width: 100px; 6 height: 100px; 7 border: 20px solid #f00; 8 background: #00f; 9 margin: 10px; 10} 11 12div + div { 13 border: 10px solid red; 14} 效果如下：
+1&amp;lt;div&amp;gt;Hello!&amp;lt;/div&amp;gt; 2&amp;lt;div&amp;gt;Hello!&amp;lt;/div&amp;gt; 通过将box-sizing属性设置为border-box，可以确保边框的宽度被包括在&amp;lt;div&amp;gt;元素的宽度和高度内。这样，设置边框后，&amp;lt;div&amp;gt;元素的宽度仍为100px。这种方法在IE8及以上版本中都适用。
+此外还有其他的解决方法，例如使用box-shadow或outline属性。具体可以参考下面的代码和链接。
+参考答案及链接： 解决方案1：使用伪元素 1.button { 2 background: #333; 3 color: #fff; 4 float: left; 5 padding: 20px; 6 margin: 20px; 7 position: relative; 8} 9 10.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>&lt;html&gt;</title>
       <link>https://www.techdocdb.com/posts/html/</link>

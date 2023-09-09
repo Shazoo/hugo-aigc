@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iife on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/iife/</link>
+    <description>Recent content in iife on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 11:52:06 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/iife/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(heading level 1)</title>
+      <link>https://www.techdocdb.com/posts/heading-level-1/</link>
+      <pubDate>Sat, 09 Sep 2023 11:52:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/heading-level-1/</guid>
+      <description>
+        
+          
+            IIFE和JavaScript中的 (function() { } )() 构造是什么？ (p) 我想了解这个的含义：
+1(function () { 2 3})(); (p) 这是否基本上等同于 document.onload？
+这是一个Immediately-Invoked Function Expression (IIFE)。它在创建后立即执行。
+这与任何事件处理程序（如 document.onload ）无关。 考虑括号内的部分：(&amp;lt;b&amp;gt;function(){}&amp;lt;/b&amp;gt;)();....它是一个常规的函数表达式。然后看最后一对括号 (function(){})&amp;lt;b&amp;gt;()&amp;lt;/b&amp;gt;;，这通常用于在表达式中调用一个函数；在这种情况下，我们先前的表达式。
+这种模式通常用于避免污染全局命名空间，因为 IIFE 中使用的所有变量（如任何其他常规函数中的变量）在其作用域外不可见。 这可能是为什么你将此结构与 window.onload 的事件处理程序混淆，因为通常用于此：
+1(function(){ 2 // 你的所有代码在这里 3 var foo = function() {}; 4 window.onload = foo; 5 // ... 6})(); 7// 这里 foo 是不可访问的（undefined） （Guffa 提出的更正：）
+函数在创建后立即执行，而不是解析后执行。在执行其中的代码之前，会先解析整个脚本块。此外，解析代码并不意味着它会被执行，例如，如果 IIFE 处于函数内部，则在调用函数之前不会执行。
+（更新） 由于这是一个非常流行的主题，值得提到的是 IIFE 也可以使用 ES6 的箭头函数来编写（如 Gajus 在评论中指出的）：
+1((foo) =&amp;gt; { 2 // 在这里使用 foo 3})(&amp;#39;foo value&amp;#39;) 这是一个假设与你的问答原始文本一一对应的陈述性教程。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

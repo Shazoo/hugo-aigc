@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generics on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/generics/</link>
+    <description>Recent content in generics on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 08:38:44 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/generics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java中Map接口的get(Object key)方法为什么不是完全的泛型化</title>
+      <link>https://www.techdocdb.com/posts/java%E4%B8%ADmap%E6%8E%A5%E5%8F%A3%E7%9A%84getobject-key%E6%96%B9%E6%B3%95%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%AE%8C%E5%85%A8%E7%9A%84%E6%B3%9B%E5%9E%8B%E5%8C%96/</link>
+      <pubDate>Sat, 09 Sep 2023 08:38:44 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/java%E4%B8%ADmap%E6%8E%A5%E5%8F%A3%E7%9A%84getobject-key%E6%96%B9%E6%B3%95%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%AE%8C%E5%85%A8%E7%9A%84%E6%B3%9B%E5%9E%8B%E5%8C%96/</guid>
+      <description>
+        
+          
+            在Java的java.util.Map接口中，我们可以看到get(Object key)方法的签名，并不是泛型方法，而是接收一个Object类型的参数。那么，这是为什么呢？
+首先，需要明确的是，equals()方法接收的参数类型为Object，而不是与对象相同的类型。因此，Map.get(Object key)方法的参数与key的类型必须相等，而不一定是相同的类型。
+尽管很多类都会将equals()方法定义为仅与相同类的对象相等，但在Java中，并不是所有情况都是这样的。例如，List.equals()方法的规定是，如果两个List对象是同一类型并且具有相同的内容，那么它们是相等的，即使它们是List的不同实现类。所以，回到问题中的例子，根据方法的规定，我们可以有一个Map&amp;lt;ArrayList, Something&amp;gt;类型的Map，并可以使用LinkedList作为参数来调用get()方法，并且它将返回具有相同内容的列表作为key。如果get()方法是泛型方法，并限制了参数类型，这种情况是不可能实现的。
+因此，从以上观点可以得出，Map.get(Object key)方法不是完全的泛型化，是因为在Java中，并不能保证key的参数类型与传入的对象类型完全一致。
+这种设计决策还具有向后兼容性，因为原先的Map（或HashMap）仍然需要支持get(Object)方法。
+总结起来，Map.get(Object key)方法不是完全的泛型化，是为了保持与已有代码的兼容性，并且遵循了Java中equals()方法的参数类型为Object的规定。这种设计决策可以在保持灵活性的同时，满足各种情况下的需求。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

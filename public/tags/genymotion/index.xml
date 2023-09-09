@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>genymotion on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/genymotion/</link>
+    <description>Recent content in genymotion on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 09:09:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/genymotion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Genymotion虚拟设备安装Google框架（Play，Accounts等）</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8genymotion%E8%99%9A%E6%8B%9F%E8%AE%BE%E5%A4%87%E5%AE%89%E8%A3%85google%E6%A1%86%E6%9E%B6playaccounts%E7%AD%89/</link>
+      <pubDate>Sat, 09 Sep 2023 09:09:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8genymotion%E8%99%9A%E6%8B%9F%E8%AE%BE%E5%A4%87%E5%AE%89%E8%A3%85google%E6%A1%86%E6%9E%B6playaccounts%E7%AD%89/</guid>
+      <description>
+        
+          
+            Genymotion是一个非常快的Android虚拟设备，而且比ADT模拟器要强大得多。在Genymotion中安装Google Play以下载一些应用程序是很有必要的。那么，如何进行安装呢？
+更新于2017年5月28日： 很抱歉，本方法已不被我支持，并且据我所知也已经无效了，请不要再尝试此方法。 下面是一种方法可以获取支持ARM翻译（该翻译导致“INSTALL_FAILED_CPU_ABI_INCOMPATIBLE”错误）和安装Google Play应用程序的方式：
+下载以下ZIP文件：
+ARM Translation Installer v1.1（如果刷入ARM翻译时遇到问题，请尝试从镜像重新下载） 下载适合您Android版本的正确GApps： Google Apps for Android 6.0 Google Apps for Android 5.1 Google Apps for Android 5.0 Google Apps for Android 4.4（从CM11链接下载）（4.4 GApps可能存在一些错误） Google Apps for Android 4.3（镜像：Mirrors） Google Apps for Android 4.2 Google Apps for Android 4.1 打开Genymotion虚拟设备并进入主界面。
+将Genymotion-ARM-Translation_v1.1.zip拖放到Genymotion虚拟设备窗口中。它会显示“文件传输中”。一旦提示刷入，点击“确认”即可。
+使用ADB（adb reboot）或ROM Toolbox之类的应用程序重新启动虚拟设备。您也可以简单地关闭虚拟设备窗口，但我不建议这样做。
+同样，在主界面上，将gapps-*-signed.zip（文件名可能有所不同）拖放到虚拟设备上，并在提示时点击“确认”。
+等待安装完成后，再次重新启动虚拟设备，并打开Google Play商店。
+使用您的Google帐号登录。
+打开商店后，转到“我的应用”菜单并让所有应用程序更新（更新会修复许多问题）。同时，尝试直接更新Google Play服务。
+现在，尝试搜索“Netflix”和“Google Drive”。
+如果这两个应用程序都显示在结果中并且您能够下载/安装它们，那么恭喜您！您已经成功完成了ARM支持和完全设置Google Play！
+请注意，此方法已在Genymotion v2.0.1-v2.1上以及使用Android 4.3和4.4镜像上进行了测试。如果您只需要ARM支持，可以跳过GApps的步骤，它也能正常工作。
+这是一种在Genymotion虚拟设备上安装Google框架的方法，希望对您有所帮助！
+参考答案： How do you install Google frameworks (Play, Accounts, etc.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

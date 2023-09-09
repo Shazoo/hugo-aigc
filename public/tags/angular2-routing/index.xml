@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>angular2-routing on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/angular2-routing/</link>
+    <description>Recent content in angular2-routing on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 09 Sep 2023 11:52:32 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/angular2-routing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular2 Routing教程</title>
+      <link>https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Sep 2023 11:52:32 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            摘要 在Angular应用程序中，如何确定当前活动的路由？
+内容 在Angular应用程序中，我们经常需要知道当前活动的路由，以便在导航链接或按钮上添加活动状态的类。在不同版本的Angular中，有多种方法可以实现这一目标。本教程将介绍一些常用的方法。
+标记导航链接为活动状态 在Angular中,我们可以使用[routerLinkActive]指令来将导航链接标记为活动状态。通过给[routerLinkActive]指令添加一个用于活动状态的CSS类名，当链接的路由与当前路由匹配时，该类名将被添加到链接上。
+下面是一个带有活动状态的导航链接的示例：
+1- &amp;lt;a [routerLink]=&amp;#34;[&amp;#39;/home&amp;#39;]&amp;#34; [routerLinkActive]=&amp;#34;[&amp;#39;is-active&amp;#39;]&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; 或者，如果只需要一个类，可以简化为：
+1- &amp;lt;a [routerLink]=&amp;#34;[&amp;#39;/home&amp;#39;]&amp;#34; [routerLinkActive]=&amp;#34;&amp;#39;is-active&amp;#39;&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; 或者，如果只需要一个类，还可以进一步简化为：
+1- &amp;lt;a [routerLink]=&amp;#34;[&amp;#39;/home&amp;#39;]&amp;#34; routerLinkActive=&amp;#34;is-active&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; 有关更多信息，请参见routerLinkActive指令的文档。
+通过注入Location对象来检测当前路由 在Angular中，我们还可以通过注入Location对象来检测当前路由。Location对象提供了一种方便的方式，通过调用path()方法获取当前路由的路径。
+下面是使用Location对象检测当前活动路由的示例：
+1import { Location } from &amp;#39;@angular/common&amp;#39;; 2 3class MyController { 4 constructor(private location: Location) {} 5 6 // 获取当前路径 7 getCurrentRoute() { 8 return this.location.path(); 9 } 10} 请确保首先导入Location对象：
+1import { Location } from &amp;#39;@angular/common&amp;#39;; 注意，无论使用哪种LocationStrategy，Location类都会返回一个规范化的路径，而不会返回具体的路径片段。
+参考答案 以下是一些不同版本的Angular中确定活动路由的参考答案：
+1- With the new Angular router, you can add a `[routerLinkActive]=&amp;#34;[&amp;#39;your-class-name&amp;#39;]&amp;#34;` attribute to all your links.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
