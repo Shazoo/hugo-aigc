@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 17:20:33 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 11:30:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动画展开/折叠的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 10 Sep 2023 11:30:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了Android中展开和折叠动画的实现方法。通过改变视图的高度，可以实现展开和折叠效果。
+内容 如果你需要一个展开和折叠的动画效果，可以使用以下方法来实现：
+1fun View.expand() { 2 visibility = View.VISIBLE 3 val animate = TranslateAnimation(0f, 0f, -height.toFloat(), 0f) 4 animate.duration = 200 5 animate.fillAfter = true 6 startAnimation(animate) 7} 8 9fun View.collapse() { 10 val animate = TranslateAnimation(0f, 0f, 0f, -height.toFloat() ) 11 animate.duration = 200 12 animate.fillAfter = true 13 startAnimation(animate) 14} 这两个扩展函数可以直接应用到任何视图上。expand()函数将指定的视图展开，collapse()函数将指定的视图折叠起来。这些函数使用了TranslateAnimation来实现动画效果。通过改变视图的垂直平移来实现展开和折叠的效果。
+这些函数应该在视图的可见性发生变化时调用。比如，当用户点击一个按钮来展开或折叠视图时，可以通过调用expand()或collapse()函数来实现动画效果。
+总结 通过使用TranslateAnimation和视图的可见性，可以很容易地实现展开和折叠动画效果。你只需要调用相应的函数就可以实现这些效果。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Android ActionBarCompat主题问题解决方案</title>
       <link>https://www.techdocdb.com/posts/android-actionbarcompat%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>

@@ -7,7 +7,262 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 17:20:33 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 11:30:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动画展开/折叠的方法</title>
+      <link>https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 10 Sep 2023 11:30:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了Android中展开和折叠动画的实现方法。通过改变视图的高度，可以实现展开和折叠效果。
+内容 如果你需要一个展开和折叠的动画效果，可以使用以下方法来实现：
+1fun View.expand() { 2 visibility = View.VISIBLE 3 val animate = TranslateAnimation(0f, 0f, -height.toFloat(), 0f) 4 animate.duration = 200 5 animate.fillAfter = true 6 startAnimation(animate) 7} 8 9fun View.collapse() { 10 val animate = TranslateAnimation(0f, 0f, 0f, -height.toFloat() ) 11 animate.duration = 200 12 animate.fillAfter = true 13 startAnimation(animate) 14} 这两个扩展函数可以直接应用到任何视图上。expand()函数将指定的视图展开，collapse()函数将指定的视图折叠起来。这些函数使用了TranslateAnimation来实现动画效果。通过改变视图的垂直平移来实现展开和折叠的效果。
+这些函数应该在视图的可见性发生变化时调用。比如，当用户点击一个按钮来展开或折叠视图时，可以通过调用expand()或collapse()函数来实现动画效果。
+总结 通过使用TranslateAnimation和视图的可见性，可以很容易地实现展开和折叠动画效果。你只需要调用相应的函数就可以实现这些效果。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>深度学习中的SAME和VALID填充方式</title>
+      <link>https://www.techdocdb.com/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84same%E5%92%8Cvalid%E5%A1%AB%E5%85%85%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sun, 10 Sep 2023 10:40:12 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84same%E5%92%8Cvalid%E5%A1%AB%E5%85%85%E6%96%B9%E5%BC%8F/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍深度学习中的&#39;SAME&#39;和&#39;VALID&#39;填充方式，并通过例子进行说明。我们将使用TensorFlow和Python来实现这些填充方式。
+内容 深度学习中的卷积操作通常需要对输入数据进行填充，以确保输出大小符合预期。TensorFlow中的卷积操作提供了两种常用的填充方式：&#39;SAME&#39;和&#39;VALID&#39;。
+&#39;VALID&#39;填充方式 &#39;VALID&#39;填充方式表示不进行填充操作。 在卷积操作中，&#39;VALID&#39;填充方式的输出大小会根据输入数据大小、卷积核大小以及步长进行计算。 &#39;VALID&#39;填充方式的输出大小计算公式为： 1out_height = ceil(float(in_height - filter_height + 1) / float(strides[1])) 2out_width = ceil(float(in_width - filter_width + 1) / float(strides[2])) 其中，in_height和in_width为输入数据的高度和宽度，filter_height和filter_width为卷积核的高度和宽度，strides[1]和strides[2]为步长的垂直和水平方向上的大小。
+&#39;SAME&#39;填充方式 &#39;SAME&#39;填充方式表示进行填充操作，以确保输出大小与输入大小相同。 在卷积操作中，&#39;SAME&#39;填充方式会在输入数据的上下左右分别填充一定数量的0。 &#39;SAME&#39;填充方式的输出大小计算公式为： 1out_height = ceil(float(in_height) / float(strides[1])) 2out_width = ceil(float(in_width) / float(strides[2])) 同时，还需要根据计算结果对输入数据进行填充，以确保输出大小与输入大小相同。
+为了更好地理解&#39;SAME&#39;和&#39;VALID&#39;填充方式，我们将通过一个例子来进行说明。
+假设输入数据为一个形状为[2, 3]，通道数为1的图像，并设置填充方式为&#39;SAME&#39;和&#39;VALID&#39;，核大小为2x2，步长为2。
+对于&#39;SAME&#39;填充方式，我们将输入数据进行填充，填充后的大小为[2, 4]。然后，我们对填充后的数据进行最大池化操作，得到输出的大小为[1, 2]。具体代码如下所示：
+1import tensorflow as tf 2 3x = tf.constant([[1., 2., 3.], 4 [4., 5., 6.]]) 5x = tf.reshape(x, [1, 2, 3, 1]) 6 7same_pad = tf.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>View markdown files offline</title>
+      <link>https://www.techdocdb.com/posts/view-markdown-files-offline/</link>
+      <pubDate>Sun, 10 Sep 2023 10:28:26 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/view-markdown-files-offline/</guid>
+      <description>
+        
+          
+            摘要 在上传到Github之前，有没有一种方法能够离线显示.md文件呢？我指的是显示README.md文件在Github上显示的效果，而不是用于编辑目的。
+内容 我找到了一种用PHP来查看的方法。在进一步调查后，我找到了2种离线和在线查看.md文件的解决方案：
+离线解决方案：https://github.com/WolfieZero/Markdown-Viewer-PHP 在线解决方案：http://daringfireball.net/projects/markdown/dingus 我推荐使用离线版本，这样即使当你在如厕时也可以进行编辑。:)
+除了这个解决方案，还有其他一些选择可以离线查看和编辑Markdown文件。下面列举了一些例子：
+texts: 一个轻量级且简洁的Markdown查看器和编辑器，适用于Mac和Windows。 Downmarker: 拥有垂直分隔视图，可以实时预览Markdown文件。 ReText: 一个漂亮的桌面Markdown编辑器。 gfms: 一个使用Node.js编写的离线Markdown查看器，支持Github风格的Markdown。 MarkdownPad: 一个很好用的Markdown编辑器，适用于Windows。 StackEdit: 一个支持在线和离线编辑的Markdown编辑器，可以连接到Dropbox或Google Drive。 Notepad++: 一个在文本编辑器Notepad++中支持Markdown语法高亮的插件。 Python-Markdown-Editor: 基于Python-Markdown、Pygments和CodeMirror的Markdown编辑器，支持实时预览、代码高亮和Github风格。 Haroopad: 一个适用于多平台的漂亮的Markdown编辑器。 Brackets + Markdown Preview Extension: 一个结合了Brackets和Markdown预览扩展的编辑器，支持代码高亮和Github风格的Markdown。 除了这些，还有其他很多选择供用户选择。
+总结 以上是一些查看和离线编辑Markdown文件的解决方案。用户可以根据自己的需求选择合适的工具来查看和编辑Markdown文件。无论是在线还是离线，这些工具都可以帮助用户预览Markdown文件的效果，并帮助他们进行编辑和修改。希望这些解决方案能对用户有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在克隆之前查看GitHub存储库的大小？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</link>
+      <pubDate>Sun, 10 Sep 2023 10:27:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</guid>
+      <description>
+        
+          
+            在我们决定是否要克隆GitHub存储库之前，有没有办法在GitHub上查看Git存储库的大小呢？
+这似乎是一个非常明显/基本的统计数据，但我找不到在GitHub上如何查看它的方法。
+解决方案 可以通过GitHub API访问此信息。
+API文档：GitHub API文档 用法：GET /repos/:user/:repo 示例：https://api.github.com/repos/git/git 在检索关于存储库的信息时，返回的JSON中的一个属性名为“size”，以千字节为单位表示整个存储库（包括其全部历史记录）的大小。
+例如，Git存储库大小约为124MB。返回的JSON中的“size”属性的值为124283。
+注：确实是以千字节的方式表示大小，基于服务器端裸存储库的磁盘使用情况。但是，为了避免在具有大网络的存储库中浪费太多空间，GitHub依赖于Git替代品（Git alternates）。在这种配置中，根据裸存储库计算磁盘使用量不会计算共享对象存储，从而通过API调用返回了一个“不完整”的值。这是GitHub支持提供的信息。
+参考代码 想要查看示例代码，请点击下方链接：
+bash Python JavaScript Bookmarklet GitHub CLI 浏览器扩展 参考代码： bash 1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+例如：
+1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/git/git 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 返回值为931668（以KB为单位），约等于1GB。
+私有存储库需要进行身份验证。一种方法是使用GitHub个人访问令牌：
+1curl -u &amp;#34;YOURGITHUBUSERNAME:$PERSONAL_ACCESS_TOKEN&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将PERSONAL_ACCESS_TOKEN替换为您的个人访问令牌。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Git中&#34;git reset&#34;和&#34;git checkout&#34;的区别</title>
+      <link>https://www.techdocdb.com/posts/git%E4%B8%ADgit-reset%E5%92%8Cgit-checkout%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 10 Sep 2023 09:39:30 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/git%E4%B8%ADgit-reset%E5%92%8Cgit-checkout%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            Git是一款非常流行的版本控制系统，其中的&amp;quot;git reset&amp;quot;和&amp;quot;git checkout&amp;quot;是常用的命令。很多人对这两个命令的作用有些混淆，以为它们是相同的，都可以将项目回退到特定的提交点。但实际上，它们是有区别的。本文将解释一下它们的实际区别，并通过一些例子来说明。
+git reset 首先，我们来看一下&amp;quot;git reset&amp;quot;命令。&amp;quot;git reset&amp;quot;主要用于更新索引，移动HEAD指针。具体来说，执行&amp;quot;git reset&amp;quot;命令会将HEAD和当前分支指向具体的提交点，从而实现回退操作。需要注意的是，如果不指定具体的提交点，则默认会回退到最近的一次提交点。
+下面是一个使用&amp;quot;git reset&amp;quot;命令的例子：
+1git reset HEAD~1 该命令将会将HEAD和当前分支回退到上一个提交点。需要注意的是，这只会更新索引，而不会影响工作目录中的文件。
+git checkout 接下来，我们来看一下&amp;quot;git checkout&amp;quot;命令。&amp;quot;git checkout&amp;quot;主要用于更新工作目录中的文件，而不会影响索引。具体来说，执行&amp;quot;git checkout&amp;quot;命令会将指定的提交点的文件拷贝到工作目录中。需要注意的是，如果不指定具体的提交点，则默认会将当前分支的最新提交点的文件拷贝到工作目录中。
+下面是一个使用&amp;quot;git checkout&amp;quot;命令的例子：
+1git checkout master 该命令将会将工作目录中的文件替换为&amp;quot;master&amp;quot;分支的最新提交点的文件。需要注意的是，如果当前分支和目标分支不相同，则会进入&amp;quot;detached HEAD&amp;quot;状态。
+总结 总的来说，&amp;quot;git reset&amp;quot;命令是用于更新索引，移动HEAD指针的，而&amp;quot;git checkout&amp;quot;命令是用于更新工作目录中的文件的。它们在操作过程中可能会有一些重叠，但最关键的区别在于&amp;quot;git reset&amp;quot;会移动当前分支指针，而&amp;quot;git checkout&amp;quot;不会移动当前分支指针。
+以上就是关于&amp;quot;git reset&amp;quot;和&amp;quot;git checkout&amp;quot;的区别的介绍。希望能对大家理解这两个命令有所帮助。
+参考资料 Git官方文档：git-reset Git官方文档：git-checkout 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在Android Studio中查看方法信息</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8android-studio%E4%B8%AD%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Sun, 10 Sep 2023 09:26:27 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8android-studio%E4%B8%AD%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E4%BF%A1%E6%81%AF/</guid>
+      <description>
+        
+          
+            Android Studio是开发Android应用程序的集成开发环境（IDE）。在开发过程中，经常需要查看方法的详细信息，包括方法的功能、参数和返回值。本教程将介绍如何在Android Studio中查看方法信息的方法。
+方法一：使用快捷方式 最简单直接的方法是使用以下快捷方式：
+在菜单栏中选择&amp;quot;File&amp;quot;（文件）→ &amp;quot;Settings&amp;quot;（设置）→ &amp;quot;Editor&amp;quot;（编辑器）→ &amp;quot;General&amp;quot;（常规） 对于Mac OS X系统，选择&amp;quot;Android Studio&amp;quot; → &amp;quot;Preferences&amp;quot;（偏好设置）→ &amp;quot;Editor&amp;quot;（编辑器）→ &amp;quot;General&amp;quot;（常规），并勾选&amp;quot;Show quick documentation on mouse move&amp;quot;（当鼠标移动时显示快速文档） 示例截图如下：
+这样，当你将鼠标悬停在方法上时，会弹出一个窗口显示方法的详细信息。
+方法二：修改配置文件 另一种方法是通过修改配置文件来实现：
+在IntelliJ IDEA的&amp;quot;bin&amp;quot;文件夹中搜索&amp;quot;idea.properties&amp;quot;文件。 在该文件中添加以下代码：auto.show.quick.doc=true 这样，你也可以像Eclipse一样，通过鼠标悬停在方法上，弹出浮动文档窗口。
+注意事项： 如果你只想看到方法的参数信息，可以使用快捷键Ctrl + P或Command + P。 如果你只想看到方法的文档信息，可以使用快捷键Ctrl + Q或Command + Q。 如果你需要下载Android SDK的文档，请确保在SDK Manager中下载并安装&amp;quot;Documentation for Android SDK&amp;quot;。 以上就是在Android Studio中查看方法信息的方法。希望对你的开发工作有所帮助！如有其他问题，请随时提问。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>命令行/Shell帮助文本的“标准”格式是什么？</title>
+      <link>https://www.techdocdb.com/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/shell%E5%B8%AE%E5%8A%A9%E6%96%87%E6%9C%AC%E7%9A%84%E6%A0%87%E5%87%86%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Sun, 10 Sep 2023 09:11:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/shell%E5%B8%AE%E5%8A%A9%E6%96%87%E6%9C%AC%E7%9A%84%E6%A0%87%E5%87%86%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>
+        
+          
+            如果没有的话，是否有一种事实上的标准？我的命令行帮助文本如下所示：
+1usage: app_name [options] required_input required_input2 2 options: 3 -a, --argument Does something 4 -b required Does something with &amp;#34;required&amp;#34; 5 -c, --command required Something else 6 -d [optlistitem1 optlistitem 2 ... ] Something with list 我从各种工具的帮助文本中读取了这些内容，但是是否有一份指南或者类似的标准清单呢？比如，我应该使用方括号还是括号？如何使用空格？如果参数是一个列表怎么办？谢谢！
+概述 通常，帮助文本应包含以下内容：
+应用程序的描述 用法语法，包括： 使用[options]表示选项的位置 使用arg_name表示必需的单个参数 使用[arg_name]表示可选的单个参数 使用arg_name...表示必需的多个参数（这种情况很少见） 使用[arg_name...]表示可接受任意数量的参数 注意，arg_name应该是一个简短的描述性名称，使用小写的蛇形命名法 一个格式良好的选项列表，每个选项都包含： 简短描述 默认值（如果有的话） 可能的取值范围（如果适用） 注意，如果一个选项可以使用短格式（例如-l）或长格式（例如--list），请在同一行上同时包含两者，因为它们的描述是相同的 提示配置文件或环境变量的位置，这些位置可能是命令行参数的来源，例如GREP_OPTS 如果有man页，请指明，否则，请简要指示如何找到更详细的帮助 另外，好的做法是同时接受-h和--help来触发此消息，并且如果用户在命令行语法中出错（例如省略了必需的参数），应显示此消息。
+参考答案 GNU编码规范是一个很好的参考资料，其中这一节涉及--help的输出。在这种情况下，它并不是非常具体。你可以采用打印一个表格，显示短选项和长选项以及简洁的描述的方式，这样做应该不会出错。为了可读性，尝试在所有参数之间保持正确的间距。你可能还想为你的工具提供一个man页（可能还有一个info手册），以提供更详细的说明。 是的，你走在正确的轨道上。 是的，方括号通常用于表示可选项。 通常情况下，如你所示，有一个顶部的命令行摘要，后面是详细信息，最好为每个选项提供示例。 （你的示例在每个选项描述之间显示了空行，但我假设这是编辑问题，你真正的程序应输出缩进的选项列表，之间没有空行。在任何情况下，这是标准的遵循方式。） 一种较新的趋势（也许有一个POSIX规范涉及到了这一点？），是取消man页系统的文档，直接将所有man页中的信息作为program --help的输出的一部分。这部分内容将包括更长的描述、解释的概念、使用示例、已知的限制和错误、如何报告错误以及相关命令的“参见”部分。 Microsoft有他们自己的命令行规范。 参考docopt。它是一种官方的标准，用于文档化（和自动解析）命令行参数。示例如下： 1Usage: 2 my_program command --option &amp;lt;argument&amp;gt; 3 my_program [&amp;lt;optional-argument&amp;gt;] 4 my_program --another-option=&amp;lt;with-argument&amp;gt; 5 my_program (--either-that-option | &amp;lt;or-this-argument&amp;gt;) 6 my_program &amp;lt;repeating-argument&amp;gt; &amp;lt;repeating-argument&amp;gt;.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用JavaScript如何去除字符串中的最后一个字符？</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Sun, 10 Sep 2023 08:30:10 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用JavaScript去除字符串中的最后一个字符。我们将使用substring、slice和正则表达式来演示这些方法。
+内容 你可以使用substring方法来去除字符串的最后一个字符。例如，假设我们有一个字符串str = &amp;quot;12345.00&amp;quot;，我们想要去除最后一个字符，只保留12345.0。你可以按照以下方式操作：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.substring(0, str.length - 1); 3console.log(str); 这段代码中，我们使用substring方法，传入起始索引0和字符串长度减1作为参数，这样就能去除最后一个字符。
+除了substring之外，还可以使用slice方法来实现相同的效果。与substring不同的是，slice方法中可以使用负数作为索引，表示相对于字符串末尾的偏移量。例如，假设我们要去除字符串str中的最后一个字符，可以按照以下方式操作：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.slice(0, -1); 3console.log(str); 在这段代码中，我们使用了slice方法，并传入起始索引0和索引-1作为参数，这样就能去除最后一个字符。
+同时，你还可以使用正则表达式来去除字符串的最后一个字符。例如，假设我们有一个字符串str = &amp;quot;12345.00&amp;quot;，我们想要去除最后一个字符，只保留12345.0。你可以按照以下方式操作：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.replace(/.$/, &amp;#34;&amp;#34;); 3console.log(str); 在这段代码中，我们使用了正则表达式/.$/，它匹配了字符串中的最后一个字符。然后，我们使用replace方法将匹配到的字符替换为空字符串。
+总结 通过使用substring、slice和正则表达式，你可以很方便地去除字符串中的最后一个字符。根据你的需求，可以选择适合你的方法来进行操作。
+参考答案：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.slice(0, -1); 3console.log(str); 参考答案：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.substring(0, str.length - 1); 3console.log(str); 参考答案：
+1let str = &amp;#34;12345.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>总数</title>
+      <link>https://www.techdocdb.com/posts/%E6%80%BB%E6%95%B0/</link>
+      <pubDate>Sun, 10 Sep 2023 08:11:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E6%80%BB%E6%95%B0/</guid>
+      <description>
+        
+          
+            计算枚举项的总数是在许多编程任务中的常见需求之一。在.NET和C#中，有几种方法可以解决这个问题。
+使用Enum.GetNames方法 Enum.GetNames方法可以返回表示枚举中所有项的名称的数组。使用此数组的Length属性可以得到枚举项的总数。
+1var myEnumMemberCount = Enum.GetNames(typeof(MyEnum)).Length; 使用Enum.GetValues方法 Enum.GetValues方法可以返回一个表示枚举中所有项的值的数组。使用此数组的Length属性可以得到枚举项的总数。
+1var myEnumMemberCount = Enum.GetValues(typeof(MyEnum)).Length; 示例 考虑以下枚举类型MyEnum的定义：
+1enum MyEnum 2{ 3 A = 1, 4 B = 2, 5 C = 1, 6 D = 3, 7 E = 2 8} 我们可以使用Enum.GetNames方法来计算枚举项的总数：
+1var namesCount = Enum.GetNames(typeof(MyEnum)).Length; 我们也可以使用Enum.GetValues方法来计算枚举项的总数：
+1var valuesCount = Enum.GetValues(typeof(MyEnum)).Cast&amp;lt;MyEnum&amp;gt;().Distinct().Count(); 注意，使用Enum.GetValues方法时需要将结果转换为MyEnum类型，并通过Distinct方法去除重复项。
+效率比较 对于以上两种方法，一种是使用Enum.GetNames方法，一种是使用Enum.GetValues方法。我们进行了性能比较测试，并得出以下结果：
+方法 平均耗时 Enum.GetNames 47.15 ns Enum.GetValues 671.30 ns 从测试结果可以看出，使用Enum.GetNames方法的效率要比使用Enum.GetValues方法高得多。
+结论 通过使用Enum.GetNames方法或Enum.GetValues方法，我们可以轻松地获取枚举中的项的总数。这些是.NET和C#中常用的方法，可以帮助我们完成这个任务。根据实际需求和性能要求，可以选择适合的方法来获取枚举项的总数。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>热衷于帮助和提升Stack Overflow的工程师</title>
+      <link>https://www.techdocdb.com/posts/%E7%83%AD%E8%A1%B7%E4%BA%8E%E5%B8%AE%E5%8A%A9%E5%92%8C%E6%8F%90%E5%8D%87stack-overflow%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B8%88/</link>
+      <pubDate>Sun, 10 Sep 2023 08:11:00 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E7%83%AD%E8%A1%B7%E4%BA%8E%E5%B8%AE%E5%8A%A9%E5%92%8C%E6%8F%90%E5%8D%87stack-overflow%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B8%88/</guid>
+      <description>
+        
+          
+            摘要 本教程将向大家介绍一位热衷于帮助其他开发者和提升Stack Overflow质量的工程师。他的专长领域包括Android、Python、Matlab和Java。
+内容 这位工程师是一名长期在其他网站担任版主的人，但他真正的身份是一名程序员，并且经常回到Stack Overflow这个平台。他希望自己能更好地管理关闭问题队列，并努力减少队列中的问题数量。他也希望能在这里为大家提供更多的帮助。以下是他的一些想法和承诺：
+我们确实需要在Stack Overflow上保持一定的质量。 我们应该对新手友好。毕竟，我们每个人都曾经是新手，但是最终我们都学会了如何做事。 他是一位热衷于Android的开发者，他希望能为清理和整理Android标签下的问题做出贡献。作为一个版主或非版主，他都将积极参与其中。此外，他还非常熟悉Python、Matlab和Java。 他会尽量多使用40个关闭投票权，以减少关闭问题队列中的问题数量。作为一名版主，他的每个关闭投票将具有更大的权重，1个关闭投票就等于减少了1个问题。 以下是一些有趣的统计数据，截止到2020年2月16日周日：
+提交了266个有用的举报，拒绝了3个举报。 审查了809个被关闭的问题。 审查了767个编辑。 完成了342个低质量问题的审查。 总结 这位工程师热衷于帮助其他开发者，他的专长领域包括Android、Python、Matlab和Java。他希望能在Stack Overflow上为大家提供更好的帮助，并提升平台的质量。通过关闭问题、整理标签、审查举报等方式，他努力减少关闭问题队列中的问题数量，以提供一个更好的开发环境。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>当应该使用大括号来导入ES6的import语句？</title>
+      <link>https://www.techdocdb.com/posts/%E5%BD%93%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%A4%A7%E6%8B%AC%E5%8F%B7%E6%9D%A5%E5%AF%BC%E5%85%A5es6%E7%9A%84import%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Sun, 10 Sep 2023 08:00:07 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%BD%93%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E5%A4%A7%E6%8B%AC%E5%8F%B7%E6%9D%A5%E5%AF%BC%E5%85%A5es6%E7%9A%84import%E8%AF%AD%E5%8F%A5/</guid>
+      <description>
+        
+          
+            本教程将解释在ES6中使用大括号在导入语句中的使用时机。
+摘要 ES6中的import关键字用于导入模块。使用大括号，我们可以选择性地导入模块的特定组件。不使用大括号时，默认将导入模块的默认导出。
+内容 为了更好地理解何时在导入语句中使用大括号，我们将通过一个例子来说明。
+例如，我们有一个名为initialState.js的文件，内容如下：
+1var initialState = { 2 todo: { 3 todos: [ 4 {id: 1, task: &amp;#39;Finish Coding&amp;#39;, completed: false}, 5 {id: 2, task: &amp;#39;Do Laundry&amp;#39;, completed: false}, 6 {id: 2, task: &amp;#39;Shopping Groceries&amp;#39;, completed: false}, 7 ] 8 } 9}; 10 11export default initialState; 在TodoReducer.js文件中，我们需要导入此文件，而不使用大括号：
+1import initialState from &amp;#39;./initialState&amp;#39;; 如果我们在大括号中包含initialState，则会出现以下错误：
+1Cannot read property &amp;#39;todos&amp;#39; of undefined 其他一些文件中的组件也可能由于使用了大括号而出现类似的错误。那么我们什么时候应该使用大括号来导入单个模块呢？
+大括号在以下两种情况下使用：
+导入模块的特定组件 导入模块的默认导出，并为其指定名称 以下是两种情况的示例：
+导入模块的特定组件 例如，我们有一个名为A.js的文件，其中包含了一个名为A的特定组件：
+1export const A = 42; 我们可以使用以下语法导入该组件：
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Android ActionBarCompat主题问题解决方案</title>
       <link>https://www.techdocdb.com/posts/android-actionbarcompat%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>

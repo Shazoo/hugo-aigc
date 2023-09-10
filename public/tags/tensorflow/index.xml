@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tensorflow on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/tensorflow/</link>
+    <description>Recent content in tensorflow on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 10:40:12 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深度学习中的SAME和VALID填充方式</title>
+      <link>https://www.techdocdb.com/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84same%E5%92%8Cvalid%E5%A1%AB%E5%85%85%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sun, 10 Sep 2023 10:40:12 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84same%E5%92%8Cvalid%E5%A1%AB%E5%85%85%E6%96%B9%E5%BC%8F/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍深度学习中的&#39;SAME&#39;和&#39;VALID&#39;填充方式，并通过例子进行说明。我们将使用TensorFlow和Python来实现这些填充方式。
+内容 深度学习中的卷积操作通常需要对输入数据进行填充，以确保输出大小符合预期。TensorFlow中的卷积操作提供了两种常用的填充方式：&#39;SAME&#39;和&#39;VALID&#39;。
+&#39;VALID&#39;填充方式 &#39;VALID&#39;填充方式表示不进行填充操作。 在卷积操作中，&#39;VALID&#39;填充方式的输出大小会根据输入数据大小、卷积核大小以及步长进行计算。 &#39;VALID&#39;填充方式的输出大小计算公式为： 1out_height = ceil(float(in_height - filter_height + 1) / float(strides[1])) 2out_width = ceil(float(in_width - filter_width + 1) / float(strides[2])) 其中，in_height和in_width为输入数据的高度和宽度，filter_height和filter_width为卷积核的高度和宽度，strides[1]和strides[2]为步长的垂直和水平方向上的大小。
+&#39;SAME&#39;填充方式 &#39;SAME&#39;填充方式表示进行填充操作，以确保输出大小与输入大小相同。 在卷积操作中，&#39;SAME&#39;填充方式会在输入数据的上下左右分别填充一定数量的0。 &#39;SAME&#39;填充方式的输出大小计算公式为： 1out_height = ceil(float(in_height) / float(strides[1])) 2out_width = ceil(float(in_width) / float(strides[2])) 同时，还需要根据计算结果对输入数据进行填充，以确保输出大小与输入大小相同。
+为了更好地理解&#39;SAME&#39;和&#39;VALID&#39;填充方式，我们将通过一个例子来进行说明。
+假设输入数据为一个形状为[2, 3]，通道数为1的图像，并设置填充方式为&#39;SAME&#39;和&#39;VALID&#39;，核大小为2x2，步长为2。
+对于&#39;SAME&#39;填充方式，我们将输入数据进行填充，填充后的大小为[2, 4]。然后，我们对填充后的数据进行最大池化操作，得到输出的大小为[1, 2]。具体代码如下所示：
+1import tensorflow as tf 2 3x = tf.constant([[1., 2., 3.], 4 [4., 5., 6.]]) 5x = tf.reshape(x, [1, 2, 3, 1]) 6 7same_pad = tf.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

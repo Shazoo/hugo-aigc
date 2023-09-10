@@ -7,7 +7,59 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 17:35:48 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 10:27:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在克隆之前查看GitHub存储库的大小？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</link>
+      <pubDate>Sun, 10 Sep 2023 10:27:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</guid>
+      <description>
+        
+          
+            在我们决定是否要克隆GitHub存储库之前，有没有办法在GitHub上查看Git存储库的大小呢？
+这似乎是一个非常明显/基本的统计数据，但我找不到在GitHub上如何查看它的方法。
+解决方案 可以通过GitHub API访问此信息。
+API文档：GitHub API文档 用法：GET /repos/:user/:repo 示例：https://api.github.com/repos/git/git 在检索关于存储库的信息时，返回的JSON中的一个属性名为“size”，以千字节为单位表示整个存储库（包括其全部历史记录）的大小。
+例如，Git存储库大小约为124MB。返回的JSON中的“size”属性的值为124283。
+注：确实是以千字节的方式表示大小，基于服务器端裸存储库的磁盘使用情况。但是，为了避免在具有大网络的存储库中浪费太多空间，GitHub依赖于Git替代品（Git alternates）。在这种配置中，根据裸存储库计算磁盘使用量不会计算共享对象存储，从而通过API调用返回了一个“不完整”的值。这是GitHub支持提供的信息。
+参考代码 想要查看示例代码，请点击下方链接：
+bash Python JavaScript Bookmarklet GitHub CLI 浏览器扩展 参考代码： bash 1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+例如：
+1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/git/git 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 返回值为931668（以KB为单位），约等于1GB。
+私有存储库需要进行身份验证。一种方法是使用GitHub个人访问令牌：
+1curl -u &amp;#34;YOURGITHUBUSERNAME:$PERSONAL_ACCESS_TOKEN&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将PERSONAL_ACCESS_TOKEN替换为您的个人访问令牌。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Git中&#34;git reset&#34;和&#34;git checkout&#34;的区别</title>
+      <link>https://www.techdocdb.com/posts/git%E4%B8%ADgit-reset%E5%92%8Cgit-checkout%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 10 Sep 2023 09:39:30 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/git%E4%B8%ADgit-reset%E5%92%8Cgit-checkout%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            Git是一款非常流行的版本控制系统，其中的&amp;quot;git reset&amp;quot;和&amp;quot;git checkout&amp;quot;是常用的命令。很多人对这两个命令的作用有些混淆，以为它们是相同的，都可以将项目回退到特定的提交点。但实际上，它们是有区别的。本文将解释一下它们的实际区别，并通过一些例子来说明。
+git reset 首先，我们来看一下&amp;quot;git reset&amp;quot;命令。&amp;quot;git reset&amp;quot;主要用于更新索引，移动HEAD指针。具体来说，执行&amp;quot;git reset&amp;quot;命令会将HEAD和当前分支指向具体的提交点，从而实现回退操作。需要注意的是，如果不指定具体的提交点，则默认会回退到最近的一次提交点。
+下面是一个使用&amp;quot;git reset&amp;quot;命令的例子：
+1git reset HEAD~1 该命令将会将HEAD和当前分支回退到上一个提交点。需要注意的是，这只会更新索引，而不会影响工作目录中的文件。
+git checkout 接下来，我们来看一下&amp;quot;git checkout&amp;quot;命令。&amp;quot;git checkout&amp;quot;主要用于更新工作目录中的文件，而不会影响索引。具体来说，执行&amp;quot;git checkout&amp;quot;命令会将指定的提交点的文件拷贝到工作目录中。需要注意的是，如果不指定具体的提交点，则默认会将当前分支的最新提交点的文件拷贝到工作目录中。
+下面是一个使用&amp;quot;git checkout&amp;quot;命令的例子：
+1git checkout master 该命令将会将工作目录中的文件替换为&amp;quot;master&amp;quot;分支的最新提交点的文件。需要注意的是，如果当前分支和目标分支不相同，则会进入&amp;quot;detached HEAD&amp;quot;状态。
+总结 总的来说，&amp;quot;git reset&amp;quot;命令是用于更新索引，移动HEAD指针的，而&amp;quot;git checkout&amp;quot;命令是用于更新工作目录中的文件的。它们在操作过程中可能会有一些重叠，但最关键的区别在于&amp;quot;git reset&amp;quot;会移动当前分支指针，而&amp;quot;git checkout&amp;quot;不会移动当前分支指针。
+以上就是关于&amp;quot;git reset&amp;quot;和&amp;quot;git checkout&amp;quot;的区别的介绍。希望能对大家理解这两个命令有所帮助。
+参考资料 Git官方文档：git-reset Git官方文档：git-checkout 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>git-diff基础教程</title>
       <link>https://www.techdocdb.com/posts/git-diff%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</link>

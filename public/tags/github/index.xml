@@ -7,7 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 08:31:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 10:28:26 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>View markdown files offline</title>
+      <link>https://www.techdocdb.com/posts/view-markdown-files-offline/</link>
+      <pubDate>Sun, 10 Sep 2023 10:28:26 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/view-markdown-files-offline/</guid>
+      <description>
+        
+          
+            摘要 在上传到Github之前，有没有一种方法能够离线显示.md文件呢？我指的是显示README.md文件在Github上显示的效果，而不是用于编辑目的。
+内容 我找到了一种用PHP来查看的方法。在进一步调查后，我找到了2种离线和在线查看.md文件的解决方案：
+离线解决方案：https://github.com/WolfieZero/Markdown-Viewer-PHP 在线解决方案：http://daringfireball.net/projects/markdown/dingus 我推荐使用离线版本，这样即使当你在如厕时也可以进行编辑。:)
+除了这个解决方案，还有其他一些选择可以离线查看和编辑Markdown文件。下面列举了一些例子：
+texts: 一个轻量级且简洁的Markdown查看器和编辑器，适用于Mac和Windows。 Downmarker: 拥有垂直分隔视图，可以实时预览Markdown文件。 ReText: 一个漂亮的桌面Markdown编辑器。 gfms: 一个使用Node.js编写的离线Markdown查看器，支持Github风格的Markdown。 MarkdownPad: 一个很好用的Markdown编辑器，适用于Windows。 StackEdit: 一个支持在线和离线编辑的Markdown编辑器，可以连接到Dropbox或Google Drive。 Notepad++: 一个在文本编辑器Notepad++中支持Markdown语法高亮的插件。 Python-Markdown-Editor: 基于Python-Markdown、Pygments和CodeMirror的Markdown编辑器，支持实时预览、代码高亮和Github风格。 Haroopad: 一个适用于多平台的漂亮的Markdown编辑器。 Brackets + Markdown Preview Extension: 一个结合了Brackets和Markdown预览扩展的编辑器，支持代码高亮和Github风格的Markdown。 除了这些，还有其他很多选择供用户选择。
+总结 以上是一些查看和离线编辑Markdown文件的解决方案。用户可以根据自己的需求选择合适的工具来查看和编辑Markdown文件。无论是在线还是离线，这些工具都可以帮助用户预览Markdown文件的效果，并帮助他们进行编辑和修改。希望这些解决方案能对用户有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在克隆之前查看GitHub存储库的大小？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</link>
+      <pubDate>Sun, 10 Sep 2023 10:27:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</guid>
+      <description>
+        
+          
+            在我们决定是否要克隆GitHub存储库之前，有没有办法在GitHub上查看Git存储库的大小呢？
+这似乎是一个非常明显/基本的统计数据，但我找不到在GitHub上如何查看它的方法。
+解决方案 可以通过GitHub API访问此信息。
+API文档：GitHub API文档 用法：GET /repos/:user/:repo 示例：https://api.github.com/repos/git/git 在检索关于存储库的信息时，返回的JSON中的一个属性名为“size”，以千字节为单位表示整个存储库（包括其全部历史记录）的大小。
+例如，Git存储库大小约为124MB。返回的JSON中的“size”属性的值为124283。
+注：确实是以千字节的方式表示大小，基于服务器端裸存储库的磁盘使用情况。但是，为了避免在具有大网络的存储库中浪费太多空间，GitHub依赖于Git替代品（Git alternates）。在这种配置中，根据裸存储库计算磁盘使用量不会计算共享对象存储，从而通过API调用返回了一个“不完整”的值。这是GitHub支持提供的信息。
+参考代码 想要查看示例代码，请点击下方链接：
+bash Python JavaScript Bookmarklet GitHub CLI 浏览器扩展 参考代码： bash 1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+例如：
+1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/git/git 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 返回值为931668（以KB为单位），约等于1GB。
+私有存储库需要进行身份验证。一种方法是使用GitHub个人访问令牌：
+1curl -u &amp;#34;YOURGITHUBUSERNAME:$PERSONAL_ACCESS_TOKEN&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将PERSONAL_ACCESS_TOKEN替换为您的个人访问令牌。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>GitHub pull request 显示已经在目标分支中的提交</title>
       <link>https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/</link>

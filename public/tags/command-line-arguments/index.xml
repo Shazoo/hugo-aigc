@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>command-line-arguments on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/command-line-arguments/</link>
+    <description>Recent content in command-line-arguments on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 09:11:14 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/command-line-arguments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>命令行/Shell帮助文本的“标准”格式是什么？</title>
+      <link>https://www.techdocdb.com/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/shell%E5%B8%AE%E5%8A%A9%E6%96%87%E6%9C%AC%E7%9A%84%E6%A0%87%E5%87%86%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Sun, 10 Sep 2023 09:11:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/shell%E5%B8%AE%E5%8A%A9%E6%96%87%E6%9C%AC%E7%9A%84%E6%A0%87%E5%87%86%E6%A0%BC%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>
+        
+          
+            如果没有的话，是否有一种事实上的标准？我的命令行帮助文本如下所示：
+1usage: app_name [options] required_input required_input2 2 options: 3 -a, --argument Does something 4 -b required Does something with &amp;#34;required&amp;#34; 5 -c, --command required Something else 6 -d [optlistitem1 optlistitem 2 ... ] Something with list 我从各种工具的帮助文本中读取了这些内容，但是是否有一份指南或者类似的标准清单呢？比如，我应该使用方括号还是括号？如何使用空格？如果参数是一个列表怎么办？谢谢！
+概述 通常，帮助文本应包含以下内容：
+应用程序的描述 用法语法，包括： 使用[options]表示选项的位置 使用arg_name表示必需的单个参数 使用[arg_name]表示可选的单个参数 使用arg_name...表示必需的多个参数（这种情况很少见） 使用[arg_name...]表示可接受任意数量的参数 注意，arg_name应该是一个简短的描述性名称，使用小写的蛇形命名法 一个格式良好的选项列表，每个选项都包含： 简短描述 默认值（如果有的话） 可能的取值范围（如果适用） 注意，如果一个选项可以使用短格式（例如-l）或长格式（例如--list），请在同一行上同时包含两者，因为它们的描述是相同的 提示配置文件或环境变量的位置，这些位置可能是命令行参数的来源，例如GREP_OPTS 如果有man页，请指明，否则，请简要指示如何找到更详细的帮助 另外，好的做法是同时接受-h和--help来触发此消息，并且如果用户在命令行语法中出错（例如省略了必需的参数），应显示此消息。
+参考答案 GNU编码规范是一个很好的参考资料，其中这一节涉及--help的输出。在这种情况下，它并不是非常具体。你可以采用打印一个表格，显示短选项和长选项以及简洁的描述的方式，这样做应该不会出错。为了可读性，尝试在所有参数之间保持正确的间距。你可能还想为你的工具提供一个man页（可能还有一个info手册），以提供更详细的说明。 是的，你走在正确的轨道上。 是的，方括号通常用于表示可选项。 通常情况下，如你所示，有一个顶部的命令行摘要，后面是详细信息，最好为每个选项提供示例。 （你的示例在每个选项描述之间显示了空行，但我假设这是编辑问题，你真正的程序应输出缩进的选项列表，之间没有空行。在任何情况下，这是标准的遵循方式。） 一种较新的趋势（也许有一个POSIX规范涉及到了这一点？），是取消man页系统的文档，直接将所有man页中的信息作为program --help的输出的一部分。这部分内容将包括更长的描述、解释的概念、使用示例、已知的限制和错误、如何报告错误以及相关命令的“参见”部分。 Microsoft有他们自己的命令行规范。 参考docopt。它是一种官方的标准，用于文档化（和自动解析）命令行参数。示例如下： 1Usage: 2 my_program command --option &amp;lt;argument&amp;gt; 3 my_program [&amp;lt;optional-argument&amp;gt;] 4 my_program --another-option=&amp;lt;with-argument&amp;gt; 5 my_program (--either-that-option | &amp;lt;or-this-argument&amp;gt;) 6 my_program &amp;lt;repeating-argument&amp;gt; &amp;lt;repeating-argument&amp;gt;.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

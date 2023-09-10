@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github-api on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/github-api/</link>
+    <description>Recent content in github-api on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 10:27:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/github-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在克隆之前查看GitHub存储库的大小？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</link>
+      <pubDate>Sun, 10 Sep 2023 10:27:37 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%8B%E9%9A%86%E4%B9%8B%E5%89%8D%E6%9F%A5%E7%9C%8Bgithub%E5%AD%98%E5%82%A8%E5%BA%93%E7%9A%84%E5%A4%A7%E5%B0%8F/</guid>
+      <description>
+        
+          
+            在我们决定是否要克隆GitHub存储库之前，有没有办法在GitHub上查看Git存储库的大小呢？
+这似乎是一个非常明显/基本的统计数据，但我找不到在GitHub上如何查看它的方法。
+解决方案 可以通过GitHub API访问此信息。
+API文档：GitHub API文档 用法：GET /repos/:user/:repo 示例：https://api.github.com/repos/git/git 在检索关于存储库的信息时，返回的JSON中的一个属性名为“size”，以千字节为单位表示整个存储库（包括其全部历史记录）的大小。
+例如，Git存储库大小约为124MB。返回的JSON中的“size”属性的值为124283。
+注：确实是以千字节的方式表示大小，基于服务器端裸存储库的磁盘使用情况。但是，为了避免在具有大网络的存储库中浪费太多空间，GitHub依赖于Git替代品（Git alternates）。在这种配置中，根据裸存储库计算磁盘使用量不会计算共享对象存储，从而通过API调用返回了一个“不完整”的值。这是GitHub支持提供的信息。
+参考代码 想要查看示例代码，请点击下方链接：
+bash Python JavaScript Bookmarklet GitHub CLI 浏览器扩展 参考代码： bash 1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+例如：
+1curl -u &amp;#34;YOURGITHUBUSERNAME&amp;#34; https://api.github.com/repos/git/git 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 返回值为931668（以KB为单位），约等于1GB。
+私有存储库需要进行身份验证。一种方法是使用GitHub个人访问令牌：
+1curl -u &amp;#34;YOURGITHUBUSERNAME:$PERSONAL_ACCESS_TOKEN&amp;#34; https://api.github.com/repos/OWNER/REPOSITORY 2&amp;gt;/dev/null | grep size | tr -dc &amp;#39;[:digit:]&amp;#39; 将YOURGITHUBUSERNAME替换为您的GitHub用户名。 将PERSONAL_ACCESS_TOKEN替换为您的个人访问令牌。 将OWNER替换为存储库所有者的Git用户名。 将REPOSITORY替换为存储库名称。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

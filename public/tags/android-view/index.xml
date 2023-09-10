@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android-view on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/android-view/</link>
+    <description>Recent content in android-view on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 09:26:27 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android-view/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在Android Studio中查看方法信息</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8android-studio%E4%B8%AD%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Sun, 10 Sep 2023 09:26:27 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8android-studio%E4%B8%AD%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E4%BF%A1%E6%81%AF/</guid>
+      <description>
+        
+          
+            Android Studio是开发Android应用程序的集成开发环境（IDE）。在开发过程中，经常需要查看方法的详细信息，包括方法的功能、参数和返回值。本教程将介绍如何在Android Studio中查看方法信息的方法。
+方法一：使用快捷方式 最简单直接的方法是使用以下快捷方式：
+在菜单栏中选择&amp;quot;File&amp;quot;（文件）→ &amp;quot;Settings&amp;quot;（设置）→ &amp;quot;Editor&amp;quot;（编辑器）→ &amp;quot;General&amp;quot;（常规） 对于Mac OS X系统，选择&amp;quot;Android Studio&amp;quot; → &amp;quot;Preferences&amp;quot;（偏好设置）→ &amp;quot;Editor&amp;quot;（编辑器）→ &amp;quot;General&amp;quot;（常规），并勾选&amp;quot;Show quick documentation on mouse move&amp;quot;（当鼠标移动时显示快速文档） 示例截图如下：
+这样，当你将鼠标悬停在方法上时，会弹出一个窗口显示方法的详细信息。
+方法二：修改配置文件 另一种方法是通过修改配置文件来实现：
+在IntelliJ IDEA的&amp;quot;bin&amp;quot;文件夹中搜索&amp;quot;idea.properties&amp;quot;文件。 在该文件中添加以下代码：auto.show.quick.doc=true 这样，你也可以像Eclipse一样，通过鼠标悬停在方法上，弹出浮动文档窗口。
+注意事项： 如果你只想看到方法的参数信息，可以使用快捷键Ctrl + P或Command + P。 如果你只想看到方法的文档信息，可以使用快捷键Ctrl + Q或Command + Q。 如果你需要下载Android SDK的文档，请确保在SDK Manager中下载并安装&amp;quot;Documentation for Android SDK&amp;quot;。 以上就是在Android Studio中查看方法信息的方法。希望对你的开发工作有所帮助！如有其他问题，请随时提问。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

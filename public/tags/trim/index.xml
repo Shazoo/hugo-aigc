@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>trim on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/trim/</link>
+    <description>Recent content in trim on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 08:30:10 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/trim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用JavaScript如何去除字符串中的最后一个字符？</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Sun, 10 Sep 2023 08:30:10 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何使用JavaScript去除字符串中的最后一个字符。我们将使用substring、slice和正则表达式来演示这些方法。
+内容 你可以使用substring方法来去除字符串的最后一个字符。例如，假设我们有一个字符串str = &amp;quot;12345.00&amp;quot;，我们想要去除最后一个字符，只保留12345.0。你可以按照以下方式操作：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.substring(0, str.length - 1); 3console.log(str); 这段代码中，我们使用substring方法，传入起始索引0和字符串长度减1作为参数，这样就能去除最后一个字符。
+除了substring之外，还可以使用slice方法来实现相同的效果。与substring不同的是，slice方法中可以使用负数作为索引，表示相对于字符串末尾的偏移量。例如，假设我们要去除字符串str中的最后一个字符，可以按照以下方式操作：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.slice(0, -1); 3console.log(str); 在这段代码中，我们使用了slice方法，并传入起始索引0和索引-1作为参数，这样就能去除最后一个字符。
+同时，你还可以使用正则表达式来去除字符串的最后一个字符。例如，假设我们有一个字符串str = &amp;quot;12345.00&amp;quot;，我们想要去除最后一个字符，只保留12345.0。你可以按照以下方式操作：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.replace(/.$/, &amp;#34;&amp;#34;); 3console.log(str); 在这段代码中，我们使用了正则表达式/.$/，它匹配了字符串中的最后一个字符。然后，我们使用replace方法将匹配到的字符替换为空字符串。
+总结 通过使用substring、slice和正则表达式，你可以很方便地去除字符串中的最后一个字符。根据你的需求，可以选择适合你的方法来进行操作。
+参考答案：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.slice(0, -1); 3console.log(str); 参考答案：
+1let str = &amp;#34;12345.00&amp;#34;; 2str = str.substring(0, str.length - 1); 3console.log(str); 参考答案：
+1let str = &amp;#34;12345.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

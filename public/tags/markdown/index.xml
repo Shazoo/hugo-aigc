@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/markdown/</link>
+    <description>Recent content in markdown on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 10:28:26 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>View markdown files offline</title>
+      <link>https://www.techdocdb.com/posts/view-markdown-files-offline/</link>
+      <pubDate>Sun, 10 Sep 2023 10:28:26 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/view-markdown-files-offline/</guid>
+      <description>
+        
+          
+            摘要 在上传到Github之前，有没有一种方法能够离线显示.md文件呢？我指的是显示README.md文件在Github上显示的效果，而不是用于编辑目的。
+内容 我找到了一种用PHP来查看的方法。在进一步调查后，我找到了2种离线和在线查看.md文件的解决方案：
+离线解决方案：https://github.com/WolfieZero/Markdown-Viewer-PHP 在线解决方案：http://daringfireball.net/projects/markdown/dingus 我推荐使用离线版本，这样即使当你在如厕时也可以进行编辑。:)
+除了这个解决方案，还有其他一些选择可以离线查看和编辑Markdown文件。下面列举了一些例子：
+texts: 一个轻量级且简洁的Markdown查看器和编辑器，适用于Mac和Windows。 Downmarker: 拥有垂直分隔视图，可以实时预览Markdown文件。 ReText: 一个漂亮的桌面Markdown编辑器。 gfms: 一个使用Node.js编写的离线Markdown查看器，支持Github风格的Markdown。 MarkdownPad: 一个很好用的Markdown编辑器，适用于Windows。 StackEdit: 一个支持在线和离线编辑的Markdown编辑器，可以连接到Dropbox或Google Drive。 Notepad++: 一个在文本编辑器Notepad++中支持Markdown语法高亮的插件。 Python-Markdown-Editor: 基于Python-Markdown、Pygments和CodeMirror的Markdown编辑器，支持实时预览、代码高亮和Github风格。 Haroopad: 一个适用于多平台的漂亮的Markdown编辑器。 Brackets + Markdown Preview Extension: 一个结合了Brackets和Markdown预览扩展的编辑器，支持代码高亮和Github风格的Markdown。 除了这些，还有其他很多选择供用户选择。
+总结 以上是一些查看和离线编辑Markdown文件的解决方案。用户可以根据自己的需求选择合适的工具来查看和编辑Markdown文件。无论是在线还是离线，这些工具都可以帮助用户预览Markdown文件的效果，并帮助他们进行编辑和修改。希望这些解决方案能对用户有所帮助！
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
