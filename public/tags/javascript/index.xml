@@ -7,7 +7,93 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 08:30:10 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 17:46:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何检测文本框内容的变化</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96/</link>
+      <pubDate>Sun, 10 Sep 2023 17:46:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何检测文本框内容的变化，包括使用jQuery和JavaScript的方法。通过对多种方法进行比较和分析，可以找到一种简洁有效的方式来实现这个需求。
+内容 在开发过程中，我们常常需要检测文本框内容的变化，以便在用户输入时执行相应的操作。下面将介绍几种常用的方法。
+方法1：使用input事件 在jQuery中，我们可以使用input事件来监听文本框内容的变化。这种方法非常简洁，并且可以处理大部分情况。
+1jQuery(&amp;#34;#some_text_box&amp;#34;).on(&amp;#34;input&amp;#34;, function() { 2 // 在这里执行你的操作 3}); 如果你想要更全面地处理各种情况，你可以扩展input事件来检测其他事件，如propertychange和paste。
+1jQuery(&amp;#34;#some_text_box&amp;#34;).on(&amp;#34;input propertychange paste&amp;#34;, function() { 2 // 在这里执行你的操作 3}); 方法2：使用change事件 在HTML/原生JavaScript中，我们可以使用change事件来检测文本框内容的变化。通过使用jQuery的.change()方法，可以很方便地实现这个功能。
+1$(&amp;#34;element&amp;#34;).change(function() { 2 // 在这里执行你的操作 3}); 方法3：使用keyup事件 另一种方法是使用keyup事件来检测文本框内容的变化。你可以通过使用闭包来记住键盘按下之前的文本框内容，并检查这是否发生了变化。
+1$(function() { 2 var content = $(&amp;#34;#myContent&amp;#34;).val(); 3 4 $(&amp;#34;#myContent&amp;#34;).keyup(function() { 5 if ($(&amp;#34;#myContent&amp;#34;).val() != content) { 6 content = $(&amp;#34;#myContent&amp;#34;).val(); 7 alert(&amp;#34;内容已经变化&amp;#34;); 8 } 9 }); 10}); 方法4：使用textchange事件 还有一种方法是使用textchange事件，通过自定义jQuery插件来实现。这种方法对所有类型的输入标签，包括textarea标签，都适用，并且可以处理复制、粘贴、删除等操作。
+1&amp;lt;!DOCTYPE html&amp;gt; 2&amp;lt;html&amp;gt; 3&amp;lt;head&amp;gt; 4&amp;lt;script class=&amp;#34;jsbin&amp;#34; src=&amp;#34;http://ajax.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何检查字符串是否为有效的JSON字符串？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Sun, 10 Sep 2023 17:21:38 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            在编写代码时，经常需要检查一个字符串是否为有效的JSON字符串。 在JavaScript中，可以使用JSON.parse()方法来解析JSON字符串，如果解析失败则会抛出一个错误。因此，我们可以通过尝试解析JSON字符串，并捕获错误来判断字符串是否为有效的JSON。
+以下是一个用于检查字符串是否为有效JSON字符串的函数：
+1function isValidJSONString(str) { 2 try { 3 JSON.parse(str); 4 return true; 5 } catch (e) { 6 return false; 7 } 8} 使用示例：
+1console.log(isValidJSONString(&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: 30}&amp;#39;)); // 输出：true 2console.log(isValidJSONString(&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: &amp;#34;30}&amp;#39;)); // 输出：false 3console.log(isValidJSONString(&amp;#39;[1, 2, 3]&amp;#39;)); // 输出：true 4console.log(isValidJSONString(&amp;#39;[1, 2, 3&amp;#39;)); // 输出：false 注意：此方法只能检查字符串是否为有效的JSON格式，无法判断JSON中的值是否符合预期。如需进一步验证JSON中的值，请使用其他方法或库。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>JavaScript对象的属性值获取方法</title>
+      <link>https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 10 Sep 2023 16:46:58 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            JavaScript中的对象是由一系列属性和值组成的，我们经常需要获取对象的属性值。本教程将介绍几种获取JavaScript对象属性值的方法，并提供相应的示例。
+获取所有属性值的方法 最简单的方法是使用for...in循环遍历对象的所有键，并获取每个键对应的值。以下是示例代码：
+1var objects = {...}; 2 3for(var key in objects) { 4 var value = objects[key]; 5 // 这里可以对属性值进行处理 6} 示例： 假设有一个JavaScript对象foo，其中包含了50多个属性，但不知道属性名称。要在循环中获取每个属性的值，可以使用上述for...in循环：
+1var foo = {one:1, two:2, three:3}; 2for (key in foo){ 3 console.log(&amp;#34;foo[&amp;#34;+ key +&amp;#34;]=&amp;#34;+ foo[key]); 4} 输出结果为：
+1foo[one]=1 2foo[two]=2 3foo[three]=3 获取属性值数组的方法 如果需要将对象的属性值存储在一个数组中，可以使用以下具有对象保护的可重用函数：
+1Object.values = function (obj) { 2 var vals = []; 3 for( var key in obj ) { 4 if ( obj.hasOwnProperty(key) ) { 5 vals.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>动态加载JS文件</title>
+      <link>https://www.techdocdb.com/posts/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDjs%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sun, 10 Sep 2023 14:31:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDjs%E6%96%87%E4%BB%B6/</guid>
+      <description>
+        
+          
+            在动态网页开发中，经常需要在一个JavaScript文件中导入另一个外部的JS文件。有多种方法可以实现这个需求。本文将介绍一些解决方案，包括使用jQuery和纯JavaScript的方法。
+使用jQuery的解决方案 你可以使用jQuery的$.getScript()方法来动态加载JS文件。该方法会通过GET方式从服务器上获取JavaScript文件，并执行它。
+1$.getScript(&amp;#34;ajax/test.js&amp;#34;, function(data, textStatus, jqxhr) { 2 console.log(data); // 返回的数据 3 console.log(textStatus); // 请求成功 4 console.log(jqxhr.status); // HTTP状态码为200 5 console.log(&amp;#39;加载成功。&amp;#39;); 6}); 你可以在参数中指定要加载的JavaScript文件的URL，并定义一个回调函数，在文件加载完成后执行。
+使用纯JavaScript的解决方案 你也可以使用纯JavaScript的方法来动态加载JS文件。例如，你可以使用document.createElement()创建一个&amp;lt;script&amp;gt;元素，并将其添加到文档的头部。
+1var script = document.createElement(&amp;#39;script&amp;#39;); 2script.src = &amp;#34;url_to_someScript.js&amp;#34;; 3 4document.head.appendChild(script); // 或者将它插入到其他符合需要的位置 然而，上述方法只是将JS文件添加到文档中，并不会立即加载和执行。为了确保JS文件已加载完成并可用，你需要监听脚本的load事件。
+1var script = document.createElement(&amp;#39;script&amp;#39;); 2script.src = &amp;#34;url_to_someScript.js&amp;#34;; 3 4script.onload = function () { 5 // 在这里可以使用已加载的JS文件进行操作 6}; 7 8document.head.appendChild(script); // 或者将它插入到其他符合需要的位置 当JS文件加载完成后，onload事件会触发回调函数。
+使用自定义的加载函数 如果你不想依赖于jQuery或者纯JavaScript的方法，你可以自行实现一个动态加载JS文件的函数。下面是一个使用jQuery的函数实现：
+1jQuery.loadScript = function (url, callback) { 2 jQuery.ajax({ 3 url: url, 4 dataType: &amp;#39;script&amp;#39;, 5 success: callback, 6 async: true 7 }); 8} 在使用时，你可以调用该函数并指定要加载的JavaScript文件的URL和加载完成后的回调函数。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用JavaScript如何去除字符串中的最后一个字符？</title>
       <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8javascript%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6/</link>

@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 11:42:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 17:21:38 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何检查字符串是否为有效的JSON字符串？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Sun, 10 Sep 2023 17:21:38 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            在编写代码时，经常需要检查一个字符串是否为有效的JSON字符串。 在JavaScript中，可以使用JSON.parse()方法来解析JSON字符串，如果解析失败则会抛出一个错误。因此，我们可以通过尝试解析JSON字符串，并捕获错误来判断字符串是否为有效的JSON。
+以下是一个用于检查字符串是否为有效JSON字符串的函数：
+1function isValidJSONString(str) { 2 try { 3 JSON.parse(str); 4 return true; 5 } catch (e) { 6 return false; 7 } 8} 使用示例：
+1console.log(isValidJSONString(&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: 30}&amp;#39;)); // 输出：true 2console.log(isValidJSONString(&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: &amp;#34;30}&amp;#39;)); // 输出：false 3console.log(isValidJSONString(&amp;#39;[1, 2, 3]&amp;#39;)); // 输出：true 4console.log(isValidJSONString(&amp;#39;[1, 2, 3&amp;#39;)); // 输出：false 注意：此方法只能检查字符串是否为有效的JSON格式，无法判断JSON中的值是否符合预期。如需进一步验证JSON中的值，请使用其他方法或库。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>解决JSON.NET的&#34;Self referencing loop detected for type&#34;错误</title>
       <link>https://www.techdocdb.com/posts/%E8%A7%A3%E5%86%B3json.net%E7%9A%84self-referencing-loop-detected-for-type%E9%94%99%E8%AF%AF/</link>

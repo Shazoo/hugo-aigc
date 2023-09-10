@@ -7,7 +7,262 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 11:30:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 17:59:29 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何保护Python代码不被用户读取？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4python%E4%BB%A3%E7%A0%81%E4%B8%8D%E8%A2%AB%E7%94%A8%E6%88%B7%E8%AF%BB%E5%8F%96/</link>
+      <pubDate>Sun, 10 Sep 2023 17:59:29 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4python%E4%BB%A3%E7%A0%81%E4%B8%8D%E8%A2%AB%E7%94%A8%E6%88%B7%E8%AF%BB%E5%8F%96/</guid>
+      <description>
+        
+          
+            我正在使用Python编写一款将分发给我雇主的客户的软件。我的雇主希望通过时间限制的许可文件来限制软件的使用。
+如果我们分发.py文件，甚至是.pyc文件，那么用户将很容易（反编译并）移除检查许可文件的代码。
+另一个问题是，我的雇主不希望我们的客户阅读代码，因为担心代码可能会被窃取，或者至少担心&#34;新创意&#34;会被窃取。
+有没有一个好的方法来解决这个问题？
+在Python中，作为一种字节码编译的解释型语言，非常难以锁定。即使您使用像py2exe这样的exe打包工具，可执行文件的结构是众所周知的，Python字节码也是众所周知的。
+通常在这种情况下，您需要做出权衡。保护代码真的很重要吗？其中是否包含了真正的机密信息（如用于对称加密的银行转账密钥），或者您只是过于担心？选择最能让您快速开发最棒产品的语言，对您的新创意的价值保持现实的认识。
+如果您确实决定有必要安全地执行许可检查，可以将其编写为小型C扩展，以使许可检查代码变得非常困难（但并非不可能！）逆向工程，并将大部分代码留在Python中。
+参考答案：
+您应该看一下getdropbox.com的客户端软件以及Linux上的处理方式。这种方式相当棘手，需要进行一些相当创造性的反汇编才能绕过保护机制。
+您的雇主是否知道他可以从其他人从您的代码中得到的任何想法中&amp;quot;窃取&amp;quot;回来？我的意思是，如果他们可以阅读您的工作，那么您也可以阅读他们的工作。也许考虑如何从这种情况中受益会比担心可能损失多，获得更高的投资回报。
+(编辑) 回答Nick的评论:
+你什么也没得也没失。客户拥有自己想要的东西（并付费购买），因为他改变了软件本身。由于他不发布更改，对其他人来说就好像没有发生过一样。
+现在，如果客户销售此软件，则必须更改版权声明（这是非法的，因此您可以提起诉讼并获胜-简单的情况）。
+如果他们不更改版权声明，第二级客户将注意到软件来自您的原始软件，并想知道发生了什么。很可能他们会与您联系，这样您就会了解对您的工作进行再销售的情况。
+同样，我们有两种情况：原始客户只销售了几份副本。这意味着他们没有赚到太多钱，所以为什么费心呢？或者他们大份额销售。这意味着您更有机会了解他们在做什么并采取行动。
+但是最后，大多数公司都努力遵守法律（一旦他们的声誉受到损害，他们要做生意就更加困难）。因此，他们不会窃取您的工作，而是与您合作改进它。因此，如果您包含了源代码（附带可保护您免受简单再销售的许可证），那么他们只会推迟他们所做的更改，这样可以确保更改在下一个版本中，而且他们不必自己维护它。这是双赢：您可以获得更改，而他们可以在您不愿意将更改包括在正式版本中时自己制作更改。
+我在寻找保护自己项目的软件保护方案时发现通用的哲学是完全保护是不可能的。您唯一能希望实现的目标是增加保护的成本，以使用户绕过保护的成本高于购买另一个许可证的成本。
+说到这一点，我刚刚在为我的项目应用程序自我保护技术的Google上进行了检查，发现的任何技术都看不到任何东西。在.NET解决方案中，混淆是对Windows平台上您的问题的第一个方法，但我不确定是否有任何可以与Mono一起使用的适用于Linux的解决方案。
+下一个是编写您的代码时使用编译语言，或者如果您真的想走到底，那么使用汇编语言。裁剪掉的可执行文件的反编译要困难得多，而解释性语言要简单得多。
+这一切归结到权衡。一方面，您可以使用Python轻松进行软件开发，但是很难隐藏秘密。另一方面，您可以使用汇编语言编写软件，这样就可以更好地隐藏秘密，但编写起来会困难得多。
+您的老板必须选择一个在这个连续体中某个点，以支持他的要求。然后，他必须为您提供工具和时间，以便您可以构建出他所需要的内容。不过，我的赌注是，他会对实际开发成本与可能损失的货币之间进行比较。
+根据Cython和Nuitka构建的解决方案，实际上并非完美，因为当使用Nuitka或Cython编译的解决方案运行为.pyd或.exe文件时，会生成一个缓存目录，并且所有的.pyc文件都会被复制到缓存目录中，因此，攻击者只需要将.pyc文件反编译并查看或修改您的代码。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>std::promise和std::future的用法和示例说明</title>
+      <link>https://www.techdocdb.com/posts/stdpromise%E5%92%8Cstdfuture%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E7%A4%BA%E4%BE%8B%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Sun, 10 Sep 2023 17:48:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/stdpromise%E5%92%8Cstdfuture%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E7%A4%BA%E4%BE%8B%E8%AF%B4%E6%98%8E/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了C++11标准库中的std::promise和std::future组件，以及它们的使用方式和示例代码。通过使用std::promise和std::future，可以在不同的线程之间传递数据，并且可以实现异步计算和并发执行的功能。
+内容 C++11的标准库中提供了std::promise和std::future这两个组件，它们是用于实现在不同线程之间传递数据的机制。通过std::promise和std::future可以实现异步计算和并发执行的功能。
+std::promise是一个异步提供者，用于将结果提供给一个共享状态。而std::future是一个异步返回对象，用于从共享状态读取结果。你可以把std::promise理解为另一个端点，而将std::future看作是与之相连的另一个端点。
+当我们使用std::promise时，需要注意以下几点：
+一个std::promise只能与一个std::future关联，不能重复使用。 当一个std::promise的std::future被获取时，std::promise会变为active状态，此时std::promise不能被销毁。 在std::promise被销毁之前，必须调用set_value或set_exception方法来设置共享状态的值或异常。 如果一个std::promise的std::future被获取后，没有设置值或异常，那么调用std::future的get方法会抛出一个&amp;quot;broken promise&amp;quot;异常。 下面是一个示例，演示了如何使用std::promise和std::future实现异步计算和数据传递：
+1#include &amp;lt;iostream&amp;gt; 2#include &amp;lt;thread&amp;gt; 3#include &amp;lt;future&amp;gt; 4 5void asyncFunc(std::promise&amp;lt;int&amp;gt;&amp;amp; prom) { 6 // 模拟耗时操作 7 std::this_thread::sleep_for(std::chrono::seconds(2)); 8 int result = 10; 9 prom.set_value(result); 10} 11 12int main() { 13 std::promise&amp;lt;int&amp;gt; prom; // 创建一个std::promise对象 14 15 std::future&amp;lt;int&amp;gt; fut = prom.get_future(); // 获取与promise相关联的std::future对象 16 17 std::thread t(asyncFunc, std::ref(prom)); // 启动一个新线程，并将std::promise对象作为参数传递 18 19 std::cout &amp;lt;&amp;lt; &amp;#34;Waiting for result...&amp;#34; &amp;lt;&amp;lt; std::endl; 20 int result = fut.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何检测文本框内容的变化</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96/</link>
+      <pubDate>Sun, 10 Sep 2023 17:46:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何检测文本框内容的变化，包括使用jQuery和JavaScript的方法。通过对多种方法进行比较和分析，可以找到一种简洁有效的方式来实现这个需求。
+内容 在开发过程中，我们常常需要检测文本框内容的变化，以便在用户输入时执行相应的操作。下面将介绍几种常用的方法。
+方法1：使用input事件 在jQuery中，我们可以使用input事件来监听文本框内容的变化。这种方法非常简洁，并且可以处理大部分情况。
+1jQuery(&amp;#34;#some_text_box&amp;#34;).on(&amp;#34;input&amp;#34;, function() { 2 // 在这里执行你的操作 3}); 如果你想要更全面地处理各种情况，你可以扩展input事件来检测其他事件，如propertychange和paste。
+1jQuery(&amp;#34;#some_text_box&amp;#34;).on(&amp;#34;input propertychange paste&amp;#34;, function() { 2 // 在这里执行你的操作 3}); 方法2：使用change事件 在HTML/原生JavaScript中，我们可以使用change事件来检测文本框内容的变化。通过使用jQuery的.change()方法，可以很方便地实现这个功能。
+1$(&amp;#34;element&amp;#34;).change(function() { 2 // 在这里执行你的操作 3}); 方法3：使用keyup事件 另一种方法是使用keyup事件来检测文本框内容的变化。你可以通过使用闭包来记住键盘按下之前的文本框内容，并检查这是否发生了变化。
+1$(function() { 2 var content = $(&amp;#34;#myContent&amp;#34;).val(); 3 4 $(&amp;#34;#myContent&amp;#34;).keyup(function() { 5 if ($(&amp;#34;#myContent&amp;#34;).val() != content) { 6 content = $(&amp;#34;#myContent&amp;#34;).val(); 7 alert(&amp;#34;内容已经变化&amp;#34;); 8 } 9 }); 10}); 方法4：使用textchange事件 还有一种方法是使用textchange事件，通过自定义jQuery插件来实现。这种方法对所有类型的输入标签，包括textarea标签，都适用，并且可以处理复制、粘贴、删除等操作。
+1&amp;lt;!DOCTYPE html&amp;gt; 2&amp;lt;html&amp;gt; 3&amp;lt;head&amp;gt; 4&amp;lt;script class=&amp;#34;jsbin&amp;#34; src=&amp;#34;http://ajax.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何检查字符串是否为有效的JSON字符串？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Sun, 10 Sep 2023 17:21:38 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            在编写代码时，经常需要检查一个字符串是否为有效的JSON字符串。 在JavaScript中，可以使用JSON.parse()方法来解析JSON字符串，如果解析失败则会抛出一个错误。因此，我们可以通过尝试解析JSON字符串，并捕获错误来判断字符串是否为有效的JSON。
+以下是一个用于检查字符串是否为有效JSON字符串的函数：
+1function isValidJSONString(str) { 2 try { 3 JSON.parse(str); 4 return true; 5 } catch (e) { 6 return false; 7 } 8} 使用示例：
+1console.log(isValidJSONString(&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: 30}&amp;#39;)); // 输出：true 2console.log(isValidJSONString(&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: &amp;#34;30}&amp;#39;)); // 输出：false 3console.log(isValidJSONString(&amp;#39;[1, 2, 3]&amp;#39;)); // 输出：true 4console.log(isValidJSONString(&amp;#39;[1, 2, 3&amp;#39;)); // 输出：false 注意：此方法只能检查字符串是否为有效的JSON格式，无法判断JSON中的值是否符合预期。如需进一步验证JSON中的值，请使用其他方法或库。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在PostgreSQL中进行&#34;不区分大小写&#34;的查询？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8postgresql%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Sun, 10 Sep 2023 17:17:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8postgresql%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E6%9F%A5%E8%AF%A2/</guid>
+      <description>
+        
+          
+            我们经常在数据库中进行查询操作，但是有时候我们想要实现不区分大小写的查询。在PostgreSQL中，我们可以通过以下方法实现这一目的。下面的例子将帮助您理解如何在PostgreSQL中进行&amp;quot;不区分大小写&amp;quot;的查询。
+使用LOWER函数进行查询 在PostgreSQL中，我们可以使用LOWER函数将字符串转换为小写字母，然后再进行比较。以下是一个示例：
+1SELECT id 2 FROM groups 3 WHERE LOWER(name)=LOWER(&amp;#39;Administrator&amp;#39;) 在这个例子中，我们使用LOWER函数将查询条件的字符串&amp;quot;Administrator&amp;quot;转换为小写字母，然后与数据库中的name列进行比较。这样就可以实现不区分大小写的查询了。
+其他解决方案 除了使用LOWER函数进行查询外，还有其他一些解决方案可以实现不区分大小写的查询。这些解决方案包括：
+使用citext模块：citext模块模拟了不区分大小写的数据类型的行为。通过加载该模块，您可以创建一个不区分大小写的索引，例如CREATE INDEX ON groups (name::citext);。 使用不区分大小写的排序规则：在初始化数据库时设置不区分大小写的排序规则，可以接受来自客户端代码的几乎任何格式，返回有用的结果。但是这也意味着您不能进行区分大小写的查询。 创建一个函数索引：通过使用LOWER函数创建一个小写索引，例如CREATE INDEX ON groups (LOWER(name));，然后可以使用LOWER函数在查询中利用这个索引。 这些解决方案的具体用法请参考参考答案中的示例代码。
+总结 在本文中，我们学习了如何在PostgreSQL中进行&amp;quot;不区分大小写&amp;quot;的查询。我们介绍了使用LOWER函数进行查询的方法，并提供了其他几种解决方案。无论您选择哪种方法，都能实现不区分大小写的查询操作。希望这篇文章能够帮助到您！
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>JavaScript对象的属性值获取方法</title>
+      <link>https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 10 Sep 2023 16:46:58 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            JavaScript中的对象是由一系列属性和值组成的，我们经常需要获取对象的属性值。本教程将介绍几种获取JavaScript对象属性值的方法，并提供相应的示例。
+获取所有属性值的方法 最简单的方法是使用for...in循环遍历对象的所有键，并获取每个键对应的值。以下是示例代码：
+1var objects = {...}; 2 3for(var key in objects) { 4 var value = objects[key]; 5 // 这里可以对属性值进行处理 6} 示例： 假设有一个JavaScript对象foo，其中包含了50多个属性，但不知道属性名称。要在循环中获取每个属性的值，可以使用上述for...in循环：
+1var foo = {one:1, two:2, three:3}; 2for (key in foo){ 3 console.log(&amp;#34;foo[&amp;#34;+ key +&amp;#34;]=&amp;#34;+ foo[key]); 4} 输出结果为：
+1foo[one]=1 2foo[two]=2 3foo[three]=3 获取属性值数组的方法 如果需要将对象的属性值存储在一个数组中，可以使用以下具有对象保护的可重用函数：
+1Object.values = function (obj) { 2 var vals = []; 3 for( var key in obj ) { 4 if ( obj.hasOwnProperty(key) ) { 5 vals.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>SQL Server中查询大于指定日期的所有日期</title>
+      <link>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E6%9F%A5%E8%AF%A2%E5%A4%A7%E4%BA%8E%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E6%89%80%E6%9C%89%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Sun, 10 Sep 2023 16:33:04 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E6%9F%A5%E8%AF%A2%E5%A4%A7%E4%BA%8E%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E6%89%80%E6%9C%89%E6%97%A5%E6%9C%9F/</guid>
+      <description>
+        
+          
+            在SQL Server中，如果我们要查询大于某个日期的所有日期，我们需要注意日期的比较方式和格式。本文将介绍如何正确查询大于指定日期的所有日期，并提供了一些示例来说明。
+摘要 当我们使用以下查询时，可能会导致无法得到期望的结果：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= 2010-04-01; 在这种查询中，2010-4-01被视为数学表达式，实际上读取的是：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= 2005; 为了避免这个问题，我们需要将日期转换为正确的datetime格式，并使用单引号括起来。
+内容 以下是正确查询大于指定日期的所有日期的示例：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= Convert(datetime, &amp;#39;2010-04-01&amp;#39;); 在这个示例中，我们使用了Convert函数将日期字符串转换为datetime类型，并使用单引号将日期字符串括起来。
+另外，如果我们想要更加简洁的查询方式，也可以使用以下查询语句：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= &amp;#39;2010-04-01&amp;#39;; 这种方式的查询语句会自动将日期字符串转换为正确的datetime类型。
+总结 通过本文的介绍，我们知道了在SQL Server中查询大于指定日期的所有日期的正确方式。我们需要将日期字符串转换为datetime类型，并使用单引号括起来。我们还提供了多种示例，供读者参考和使用。
+因此，在SQL Server中查询大于指定日期的所有日期时，请根据本文介绍的方式进行操作，以获得正确的查询结果。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>git-branch 分支名</title>
+      <link>https://www.techdocdb.com/posts/git-branch-%E5%88%86%E6%94%AF%E5%90%8D/</link>
+      <pubDate>Sun, 10 Sep 2023 15:17:25 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/git-branch-%E5%88%86%E6%94%AF%E5%90%8D/</guid>
+      <description>
+        
+          
+            git-branch 是一个常用的 Git 命令，用于显示所有本地分支的列表。在这个列表中，通过星号 (*) 标记的分支名称就是当前所在的分支。以下是一些获取当前分支名称的方法。
+获取当前分支名称的方法 有几种方法可以获取 Git 中的当前分支名称。下面是其中一些方法的示例。
+方法一：使用 git branch 命令 通过运行以下命令，您可以获取当前所在的分支名称（带有星号标记的分支）：
+1git branch | grep &amp;#39;*&amp;#39; 这将输出一个类似于 * master 的结果，表示您当前所在的分支是 master。
+方法二：使用 git rev-parse 命令 运行以下命令，可以获取当前分支的名称：
+1git rev-parse --abbrev-ref HEAD 这将返回当前分支的名称，例如 master。
+方法三：使用 git status 命令 另一种获取当前分支名称的方法是运行以下命令：
+1git status | head -1 这将输出第一行，其中包含了当前分支的名称，例如 On branch master。
+方法四：使用 git symbolic-ref HEAD 命令 在 Git 仓库中运行以下命令来获取当前分支的名称：
+1git symbolic-ref --short HEAD 这会返回当前分支的名称，例如 master。
+方法五：使用 git describe 命令 运行以下命令，可以获取当前分支的名称：
+1git describe --contains --all HEAD 这将返回当前分支的名称，例如 feature/branch。它还会显示当前提交所在的所有分支名称。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sun, 10 Sep 2023 15:17:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>动态加载JS文件</title>
+      <link>https://www.techdocdb.com/posts/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDjs%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sun, 10 Sep 2023 14:31:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDjs%E6%96%87%E4%BB%B6/</guid>
+      <description>
+        
+          
+            在动态网页开发中，经常需要在一个JavaScript文件中导入另一个外部的JS文件。有多种方法可以实现这个需求。本文将介绍一些解决方案，包括使用jQuery和纯JavaScript的方法。
+使用jQuery的解决方案 你可以使用jQuery的$.getScript()方法来动态加载JS文件。该方法会通过GET方式从服务器上获取JavaScript文件，并执行它。
+1$.getScript(&amp;#34;ajax/test.js&amp;#34;, function(data, textStatus, jqxhr) { 2 console.log(data); // 返回的数据 3 console.log(textStatus); // 请求成功 4 console.log(jqxhr.status); // HTTP状态码为200 5 console.log(&amp;#39;加载成功。&amp;#39;); 6}); 你可以在参数中指定要加载的JavaScript文件的URL，并定义一个回调函数，在文件加载完成后执行。
+使用纯JavaScript的解决方案 你也可以使用纯JavaScript的方法来动态加载JS文件。例如，你可以使用document.createElement()创建一个&amp;lt;script&amp;gt;元素，并将其添加到文档的头部。
+1var script = document.createElement(&amp;#39;script&amp;#39;); 2script.src = &amp;#34;url_to_someScript.js&amp;#34;; 3 4document.head.appendChild(script); // 或者将它插入到其他符合需要的位置 然而，上述方法只是将JS文件添加到文档中，并不会立即加载和执行。为了确保JS文件已加载完成并可用，你需要监听脚本的load事件。
+1var script = document.createElement(&amp;#39;script&amp;#39;); 2script.src = &amp;#34;url_to_someScript.js&amp;#34;; 3 4script.onload = function () { 5 // 在这里可以使用已加载的JS文件进行操作 6}; 7 8document.head.appendChild(script); // 或者将它插入到其他符合需要的位置 当JS文件加载完成后，onload事件会触发回调函数。
+使用自定义的加载函数 如果你不想依赖于jQuery或者纯JavaScript的方法，你可以自行实现一个动态加载JS文件的函数。下面是一个使用jQuery的函数实现：
+1jQuery.loadScript = function (url, callback) { 2 jQuery.ajax({ 3 url: url, 4 dataType: &amp;#39;script&amp;#39;, 5 success: callback, 6 async: true 7 }); 8} 在使用时，你可以调用该函数并指定要加载的JavaScript文件的URL和加载完成后的回调函数。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在PHP中获得客户端的IP地址</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8php%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84ip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Sun, 10 Sep 2023 14:22:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8php%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84ip%E5%9C%B0%E5%9D%80/</guid>
+      <description>
+        
+          
+            在PHP中，你可以通过$_SERVER全局变量来获取客户端的IP地址。以下是一些获取客户端IP地址的方法：
+1$ip = $_SERVER[&amp;#39;REMOTE_ADDR&amp;#39;]; 这是最简单和最常用的方法。它将返回客户端的真实IP地址。但是，请注意这个方法可能不准确，因为客户端可能位于代理服务器之后。
+1$ip = $_SERVER[&amp;#39;HTTP_CLIENT_IP&amp;#39;]; 这个方法适用于使用共享Internet服务的用户。它将返回客户端的IP地址，但在某些情况下可能为空。
+1$ip = $_SERVER[&amp;#39;HTTP_X_FORWARDED_FOR&amp;#39;]; 这个方法适用于通过代理服务器连接的用户。它将返回经过代理服务器转发的IP地址列表，可能包含多个IP地址。
+以上是一些常用的方法，但需要注意的是，这些方法都可以被伪造或篡改。为了更准确和安全地获取客户端的IP地址，你可以结合使用多个方法，并进行IP地址的验证。以下是一个使用多个方法并验证IP地址的示例代码：
+1function getClientIP() { 2 // 按优先级检查多个可能的IP来源 3 $ip_sources = array( 4 &amp;#39;HTTP_CLIENT_IP&amp;#39;, 5 &amp;#39;HTTP_X_FORWARDED_FOR&amp;#39;, 6 &amp;#39;HTTP_X_FORWARDED&amp;#39;, 7 &amp;#39;HTTP_FORWARDED_FOR&amp;#39;, 8 &amp;#39;HTTP_FORWARDED&amp;#39;, 9 &amp;#39;REMOTE_ADDR&amp;#39; 10 ); 11 12 foreach ($ip_sources as $source) { 13 if (!empty($_SERVER[$source]) &amp;amp;&amp;amp; filter_var($_SERVER[$source], FILTER_VALIDATE_IP)) { 14 return $_SERVER[$source]; 15 } 16 } 17 18 return &amp;#39;Unknown&amp;#39;; // 如果找不到合法的IP地址，则返回 &amp;#39;Unknown&amp;#39; 19} 这个函数会按照指定的优先级顺序检查多个可能的IP来源，并返回第一个合法的IP地址。如果找不到合法的IP地址，则返回&#39;Unknown&#39;。
+请注意，无论哪种方法，都存在安全风险和准确性的问题。因此，在处理IP地址时，需要谨慎处理和验证用户输入。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>动画展开/折叠的方法</title>
       <link>https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/</link>

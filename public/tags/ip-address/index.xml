@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 15:58:41 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/ip-address/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 14:22:06 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/ip-address/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在PHP中获得客户端的IP地址</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8php%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84ip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Sun, 10 Sep 2023 14:22:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8php%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84ip%E5%9C%B0%E5%9D%80/</guid>
+      <description>
+        
+          
+            在PHP中，你可以通过$_SERVER全局变量来获取客户端的IP地址。以下是一些获取客户端IP地址的方法：
+1$ip = $_SERVER[&amp;#39;REMOTE_ADDR&amp;#39;]; 这是最简单和最常用的方法。它将返回客户端的真实IP地址。但是，请注意这个方法可能不准确，因为客户端可能位于代理服务器之后。
+1$ip = $_SERVER[&amp;#39;HTTP_CLIENT_IP&amp;#39;]; 这个方法适用于使用共享Internet服务的用户。它将返回客户端的IP地址，但在某些情况下可能为空。
+1$ip = $_SERVER[&amp;#39;HTTP_X_FORWARDED_FOR&amp;#39;]; 这个方法适用于通过代理服务器连接的用户。它将返回经过代理服务器转发的IP地址列表，可能包含多个IP地址。
+以上是一些常用的方法，但需要注意的是，这些方法都可以被伪造或篡改。为了更准确和安全地获取客户端的IP地址，你可以结合使用多个方法，并进行IP地址的验证。以下是一个使用多个方法并验证IP地址的示例代码：
+1function getClientIP() { 2 // 按优先级检查多个可能的IP来源 3 $ip_sources = array( 4 &amp;#39;HTTP_CLIENT_IP&amp;#39;, 5 &amp;#39;HTTP_X_FORWARDED_FOR&amp;#39;, 6 &amp;#39;HTTP_X_FORWARDED&amp;#39;, 7 &amp;#39;HTTP_FORWARDED_FOR&amp;#39;, 8 &amp;#39;HTTP_FORWARDED&amp;#39;, 9 &amp;#39;REMOTE_ADDR&amp;#39; 10 ); 11 12 foreach ($ip_sources as $source) { 13 if (!empty($_SERVER[$source]) &amp;amp;&amp;amp; filter_var($_SERVER[$source], FILTER_VALIDATE_IP)) { 14 return $_SERVER[$source]; 15 } 16 } 17 18 return &amp;#39;Unknown&amp;#39;; // 如果找不到合法的IP地址，则返回 &amp;#39;Unknown&amp;#39; 19} 这个函数会按照指定的优先级顺序检查多个可能的IP来源，并返回第一个合法的IP地址。如果找不到合法的IP地址，则返回&#39;Unknown&#39;。
+请注意，无论哪种方法，都存在安全风险和准确性的问题。因此，在处理IP地址时，需要谨慎处理和验证用户输入。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Express.js中获取远程客户端IP地址</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8express.js%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AFip%E5%9C%B0%E5%9D%80/</link>

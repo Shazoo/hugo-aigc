@@ -146,6 +146,686 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-const-%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/" title="使用 &#39;const&#39; 修饰函数参数">使用 'const' 修饰函数参数</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 15:20:15</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/constants/' title="constants" class="post_tag button button_translucent">constants
+        </a><a href='https://www.techdocdb.com/tags/c&#43;&#43;/' title="c&#43;&#43;" class="post_tag button button_translucent">c&#43;&#43;
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="使用 &amp;#39;const&amp;#39; 修饰函数参数"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/c&#43;&#43;.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>注意：下面是相同问题的问题解答，并将其优化成了一篇说明性的教程文章。
+摘要 本教程将介绍在函数参数中使用 'const' 的使用方式。我们将通过例子来说明如何使用 'const' 修饰函数参数，以及这种用法是否有实际意义。
+内容 通常情况下，对于按值传递的参数来说，在函数声明中加上 'const' 是没有意义的，因为这对调用者没有任何影响。以下是一个简单的例子：
+1void func(const int n, const long l) 在上面的例子中，'const' 只是限制了参数的实现，对于函数的接口没有任何贡献。添加这种限制只会让代码变得更复杂，并且注意力会从真正必要使用 'const' 的地方分散开来。
+然而，对于指针或引用 …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8-const-%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/" title="静态方法重写">静态方法重写</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 14:29:42</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/static-methods/' title="static-methods" class="post_tag button button_translucent">static-methods
+        </a><a href='https://www.techdocdb.com/tags/overriding/' title="overriding" class="post_tag button button_translucent">overriding
+        </a><a href='https://www.techdocdb.com/tags/static/' title="static" class="post_tag button button_translucent">static
+        </a><a href='https://www.techdocdb.com/tags/java/' title="java" class="post_tag button button_translucent">java
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="静态方法重写"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/java.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>摘要 在Java中，无法重写静态方法。这是因为静态方法与类的实例无关，因此重写的概念不适用于静态方法。
+内容 重写依赖于存在一个类的实例。多态的关键在于你可以对一个类进行子类化，并且实现这些子类中的方法可以对超类中定义的相同方法具有不同的行为（并在子类中重写这些方法）。静态方法与类的任何实例都没有关联，因此重写的概念不适用。
+Java的设计有两个考虑因素对此产生了影响。一个是对性能的关注：曾经有很多关于Smalltalk的批评，认为它运行速度太慢（垃圾回收和多态调用是其中的一部分），Java的创造者决心避免这种情况。另一个是Java的目标受众是C++开发人员。让静态方法按照目前的方式工作对于C++程序员来说很熟悉，也非常快速，因为在 …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/google-ajax-libraries%E6%95%99%E7%A8%8B/" title="Google AJAX Libraries教程">Google AJAX Libraries教程</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 14:12:57</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/google-ajax-libraries/' title="google-ajax-libraries" class="post_tag button button_translucent">google-ajax-libraries
+        </a><a href='https://www.techdocdb.com/tags/cdn/' title="cdn" class="post_tag button button_translucent">cdn
+        </a><a href='https://www.techdocdb.com/tags/jquery/' title="jquery" class="post_tag button button_translucent">jquery
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="Google AJAX Libraries教程"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/jquery.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>在Web开发中，使用CDN（内容分发网络）是一种常见的优化性能和加载速度的方法。Google AJAX Libraries是一个非常受欢迎的CDN，它提供了许多常用的JavaScript库，包括jQuery。
+摘要 本教程将介绍如何在使用Google的托管版本的jQuery时，当加载失败时，切换到自己托管的版本。我们还将讨论同时引入两个版本的风险，并提供了一种备份计划。以下是解决方案：
+1&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&quot;&gt;&lt;/script&gt; 2 …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/google-ajax-libraries%E6%95%99%E7%A8%8B/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/" title="Angular2 Routing教程">Angular2 Routing教程</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 11:52:32</span>
+    <span class="post_time"> · 3 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/angular2-routing/' title="angular2-routing" class="post_tag button button_translucent">angular2-routing
+        </a><a href='https://www.techdocdb.com/tags/typescript/' title="typescript" class="post_tag button button_translucent">typescript
+        </a><a href='https://www.techdocdb.com/tags/angular/' title="angular" class="post_tag button button_translucent">angular
+        </a><a href='https://www.techdocdb.com/tags/javascript/' title="javascript" class="post_tag button button_translucent">javascript
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="Angular2 Routing教程"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/typescript.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>摘要 在Angular应用程序中，如何确定当前活动的路由？
+内容 在Angular应用程序中，我们经常需要知道当前活动的路由，以便在导航链接或按钮上添加活动状态的类。在不同版本的Angular中，有多种方法可以实现这一目标。本教程将介绍一些常用的方法。
+标记导航链接为活动状态 在Angular中,我们可以使用[routerLinkActive]指令来将导航链接标记为活动状态。通过给[routerLinkActive]指令添加一个用于活动状态的CSS类名，当链接的路由与当前路由匹配时，该类名将被添加到链接上。
+下面是一个带有活动状态的导航链接的示例：
+1- &lt;a …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/heading-level-1/" title="(heading level 1)">(heading level 1)</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 11:52:06</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/iife/' title="iife" class="post_tag button button_translucent">iife
+        </a><a href='https://www.techdocdb.com/tags/javascript/' title="javascript" class="post_tag button button_translucent">javascript
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="(heading level 1)"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/javascript.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>IIFE和JavaScript中的 (function() { } )() 构造是什么？ (p) 我想了解这个的含义：
+1(function () { 2 3})(); (p) 这是否基本上等同于 document.onload？
+这是一个Immediately-Invoked Function Expression (IIFE)。它在创建后立即执行。
+这与任何事件处理程序（如 document.onload ）无关。 考虑括号内的部分：(&lt;b&gt;function(){}&lt;/b&gt;)();....它是一个常规的函数表达式。 …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/heading-level-1/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/how-to-choose-the-right-bean-scope/" title="How to Choose the Right Bean Scope?">How to Choose the Right Bean Scope?</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 11:23:05</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/managed-bean/' title="managed-bean" class="post_tag button button_translucent">managed-bean
+        </a><a href='https://www.techdocdb.com/tags/jsf-2/' title="jsf-2" class="post_tag button button_translucent">jsf-2
+        </a><a href='https://www.techdocdb.com/tags/scope/' title="scope" class="post_tag button button_translucent">scope
+        </a><a href='https://www.techdocdb.com/tags/jsf/' title="jsf" class="post_tag button button_translucent">jsf
+        </a>
+    </span>
+  </div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div class="pale">
+          
+            <p>Introduction 在JSF中，选择正确的bean scope非常重要。bean scope决定了bean的生命周期以及数据的存储方式。本教程将详细介绍JSF中各种bean scope的作用和如何选择适合你的bean的scope。
+@Request/View/Flow/Session/ApplicationScoped @RequestScoped: 一个标记有@RequestScoped注解的bean的生命周期与一个HTTP请求-响应周期相同。也就是说，每个HTTP请求都会创建一个新的@RequestScoped bean实例。这种scope适合简单的非Ajax表单提交和展示页面。 @ViewScoped: 一个标记 …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/how-to-choose-the-right-bean-scope/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/html/" title="&lt;html&gt;"><html></a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 11:11:42</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/split/' title="split" class="post_tag button button_translucent">split
+        </a><a href='https://www.techdocdb.com/tags/string/' title="string" class="post_tag button button_translucent">string
+        </a><a href='https://www.techdocdb.com/tags/python/' title="python" class="post_tag button button_translucent">python
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="&amp;lt;html&amp;gt;"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/python.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>504 Gateway Time-out 504 Gateway Time-out nginx</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/html/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/random-color-generator/" title="Random Color Generator">Random Color Generator</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 10:43:24</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/colors/' title="colors" class="post_tag button button_translucent">colors
+        </a><a href='https://www.techdocdb.com/tags/random/' title="random" class="post_tag button button_translucent">random
+        </a><a href='https://www.techdocdb.com/tags/javascript/' title="javascript" class="post_tag button button_translucent">javascript
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="Random Color Generator"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/random.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>这篇文章将介绍如何使用JavaScript生成随机颜色。我们将展示一个例子来说明这个知识点。
+摘要 使用JavaScript生成随机颜色是一种常见的需求。我们可以使用不同的方法来实现这个目标。在本教程中，我们将介绍一个简单的方法，它可以确保生成的颜色代码始终是有效的六位16进制值。这个方法使用正则表达式和替换函数来生成随机的颜色代码。
+内容 要替换给定的color代码为一个随机颜色生成器，我们可以使用如下的方法：
+1document.overlay = GPolyline.fromEncoded({ 2 color: getRandomColor(), 3 weight: 10, 4 points: encoded_points, …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/random-color-generator/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/html/" title="&lt;html&gt;"><html></a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 10:43:21</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/state/' title="state" class="post_tag button button_translucent">state
+        </a><a href='https://www.techdocdb.com/tags/reactjs/' title="reactjs" class="post_tag button button_translucent">reactjs
+        </a><a href='https://www.techdocdb.com/tags/javascript/' title="javascript" class="post_tag button button_translucent">javascript
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="&amp;lt;html&amp;gt;"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/reactjs.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>504 Gateway Time-out 504 Gateway Time-out nginx</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/html/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/css%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BAdiv%E8%AE%BE%E7%BD%AE%E5%86%85%E8%BE%B9%E6%A1%86%E8%80%8C%E4%B8%8D%E6%98%AF%E8%BE%B9%E7%BC%98/" title="CSS中如何为div设置内边框而不是边缘？">CSS中如何为div设置内边框而不是边缘？</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 10:40:47</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/border/' title="border" class="post_tag button button_translucent">border
+        </a><a href='https://www.techdocdb.com/tags/css/' title="css" class="post_tag button button_translucent">css
+        </a><a href='https://www.techdocdb.com/tags/html/' title="html" class="post_tag button button_translucent">html
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="CSS中如何为div设置内边框而不是边缘？"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/css.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>设置box-sizing属性为border-box可以实现将边框置于&lt;div&gt;元素内部而不是边缘的效果：
+1div { 2 box-sizing: border-box; 3 -moz-box-sizing: border-box; 4 -webkit-box-sizing: border-box; 5 width: 100px; 6 height: 100px; 7 border: 20px solid #f00; 8 background: #00f; 9 margin: 10px; 10} 11 12div + div { 13 border: 10px solid red; 14} 效果如下： …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/css%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BAdiv%E8%AE%BE%E7%BD%AE%E5%86%85%E8%BE%B9%E6%A1%86%E8%80%8C%E4%B8%8D%E6%98%AF%E8%BE%B9%E7%BC%98/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://www.techdocdb.com/posts/bash%E5%B7%A5%E5%85%B7%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%8E%B7%E5%8F%96%E7%AC%ACn%E8%A1%8C/" title="Bash工具：从文件中获取第N行">Bash工具：从文件中获取第N行</a>
+      </h3>
+      
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      2023-09-09 09:46:53</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/sed/' title="sed" class="post_tag button button_translucent">sed
+        </a><a href='https://www.techdocdb.com/tags/awk/' title="awk" class="post_tag button button_translucent">awk
+        </a><a href='https://www.techdocdb.com/tags/unix/' title="unix" class="post_tag button button_translucent">unix
+        </a><a href='https://www.techdocdb.com/tags/shell/' title="shell" class="post_tag button button_translucent">shell
+        </a><a href='https://www.techdocdb.com/tags/bash/' title="bash" class="post_tag button button_translucent">bash
+        </a>
+    </span>
+  </div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail"><figure>
+  <picture>
+
+    
+      
+        
+        
+        
+        
+        
+        
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="Bash工具：从文件中获取第N行"
+      
+        class="image_figure image_thumbnail image_internal image_unprocessed"
+        src="/images/sed.256x256.png"
+      
+      
+    />
+
+    </picture>
+</figure>
+
+      </div>
+      
+        <div class="pale">
+          
+            <p>摘要 本文介绍了一种在Bash中提取文件中特定行（或一系列行）的方法。通过使用head和tail命令、sed以及其他一些工具，可以实现此功能。本文还讨论了在处理大文件时各种方法的性能。
+内容 如果想要从文件中提取特定行，可以使用以下方法之一：
+使用head和tail命令：可以将head -n+N和tail -1命令组合使用来提取第N行。例如，head -7 file.txt | tail -1将打印文件的第7行。 使用sed命令：可以使用sed 'NUMq;d' file命令来提取第N行。例如，sed '7q;d' file.txt将打印文件的第7行。 使用awk命令：可以使用awk 'NR == N {print; exit}' …</p>
+          
+          <br>
+          <a href="https://www.techdocdb.com/posts/bash%E5%B7%A5%E5%85%B7%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%8E%B7%E5%8F%96%E7%AC%ACn%E8%A1%8C/" title="阅读更多" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+        <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="https://www.techdocdb.com/posts/%E8%A7%A3%E6%9E%90%E5%B9%B3%E9%9D%A2%E8%A1%A8%E4%B8%BA%E6%A0%91%E7%9A%84%E6%9C%80%E9%AB%98%E6%95%88/%E4%BC%98%E9%9B%85%E7%9A%84%E6%96%B9%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88/" title="解析平面表为树的最高效/优雅的方法是什么？">解析平面表为树的最高效/优雅的方法是什么？</a>
       </h3>
       
@@ -1288,674 +1968,6 @@ ARM Translation Installer v1.1（如果刷入ARM翻译时遇到问题，请尝�
     </div>
   </li>
 
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/html/" title="&lt;html&gt;"><html></a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 10:10:24</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/java-9/' title="java-9" class="post_tag button button_translucent">java-9
-        </a><a href='https://www.techdocdb.com/tags/android/' title="android" class="post_tag button button_translucent">android
-        </a><a href='https://www.techdocdb.com/tags/java/' title="java" class="post_tag button button_translucent">java
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="&amp;lt;html&amp;gt;"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/android.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>504 Gateway Time-out 504 Gateway Time-out nginx</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/html/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/pass-method-as-parameter-using-c%5C#/" title="Pass Method as Parameter using C\#">Pass Method as Parameter using C#</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 09:41:03</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/delegates/' title="delegates" class="post_tag button button_translucent">delegates
-        </a><a href='https://www.techdocdb.com/tags/methods/' title="methods" class="post_tag button button_translucent">methods
-        </a><a href='https://www.techdocdb.com/tags/.net/' title=".net" class="post_tag button button_translucent">.net
-        </a><a href='https://www.techdocdb.com/tags/csharp/' title="csharp" class="post_tag button button_translucent">csharp
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="Pass Method as Parameter using C\#"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/.net.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>该教程将向您展示如何在C＃中将方法作为参数传递。为了实现这一目标，我们将使用.NET中的Func委托。
-概述 您有多个方法，它们的参数类型和返回值相同，但名称和代码块不同。您想将要运行的方法的名称传递给另一个方法，然后由该方法调用传递的方法。
-1public int Method1(string input) 2{ 3 // 执行某些操作 4 return 0; 5} 6 7public int Method2(string input) 8{ 9 // 执行其他操作 10 return 1; 11} 12 13public bool RunTheMethod(Func&lt;string, int&gt; …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/pass-method-as-parameter-using-c%5C#/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/" title="如何在iPhone应用程序中嵌入自定义字体？">如何在iPhone应用程序中嵌入自定义字体？</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 09:06:06</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/fonts/' title="fonts" class="post_tag button button_translucent">fonts
-        </a><a href='https://www.techdocdb.com/tags/cocoa-touch/' title="cocoa-touch" class="post_tag button button_translucent">cocoa-touch
-        </a><a href='https://www.techdocdb.com/tags/ios/' title="ios" class="post_tag button button_translucent">ios
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="如何在iPhone应用程序中嵌入自定义字体？"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/ios.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>iOS 3.2及更高版本支持在应用程序中嵌入自定义字体。直接从“What's New in iPhone OS 3.2”文档中摘录了以下内容：
-Custom Font Support(自定义字体支持): 应用程序想要使用自定义字体，现在可以将那些字体包含在其应用程序捆绑包中，并通过在其 Info.plist 文件中包括 UIAppFonts 键来将这些字体注册到系统。该键的值是一个字符串数组，标识应用程序捆绑包中的字体文件。当系统看到这个键时，会加载指定的字体并使它们对应用程序可用。
-在 Info.plist 中设置 UIAppFonts：
-步骤如下：
-将自定义字体文件添加到Xcode的资源文件夹中。 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/" title="GitHub pull request 显示已经在目标分支中的提交">GitHub pull request 显示已经在目标分支中的提交</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 08:31:34</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/pull-request/' title="pull-request" class="post_tag button button_translucent">pull-request
-        </a><a href='https://www.techdocdb.com/tags/commit/' title="commit" class="post_tag button button_translucent">commit
-        </a><a href='https://www.techdocdb.com/tags/merge/' title="merge" class="post_tag button button_translucent">merge
-        </a><a href='https://www.techdocdb.com/tags/github/' title="github" class="post_tag button button_translucent">github
-        </a><a href='https://www.techdocdb.com/tags/git/' title="git" class="post_tag button button_translucent">git
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="GitHub pull request 显示已经在目标分支中的提交"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/github.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>GitHub的pull request功能是开发团队协作开发的重要工具。然而，在某些情况下，当我们进行pull request时，我们会发现显示的提交和差异与我们预期的不符。特别是在目标分支有新提交时，已经合并的提交可能仍然在pull request中显示。
-解决方法 这个问题是由于GitHub pull request的工作原理导致的。默认情况下，pull request会显示源分支和目标分支的共同祖先之后的所有变更，在此过程中不会考虑到目标分支上所发生的任何更改。这就是为什么即使在目标分支上进行了合并，pull request仍然显示已经合并的提交的原因。
-以下是一些解决该问题的方法。
-方法一：使用URL比较链接 您可以通过以 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/github-pull-request-%E6%98%BE%E7%A4%BA%E5%B7%B2%E7%BB%8F%E5%9C%A8%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%8F%90%E4%BA%A4/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E7%9B%B8%E5%BA%94%E5%BC%8F%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%9C%A8css%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="相应式字体大小在CSS中的应用">相应式字体大小在CSS中的应用</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 08:14:14</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/font-size/' title="font-size" class="post_tag button button_translucent">font-size
-        </a><a href='https://www.techdocdb.com/tags/zurb-foundation/' title="zurb-foundation" class="post_tag button button_translucent">zurb-foundation
-        </a><a href='https://www.techdocdb.com/tags/responsive-design/' title="responsive-design" class="post_tag button button_translucent">responsive-design
-        </a><a href='https://www.techdocdb.com/tags/css/' title="css" class="post_tag button button_translucent">css
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="相应式字体大小在CSS中的应用"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/css.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>摘要 本教程将教你如何在CSS中使用相应式字体大小。你将学到如何根据浏览器窗口的大小来调整字体大小，以适应不同的屏幕尺寸。
-内容 在响应式设计中，我们经常遇到一个问题：当浏览器窗口缩小到移动设备尺寸时，字体大小没有自动调整，导致文本过大而出现水平滚动条。那么我们该如何解决这个问题呢？
-使用媒体查询 为了解决这个问题，我们可以使用媒体查询。媒体查询允许我们根据浏览器窗口的大小来应用不同的CSS样式。我们可以使用媒体查询来减小字体大小，以防止设计被破坏并出现滚动条。
-例如，你可以在CSS的末尾添加以下代码，根据设计开始崩溃的320像素宽度，设置字体大小为2em：
-1@media only screen and (max-width: …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E7%9B%B8%E5%BA%94%E5%BC%8F%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%9C%A8css%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%9C%89%E6%95%88%E7%9A%84%E8%AE%BA%E5%9D%9B%E7%89%88%E4%B8%BB/" title="如何成为一个有效的论坛版主">如何成为一个有效的论坛版主</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 08:07:28</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/' title="" class="post_tag button button_translucent">
-        </a>
-    </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            <p>在一个活跃的社区中，版主的作用不可忽视。他们是维护秩序、促进构建社区的重要角色。如果你想成为一个优秀的版主，以下是一些关键要点。
-全心投入 成为一个版主需要全心全意地为社区服务。举例来说，Sathya就是一个非常有热情和奉献精神的版主。他在过去的3年里一直是一个活跃的成员，访问了超过1100天。
-社区建设 要想成为一个受欢迎的版主，积极参与社区建设是至关重要的。作为版主，要主动参与各个子论坛的讨论，并给出有价值的建议。例如，Sathya在Meta Stack Overflow、Super User、Super User Meta、Web Apps和Web Apps meta等论坛活跃，经常参与讨论并给出成员改善体验的建议。
-丰富的版 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%9C%89%E6%95%88%E7%9A%84%E8%AE%BA%E5%9D%9B%E7%89%88%E4%B8%BB/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E6%8F%90%E5%90%8D%E8%87%AA%E5%B7%B1%E6%88%90%E4%B8%BAstack-overflow%E7%9A%84%E7%89%88%E4%B8%BB/" title="提名自己成为Stack Overflow的版主">提名自己成为Stack Overflow的版主</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 01:23:48</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/' title="" class="post_tag button button_translucent">
-        </a>
-    </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            <p>摘要 本教程将介绍Second Rikudo自我提名成为Stack Overflow版主的理由和经验。Second Rikudo强调作为版主应具备的专业性、耐心和审慎判断的品质，并分享了他在Stack Overflow的活跃经历和成就。
-内容 Second Rikudo在自我提名成为Stack Overflow版主时，特别强调了他认为版主最重要的品质。他认为版主应该具备专业素养，对用户有耐心，并且慎重对待问题。他认为版主应该关注当前存在的问题，并做出适当的回答。
-以下是Second Rikudo在Stack Overflow的活跃经历和成就：
-发放了总计8700分的悬赏积分，并提供了大部分给出色的、高质量的答案。 参与了4362个问 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E6%8F%90%E5%90%8D%E8%87%AA%E5%B7%B1%E6%88%90%E4%B8%BAstack-overflow%E7%9A%84%E7%89%88%E4%B8%BB/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83/" title="在MySQL中如何进行区分大小写的字符串比较？">在MySQL中如何进行区分大小写的字符串比较？</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 01:20:11</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/case-sensitive/' title="case-sensitive" class="post_tag button button_translucent">case-sensitive
-        </a><a href='https://www.techdocdb.com/tags/string-comparison/' title="string-comparison" class="post_tag button button_translucent">string-comparison
-        </a><a href='https://www.techdocdb.com/tags/interop/' title="interop" class="post_tag button button_translucent">interop
-        </a><a href='https://www.techdocdb.com/tags/mysql/' title="mysql" class="post_tag button button_translucent">mysql
-        </a><a href='https://www.techdocdb.com/tags/sql/' title="sql" class="post_tag button button_translucent">sql
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="在MySQL中如何进行区分大小写的字符串比较？"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/mysql.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>摘要 本文介绍了在MySQL中如何进行区分大小写的字符串比较。
-内容 有时候我们需要在MySQL中进行区分大小写的字符串比较。以下是几种实现区分大小写字符串比较的方法：
-使用BINARY关键字
-1SELECT * FROM <code>table</code> WHERE BINARY <code>column</code> = 'value' 这个方法使用BINARY关键字对进行比较的列和值进行二进制比较，从而实现区分大小写的比较。
-使用COLLATE关键字
-1SELECT * FROM <code>table</code> WHERE <code>column</code> COLLATE utf8_bin = 'value' 这个方法使用COLLATE关键字指定列和值的字符集和排序 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E5%9C%A8git%E4%B8%AD%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%90%8E%E5%86%8D%E6%8E%A8%E9%80%81/" title="在Git中合并多个提交后再推送">在Git中合并多个提交后再推送</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-08 01:18:25</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/git-squash/' title="git-squash" class="post_tag button button_translucent">git-squash
-        </a><a href='https://www.techdocdb.com/tags/git/' title="git" class="post_tag button button_translucent">git
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="在Git中合并多个提交后再推送"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/git.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>摘要 在Git中，我们可以使用交互式变基（Interactive Rebase）来合并多个提交。本教程将演示如何使用交互式变基实现这一目标。
-内容 要合并多个提交，可以按照以下步骤操作：
-运行交互式变基命令git rebase -i HEAD~n，其中n是要合并的提交数。 根据提示，将要合并的提交的命令行前的pick替换为squash或s。确保保留第一个提交的pick命令。 保存文件并关闭编辑器。 对于合并后的提交消息，编辑器会再次打开，以便将所有提交的提交消息合并为一个大的提交消息。 保存文件并关闭编辑器。 以下是具体示例：
-1git rebase -i HEAD~4 这将打开一个文本编辑器，并显示类似于以下的文件：
-1pick …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E5%9C%A8git%E4%B8%AD%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%90%8E%E5%86%8D%E6%8E%A8%E9%80%81/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E6%9E%84%E5%BB%BA.net-core%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BB%A5%E7%94%9F%E6%88%90exe%E6%96%87%E4%BB%B6/" title="构建.NET Core控制台应用程序以生成EXE文件">构建.NET Core控制台应用程序以生成EXE文件</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-07 23:29:57</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/.net-core/' title=".net-core" class="post_tag button button_translucent">.net-core
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="构建.NET Core控制台应用程序以生成EXE文件"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/.net-core.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>摘要 本教程将介绍如何构建.NET Core控制台应用程序并在构建过程中生成EXE文件。
-内容 对于目标为.NET Core 1.0的控制台应用程序项目，如果在构建过程中无法生成EXE文件，可以尝试以下方法解决该问题。该项目在调试时运行正常。
-已经尝试了发布项目，但也无法生成EXE文件。这是合理的，因为EXE文件是特定于平台的，但是肯定有办法解决这个问题。搜索结果只提到了旧版本的.NET Core使用的project.json文件。
-每次构建或发布时，只能获得以下内容：
-最终被认可的答案是：
-调试目的上可以使用DLL文件，可以使用dotnet ConsoleApp2.dll运行。如果想要生成EXE文件，必须生成一个自包含的应用程序。 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E6%9E%84%E5%BB%BA.net-core%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BB%A5%E7%94%9F%E6%88%90exe%E6%96%87%E4%BB%B6/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%A1%AE%E5%AE%9A%E5%BD%93%E5%89%8D%E8%84%9A%E6%9C%AC%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95/" title="如何正确确定当前脚本所在目录">如何正确确定当前脚本所在目录</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      2023-09-07 22:54:24</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://www.techdocdb.com/tags/working-directory/' title="working-directory" class="post_tag button button_translucent">working-directory
-        </a><a href='https://www.techdocdb.com/tags/path/' title="path" class="post_tag button button_translucent">path
-        </a><a href='https://www.techdocdb.com/tags/python/' title="python" class="post_tag button button_translucent">python
-        </a>
-    </span>
-  </div>
-
-    </div>
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail"><figure>
-  <picture>
-
-    
-      
-        
-        
-        
-        
-        
-        
-    <img
-      loading="lazy"
-      decoding="async"
-      alt="如何正确确定当前脚本所在目录"
-      
-        class="image_figure image_thumbnail image_internal image_unprocessed"
-        src="/images/python.256x256.png"
-      
-      
-    />
-
-    </picture>
-</figure>
-
-      </div>
-      
-        <div class="pale">
-          
-            <p>摘要 本教程将介绍在Python中正确确定当前脚本所在目录的方法。我们将提供使用不同方式调用Python代码时的解决方案。
-内容 要确定当前脚本所在的目录，您可以尝试以下方法之一：
-使用os.getcwd()来获取当前工作目录。
-使用os.path.dirname(os.path.abspath(<strong>file</strong>))，这是一个常用的方法。
-以下是每种方法的具体步骤：
-使用os.getcwd() 确认导入os模块。
-使用os.getcwd()方法获取当前工作目录。
-使用os.path.dirname(os.path.abspath(file)) 确认导入os.path模块。
-使用os.path.abspath(<strong>file</strong>)获取当 …</p>
-          
-          <br>
-          <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%A1%AE%E5%AE%9A%E5%BD%93%E5%89%8D%E8%84%9A%E6%9C%AC%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95/" title="阅读更多" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
       <li>
     <ul class="pagination pagination-default">
       <li class="page-item">
@@ -2004,6 +2016,39 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
     
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
+      <li>
+        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4python%E4%BB%A3%E7%A0%81%E4%B8%8D%E8%A2%AB%E7%94%A8%E6%88%B7%E8%AF%BB%E5%8F%96/" class="nav-link" title="如何保护Python代码不被用户读取？">如何保护Python代码不被用户读取？</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/stdpromise%E5%92%8Cstdfuture%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E7%A4%BA%E4%BE%8B%E8%AF%B4%E6%98%8E/" class="nav-link" title="std::promise和std::future的用法和示例说明">std::promise和std::future的用法和示例说明</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96/" class="nav-link" title="如何检测文本框内容的变化">如何检测文本框内容的变化</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9C%89%E6%95%88%E7%9A%84json%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="nav-link" title="如何检查字符串是否为有效的JSON字符串？">如何检查字符串是否为有效的JSON字符串？</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8postgresql%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E6%9F%A5%E8%AF%A2/" class="nav-link" title="如何在PostgreSQL中进行&#34;不区分大小写&#34;的查询？">如何在PostgreSQL中进行&quot;不区分大小写&quot;的查询？</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/" class="nav-link" title="JavaScript对象的属性值获取方法">JavaScript对象的属性值获取方法</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E6%9F%A5%E8%AF%A2%E5%A4%A7%E4%BA%8E%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E6%89%80%E6%9C%89%E6%97%A5%E6%9C%9F/" class="nav-link" title="SQL Server中查询大于指定日期的所有日期">SQL Server中查询大于指定日期的所有日期</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/git-branch-%E5%88%86%E6%94%AF%E5%90%8D/" class="nav-link" title="git-branch 分支名">git-branch 分支名</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/html/" class="nav-link" title="&lt;html&gt;"><html></a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDjs%E6%96%87%E4%BB%B6/" class="nav-link" title="动态加载JS文件">动态加载JS文件</a>
+      </li>
+      <li>
+        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8php%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84ip%E5%9C%B0%E5%9D%80/" class="nav-link" title="如何在PHP中获得客户端的IP地址">如何在PHP中获得客户端的IP地址</a>
+      </li>
       <li>
         <a href="https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/" class="nav-link" title="动画展开/折叠的方法">动画展开/折叠的方法</a>
       </li>
@@ -2121,61 +2166,28 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
       <li>
         <a href="https://www.techdocdb.com/posts/%E7%94%9F%E6%88%90java%E4%BB%A3%E7%A0%81%E7%9A%84uml%E5%9B%BE%E7%89%B9%E5%88%AB%E6%98%AF%E5%BA%8F%E5%88%97%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/" class="nav-link" title="生成Java代码的UML图（特别是序列图）的方法">生成Java代码的UML图（特别是序列图）的方法</a>
       </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/%E5%B9%B6%E5%8F%91%E5%88%97%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E4%B8%8Ejava%E4%B8%AD%E7%9A%84%E5%88%97%E8%A1%A8/" class="nav-link" title="并发列表的实现方式与Java中的列表">并发列表的实现方式与Java中的列表</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/android-toolbar-%E6%A0%87%E9%A2%98%E5%B1%85%E4%B8%AD%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/" class="nav-link" title="Android Toolbar 标题居中和自定义字体">Android Toolbar 标题居中和自定义字体</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD.bash_profile/" class="nav-link" title="如何从命令行重新加载.bash_profile">如何从命令行重新加载.bash_profile</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/stack-overflow-%E4%B8%80%E4%B8%AA%E5%BC%80%E5%8F%91%E8%80%85%E5%BF%85%E5%A4%87%E7%9A%84%E7%9F%A5%E8%AF%86%E5%BA%93/" class="nav-link" title="Stack Overflow - 一个开发者必备的知识库">Stack Overflow - 一个开发者必备的知识库</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/%E8%8E%B7%E5%8F%96%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%85%83%E7%B4%A0%E7%9A%84id/" class="nav-link" title="获取触发事件的元素的ID">获取触发事件的元素的ID</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/facebook-graph-api-v2.0&#43;-/me/friends-%E8%BF%94%E5%9B%9E%E7%A9%BA%E6%88%96%E8%80%85%E5%8F%AA%E8%BF%94%E5%9B%9E%E4%BD%BF%E7%94%A8%E6%88%91%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%A5%BD%E5%8F%8B/" class="nav-link" title="Facebook Graph API v2.0&#43; - /me/friends 返回空或者只返回使用我应用程序的好友">Facebook Graph API v2.0+ - /me/friends 返回空或者只返回使用我应用程序的好友</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/html/" class="nav-link" title="&lt;html&gt;"><html></a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/html/" class="nav-link" title="&lt;html&gt;"><html></a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/html/" class="nav-link" title="&lt;html&gt;"><html></a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/c&#43;&#43;-faq%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/" class="nav-link" title="C&#43;&#43;-FAQ：类型转换和类型转换规则">C++-FAQ：类型转换和类型转换规则</a>
-      </li>
-      <li>
-        <a href="https://www.techdocdb.com/posts/html/" class="nav-link" title="&lt;html&gt;"><html></a>
-      </li>
     </ul>
     <div>
       <h2 class="mt-4 taxonomy" id="tags-section">标签</h2>
       <nav class="tags_nav">
         <a href='https://www.techdocdb.com/tags/javascript/' class="post_tag button button_translucent" title="javascript">
           JAVASCRIPT
-          <span class="button_tally">37</span>
+          <span class="button_tally">41</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/python/' class="post_tag button button_translucent" title="python">
           PYTHON
-          <span class="button_tally">29</span>
+          <span class="button_tally">30</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/git/' class="post_tag button button_translucent" title="git">
           GIT
-          <span class="button_tally">21</span>
+          <span class="button_tally">22</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/html/' class="post_tag button button_translucent" title="html">
           HTML
-          <span class="button_tally">15</span>
+          <span class="button_tally">16</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/java/' class="post_tag button button_translucent" title="java">
@@ -2190,6 +2202,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/css/' class="post_tag button button_translucent" title="css">
           CSS
+          <span class="button_tally">12</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/jquery/' class="post_tag button button_translucent" title="jquery">
+          JQUERY
           <span class="button_tally">11</span>
         </a>
         
@@ -2200,11 +2217,6 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/github/' class="post_tag button button_translucent" title="github">
           GITHUB
-          <span class="button_tally">9</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/jquery/' class="post_tag button button_translucent" title="jquery">
-          JQUERY
           <span class="button_tally">9</span>
         </a>
         
@@ -2220,7 +2232,12 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/c&#43;&#43;/' class="post_tag button button_translucent" title="c&#43;&#43;">
           C&#43;&#43;
-          <span class="button_tally">7</span>
+          <span class="button_tally">8</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/sql/' class="post_tag button button_translucent" title="sql">
+          SQL
+          <span class="button_tally">8</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/mysql/' class="post_tag button button_translucent" title="mysql">
@@ -2228,9 +2245,9 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">7</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/sql/' class="post_tag button button_translucent" title="sql">
-          SQL
-          <span class="button_tally">7</span>
+        <a href='https://www.techdocdb.com/tags/datetime/' class="post_tag button button_translucent" title="datetime">
+          DATETIME
+          <span class="button_tally">6</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/pandas/' class="post_tag button button_translucent" title="pandas">
@@ -2248,13 +2265,18 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">5</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/datetime/' class="post_tag button button_translucent" title="datetime">
-          DATETIME
+        <a href='https://www.techdocdb.com/tags/json/' class="post_tag button button_translucent" title="json">
+          JSON
           <span class="button_tally">5</span>
         </a>
         
         <a href='https://www.techdocdb.com/tags/list/' class="post_tag button button_translucent" title="list">
           LIST
+          <span class="button_tally">5</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/php/' class="post_tag button button_translucent" title="php">
+          PHP
           <span class="button_tally">5</span>
         </a>
         
@@ -2293,23 +2315,18 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">4</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/json/' class="post_tag button button_translucent" title="json">
-          JSON
-          <span class="button_tally">4</span>
-        </a>
-        
         <a href='https://www.techdocdb.com/tags/linux/' class="post_tag button button_translucent" title="linux">
           LINUX
           <span class="button_tally">4</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/php/' class="post_tag button button_translucent" title="php">
-          PHP
+        <a href='https://www.techdocdb.com/tags/regex/' class="post_tag button button_translucent" title="regex">
+          REGEX
           <span class="button_tally">4</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/regex/' class="post_tag button button_translucent" title="regex">
-          REGEX
+        <a href='https://www.techdocdb.com/tags/sql-server/' class="post_tag button button_translucent" title="sql-server">
+          SQL-SERVER
           <span class="button_tally">4</span>
         </a>
         
@@ -2353,11 +2370,6 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">3</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/sql-server/' class="post_tag button button_translucent" title="sql-server">
-          SQL-SERVER
-          <span class="button_tally">3</span>
-        </a>
-        
         <a href='https://www.techdocdb.com/tags/syntax/' class="post_tag button button_translucent" title="syntax">
           SYNTAX
           <span class="button_tally">3</span>
@@ -2390,6 +2402,16 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/asp.net/' class="post_tag button button_translucent" title="asp.net">
           ASP.NET
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/branch/' class="post_tag button button_translucent" title="branch">
+          BRANCH
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/c&#43;&#43;11/' class="post_tag button button_translucent" title="c&#43;&#43;11">
+          C&#43;&#43;11
           <span class="button_tally">2</span>
         </a>
         
@@ -2453,6 +2475,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">2</span>
         </a>
         
+        <a href='https://www.techdocdb.com/tags/git-branch/' class="post_tag button button_translucent" title="git-branch">
+          GIT-BRANCH
+          <span class="button_tally">2</span>
+        </a>
+        
         <a href='https://www.techdocdb.com/tags/guid/' class="post_tag button button_translucent" title="guid">
           GUID
           <span class="button_tally">2</span>
@@ -2478,8 +2505,18 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">2</span>
         </a>
         
+        <a href='https://www.techdocdb.com/tags/ip-address/' class="post_tag button button_translucent" title="ip-address">
+          IP-ADDRESS
+          <span class="button_tally">2</span>
+        </a>
+        
         <a href='https://www.techdocdb.com/tags/iteration/' class="post_tag button button_translucent" title="iteration">
           ITERATION
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/javascript-objects/' class="post_tag button button_translucent" title="javascript-objects">
+          JAVASCRIPT-OBJECTS
           <span class="button_tally">2</span>
         </a>
         
@@ -2575,6 +2612,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/alter/' class="post_tag button button_translucent" title="alter">
           ALTER
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/anchor/' class="post_tag button button_translucent" title="anchor">
+          ANCHOR
           <span class="button_tally">1</span>
         </a>
         
@@ -2688,11 +2730,6 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">1</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/branch/' class="post_tag button button_translucent" title="branch">
-          BRANCH
-          <span class="button_tally">1</span>
-        </a>
-        
         <a href='https://www.techdocdb.com/tags/breakpoints/' class="post_tag button button_translucent" title="breakpoints">
           BREAKPOINTS
           <span class="button_tally">1</span>
@@ -2708,11 +2745,6 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">1</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/c&#43;&#43;11/' class="post_tag button button_translucent" title="c&#43;&#43;11">
-          C&#43;&#43;11
-          <span class="button_tally">1</span>
-        </a>
-        
         <a href='https://www.techdocdb.com/tags/cache-control/' class="post_tag button button_translucent" title="cache-control">
           CACHE-CONTROL
           <span class="button_tally">1</span>
@@ -2725,6 +2757,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/callback/' class="post_tag button button_translucent" title="callback">
           CALLBACK
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/case-insensitive/' class="post_tag button button_translucent" title="case-insensitive">
+          CASE-INSENSITIVE
           <span class="button_tally">1</span>
         </a>
         
@@ -2790,6 +2827,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/content-type/' class="post_tag button button_translucent" title="content-type">
           CONTENT-TYPE
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://www.techdocdb.com/tags/copy-protection/' class="post_tag button button_translucent" title="copy-protection">
+          COPY-PROTECTION
           <span class="button_tally">1</span>
         </a>
         
@@ -2908,6 +2950,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">1</span>
         </a>
         
+        <a href='https://www.techdocdb.com/tags/environment-variables/' class="post_tag button button_translucent" title="environment-variables">
+          ENVIRONMENT-VARIABLES
+          <span class="button_tally">1</span>
+        </a>
+        
         <a href='https://www.techdocdb.com/tags/epoch/' class="post_tag button button_translucent" title="epoch">
           EPOCH
           <span class="button_tally">1</span>
@@ -3010,11 +3057,6 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
         
         <a href='https://www.techdocdb.com/tags/git-amend/' class="post_tag button button_translucent" title="git-amend">
           GIT-AMEND
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/git-branch/' class="post_tag button button_translucent" title="git-branch">
-          GIT-BRANCH
           <span class="button_tally">1</span>
         </a>
         
@@ -3128,36 +3170,6 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
           <span class="button_tally">1</span>
         </a>
         
-        <a href='https://www.techdocdb.com/tags/http-authentication/' class="post_tag button button_translucent" title="http-authentication">
-          HTTP-AUTHENTICATION
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/http-headers/' class="post_tag button button_translucent" title="http-headers">
-          HTTP-HEADERS
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/http-status-code-301/' class="post_tag button button_translucent" title="http-status-code-301">
-          HTTP-STATUS-CODE-301
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/http-status-code-302/' class="post_tag button button_translucent" title="http-status-code-302">
-          HTTP-STATUS-CODE-302
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/iife/' class="post_tag button button_translucent" title="iife">
-          IIFE
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://www.techdocdb.com/tags/import/' class="post_tag button button_translucent" title="import">
-          IMPORT
-          <span class="button_tally">1</span>
-        </a>
-        
         
         <br>
         <div class="post_tags_toggle button">所有标签</div>
@@ -3177,6 +3189,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/alter/' class=" post_tag button button_translucent" data-position=1 title="alter">ALTER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/anchor/' class=" post_tag button button_translucent" data-position=1 title="anchor">ANCHOR<span class="button_tally">1</span>
             </a>
             
             
@@ -3300,7 +3316,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/branch/' class=" post_tag button button_translucent" data-position=1 title="branch">BRANCH<span class="button_tally">1</span>
+            <a href='https://www.techdocdb.com/tags/branch/' class=" post_tag button button_translucent" data-position=2 title="branch">BRANCH<span class="button_tally">2</span>
             </a>
             
             
@@ -3312,7 +3328,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/c&#43;&#43;/' class=" post_tag button button_translucent" data-position=7 title="c&#43;&#43;">C&#43;&#43;<span class="button_tally">7</span>
+            <a href='https://www.techdocdb.com/tags/c&#43;&#43;/' class=" post_tag button button_translucent" data-position=8 title="c&#43;&#43;">C&#43;&#43;<span class="button_tally">8</span>
             </a>
             
             
@@ -3320,7 +3336,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/c&#43;&#43;11/' class=" post_tag button button_translucent" data-position=1 title="c&#43;&#43;11">C&#43;&#43;11<span class="button_tally">1</span>
+            <a href='https://www.techdocdb.com/tags/c&#43;&#43;11/' class=" post_tag button button_translucent" data-position=2 title="c&#43;&#43;11">C&#43;&#43;11<span class="button_tally">2</span>
             </a>
             
             
@@ -3333,6 +3349,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/callback/' class=" post_tag button button_translucent" data-position=1 title="callback">CALLBACK<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/case-insensitive/' class=" post_tag button button_translucent" data-position=1 title="case-insensitive">CASE-INSENSITIVE<span class="button_tally">1</span>
             </a>
             
             
@@ -3408,6 +3428,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
+            <a href='https://www.techdocdb.com/tags/copy-protection/' class=" post_tag button button_translucent" data-position=1 title="copy-protection">COPY-PROTECTION<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='https://www.techdocdb.com/tags/cpython/' class=" post_tag button button_translucent" data-position=1 title="cpython">CPYTHON<span class="button_tally">1</span>
             </a>
             
@@ -3428,7 +3452,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/css/' class=" post_tag button button_translucent" data-position=11 title="css">CSS<span class="button_tally">11</span>
+            <a href='https://www.techdocdb.com/tags/css/' class=" post_tag button button_translucent" data-position=12 title="css">CSS<span class="button_tally">12</span>
             </a>
             
             
@@ -3460,7 +3484,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/datetime/' class=" post_tag button button_translucent" data-position=5 title="datetime">DATETIME<span class="button_tally">5</span>
+            <a href='https://www.techdocdb.com/tags/datetime/' class=" post_tag button button_translucent" data-position=6 title="datetime">DATETIME<span class="button_tally">6</span>
             </a>
             
             
@@ -3545,6 +3569,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/enums/' class=" post_tag button button_translucent" data-position=2 title="enums">ENUMS<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/environment-variables/' class=" post_tag button button_translucent" data-position=1 title="environment-variables">ENVIRONMENT-VARIABLES<span class="button_tally">1</span>
             </a>
             
             
@@ -3652,7 +3680,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/git/' class=" post_tag button button_translucent" data-position=21 title="git">GIT<span class="button_tally">21</span>
+            <a href='https://www.techdocdb.com/tags/git/' class=" post_tag button button_translucent" data-position=22 title="git">GIT<span class="button_tally">22</span>
             </a>
             
             
@@ -3660,7 +3688,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/git-branch/' class=" post_tag button button_translucent" data-position=1 title="git-branch">GIT-BRANCH<span class="button_tally">1</span>
+            <a href='https://www.techdocdb.com/tags/git-branch/' class=" post_tag button button_translucent" data-position=2 title="git-branch">GIT-BRANCH<span class="button_tally">2</span>
             </a>
             
             
@@ -3760,7 +3788,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/html/' class=" post_tag button button_translucent" data-position=15 title="html">HTML<span class="button_tally">15</span>
+            <a href='https://www.techdocdb.com/tags/html/' class=" post_tag button button_translucent" data-position=16 title="html">HTML<span class="button_tally">16</span>
             </a>
             
             
@@ -3860,7 +3888,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/ip-address/' class=" post_tag button button_translucent" data-position=1 title="ip-address">IP-ADDRESS<span class="button_tally">1</span>
+            <a href='https://www.techdocdb.com/tags/ip-address/' class=" post_tag button button_translucent" data-position=2 title="ip-address">IP-ADDRESS<span class="button_tally">2</span>
             </a>
             
             
@@ -3888,11 +3916,11 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/javascript/' class=" post_tag button button_translucent" data-position=37 title="javascript">JAVASCRIPT<span class="button_tally">37</span>
+            <a href='https://www.techdocdb.com/tags/javascript/' class=" post_tag button button_translucent" data-position=41 title="javascript">JAVASCRIPT<span class="button_tally">41</span>
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/javascript-objects/' class=" post_tag button button_translucent" data-position=1 title="javascript-objects">JAVASCRIPT-OBJECTS<span class="button_tally">1</span>
+            <a href='https://www.techdocdb.com/tags/javascript-objects/' class=" post_tag button button_translucent" data-position=2 title="javascript-objects">JAVASCRIPT-OBJECTS<span class="button_tally">2</span>
             </a>
             
             
@@ -3900,7 +3928,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/jquery/' class=" post_tag button button_translucent" data-position=9 title="jquery">JQUERY<span class="button_tally">9</span>
+            <a href='https://www.techdocdb.com/tags/jquery/' class=" post_tag button button_translucent" data-position=11 title="jquery">JQUERY<span class="button_tally">11</span>
             </a>
             
             
@@ -3920,7 +3948,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/json/' class=" post_tag button button_translucent" data-position=4 title="json">JSON<span class="button_tally">4</span>
+            <a href='https://www.techdocdb.com/tags/json/' class=" post_tag button button_translucent" data-position=5 title="json">JSON<span class="button_tally">5</span>
             </a>
             
             
@@ -3932,11 +3960,19 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
+            <a href='https://www.techdocdb.com/tags/keypress/' class=" post_tag button button_translucent" data-position=1 title="keypress">KEYPRESS<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='https://www.techdocdb.com/tags/kotlin/' class=" post_tag button button_translucent" data-position=1 title="kotlin">KOTLIN<span class="button_tally">1</span>
             </a>
             
             
             <a href='https://www.techdocdb.com/tags/libjpeg/' class=" post_tag button button_translucent" data-position=1 title="libjpeg">LIBJPEG<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/licensing/' class=" post_tag button button_translucent" data-position=1 title="licensing">LICENSING<span class="button_tally">1</span>
             </a>
             
             
@@ -4028,6 +4064,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
+            <a href='https://www.techdocdb.com/tags/multithreading/' class=" post_tag button button_translucent" data-position=1 title="multithreading">MULTITHREADING<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='https://www.techdocdb.com/tags/mysql/' class=" post_tag button button_translucent" data-position=7 title="mysql">MYSQL<span class="button_tally">7</span>
             </a>
             
@@ -4065,6 +4105,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/oauth-2.0/' class=" post_tag button button_translucent" data-position=1 title="oauth-2.0">OAUTH-2.0<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/obfuscation/' class=" post_tag button button_translucent" data-position=1 title="obfuscation">OBFUSCATION<span class="button_tally">1</span>
             </a>
             
             
@@ -4112,7 +4156,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/php/' class=" post_tag button button_translucent" data-position=4 title="php">PHP<span class="button_tally">4</span>
+            <a href='https://www.techdocdb.com/tags/php/' class=" post_tag button button_translucent" data-position=5 title="php">PHP<span class="button_tally">5</span>
             </a>
             
             
@@ -4136,11 +4180,19 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
+            <a href='https://www.techdocdb.com/tags/postgresql/' class=" post_tag button button_translucent" data-position=1 title="postgresql">POSTGRESQL<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='https://www.techdocdb.com/tags/powershell/' class=" post_tag button button_translucent" data-position=2 title="powershell">POWERSHELL<span class="button_tally">2</span>
             </a>
             
             
             <a href='https://www.techdocdb.com/tags/profiling/' class=" post_tag button button_translucent" data-position=1 title="profiling">PROFILING<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/promise/' class=" post_tag button button_translucent" data-position=1 title="promise">PROMISE<span class="button_tally">1</span>
             </a>
             
             
@@ -4160,7 +4212,7 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/python/' class=" post_tag button button_translucent" data-position=29 title="python">PYTHON<span class="button_tally">29</span>
+            <a href='https://www.techdocdb.com/tags/python/' class=" post_tag button button_translucent" data-position=30 title="python">PYTHON<span class="button_tally">30</span>
             </a>
             
             
@@ -4336,11 +4388,15 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/sql/' class=" post_tag button button_translucent" data-position=7 title="sql">SQL<span class="button_tally">7</span>
+            <a href='https://www.techdocdb.com/tags/sql/' class=" post_tag button button_translucent" data-position=8 title="sql">SQL<span class="button_tally">8</span>
             </a>
             
             
-            <a href='https://www.techdocdb.com/tags/sql-server/' class=" post_tag button button_translucent" data-position=3 title="sql-server">SQL-SERVER<span class="button_tally">3</span>
+            <a href='https://www.techdocdb.com/tags/sql-like/' class=" post_tag button button_translucent" data-position=1 title="sql-like">SQL-LIKE<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/sql-server/' class=" post_tag button button_translucent" data-position=4 title="sql-server">SQL-SERVER<span class="button_tally">4</span>
             </a>
             
             
@@ -4361,6 +4417,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/ssh/' class=" post_tag button button_translucent" data-position=1 title="ssh">SSH<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/standard-library/' class=" post_tag button button_translucent" data-position=1 title="standard-library">STANDARD-LIBRARY<span class="button_tally">1</span>
             </a>
             
             
@@ -4449,6 +4509,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/ternary-operator/' class=" post_tag button button_translucent" data-position=1 title="ternary-operator">TERNARY-OPERATOR<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/textbox/' class=" post_tag button button_translucent" data-position=1 title="textbox">TEXTBOX<span class="button_tally">1</span>
             </a>
             
             
@@ -4580,6 +4644,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             </a>
             
             
+            <a href='https://www.techdocdb.com/tags/where-clause/' class=" post_tag button button_translucent" data-position=1 title="where-clause">WHERE-CLAUSE<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='https://www.techdocdb.com/tags/whitespace/' class=" post_tag button button_translucent" data-position=1 title="whitespace">WHITESPACE<span class="button_tally">1</span>
             </a>
             
@@ -4589,6 +4657,10 @@ Custom Font Support(自定义字体支持): 应用程序想要使用自定义字
             
             
             <a href='https://www.techdocdb.com/tags/working-directory/' class=" post_tag button button_translucent" data-position=1 title="working-directory">WORKING-DIRECTORY<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://www.techdocdb.com/tags/xhtml/' class=" post_tag button button_translucent" data-position=1 title="xhtml">XHTML<span class="button_tally">1</span>
             </a>
             
             

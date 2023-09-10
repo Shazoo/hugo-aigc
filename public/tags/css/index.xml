@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 10:40:47 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 15:17:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Sun, 10 Sep 2023 15:17:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>CSS中如何为div设置内边框而不是边缘？</title>
       <link>https://www.techdocdb.com/posts/css%E4%B8%AD%E5%A6%82%E4%BD%95%E4%B8%BAdiv%E8%AE%BE%E7%BD%AE%E5%86%85%E8%BE%B9%E6%A1%86%E8%80%8C%E4%B8%8D%E6%98%AF%E8%BE%B9%E7%BC%98/</link>

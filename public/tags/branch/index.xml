@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 17:51:05 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 15:17:25 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git-branch 分支名</title>
+      <link>https://www.techdocdb.com/posts/git-branch-%E5%88%86%E6%94%AF%E5%90%8D/</link>
+      <pubDate>Sun, 10 Sep 2023 15:17:25 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/git-branch-%E5%88%86%E6%94%AF%E5%90%8D/</guid>
+      <description>
+        
+          
+            git-branch 是一个常用的 Git 命令，用于显示所有本地分支的列表。在这个列表中，通过星号 (*) 标记的分支名称就是当前所在的分支。以下是一些获取当前分支名称的方法。
+获取当前分支名称的方法 有几种方法可以获取 Git 中的当前分支名称。下面是其中一些方法的示例。
+方法一：使用 git branch 命令 通过运行以下命令，您可以获取当前所在的分支名称（带有星号标记的分支）：
+1git branch | grep &amp;#39;*&amp;#39; 这将输出一个类似于 * master 的结果，表示您当前所在的分支是 master。
+方法二：使用 git rev-parse 命令 运行以下命令，可以获取当前分支的名称：
+1git rev-parse --abbrev-ref HEAD 这将返回当前分支的名称，例如 master。
+方法三：使用 git status 命令 另一种获取当前分支名称的方法是运行以下命令：
+1git status | head -1 这将输出第一行，其中包含了当前分支的名称，例如 On branch master。
+方法四：使用 git symbolic-ref HEAD 命令 在 Git 仓库中运行以下命令来获取当前分支的名称：
+1git symbolic-ref --short HEAD 这会返回当前分支的名称，例如 master。
+方法五：使用 git describe 命令 运行以下命令，可以获取当前分支的名称：
+1git describe --contains --all HEAD 这将返回当前分支的名称，例如 feature/branch。它还会显示当前提交所在的所有分支名称。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>使用Git，显示在一个分支中但不在其他分支中的所有提交</title>
       <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8git%E6%98%BE%E7%A4%BA%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%E4%B8%AD%E4%BD%86%E4%B8%8D%E5%9C%A8%E5%85%B6%E4%BB%96%E5%88%86%E6%94%AF%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%90%E4%BA%A4/</link>

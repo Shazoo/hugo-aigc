@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 16:49:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript-objects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 16:46:58 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript-objects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript对象的属性值获取方法</title>
+      <link>https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 10 Sep 2023 16:46:58 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</guid>
+      <description>
+        
+          
+            JavaScript中的对象是由一系列属性和值组成的，我们经常需要获取对象的属性值。本教程将介绍几种获取JavaScript对象属性值的方法，并提供相应的示例。
+获取所有属性值的方法 最简单的方法是使用for...in循环遍历对象的所有键，并获取每个键对应的值。以下是示例代码：
+1var objects = {...}; 2 3for(var key in objects) { 4 var value = objects[key]; 5 // 这里可以对属性值进行处理 6} 示例： 假设有一个JavaScript对象foo，其中包含了50多个属性，但不知道属性名称。要在循环中获取每个属性的值，可以使用上述for...in循环：
+1var foo = {one:1, two:2, three:3}; 2for (key in foo){ 3 console.log(&amp;#34;foo[&amp;#34;+ key +&amp;#34;]=&amp;#34;+ foo[key]); 4} 输出结果为：
+1foo[one]=1 2foo[two]=2 3foo[three]=3 获取属性值数组的方法 如果需要将对象的属性值存储在一个数组中，可以使用以下具有对象保护的可重用函数：
+1Object.values = function (obj) { 2 var vals = []; 3 for( var key in obj ) { 4 if ( obj.hasOwnProperty(key) ) { 5 vals.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>&lt;html&gt;</title>
       <link>https://www.techdocdb.com/posts/html/</link>

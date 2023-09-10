@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>promise on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/promise/</link>
+    <description>Recent content in promise on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2023 17:48:57 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/promise/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>std::promise和std::future的用法和示例说明</title>
+      <link>https://www.techdocdb.com/posts/stdpromise%E5%92%8Cstdfuture%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E7%A4%BA%E4%BE%8B%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Sun, 10 Sep 2023 17:48:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/stdpromise%E5%92%8Cstdfuture%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E7%A4%BA%E4%BE%8B%E8%AF%B4%E6%98%8E/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了C++11标准库中的std::promise和std::future组件，以及它们的使用方式和示例代码。通过使用std::promise和std::future，可以在不同的线程之间传递数据，并且可以实现异步计算和并发执行的功能。
+内容 C++11的标准库中提供了std::promise和std::future这两个组件，它们是用于实现在不同线程之间传递数据的机制。通过std::promise和std::future可以实现异步计算和并发执行的功能。
+std::promise是一个异步提供者，用于将结果提供给一个共享状态。而std::future是一个异步返回对象，用于从共享状态读取结果。你可以把std::promise理解为另一个端点，而将std::future看作是与之相连的另一个端点。
+当我们使用std::promise时，需要注意以下几点：
+一个std::promise只能与一个std::future关联，不能重复使用。 当一个std::promise的std::future被获取时，std::promise会变为active状态，此时std::promise不能被销毁。 在std::promise被销毁之前，必须调用set_value或set_exception方法来设置共享状态的值或异常。 如果一个std::promise的std::future被获取后，没有设置值或异常，那么调用std::future的get方法会抛出一个&amp;quot;broken promise&amp;quot;异常。 下面是一个示例，演示了如何使用std::promise和std::future实现异步计算和数据传递：
+1#include &amp;lt;iostream&amp;gt; 2#include &amp;lt;thread&amp;gt; 3#include &amp;lt;future&amp;gt; 4 5void asyncFunc(std::promise&amp;lt;int&amp;gt;&amp;amp; prom) { 6 // 模拟耗时操作 7 std::this_thread::sleep_for(std::chrono::seconds(2)); 8 int result = 10; 9 prom.set_value(result); 10} 11 12int main() { 13 std::promise&amp;lt;int&amp;gt; prom; // 创建一个std::promise对象 14 15 std::future&amp;lt;int&amp;gt; fut = prom.get_future(); // 获取与promise相关联的std::future对象 16 17 std::thread t(asyncFunc, std::ref(prom)); // 启动一个新线程，并将std::promise对象作为参数传递 18 19 std::cout &amp;lt;&amp;lt; &amp;#34;Waiting for result...&amp;#34; &amp;lt;&amp;lt; std::endl; 20 int result = fut.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

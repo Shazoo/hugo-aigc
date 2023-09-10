@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 04:56:41 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/datetime/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 16:33:04 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/datetime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Server中查询大于指定日期的所有日期</title>
+      <link>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E6%9F%A5%E8%AF%A2%E5%A4%A7%E4%BA%8E%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E6%89%80%E6%9C%89%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Sun, 10 Sep 2023 16:33:04 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/sql-server%E4%B8%AD%E6%9F%A5%E8%AF%A2%E5%A4%A7%E4%BA%8E%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E6%89%80%E6%9C%89%E6%97%A5%E6%9C%9F/</guid>
+      <description>
+        
+          
+            在SQL Server中，如果我们要查询大于某个日期的所有日期，我们需要注意日期的比较方式和格式。本文将介绍如何正确查询大于指定日期的所有日期，并提供了一些示例来说明。
+摘要 当我们使用以下查询时，可能会导致无法得到期望的结果：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= 2010-04-01; 在这种查询中，2010-4-01被视为数学表达式，实际上读取的是：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= 2005; 为了避免这个问题，我们需要将日期转换为正确的datetime格式，并使用单引号括起来。
+内容 以下是正确查询大于指定日期的所有日期的示例：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= Convert(datetime, &amp;#39;2010-04-01&amp;#39;); 在这个示例中，我们使用了Convert函数将日期字符串转换为datetime类型，并使用单引号将日期字符串括起来。
+另外，如果我们想要更加简洁的查询方式，也可以使用以下查询语句：
+1SELECT * 2FROM dbo.March2010 A 3WHERE A.Date &amp;gt;= &amp;#39;2010-04-01&amp;#39;; 这种方式的查询语句会自动将日期字符串转换为正确的datetime类型。
+总结 通过本文的介绍，我们知道了在SQL Server中查询大于指定日期的所有日期的正确方式。我们需要将日期字符串转换为datetime类型，并使用单引号括起来。我们还提供了多种示例，供读者参考和使用。
+因此，在SQL Server中查询大于指定日期的所有日期时，请根据本文介绍的方式进行操作，以获得正确的查询结果。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何获取当前日期和时间的秒数</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%9A%84%E7%A7%92%E6%95%B0/</link>
