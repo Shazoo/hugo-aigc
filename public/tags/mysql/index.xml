@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2023 10:26:49 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 08:41:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在MySQL中查找重复记录</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E6%9F%A5%E6%89%BE%E9%87%8D%E5%A4%8D%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 11 Sep 2023 08:41:01 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E6%9F%A5%E6%89%BE%E9%87%8D%E5%A4%8D%E8%AE%B0%E5%BD%95/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在MySQL数据库中查找重复记录。我们将提供多种方法来找出重复记录，并给出相应的查询示例。
+内容 在MySQL中查找重复记录可以采用以下多种方法：
+使用GROUP BY和HAVING子句：通过使用GROUP BY子句按特定字段进行分组，并使用HAVING子句对分组进行筛选，可以找出重复记录。例如： 1SELECT address, COUNT(id) as cnt FROM list 2GROUP BY address HAVING cnt &amp;gt; 1; 使用子查询和JOIN操作：编写一个子查询，找出重复的字段，然后使用JOIN操作将其与原始表连接，可以获取包含重复记录的完整行。例如： 1SELECT t1.firstname, t1.lastname, t1.address 2FROM list AS t1 3INNER JOIN ( 4 SELECT address 5 FROM list 6 GROUP BY address 7 HAVING COUNT(id) &amp;gt; 1 8) t2 ON t1.address = t2.address; 使用WHERE子句和子查询：在WHERE子句中编写一个子查询，根据某个字段出现的次数进行筛选，可以找出重复记录。例如： 1SELECT * 2FROM list AS outer 3WHERE ( 4 SELECT COUNT(*) 5 FROM list AS inner 6 WHERE inner.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>&lt;html&gt;</title>
       <link>https://www.techdocdb.com/posts/html/</link>

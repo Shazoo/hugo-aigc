@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/database/</link>
+    <description>Recent content in database on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Sep 2023 08:42:24 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在关系数据库中存储分层数据的选项</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%AD%98%E5%82%A8%E5%88%86%E5%B1%82%E6%95%B0%E6%8D%AE%E7%9A%84%E9%80%89%E9%A1%B9/</link>
+      <pubDate>Mon, 11 Sep 2023 08:42:24 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%AD%98%E5%82%A8%E5%88%86%E5%B1%82%E6%95%B0%E6%8D%AE%E7%9A%84%E9%80%89%E9%A1%B9/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在关系数据库中存储分层数据的选项。我们将介绍不同的存储方法，如邻接表、嵌套集模型、桥接表和线性列等，以及它们的优缺点。
+内容 在关系数据库中存储分层数据可能存在一些挑战，但是有几种方法可以解决这个问题。下面是一些常用的选项：
+邻接表（Adjacency List） 邻接表是一种简单而直观的方法，它使用一个包含父节点ID的列来表示层级关系。每个节点在表中都有一行，该行包含其自身ID和父节点ID。
+列： ID：节点的唯一标识符 ParentID：父节点的ID 例如，以下是一个使用邻接表存储的示例：
+1CREATE TABLE categories ( 2 ID INT PRIMARY KEY, 3 ParentID INT, 4 Name VARCHAR(100) 5); 对于上述模式，我们可以这样插入数据：
+1INSERT INTO categories (ID, ParentID, Name) 2VALUES (1, NULL, &amp;#39;ELECTRONICS&amp;#39;), 3 (2, 1, &amp;#39;TELEVISIONS&amp;#39;), 4 (3, 2, &amp;#39;TUBE&amp;#39;), 5 (4, 2, &amp;#39;LCD&amp;#39;), 6 (5, 2, &amp;#39;PLASMA&amp;#39;), 7 (6, 1, &amp;#39;PORTABLE ELECTRONICS&amp;#39;), 8 (7, 6, &amp;#39;MP3 PLAYERS&amp;#39;), 9 (8, 7, &amp;#39;FLASH&amp;#39;), 10 (9, 6, &amp;#39;CD PLAYERS&amp;#39;), 11 (10, 6, &amp;#39;2 WAY RADIOS&amp;#39;); 使用邻接表可以轻松地查询父节点、子节点和层级关系。例如，要获取所有子节点，可以执行以下查询：
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

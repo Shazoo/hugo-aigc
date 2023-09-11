@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>async-await on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/async-await/</link>
+    <description>Recent content in async-await on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Sep 2023 10:52:57 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/async-await/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>async-await 和 JavaScript 中的 Promise.all 的区别</title>
+      <link>https://www.techdocdb.com/posts/async-await-%E5%92%8C-javascript-%E4%B8%AD%E7%9A%84-promise.all-%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 11 Sep 2023 10:52:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/async-await-%E5%92%8C-javascript-%E4%B8%AD%E7%9A%84-promise.all-%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            在 JavaScript 中，我们经常使用 async-await 和 Promise.all 来处理异步操作。虽然它们都是用来处理异步代码的工具，但是它们之间有一些区别。本文将介绍 async-await 和 Promise.all 的使用方法和区别。
+async-await async-await 是一种更直观、更易读的处理异步操作的方式。通过使用 async-await，我们可以像编写同步代码一样编写异步代码，不再需要使用 then 方法来处理 Promise 对象的返回值。
+以下是一个使用 async-await 的例子：
+1async function example() { 2 const result1 = await task1(); 3 const result2 = await task2(); 4 // do something with result1 and result2 5} 在上面的例子中，task2 会等待 task1 完成之后才会开始执行。这就意味着两个异步任务是按顺序执行的，不会并行执行。这可能会降低代码的执行效率。
+Promise.all Promise.all 是一种更适用于并行执行多个异步任务的方式。通过使用 Promise.all，我们可以将多个 Promise 对象放入一个数组中，并等待它们都完成后再进行下一步操作。
+以下是一个使用 Promise.all 的例子：
+1const [result1, result2] = await Promise.all([task1(), task2()]); 2// do something with result1 and result2 在上面的例子中，task1 和 task2 会同时执行，并在它们都完成后返回结果。这样可以显著提高代码的执行效率。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

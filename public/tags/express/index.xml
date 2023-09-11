@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 15:58:41 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 08:41:19 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用&#34;by lazy&#34;和&#34;lateinit&#34;进行属性初始化</title>
+      <link>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8by-lazy%E5%92%8Clateinit%E8%BF%9B%E8%A1%8C%E5%B1%9E%E6%80%A7%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Mon, 11 Sep 2023 08:41:19 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E4%BD%BF%E7%94%A8by-lazy%E5%92%8Clateinit%E8%BF%9B%E8%A1%8C%E5%B1%9E%E6%80%A7%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>
+        
+          
+            摘要 本教程将解释如何在Kotlin中使用&amp;quot;by lazy&amp;quot;和&amp;quot;lateinit&amp;quot;进行属性初始化。原始问答中给出了使用lazy和lateinit进行属性初始化的示例。我们将比较这两种方法的不同，并解释它们的用途和区别。
+内容 引言 在Kotlin中，如果您不想在构造函数或类体的顶部初始化类属性，您可以使用以下两种选项：lazy初始化和lateinit修饰符。
+使用&amp;quot;by lazy&amp;quot;进行延迟初始化 使用&amp;quot;by lazy&amp;quot;语法，您可以在第一次访问属性时进行延迟初始化。&amp;quot;by lazy&amp;quot;创建一个Lazy实例，在第一次调用属性的get()方法时执行lambda表达式，并记住结果。随后的调用只会返回记住的结果。
+以下是使用&amp;quot;by lazy&amp;quot;进行延迟初始化的示例：
+1public class Hello { 2 val myLazyString: String by lazy { &amp;#34;Hello&amp;#34; } 3} 第一次调用和后续的调用，无论在何处，myLazyString都将返回&amp;quot;Hello&amp;quot;。
+使用&amp;quot;lateinit&amp;quot;进行延迟初始化 使用&amp;quot;lateinit&amp;quot;修饰符，您可以将属性标记为在类的其他位置进行延迟初始化。&amp;quot;lateinit&amp;quot;属性必须是可变的类型（var），不能是可为空的类型，并且不能是原始类型。lateinit属性具有一个后备字段，用于存储值，并且不能拥有自定义的getter或setter。因此，如果需要后备字段，请使用&amp;quot;lateinit&amp;quot;。
+以下是使用&amp;quot;lateinit&amp;quot;进行延迟初始化的示例：
+1public class MyTest { 2 lateinit var subject: TestSubject 3 4 @SetUp fun setup() { subject = TestSubject() } 5 6 @Test fun test() { subject.method() } 7} 需要注意的是，lateinit属性必须在类体中声明，不能在主构造函数中声明，并且不能具有自定义的getter或setter。属性的类型必须是非空的，不能是原始类型。
+如何选择&amp;quot;by lazy&amp;quot;和&amp;quot;lateinit&amp;quot; 在选择&amp;quot;by lazy&amp;quot;和&amp;quot;lateinit&amp;quot;时，取决于您的需求。以下是两种选项之间的主要区别和用途：
+&amp;quot;by lazy&amp;quot;只能用于val属性，而&amp;quot;lateinit&amp;quot;只能用于var属性，因为&amp;quot;lateinit&amp;quot;无法编译为final字段，因此无法保证不可变性。 &amp;quot;lateinit&amp;quot;具有用于存储值的后备字段，而&amp;quot;by lazy&amp;quot;在代理对象中存储值。如果需要后备字段，请使用&amp;quot;lateinit&amp;quot;。 除了val属性外，&amp;quot;lateinit&amp;quot;不能用于可为空的属性或原始类型。 &amp;quot;lateinit var&amp;quot;可以从类中的任何位置进行初始化，即使在多个线程中也可以。而&amp;quot;by lazy&amp;quot;定义了属性的唯一初始化器，只能通过在子类中重写属性来更改初始化器。如果希望在外部以可能预先未知的方式初始化属性，请使用&amp;quot;lateinit&amp;quot;。 &amp;quot;by lazy&amp;quot;的初始化在默认情况下是线程安全的，并且保证初始化器最多只调用一次。而对于&amp;quot;lateinit var&amp;quot;，在多线程环境中，根据用户的代码，负责正确初始化属性。 &amp;quot;Lazy&amp;quot;实例可以保存、传递和用于多个属性。相反，&amp;quot;lateinit var&amp;quot;不存储任何额外的运行时状态，只有一个未初始化值的字段。 如果保留对&amp;quot;Lazy&amp;quot;实例的引用，可以使用isInitialized()方法检查属性是否已初始化。要检查&amp;quot;lateinit&amp;quot;属性是否已初始化，可以使用property::isInitialized()。 此外，还有一种未在问题中提到的方式：&amp;quot;Delegates.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在Express.js中获取远程客户端IP地址</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8express.js%E4%B8%AD%E8%8E%B7%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AFip%E5%9C%B0%E5%9D%80/</link>

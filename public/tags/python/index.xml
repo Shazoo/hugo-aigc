@@ -7,7 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 17:59:29 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 10:43:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>问题题目：什么是__main__.py</title>
+      <link>https://www.techdocdb.com/posts/%E9%97%AE%E9%A2%98%E9%A2%98%E7%9B%AE%E4%BB%80%E4%B9%88%E6%98%AF__main__.py/</link>
+      <pubDate>Mon, 11 Sep 2023 10:43:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E9%97%AE%E9%A2%98%E9%A2%98%E7%9B%AE%E4%BB%80%E4%B9%88%E6%98%AF__main__.py/</guid>
+      <description>
+        
+          
+            摘要： 通常情况下，我们在命令行上运行Python程序时会指定一个.py文件：
+1$ python my_program.py 但是，我们还可以创建一个包含代码的目录或者压缩文件，并在其中包含一个__main__.py文件。然后，我们只需要在命令行上指定目录或者压缩文件的名称，main.py文件会自动执行：
+1$ python my_program_dir 2$ python my_program.zip 你可以根据你的应用程序是否可以从这种运行方式中获益来决定是否使用__main__.py文件。
+需要注意的是，main__模块通常不是来自__main.py文件。它可以是，但通常不是。当你运行像python my_program.py这样的脚本时，脚本会作为__main__模块而不是my_program模块运行。这也适用于作为python -m my_module运行的模块，或者其他几种方式。
+如果你在错误信息中看到了__main__的名称，并不一定意味着你应该查找__main__.py文件。
+参考答案： main.py用于在zip文件中运行Python程序。当运行zip文件时，main.py文件会被执行。例如，如果zip文件的结构如下所示：
+1test.zip 2 __main__.py main.py文件的内容如下：
+1import sys 2print &amp;#34;hello %s&amp;#34; % sys.argv[1] 然后，如果我们运行python test.zip world，我们会得到hello world的输出。
+因此，当我们用python调用zip文件时，main.py文件会被执行。
+参考答案： 如果你的脚本是一个目录或者ZIP文件，而不是一个单独的Python文件，在将&amp;quot;脚本&amp;quot;作为参数传递给Python解析器时，main.py文件将被执行。
+参考答案： 你可以创建一个__main__.py文件，并且放在你的包（yourpackage）中，这样就可以通过以下方式执行它：
+1$ python -m yourpackage 参考答案： 什么是__main__.py文件？ 创建Python模块时，通常会将模块在运行时作为程序的入口点执行一些功能（通常包含在一个main函数中）。这通常是通过在大多数Python文件的底部放置以下常见习语来完成的：
+1if __name__ == &amp;#39;__main__&amp;#39;: 2 # only execute if run as the entry point into the program 3 main() 使用__main__.py文件可以实现相同的语义效果，下面是一个__main__.py文件的示例结构：
+1. 2└── demo 3 ├── __init__.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>将NumPy数组转换为Python列表</title>
+      <link>https://www.techdocdb.com/posts/%E5%B0%86numpy%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BApython%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Mon, 11 Sep 2023 09:02:47 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%B0%86numpy%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BApython%E5%88%97%E8%A1%A8/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何将NumPy数组转换为Python列表。我们将提供多种解决方案，包括使用NumPy的tolist方法以及其他一些方法。
+内容 在将NumPy数组转换为
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何保护Python代码不被用户读取？</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4python%E4%BB%A3%E7%A0%81%E4%B8%8D%E8%A2%AB%E7%94%A8%E6%88%B7%E8%AF%BB%E5%8F%96/</link>

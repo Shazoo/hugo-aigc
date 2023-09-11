@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mocha.js on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/mocha.js/</link>
+    <description>Recent content in mocha.js on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Sep 2023 08:09:34 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/mocha.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Mocha中增加单个测试用例的超时时间</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8mocha%E4%B8%AD%E5%A2%9E%E5%8A%A0%E5%8D%95%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Mon, 11 Sep 2023 08:09:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8mocha%E4%B8%AD%E5%A2%9E%E5%8A%A0%E5%8D%95%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Mocha中为单个测试用例增加超时时间。您将学习如何在需要执行时间较长的测试用例时，增加超时限制。
+内容 使用Mocha进行测试时，默认的超时时间为2秒。对于处理网络请求等可能耗时较长的测试用例，可能需要增加超时时间限制。
+下面是一些在Mocha中增加单个测试用例超时时间的方法：
+对于普通函数： 使用this.timeout()方法为测试用例设置超时时间。例如：
+1it(&amp;#39;accesses the network&amp;#39;, function(done){ 2 this.timeout(500); 3 // 在此处添加网络请求的代码，并在回调函数中调用done() 4}) 对于箭头函数： 在箭头函数后面使用.timeout()方法指定超时时间。例如：
+1it(&amp;#39;accesses the network&amp;#39;, (done) =&amp;gt; { 2 // 在此处添加网络请求的代码，并在回调函数中调用done() 3}).timeout(500); 请注意，Mocha使用默认的超时时间来确保测试用例在合理的时间内完成。如果测试用例超过了超时时间，Mocha将会认为测试用例失败。
+通过使用上述方法中的任何一个，您都可以为单个测试用例增加超时时间限制。请根据测试用例的需要选择适合的方法，并确保测试用例在合理的时间内完成。
+总结 在Mocha中，可以使用this.timeout()方法或.timeout()方法来为单个测试用例增加超时时间。通过设置适当的超时时间，可以确保测试用例在处理时间较长的情况下仍然能够正常完成。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

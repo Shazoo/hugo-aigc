@@ -7,7 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 11:30:11 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/date/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 10:11:14 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/date/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在NodeJS中将UTC日期格式化为`YYYY-MM-DD hh:mm:ss`字符串？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8nodejs%E4%B8%AD%E5%B0%86utc%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAyyyy-mm-dd-hhmmss%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Mon, 11 Sep 2023 10:11:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8nodejs%E4%B8%AD%E5%B0%86utc%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAyyyy-mm-dd-hhmmss%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            要在Node.js中格式化一个Date对象为指定的字符串格式，你可以使用moment.js库。以下是使用moment.js库格式化UTC日期的示例：
+1const moment = require(&amp;#39;moment&amp;#39;); 2 3const utcDate = &amp;#39;2022-02-01T10:00:00Z&amp;#39;; // Example UTC date 4const formattedDate = moment(utcDate).format(&amp;#39;YYYY-MM-DD HH:mm:ss&amp;#39;); 5console.log(formattedDate); 6// Output: 2022-02-01 10:00:00 首先，你需要通过require语句引入moment模块。然后，使用moment函数将UTC日期字符串转换为moment对象。在这个示例中，我们将输入的UTC日期字符串作为参数传递给moment函数。然后，使用format方法指定输出日期的格式。在这个示例中，我们将日期格式设置为YYYY-MM-DD HH:mm:ss来得到所需的字符串。最后，使用console.log输出结果。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何检查一个对象是否为日期对象？</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/</link>

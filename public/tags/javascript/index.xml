@@ -7,7 +7,69 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 17:46:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 10:52:57 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>async-await 和 JavaScript 中的 Promise.all 的区别</title>
+      <link>https://www.techdocdb.com/posts/async-await-%E5%92%8C-javascript-%E4%B8%AD%E7%9A%84-promise.all-%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 11 Sep 2023 10:52:57 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/async-await-%E5%92%8C-javascript-%E4%B8%AD%E7%9A%84-promise.all-%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>
+        
+          
+            在 JavaScript 中，我们经常使用 async-await 和 Promise.all 来处理异步操作。虽然它们都是用来处理异步代码的工具，但是它们之间有一些区别。本文将介绍 async-await 和 Promise.all 的使用方法和区别。
+async-await async-await 是一种更直观、更易读的处理异步操作的方式。通过使用 async-await，我们可以像编写同步代码一样编写异步代码，不再需要使用 then 方法来处理 Promise 对象的返回值。
+以下是一个使用 async-await 的例子：
+1async function example() { 2 const result1 = await task1(); 3 const result2 = await task2(); 4 // do something with result1 and result2 5} 在上面的例子中，task2 会等待 task1 完成之后才会开始执行。这就意味着两个异步任务是按顺序执行的，不会并行执行。这可能会降低代码的执行效率。
+Promise.all Promise.all 是一种更适用于并行执行多个异步任务的方式。通过使用 Promise.all，我们可以将多个 Promise 对象放入一个数组中，并等待它们都完成后再进行下一步操作。
+以下是一个使用 Promise.all 的例子：
+1const [result1, result2] = await Promise.all([task1(), task2()]); 2// do something with result1 and result2 在上面的例子中，task1 和 task2 会同时执行，并在它们都完成后返回结果。这样可以显著提高代码的执行效率。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>如何在NodeJS中将UTC日期格式化为`YYYY-MM-DD hh:mm:ss`字符串？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8nodejs%E4%B8%AD%E5%B0%86utc%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAyyyy-mm-dd-hhmmss%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Mon, 11 Sep 2023 10:11:14 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8nodejs%E4%B8%AD%E5%B0%86utc%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAyyyy-mm-dd-hhmmss%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>
+        
+          
+            要在Node.js中格式化一个Date对象为指定的字符串格式，你可以使用moment.js库。以下是使用moment.js库格式化UTC日期的示例：
+1const moment = require(&amp;#39;moment&amp;#39;); 2 3const utcDate = &amp;#39;2022-02-01T10:00:00Z&amp;#39;; // Example UTC date 4const formattedDate = moment(utcDate).format(&amp;#39;YYYY-MM-DD HH:mm:ss&amp;#39;); 5console.log(formattedDate); 6// Output: 2022-02-01 10:00:00 首先，你需要通过require语句引入moment模块。然后，使用moment函数将UTC日期字符串转换为moment对象。在这个示例中，我们将输入的UTC日期字符串作为参数传递给moment函数。然后，使用format方法指定输出日期的格式。在这个示例中，我们将日期格式设置为YYYY-MM-DD HH:mm:ss来得到所需的字符串。最后，使用console.log输出结果。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Mocha中增加单个测试用例的超时时间</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8mocha%E4%B8%AD%E5%A2%9E%E5%8A%A0%E5%8D%95%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Mon, 11 Sep 2023 08:09:34 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8mocha%E4%B8%AD%E5%A2%9E%E5%8A%A0%E5%8D%95%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在Mocha中为单个测试用例增加超时时间。您将学习如何在需要执行时间较长的测试用例时，增加超时限制。
+内容 使用Mocha进行测试时，默认的超时时间为2秒。对于处理网络请求等可能耗时较长的测试用例，可能需要增加超时时间限制。
+下面是一些在Mocha中增加单个测试用例超时时间的方法：
+对于普通函数： 使用this.timeout()方法为测试用例设置超时时间。例如：
+1it(&amp;#39;accesses the network&amp;#39;, function(done){ 2 this.timeout(500); 3 // 在此处添加网络请求的代码，并在回调函数中调用done() 4}) 对于箭头函数： 在箭头函数后面使用.timeout()方法指定超时时间。例如：
+1it(&amp;#39;accesses the network&amp;#39;, (done) =&amp;gt; { 2 // 在此处添加网络请求的代码，并在回调函数中调用done() 3}).timeout(500); 请注意，Mocha使用默认的超时时间来确保测试用例在合理的时间内完成。如果测试用例超过了超时时间，Mocha将会认为测试用例失败。
+通过使用上述方法中的任何一个，您都可以为单个测试用例增加超时时间限制。请根据测试用例的需要选择适合的方法，并确保测试用例在合理的时间内完成。
+总结 在Mocha中，可以使用this.timeout()方法或.timeout()方法来为单个测试用例增加超时时间。通过设置适当的超时时间，可以确保测试用例在处理时间较长的情况下仍然能够正常完成。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何检测文本框内容的变化</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96/</link>
