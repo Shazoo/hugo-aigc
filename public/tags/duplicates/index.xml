@@ -7,7 +7,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2023 08:41:01 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/duplicates/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 14:55:59 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/duplicates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在SQL中选择多个列的不重复值</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8sql%E4%B8%AD%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%88%97%E7%9A%84%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%80%BC/</link>
+      <pubDate>Mon, 11 Sep 2023 14:55:59 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8sql%E4%B8%AD%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%88%97%E7%9A%84%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%80%BC/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在SQL中选择多个列的不重复值。我们将讨论使用DISTINCT关键字、GROUP BY子句以及嵌套查询来实现这个目标，并提供具体的代码示例和说明。
+内容 有时候我们需要从一个表中的多个列中选择不重复的值。以下是几种方法可以实现这个目标：
+使用DISTINCT关键字：
+我们可以使用DISTINCT关键字来选择多个列的不重复值。以下是一个使用DISTINCT关键字的例子：
+1SELECT DISTINCT col1, col2 FROM table 这会返回根据多个列组合而不重复的行。
+使用GROUP BY子句：
+另一种方法是使用GROUP BY子句来对多个列进行分组，并选择每个组的第一行。以下是一个使用GROUP BY子句的例子：
+1SELECT col1, col2 2FROM table 3GROUP BY col1, col2 这将返回每个组的第一行，并保证结果中没有重复值。
+使用嵌套查询：
+我们还可以使用嵌套查询来选择不重复的多个列。以下是一个使用嵌套查询的例子：
+1SELECT DISTINCT * 2FROM (SELECT col1, col2 FROM table) AS x 首先，内部查询选择了多个列的值，然后外部查询使用DISTINCT关键字选择不重复的行。
+根据具体的需求和数据库管理系统，选择合适的方法来选择多个列的不重复值。以上方法都可以实现这个目标，根据实际情况选择最适合的方法。
+参考文献：
+Microsoft Documentation - DISTINCT Microsoft Documentation - GROUP BY 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>去除JavaScript数组中的重复值</title>
+      <link>https://www.techdocdb.com/posts/%E5%8E%BB%E9%99%A4javascript%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%80%BC/</link>
+      <pubDate>Mon, 11 Sep 2023 14:30:26 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%8E%BB%E9%99%A4javascript%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%80%BC/</guid>
+      <description>
+        
+          
+            摘要 本文介绍了如何使用JavaScript语言去除数组中的重复值。包括使用数组自带方法和使用Set数据结构两种方法。
+内容 JavaScript数组是一种有序的集合，其中包含了若干个元素。有时候我们需要去除数组中的重复元素，只保留唯一的值。下面介绍两种方法实现这个功能。
+1. 使用数组自带方法 JavaScript数组有一个自带的filter方法，可以用来过滤数组中的元素。我们可以使用该方法来过滤掉重复的元素。
+示例代码：
+1var names = [&amp;#34;Mike&amp;#34;,&amp;#34;Matt&amp;#34;,&amp;#34;Nancy&amp;#34;,&amp;#34;Adam&amp;#34;,&amp;#34;Jenny&amp;#34;,&amp;#34;Nancy&amp;#34;,&amp;#34;Carl&amp;#34;]; 2var uniqueNames = names.filter(function(item, index){ 3 return names.indexOf(item) == index; 4}); 通过使用filter方法，我们将数组中的每个元素都和它的索引位置进行比较，只保留第一次出现的元素，将其他重复元素过滤掉。最后得到的uniqueNames数组就是去除重复值后的数组。
+2. 使用Set数据结构 在ES6引入的JavaScript新特性中，我们可以使用Set数据结构来去除数组中的重复值。Set是一种类似数组的数据结构，但是它的成员是唯一的，不会重复。
+示例代码：
+1var names = [&amp;#34;Mike&amp;#34;,&amp;#34;Matt&amp;#34;,&amp;#34;Nancy&amp;#34;,&amp;#34;Adam&amp;#34;,&amp;#34;Jenny&amp;#34;,&amp;#34;Nancy&amp;#34;,&amp;#34;Carl&amp;#34;]; 2var uniqueNames = Array.from(new Set(names)); 通过将数组转换为Set数据结构，然后再将Set转换回数组，我们就可以得到去除重复值后的数组uniqueNames。
+总结 以上是两种常用的方法，分别使用了数组的自带方法和ES6新增的数据结构Set来实现去除重复值的功能。根据具体的使用场景和需求，选择合适的方法即可。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在MySQL中查找重复记录</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E6%9F%A5%E6%89%BE%E9%87%8D%E5%A4%8D%E8%AE%B0%E5%BD%95/</link>

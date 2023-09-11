@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 11:30:37 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 14:40:47 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android中如何创建一个启动页？</title>
+      <link>https://www.techdocdb.com/posts/android%E4%B8%AD%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E9%A1%B5/</link>
+      <pubDate>Mon, 11 Sep 2023 14:40:47 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/android%E4%B8%AD%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E9%A1%B5/</guid>
+      <description>
+        
+          
+            导入所需的资源文件和图片。 创建一个名为 “SplashActivity&amp;quot; 的新活动（Activity）类并设置为启动活动（Launch Activity）。 在onCreate()方法中使用Handler类来延迟几秒钟后自动跳转到主活动（Main Activity）。 在Android清单文件（AndroidManifest.xml）中添加对新活动（SplashActivity）的引用。 运行应用程序并查看启动页的效果。 1public class SplashActivity extends AppCompatActivity { 2 3 private static final long SPLASH_SCREEN_DELAY = 3000; 4 5 @Override 6 protected void onCreate(Bundle savedInstanceState) { 7 super.onCreate(savedInstanceState); 8 9 setContentView(R.layout.activity_splash); 10 11 new Handler().postDelayed(new Runnable() { 12 @Override 13 public void run() { 14 Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class); 15 startActivity(mainIntent); 16 finish(); 17 } 18 }, SPLASH_SCREEN_DELAY); 19 } 20} 此外，还需要在Android清单文件（AndroidManifest.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>动画展开/折叠的方法</title>
       <link>https://www.techdocdb.com/posts/%E5%8A%A8%E7%94%BB%E5%B1%95%E5%BC%80/%E6%8A%98%E5%8F%A0%E7%9A%84%E6%96%B9%E6%B3%95/</link>

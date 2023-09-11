@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgresql-9.2 on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/postgresql-9.2/</link>
+    <description>Recent content in postgresql-9.2 on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Sep 2023 15:41:59 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/postgresql-9.2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQL-9.2数据库大小查询命令</title>
+      <link>https://www.techdocdb.com/posts/postgresql-9.2%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E5%B0%8F%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 11 Sep 2023 15:41:59 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/postgresql-9.2%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E5%B0%8F%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4/</guid>
+      <description>
+        
+          
+             摘要 本教程介绍了如何使用PostgreSQL-9.2来查询数据库的大小。通过示例和详细说明，帮助读者了解如何使用不同的方法来获取数据库的大小信息。
+内容 PostgreSQL是一种非常流行的关系型数据库管理系统，可以用来存储和管理大量的数据。在进行数据库管理和优化时，了解数据库的大小是非常重要的。在PostgreSQL-9.2中，有多种方法可以查询数据库的大小。
+以下是一些常见的方法和示例：
+使用SELECT语句查询特定数据库的大小： 1SELECT pg_size_pretty(pg_database_size(&amp;#39;databaseName&amp;#39;)) AS &amp;#34;db_size&amp;#34;; 查询所有数据库的名称和大小： 1SELECT t1.datname AS &amp;#34;db_name&amp;#34;, 2 pg_size_pretty(pg_database_size(t1.datname)) AS &amp;#34;db_size&amp;#34; 3FROM pg_database t1 4ORDER BY pg_database_size(t1.datname) DESC; 使用psql元命令查询数据库大小： 1\l+ 使用pgAdmin查询数据库大小：
+打开pgAdmin，并连接到服务器。 点击数据库名称，并选择统计选项卡，可以在列表末尾看到数据库的大小。 可以轻松查看多个数据库的大小。 通过将查询结果作为机器输出来查询数据库大小：
+1\l+ &amp;lt;database_name&amp;gt; 注意：在使用这些方法时，请确保拥有足够的权限来访问数据库和执行相应的查询。
+总结 通过本教程，我们学习了如何使用PostgreSQL-9.2来查询数据库的大小。我们介绍了几种不同的方法，包括使用SELECT语句、psql元命令和pgAdmin工具。每种方法都有其优点和适用场景，读者可以根据实际需求选择合适的方法。
+了解数据库的大小是数据库管理和优化的重要一步，通过掌握这些方法，读者可以更好地了解和管理他们的PostgreSQL数据库。
+参考来源：
+https://stackoverflow.com/questions/2596624/how-do-you-find-the-disk-size-of-a-postgres-postgresql-table-and-its-indexes#answer-18985810 https://www.postgresql.org/docs/current/app-psql.html PostgreSQL wiki dbrnd.com 
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2023 10:43:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 17:50:06 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用Python求列表的总和</title>
+      <link>https://www.techdocdb.com/posts/%E7%94%A8python%E6%B1%82%E5%88%97%E8%A1%A8%E7%9A%84%E6%80%BB%E5%92%8C/</link>
+      <pubDate>Mon, 11 Sep 2023 17:50:06 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E7%94%A8python%E6%B1%82%E5%88%97%E8%A1%A8%E7%9A%84%E6%80%BB%E5%92%8C/</guid>
+      <description>
+        
+          
+            摘要 本文将介绍如何使用Python计算一个列表中所有数字的总和，以及如何计算两两元素的平均值。通过示例代码和详细说明，解释如何实现这些功能。
+内容 给定一个列表，例如：
+1[1, 2, 3, 4, 5, ...] 我们需要计算列表中所有数字的总和，即：
+11 + 2 + 3 + 4 + 5 + ... 我们还需要计算相邻元素的平均值，即：
+1[(1+2)/2, (2+3)/2, (3+4)/2, (4+5)/2, ...] 求列表总和 要计算列表中所有数字的总和，可以使用内置的sum函数，代码如下：
+1sum(list_of_nums) 计算相邻元素的平均值 要计算相邻元素的平均值，我们可以使用列表推导式和内置的zip函数，代码如下：
+1[(x + y) / 2 for x, y in zip(xs, xs[1:])] 如果要将相邻元素的平均值求和，可以在计算过程中使用生成器表达式和sum函数，代码如下：
+1sum((x + y) / 2 for x, y in zip(xs, xs[1:])) 这些是使用Python求列表总和和相邻元素平均值的方法。
+总结 通过使用内置函数和列表处理技巧，我们可以很容易地在Python中求列表的总和和相邻元素的平均值。根据需要选择合适的方法来实现所需的功能。
+参考链接：无
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>问题题目：什么是__main__.py</title>
       <link>https://www.techdocdb.com/posts/%E9%97%AE%E9%A2%98%E9%A2%98%E7%9B%AE%E4%BB%80%E4%B9%88%E6%98%AF__main__.py/</link>

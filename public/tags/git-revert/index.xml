@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-revert on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/git-revert/</link>
+    <description>Recent content in git-revert on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Sep 2023 15:23:43 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/git-revert/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Revert vs. Checkout vs. Reset</title>
+      <link>https://www.techdocdb.com/posts/git-revert-vs.-checkout-vs.-reset/</link>
+      <pubDate>Mon, 11 Sep 2023 15:23:43 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/git-revert-vs.-checkout-vs.-reset/</guid>
+      <description>
+        
+          
+            概要 本教程将解释Git中的三个命令——git revert、git checkout和git reset的区别及用法。
+内容 git revert git revert命令用于撤销之前的提交，并创建一个新的提交来撤销前一个提交所做的更改。这个命令会添加新的历史记录到项目中，而不会修改已有的历史记录。
+git checkout git checkout命令用于将存储在版本库中的内容检出到工作树中。它也可以有其他效果，具体取决于命令的用法。例如，它还可以切换工作的分支。这个命令不会对历史记录进行任何更改。
+git reset git reset命令稍微复杂一些。它的作用会根据用法的不同而有所不同。它可以修改索引（即暂存区），或者更改分支头所指向的提交。这个命令可能会修改已有的历史记录（通过改变分支引用所指向的提交）。
+用法示例 如果你想撤销之前的提交，可以使用git revert命令。它会创建一个撤销前一次提交更改的新提交，并在历史记录中记录下这次“撤销”操作。
+如果你在工作树中修改了一个文件，但没有提交这个修改，可以使用git checkout命令来还原该文件到代码库中的版本。
+如果你已经提交了一个错误的修改，但还没有与其他人共享这个提交，你可以使用git reset命令来重写历史，使得看起来好像你从未进行过这个提交。
+这只是一些可能的应用场景，还有其他命令可以在特定情况下使用，上述的三个命令也有其他用途。
+总结 git revert、git checkout和git reset是三个完全不同的命令，它们的用途和作用也大不相同。在使用时需要根据具体的场景选择适当的命令。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

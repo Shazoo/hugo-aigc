@@ -7,7 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 22:12:29 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/sql-update/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 14:55:59 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/sql-update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在SQL中选择多个列的不重复值</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8sql%E4%B8%AD%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%88%97%E7%9A%84%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%80%BC/</link>
+      <pubDate>Mon, 11 Sep 2023 14:55:59 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8sql%E4%B8%AD%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%88%97%E7%9A%84%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%80%BC/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在SQL中选择多个列的不重复值。我们将讨论使用DISTINCT关键字、GROUP BY子句以及嵌套查询来实现这个目标，并提供具体的代码示例和说明。
+内容 有时候我们需要从一个表中的多个列中选择不重复的值。以下是几种方法可以实现这个目标：
+使用DISTINCT关键字：
+我们可以使用DISTINCT关键字来选择多个列的不重复值。以下是一个使用DISTINCT关键字的例子：
+1SELECT DISTINCT col1, col2 FROM table 这会返回根据多个列组合而不重复的行。
+使用GROUP BY子句：
+另一种方法是使用GROUP BY子句来对多个列进行分组，并选择每个组的第一行。以下是一个使用GROUP BY子句的例子：
+1SELECT col1, col2 2FROM table 3GROUP BY col1, col2 这将返回每个组的第一行，并保证结果中没有重复值。
+使用嵌套查询：
+我们还可以使用嵌套查询来选择不重复的多个列。以下是一个使用嵌套查询的例子：
+1SELECT DISTINCT * 2FROM (SELECT col1, col2 FROM table) AS x 首先，内部查询选择了多个列的值，然后外部查询使用DISTINCT关键字选择不重复的行。
+根据具体的需求和数据库管理系统，选择合适的方法来选择多个列的不重复值。以上方法都可以实现这个目标，根据实际情况选择最适合的方法。
+参考文献：
+Microsoft Documentation - DISTINCT Microsoft Documentation - GROUP BY 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>在MySQL中基于SELECT查询进行UPDATE查询</title>
       <link>https://www.techdocdb.com/posts/%E5%9C%A8mysql%E4%B8%AD%E5%9F%BA%E4%BA%8Eselect%E6%9F%A5%E8%AF%A2%E8%BF%9B%E8%A1%8Cupdate%E6%9F%A5%E8%AF%A2/</link>

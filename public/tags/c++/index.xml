@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 17:48:57 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 15:01:09 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; FAQ：为什么优先使用enum class而不是普通的enum？</title>
+      <link>https://www.techdocdb.com/posts/c&#43;&#43;-faq%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%98%E5%85%88%E4%BD%BF%E7%94%A8enum-class%E8%80%8C%E4%B8%8D%E6%98%AF%E6%99%AE%E9%80%9A%E7%9A%84enum/</link>
+      <pubDate>Mon, 11 Sep 2023 15:01:09 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/c&#43;&#43;-faq%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%98%E5%85%88%E4%BD%BF%E7%94%A8enum-class%E8%80%8C%E4%B8%8D%E6%98%AF%E6%99%AE%E9%80%9A%E7%9A%84enum/</guid>
+      <description>
+        
+          
+            摘要 在C++中，enum class（枚举类）由于具有强类型和作用域枚举的特点，因此得到了广泛推荐和使用。本文将介绍为什么enum class更受推崇，并通过示例说明其优势。
+内容 在C++中，有两种类型的枚举：
+enum class（枚举类） 普通的enum（枚举） 下面是一些示例来说明它们的声明方式：
+1enum class Color { red, green, blue }; // 枚举类 2enum Animal { dog, cat, bird, human }; // 普通的枚举 这两者有什么区别呢？
+枚举类（enum class）的枚举器名称仅在枚举类内部可见，它们的值不能隐式转换为其他类型（如另一个枚举或int）。 普通的枚举（enum）的枚举器名称在同一作用域中可见，它们的值可以隐式转换为整型和其他类型。 以下是一个示例：
+1enum Color { red, green, blue }; // 普通的枚举 2 3void foo(Color color) { 4 int num = color; // 没问题 5 6 if (color == red) // 没问题（但不好） 7 cout &amp;lt;&amp;lt; &amp;#34;bad&amp;#34; &amp;lt;&amp;lt; endl; 8} 在上述代码中，普通的枚举（enum）可以被隐式转换为int，这可能会导致错误的比较和使用。而使用枚举类（enum class）可以避免这些问题。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>std::promise和std::future的用法和示例说明</title>
       <link>https://www.techdocdb.com/posts/stdpromise%E5%92%8Cstdfuture%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E7%A4%BA%E4%BE%8B%E8%AF%B4%E6%98%8E/</link>
