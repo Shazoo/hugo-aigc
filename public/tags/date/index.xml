@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2023 10:11:14 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/date/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 09:02:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/date/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>date-format教程</title>
+      <link>https://www.techdocdb.com/posts/date-format%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 12 Sep 2023 09:02:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/date-format%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            在JavaScript中将日期格式化为yyyy-mm-dd的方法
+摘要 本教程将介绍如何使用JavaScript将日期格式从“Sun May 11,2014”转换为“2014-05-11”。
+内容 你可以使用以下代码将日期格式从“Sun May 11,2014”转换为“2014-05-11”：
+1function formatDate(date) { 2 var d = new Date(date), 3 month = &amp;#39;&amp;#39; + (d.getMonth() + 1), 4 day = &amp;#39;&amp;#39; + d.getDate(), 5 year = d.getFullYear(); 6 7 if (month.length &amp;lt; 2) 8 month = &amp;#39;0&amp;#39; + month; 9 if (day.length &amp;lt; 2) 10 day = &amp;#39;0&amp;#39; + day; 11 12 return [year, month, day].join(&amp;#39;-&amp;#39;); 13} 14 15console.log(formatDate(&amp;#39;Sun May 11,2014&amp;#39;)); 通过上述代码，你可以将“Sun May 11,2014”格式的日期转换为“2014-05-11”。可以通过将日期作为参数传递给formatDate函数来实现。函数内部通过将日期分解为年、月和日，并通过前导零将月份和日期格式化。然后，将年、月和日组合为一个新的日期字符串，并使用连字符分隔。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>如何在NodeJS中将UTC日期格式化为`YYYY-MM-DD hh:mm:ss`字符串？</title>
       <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8nodejs%E4%B8%AD%E5%B0%86utc%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAyyyy-mm-dd-hhmmss%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>

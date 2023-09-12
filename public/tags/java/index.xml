@@ -7,7 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 16:42:44 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 09:46:03 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何获取以日期、小时和分钟为ISO 8601格式的当前时刻？</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E4%BB%A5%E6%97%A5%E6%9C%9F%E5%B0%8F%E6%97%B6%E5%92%8C%E5%88%86%E9%92%9F%E4%B8%BAiso-8601%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%BD%93%E5%89%8D%E6%97%B6%E5%88%BB/</link>
+      <pubDate>Tue, 12 Sep 2023 09:46:03 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E4%BB%A5%E6%97%A5%E6%9C%9F%E5%B0%8F%E6%97%B6%E5%92%8C%E5%88%86%E9%92%9F%E4%B8%BAiso-8601%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%BD%93%E5%89%8D%E6%97%B6%E5%88%BB/</guid>
+      <description>
+        
+          
+            要以ISO 8601格式获取当前时刻的日期、小时和分钟，可以使用Java的SimpleDateFormat类。以下是示例代码：
+1TimeZone tz = TimeZone.getTimeZone(&amp;#34;UTC&amp;#34;); 2DateFormat df = new SimpleDateFormat(&amp;#34;yyyy-MM-dd&amp;#39;T&amp;#39;HH:mm&amp;#39;Z&amp;#39;&amp;#34;); 3df.setTimeZone(tz); 4String nowAsISO = df.format(new Date()); 在上面的代码中，我们首先指定了时区为UTC。然后，我们创建了一个SimpleDateFormat对象，并指定了日期时间格式字符串&amp;quot;yyyy-MM-dd&#39;T&#39;HH:mm&#39;Z&#39;&amp;quot;。最后，我们使用当前时间创建一个Date对象，并使用SimpleDateFormat.format()方法将其格式化为ISO 8601格式的字符串。
+对于不同的时区，可以根据需求更改代码中的时区部分。在上面的示例中，我们将时区设置为UTC。
+这样就可以得到以日期、小时和分钟为ISO 8601格式的当前时刻。
+参考代码如下：
+1import java.text.DateFormat; 2import java.text.SimpleDateFormat; 3import java.util.Date; 4import java.util.TimeZone; 5 6public class Main { 7 public static void main(String[] args) { 8 TimeZone tz = TimeZone.getTimeZone(&amp;#34;UTC&amp;#34;); 9 DateFormat df = new SimpleDateFormat(&amp;#34;yyyy-MM-dd&amp;#39;T&amp;#39;HH:mm&amp;#39;Z&amp;#39;&amp;#34;); 10 df.setTimeZone(tz); 11 String nowAsISO = df.format(new Date()); 12 System.out.println(nowAsISO); 13 } 14} 上述代码会输出类似&amp;quot;2022-01-01T12:00Z&amp;quot;的字符串，表示ISO 8601格式的当前时刻。
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>&lt;html&gt;</title>
+      <link>https://www.techdocdb.com/posts/html/</link>
+      <pubDate>Tue, 12 Sep 2023 08:47:12 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/html/</guid>
+      <description>
+        
+          
+            504 Gateway Time-out 504 Gateway Time-out nginx 
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>下载 Java JDK 安装包</title>
       <link>https://www.techdocdb.com/posts/%E4%B8%8B%E8%BD%BD-java-jdk-%E5%AE%89%E8%A3%85%E5%8C%85/</link>

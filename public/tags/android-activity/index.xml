@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android-activity on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/android-activity/</link>
+    <description>Recent content in android-activity on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 12 Sep 2023 09:11:09 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/android-activity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在Android上管理startActivityForResult</title>
+      <link>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8android%E4%B8%8A%E7%AE%A1%E7%90%86startactivityforresult/</link>
+      <pubDate>Tue, 12 Sep 2023 09:11:09 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%A6%82%E4%BD%95%E5%9C%A8android%E4%B8%8A%E7%AE%A1%E7%90%86startactivityforresult/</guid>
+      <description>
+        
+          
+            首先，在你的FirstActivity里，通过startActivityForResult()方法调用SecondActivity。
+例如：
+1int LAUNCH_SECOND_ACTIVITY = 1; 2Intent i = new Intent(this, SecondActivity.class); 3startActivityForResult(i, LAUNCH_SECOND_ACTIVITY); 然后，在你的SecondActivity里，设置要返回给FirstActivity的数据。如果你不想返回数据，就不要设置任何值。
+例如：在SecondActivity里，如果你想返回数据，可以这样设置：
+1Intent returnIntent = new Intent(); 2returnIntent.putExtra(&amp;#34;result&amp;#34;, result); 3setResult(Activity.RESULT_OK, returnIntent); 4finish(); 如果你不想返回数据，可以这样设置：
+1Intent returnIntent = new Intent(); 2setResult(Activity.RESULT_CANCELED, returnIntent); 3finish(); 接下来，在你的FirstActivity类中，编写以下代码来处理onActivityResult()方法：
+1@Override 2protected void onActivityResult(int requestCode, int resultCode, Intent data) { 3 super.onActivityResult(requestCode, resultCode, data); 4 5 if (requestCode == LAUNCH_SECOND_ACTIVITY) { 6 if(resultCode == Activity.RESULT_OK){ 7 String result = data.getStringExtra(&amp;#34;result&amp;#34;); 8 // 处理返回的结果 9 } 10 if (resultCode == Activity.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

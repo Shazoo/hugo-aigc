@@ -7,7 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2023 17:50:06 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 08:13:22 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>virtualenv, django和python的最佳实践</title>
+      <link>https://www.techdocdb.com/posts/virtualenv-django%E5%92%8Cpython%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 12 Sep 2023 08:13:22 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/virtualenv-django%E5%92%8Cpython%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在开发Django Web应用程序时，正确使用virtualenv，并解释为什么将virtualenv目录放在git存储库中可能不是一个好主意。我们将提供多个参考答案，并说明如何使用requirements.txt文件来管理Python包的依赖关系。
+内容 在开发Django Web应用程序时，使用virtualenv是一个很好的实践。virtualenv可以为每个项目创建独立的Python环境，以防止不同项目之间的冲突。通过使用虚拟环境，您可以快速切换不同项目之间的上下文，并确保项目之间的依赖关系不会相互干扰。
+然而，将virtualenv目录放在git存储库中可能不是明智之举。有几个原因可以支持这种观点：
+路径依赖性：virtualenv使用绝对路径，而不同的开发者可能在不同的路径中保存虚拟环境。这意味着如果您的virtualenv目录位于/home/lyle/myenv/，其他开发者使用该存储库时将假设相同的绝对路径。这可能导致虚拟环境无法在其他开发者的计算机上正常工作。
+跨平台兼容性：virtualenv在Linux、Windows和Mac环境中的安装方式略有不同。如果将virtualenv目录放在git存储库中，它可能无法在不同平台上正常工作。更好的做法是让每个开发者在自己的环境中设置和安装所需的库。
+管理复杂性：如果您在virtualenv中安装了特定于环境的库（如PyCrypto），则在不同环境之间部署代码可能会变得非常困难。每个库可能需要不同的编译设置，这将增加管理存储库的复杂性。
+为了解决以上问题，我们可以使用requirements.txt文件来管理Python包的依赖关系。可以使用以下命令将所需的包列表保存到requirements.txt文件中：
+1pip freeze &amp;gt; requirements.txt 将该文件添加到git存储库中，并且其他开发者可以使用以下命令来安装所有依赖项：
+1pip install -r requirements.txt 此外，还可以创建一个脚本来完成这些任务。下面是一个示例脚本：
+1#!/bin/bash 2virtualenv --no-site-packages --distribute .env &amp;amp;&amp;amp; \ 3 source .env/bin/activate &amp;amp;&amp;amp; \ 4 pip install -r requirements.txt 此脚本将自动创建虚拟环境并安装所需的Python包。
+总结 在开发Django Web应用程序时，使用virtualenv是一个很好的实践。然而，将virtualenv目录放在git存储库中可能导致依赖于绝对路径的问题，并增加部署和管理复杂性。更好的做法是使用requirements.txt文件来管理Python包的依赖关系，并确保每个开发者在自己的环境中设置虚拟环境。这样可以提高代码的可移植性和跨平台兼容性，并简化部署和管理过程。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>用Python求列表的总和</title>
       <link>https://www.techdocdb.com/posts/%E7%94%A8python%E6%B1%82%E5%88%97%E8%A1%A8%E7%9A%84%E6%80%BB%E5%92%8C/</link>

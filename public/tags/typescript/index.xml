@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Sep 2023 11:52:32 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 09:43:46 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 TypeScript 中检查值是否存在于枚举中</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-typescript-%E4%B8%AD%E6%A3%80%E6%9F%A5%E5%80%BC%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8E%E6%9E%9A%E4%B8%BE%E4%B8%AD/</link>
+      <pubDate>Tue, 12 Sep 2023 09:43:46 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-typescript-%E4%B8%AD%E6%A3%80%E6%9F%A5%E5%80%BC%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8E%E6%9E%9A%E4%B8%BE%E4%B8%AD/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在 TypeScript 中检查一个值是否存在于枚举中。
+内容 当你需要检查一个值是否存在于枚举中时，可以使用 TypeScript 中的对象的值和 includes 方法。
+以下是一个例子，假设你有以下枚举：
+1enum MESSAGE_TYPE { 2 INFO = 1, 3 SUCCESS = 2, 4 WARNING = 3, 5 ERROR = 4, 6} 你可以使用以下方法检查一个值是否存在于该枚举中：
+1const value = 3; 2 3if (Object.values(MESSAGE_TYPE).includes(value)) { 4 // 值存在于枚举中 5} 上述代码将利用 Object.values(MESSAGE_TYPE) 获取枚举的所有值，并使用 includes 方法检查指定的 value 是否存在于这些值中。
+这种方法适用于枚举的值为数字类型的情况。如果枚举的值为字符串类型，可以使用类似的方式进行检查：
+1enum Vehicle { 2 Car = &amp;#39;car&amp;#39;, 3 Bike = &amp;#39;bike&amp;#39;, 4 Truck = &amp;#39;truck&amp;#39; 5} 6 7if (Object.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Angular2 Routing教程</title>
       <link>https://www.techdocdb.com/posts/angular2-routing%E6%95%99%E7%A8%8B/</link>

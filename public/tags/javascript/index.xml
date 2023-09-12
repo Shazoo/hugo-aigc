@@ -7,7 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2023 16:29:09 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 09:43:46 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 TypeScript 中检查值是否存在于枚举中</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8-typescript-%E4%B8%AD%E6%A3%80%E6%9F%A5%E5%80%BC%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8E%E6%9E%9A%E4%B8%BE%E4%B8%AD/</link>
+      <pubDate>Tue, 12 Sep 2023 09:43:46 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8-typescript-%E4%B8%AD%E6%A3%80%E6%9F%A5%E5%80%BC%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BA%8E%E6%9E%9A%E4%B8%BE%E4%B8%AD/</guid>
+      <description>
+        
+          
+            摘要 本教程将介绍如何在 TypeScript 中检查一个值是否存在于枚举中。
+内容 当你需要检查一个值是否存在于枚举中时，可以使用 TypeScript 中的对象的值和 includes 方法。
+以下是一个例子，假设你有以下枚举：
+1enum MESSAGE_TYPE { 2 INFO = 1, 3 SUCCESS = 2, 4 WARNING = 3, 5 ERROR = 4, 6} 你可以使用以下方法检查一个值是否存在于该枚举中：
+1const value = 3; 2 3if (Object.values(MESSAGE_TYPE).includes(value)) { 4 // 值存在于枚举中 5} 上述代码将利用 Object.values(MESSAGE_TYPE) 获取枚举的所有值，并使用 includes 方法检查指定的 value 是否存在于这些值中。
+这种方法适用于枚举的值为数字类型的情况。如果枚举的值为字符串类型，可以使用类似的方式进行检查：
+1enum Vehicle { 2 Car = &amp;#39;car&amp;#39;, 3 Bike = &amp;#39;bike&amp;#39;, 4 Truck = &amp;#39;truck&amp;#39; 5} 6 7if (Object.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>date-format教程</title>
+      <link>https://www.techdocdb.com/posts/date-format%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 12 Sep 2023 09:02:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/date-format%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+          
+            在JavaScript中将日期格式化为yyyy-mm-dd的方法
+摘要 本教程将介绍如何使用JavaScript将日期格式从“Sun May 11,2014”转换为“2014-05-11”。
+内容 你可以使用以下代码将日期格式从“Sun May 11,2014”转换为“2014-05-11”：
+1function formatDate(date) { 2 var d = new Date(date), 3 month = &amp;#39;&amp;#39; + (d.getMonth() + 1), 4 day = &amp;#39;&amp;#39; + d.getDate(), 5 year = d.getFullYear(); 6 7 if (month.length &amp;lt; 2) 8 month = &amp;#39;0&amp;#39; + month; 9 if (day.length &amp;lt; 2) 10 day = &amp;#39;0&amp;#39; + day; 11 12 return [year, month, day].join(&amp;#39;-&amp;#39;); 13} 14 15console.log(formatDate(&amp;#39;Sun May 11,2014&amp;#39;)); 通过上述代码，你可以将“Sun May 11,2014”格式的日期转换为“2014-05-11”。可以通过将日期作为参数传递给formatDate函数来实现。函数内部通过将日期分解为年、月和日，并通过前导零将月份和日期格式化。然后，将年、月和日组合为一个新的日期字符串，并使用连字符分隔。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>浮点数的解析和处理</title>
       <link>https://www.techdocdb.com/posts/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E5%A4%84%E7%90%86/</link>

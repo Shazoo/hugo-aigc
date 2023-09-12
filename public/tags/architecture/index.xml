@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>architecture on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/architecture/</link>
+    <description>Recent content in architecture on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 12 Sep 2023 09:48:54 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在ViewModel中使用INotifyPropertyChanged还是DependencyProperty</title>
+      <link>https://www.techdocdb.com/posts/%E5%9C%A8viewmodel%E4%B8%AD%E4%BD%BF%E7%94%A8inotifypropertychanged%E8%BF%98%E6%98%AFdependencyproperty/</link>
+      <pubDate>Tue, 12 Sep 2023 09:48:54 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/%E5%9C%A8viewmodel%E4%B8%AD%E4%BD%BF%E7%94%A8inotifypropertychanged%E8%BF%98%E6%98%AFdependencyproperty/</guid>
+      <description>
+        
+          
+            摘要 本教程将讨论在Model-View-ViewModel(MVVM)架构中的WPF应用中，如何在ViewModel中实现数据绑定。对于这个问题，有两个主要选择，一种是使用DependencyProperty，另一种是实现INotifyPropertyChanged接口。本教程将解释何时应选择其中之一，并讨论在设计决策时需要考虑的其他因素。
+内容 在WPF应用的MVVM架构中，为了实现数据绑定，可以选择使用DependencyProperty或实现INotifyPropertyChanged接口。以下是对这两种方式的讨论：
+DependencyProperty 使用DependencyProperty的主要场景是在自定义控件中使用，例如按钮(Button)。使用DependencyProperty可以实现属性绑定，并允许从其他属性接收输入（使用{Binding ...}将属性的值设置为其他属性的值）。DependencyProperty带来了声明性的方法，使用静态元数据来定义属性行为，从而提供了一种优雅的方式。
+例如：
+1public static DependencyProperty NameProperty = DependencyProperty.Register(&amp;#34;Name&amp;#34;, typeof(string), typeof(Customer)); 2 3public string Name 4{ 5 set { SetValue(NameProperty, value); } 6 get { return (string)GetValue(NameProperty); } 7} INotifyPropertyChanged INotifyPropertyChanged接口通过在属性值发生更改时引发事件，实现了属性通知机制。使用INotifyPropertyChanged，可以在View Model中定义属性，并在属性值发生更改时通知UI进行更新。这种方式更加灵活，允许在属性的Getter和Setter中添加自定义逻辑。
+例如：
+1public class ViewModel : INotifyPropertyChanged 2{ 3 private string name; 4 5 public string Name 6 { 7 get { return name; } 8 set 9 { 10 if (name != value) 11 { 12 name = value; 13 OnPropertyChanged(nameof(Name)); 14 } 15 } 16 } 17 18 public event PropertyChangedEventHandler PropertyChanged; 19 20 protected virtual void OnPropertyChanged(string propertyName) 21 { 22 PropertyChanged?
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

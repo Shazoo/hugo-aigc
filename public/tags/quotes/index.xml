@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quotes on 技术分享站</title>
+    <link>https://www.techdocdb.com/tags/quotes/</link>
+    <description>Recent content in quotes on 技术分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 12 Sep 2023 10:28:28 +0800</lastBuildDate><atom:link href="https://www.techdocdb.com/tags/quotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Insert text with single quotes in PostgreSQL</title>
+      <link>https://www.techdocdb.com/posts/insert-text-with-single-quotes-in-postgresql/</link>
+      <pubDate>Tue, 12 Sep 2023 10:28:28 +0800</pubDate>
+      
+      <guid>https://www.techdocdb.com/posts/insert-text-with-single-quotes-in-postgresql/</guid>
+      <description>
+        
+          
+            在使用 PostgreSQL 数据库时，如果需要在值中插入单引号 &#39;，需要使用两个相邻的单引号 &#39;&#39; 进行转义。下面是两种常用的转义方式：
+使用两个单引号 &#39;&#39; 进行转义，这是标准的转义方式，如下所示： 1&amp;#39;user&amp;#39;&amp;#39;s log&amp;#39; -- 正确的语法 需要注意的是，这里使用的是普通的单引号（ASCII / UTF-8 码 39），而不是反引号 &#39;&#39;（在某些其他 RDBMS 中有特殊用途）和双引号 &amp;quot;`（用于标识符）。
+如果你使用的是旧版本的 PostgreSQL 或者启用了 standard_conforming_strings = off 参数，或者想要使用 Posix 转义字符串语法，可以在字符串前面加上 E 来声明，然后使用反斜杠 \ 进行转义，如下所示： 1E&amp;#39;user\&amp;#39;s log&amp;#39; 这种方式可以用于转义反斜杠本身，但一般情况下不推荐使用。
+如果需要处理大量单引号或多层转义的情况，可以使用 PostgreSQL 中的 dollar-quoted strings，它可以避免引号的困扰，如下所示：
+1&amp;#39;escape &amp;#39;&amp;#39; with &amp;#39;&amp;#39;&amp;#39;&amp;#39;&amp;#39; 2$$escape &amp;#39; with &amp;#39;&amp;#39;$$ 为了避免混淆，可以给每对 dollar-quoted strings 添加一个唯一的标记，如下所示：
+1$token$escape &amp;#39; with &amp;#39;&amp;#39;$token$ 这样可以无限嵌套使用。
+需要注意的是，在客户端软件中，$ 字符可能具有特殊含义，可能需要进行额外的转义。但在标准的 PostgreSQL 客户端（如 psql 或 pgAdmin）中，不需要进行额外转义。
+总之，在编写 PL/pgSQL 函数或临时 SQL 命令时，这些方法都非常有用。但是，在应用程序中如果需要处理用户输入，为了防止 SQL 注入等安全问题，仍然需要使用预编译语句或其他安全防护措施。
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
